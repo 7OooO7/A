@@ -124,8 +124,8 @@ export default function ServicePage({
       {faqItems && faqItems.length > 0 && <FAQSchema items={faqItems} lang={lang}/>}
 
       {/* ── HERO ── */}
-      <section className="relative hero-bg pt-12 lg:pt-16 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-8 lg:pb-10">
+      <section className="relative hero-bg py-12 lg:py-16 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
 
           {/* Breadcrumb */}
           {breadcrumb && breadcrumb.length > 0 && (
@@ -206,6 +206,18 @@ export default function ServicePage({
                 </div>
               </div>
 
+              {/* Authority logos — infinite scrolling marquee */}
+              <div className="mb-6" dir="ltr">
+                <AcceptedByMarquee
+                  variant="light"
+                  logoHeight={56}
+                  gap={14}
+                  speed={50}
+                  title={t(L.accepted_by, lang)}
+                  showTitle={true}
+                />
+              </div>
+
               {/* CTA buttons */}
               <div className="flex flex-wrap gap-3">
                 <a href={waUrl} target="_blank" rel="noopener noreferrer"
@@ -239,18 +251,6 @@ export default function ServicePage({
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Trust bar — infinite scrolling marquee (full width, same as homepage) */}
-        <div className="relative border-t border-navy-800" dir="ltr">
-          <AcceptedByMarquee
-            variant="light"
-            logoHeight={56}
-            gap={14}
-            speed={50}
-            title={t(L.accepted_by, lang)}
-            showTitle={true}
-          />
         </div>
       </section>
 
