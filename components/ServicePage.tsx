@@ -52,7 +52,7 @@ const WA_ICON = <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
 
 const L = {
   price_from:  { en:'From', ar:'من', ru:'От', zh:'从', es:'Desde' },
-  accepted_by: { en:'Accepted by', ar:'جهات التقديم الشائعة', ru:'Принимается', zh:'被以下机构接受', es:'Aceptado por' },
+  accepted_by: { en:'Authorities We Prepare Documents For', ar:'جهات التقديم الشائعة', ru:'Принимается', zh:'被以下机构接受', es:'Aceptado por' },
   start_wa:    { en:'Start on WhatsApp — Fast Reply', ar:'ابدأ عبر واتساب — رد سريع', ru:'Начать в WhatsApp — быстрый ответ', zh:'通过 WhatsApp 开始 — 快速回复', es:'Iniciar en WhatsApp — Respuesta Rápida' },
   tableegh:    { en:'⚠️ Tableegh delivery required for legal validity in Dubai Courts.', ar:'⚠️ قد يلزم التبليغ الرسمي وإثباته بحسب نوع الإجراء والمتطلبات المطبقة.', ru:'⚠️ Доставка через Tableegh обязательна для юридической силы в Dubai Courts.', zh:'⚠️ Tableegh送达是在Dubai Courts具有法律效力的必要条件。', es:'⚠️ La entrega por Tableegh es obligatoria para la validez legal en Dubai Courts.' },
   faq_h:       { en:'Frequently Asked Questions', ar:'الأسئلة الشائعة', ru:'Часто задаваемые вопросы', zh:'常见问题', es:'Preguntas Frecuentes' },
