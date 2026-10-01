@@ -30631,6 +30631,400 @@
     }
   },
   "blog_content": {
+	  
+	  "special-power-of-attorney-uae-guide": {
+  "title_en": "Special Power of Attorney in the UAE: When and How to Use an SPA",
+  "title_ar": "الوكالة الخاصة في الإمارات: متى وكيف تستخدمها؟",
+  "title_ru": "Специальная доверенность в ОАЭ: когда и как её использовать",
+  "title_zh": "阿联酋特别授权委托书：何时以及如何使用",
+  "title_es": "Poder Notarial Especial en los EAU: Cuándo y Cómo Usarlo",
+  "meta_en": "Learn when a Special Power of Attorney (SPA) is required in the UAE, how it differs from a General POA, and how to draft one that authorities accept. 2026 guide.",
+  "meta_ar": "تعرف على متى تحتاج إلى وكالة خاصة في الإمارات، وما الفرق بينها وبين الوكالة العامة، وكيف تصوغ واحدة تقبلها الجهات الرسمية.",
+  "meta_ru": "Узнайте, когда требуется специальная доверенность в ОАЭ, чем она отличается от общей, и как составить документ, который примут органы.",
+  "meta_zh": "了解在阿联酋何时需要特别授权委托书、它与一般授权书的区别，以及如何起草一份能获得当局认可的授权书。",
+  "meta_es": "Descubra cuándo se requiere un Poder Notarial Especial en los EAU, en qué se diferencia de un Poder General y cómo redactar uno que las autoridades acepten.",
+  "date": "2026-10-01",
+  "date_updated": "2026-10-01",
+  "rich_blocks": [
+    {
+      "type": "para",
+      "accent": true,
+      "text": {
+        "en": "Life in the UAE often requires you to authorize someone else to act on your behalf. Whether you are selling a property in Dubai, managing a bank account, or handling a court case, you may need to delegate authority. The critical question is: how much authority should you grant? A [[/power-of-attorney/general|General Power of Attorney]] offers broad powers, but it also carries significant risk. That is where a **Special Power of Attorney (SPA)** comes in. This guide explains what an SPA is, when to use it, and how it protects your assets by limiting your agent's authority to a single, clearly defined task.",
+        "ar": "غالبًا ما تتطلب الحياة في الإمارات أن تفوض شخصًا آخر للتصرف نيابة عنك. سواء كنت تبيع عقارًا في دبي، أو تدير حسابًا بنكيًا، أو تتعامل مع قضية قضائية، قد تحتاج إلى تفويض الصلاحيات. السؤال الحاسم هو: ما مقدار الصلاحية التي يجب أن تمنحها؟ تقدم [[/power-of-attorney/general|الوكالة العامة]] صلاحيات واسعة، لكنها تحمل أيضًا مخاطر كبيرة. هنا يأتي دور **الوكالة الخاصة (SPA)**. يشرح هذا الدليل ماهية الوكالة الخاصة، ومتى يجب استخدامها، وكيف تحمي أصولك من خلال تقييد صلاحيات الوكيل لمهمة واحدة محددة بوضوح.",
+        "ru": "Жизнь в ОАЭ часто требует, чтобы вы уполномочили кого-то другого действовать от вашего имени. Будь то продажа недвижимости в Дубае, управление банковским счетом или ведение судебного дела, вам может потребоваться делегировать полномочия. Критический вопрос: какой объем полномочий следует предоставить? [[/power-of-attorney/general|Общая доверенность]] предлагает широкие полномочия, но она также несет значительный риск. Здесь на помощь приходит **Специальная доверенность (SPA)**. Это руководство объясняет, что такое SPA, когда его использовать и как он защищает ваши активы, ограничивая полномочия представителя одной четко определенной задачей.",
+        "zh": "在阿联酋生活，您经常需要授权他人代表您行事。无论是出售迪拜的房产、管理银行账户，还是处理法院案件，您都可能需要委托权限。关键问题是：您应该授予多少权限？[[/power-of-attorney/general|一般授权委托书]]提供广泛的权限，但也带来重大风险。这正是**特别授权委托书 (SPA)** 的用武之地。本指南解释了什么是 SPA、何时使用它，以及它如何通过将代理人的权限限制在单一、明确的任务中来保护您的资产。",
+        "es": "La vida en los EAU a menudo requiere que autorice a otra persona para actuar en su nombre. Ya sea que esté vendiendo una propiedad en Dubái, gestionando una cuenta bancaria o manejando un caso judicial, puede necesitar delegar autoridad. La pregunta crítica es: ¿cuánta autoridad debería otorgar? Un [[/power-of-attorney/general|Poder Notarial General]] ofrece amplias facultades, pero también conlleva un riesgo significativo. Aquí es donde entra en juego un **Poder Notarial Especial (SPA)**. Esta guía explica qué es un SPA, cuándo usarlo y cómo protege sus activos limitando la autoridad de su agente a una única tarea claramente definida."
+      }
+    },
+    {
+      "type": "heading",
+      "text": {
+        "en": "What Is a Special Power of Attorney?",
+        "ar": "ما هي الوكالة الخاصة؟",
+        "ru": "Что такое специальная доверенность?",
+        "zh": "什么是特别授权委托书？",
+        "es": "¿Qué es un Poder Notarial Especial?"
+      }
+    },
+    {
+      "type": "para",
+      "text": {
+        "en": "A Special Power of Attorney (SPA) is a legal document in which you (the **principal**) appoint another person (the **agent**) to perform one specific legal act or a clearly defined set of acts on your behalf. Unlike a General POA, which can grant sweeping authority over your affairs, an SPA is precise. The document names exactly what the agent can do—and nothing more. The authority automatically ends once the task is completed. This precision is what makes an SPA the safer choice when you only need to delegate a single transaction.",
+        "ar": "الوكالة الخاصة (SPA) هي وثيقة قانونية تقوم فيها أنت (**الموكل**) بتعيين شخص آخر (**الوكيل**) لأداء تصرف قانوني واحد محدد أو مجموعة محددة بوضوح من التصرفات نيابة عنك. على عكس الوكالة العامة التي تمنح صلاحيات واسعة، فإن الوكالة الخاصة دقيقة. تحدد الوثيقة بدقة ما يمكن للوكيل فعله - ولا شيء أكثر من ذلك. تنتهي الصلاحية تلقائيًا بمجرد إتمام المهمة. هذه الدقة هي ما يجعل الوكالة الخاصة الخيار الأكثر أمانًا عندما تحتاج فقط إلى تفويض معاملة واحدة.",
+        "ru": "Специальная доверенность (SPA) — это юридический документ, в котором вы (**доверитель**) назначаете другое лицо (**представителя**) для совершения одного конкретного юридического действия или четко определенной совокупности действий от вашего имени. В отличие от общей доверенности, которая может предоставить широкие полномочия, специальная доверенность точна. В документе точно указано, что представитель может делать — и ничего больше. Полномочия автоматически прекращаются после выполнения задачи. Именно эта точность делает SPA более безопасным выбором, когда вам нужно делегировать только одну сделку.",
+        "zh": "特别授权委托书 (SPA) 是一份法律文件，您（**委托人**）在其中指定另一人（**代理人**）代表您执行一项特定的法律行为或一组明确界定的行为。与可能授予广泛事务权限的一般授权书不同，SPA 非常精确。文件明确规定了代理人可以做什么——仅此而已。任务完成后，授权自动终止。当您只需要委托一项交易时，这种精确性使 SPA 成为更安全的选择。",
+        "es": "Un Poder Notarial Especial (SPA) es un documento legal en el que usted (el **poderdante**) nombra a otra persona (el **apoderado**) para realizar un acto legal específico o un conjunto claramente definido de actos en su nombre. A diferencia de un Poder General, que puede otorgar una autoridad amplia sobre sus asuntos, un SPA es preciso. El documento nombra exactamente lo que el agente puede hacer, y nada más. La autoridad termina automáticamente una vez que se completa la tarea. Esta precisión es lo que hace que un SPA sea la opción más segura cuando solo necesita delegar una única transacción."
+      }
+    },
+    {
+      "type": "heading",
+      "text": {
+        "en": "When Should You Use a Special Power of Attorney?",
+        "ar": "متى يجب أن تستخدم وكالة خاصة؟",
+        "ru": "Когда следует использовать специальную доверенность?",
+        "zh": "何时应使用特别授权委托书？",
+        "es": "¿Cuándo Debe Usar un Poder Notarial Especial?"
+      }
+    },
+    {
+      "type": "checklist",
+      "items": [
+        {
+          "en": "Selling, buying, or leasing a specific property in Dubai",
+          "ar": "بيع أو شراء أو تأجير عقار محدد في دبي",
+          "ru": "Продажа, покупка или аренда конкретной недвижимости в Дубае",
+          "zh": "出售、购买或租赁迪拜的特定房产",
+          "es": "Vender, comprar o arrendar una propiedad específica en Dubái"
+        },
+        {
+          "en": "Opening or closing a specific bank account",
+          "ar": "فتح أو إغلاق حساب بنكي محدد",
+          "ru": "Открытие или закрытие конкретного банковского счета",
+          "zh": "开立或关闭特定银行账户",
+          "es": "Abrir o cerrar una cuenta bancaria específica"
+        },
+        {
+          "en": "Representing you in a specific court case",
+          "ar": "تمثيلك في قضية قضائية محددة",
+          "ru": "Представление ваших интересов в конкретном судебном деле",
+          "zh": "在特定法院案件中代表您",
+          "es": "Representarle en un caso judicial específico"
+        },
+        {
+          "en": "Selling or transferring a specific vehicle at the RTA",
+          "ar": "بيع أو نقل ملكية مركبة محددة في هيئة الطرق والمواصلات",
+          "ru": "Продажа или переоформление конкретного автомобиля в RTA",
+          "zh": "在 RTA 出售或转让特定车辆",
+          "es": "Vender o transferir un vehículo específico en la RTA"
+        },
+        {
+          "en": "Signing the Memorandum of Association for a new company",
+          "ar": "توقيع عقد التأسيس لشركة جديدة",
+          "ru": "Подписание устава для новой компании",
+          "zh": "签署新公司的公司章程",
+          "es": "Firmar el Acta Constitutiva de una nueva empresa"
+        }
+      ]
+    },
+    {
+      "type": "para",
+      "text": {
+        "en": "In each of these scenarios, the agent only needs authority for that specific transaction. Granting broader powers would expose you to unnecessary risk. For a deeper comparison, see our guide on [[/blog/difference-between-general-and-special-poa-uae|General vs Special POA]].",
+        "ar": "في كل من هذه السيناريوهات، يحتاج الوكيل فقط إلى صلاحية لتلك المعاملة المحددة. منح صلاحيات أوسع سيعرضك لمخاطر غير ضرورية. لمقارنة أعمق، راجع دليلنا حول [[/blog/difference-between-general-and-special-poa-uae|الفرق بين الوكالة العامة والخاصة]].",
+        "ru": "В каждом из этих сценариев представителю нужны полномочия только для этой конкретной сделки. Предоставление более широких полномочий подвергнет вас ненужному риску. Для более глубокого сравнения см. наше руководство [[/blog/difference-between-general-and-special-poa-uae|Общая и специальная доверенность]].",
+        "zh": "在上述每种情况下，代理人只需要该特定交易的权限。授予更广泛的权限会使您面临不必要的风险。如需更深入的比较，请参阅我们的[[/blog/difference-between-general-and-special-poa-uae|一般授权与特别授权]]指南。",
+        "es": "En cada uno de estos escenarios, el agente solo necesita autoridad para esa transacción específica. Otorgar poderes más amplios le expondría a riesgos innecesarios. Para una comparación más profunda, consulte nuestra guía sobre [[/blog/difference-between-general-and-special-poa-uae|Poder General vs Especial]]."
+      }
+    },
+    {
+      "type": "heading",
+      "text": {
+        "en": "General POA vs. Special POA: The Key Differences",
+        "ar": "الوكالة العامة مقابل الوكالة الخاصة: الفروق الرئيسية",
+        "ru": "Общая доверенность против специальной: ключевые различия",
+        "zh": "一般授权委托书与特别授权委托书：关键区别",
+        "es": "Poder General vs. Poder Especial: Las Diferencias Clave"
+      }
+    },
+    {
+      "type": "table",
+      "headers": [
+        {
+          "en": "Point of Comparison",
+          "ar": "وجه المقارنة",
+          "ru": "Критерий сравнения",
+          "zh": "比较点",
+          "es": "Punto de Comparación"
+        },
+        {
+          "en": "General POA",
+          "ar": "الوكالة العامة",
+          "ru": "Общая доверенность",
+          "zh": "一般授权委托书",
+          "es": "Poder General"
+        },
+        {
+          "en": "Special POA",
+          "ar": "الوكالة الخاصة",
+          "ru": "Специальная доверенность",
+          "zh": "特别授权委托书",
+          "es": "Poder Especial"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Scope",
+            "ar": "النطاق",
+            "ru": "Объем",
+            "zh": "范围",
+            "es": "Alcance"
+          },
+          {
+            "en": "Broad authority over many actions",
+            "ar": "صلاحيات واسعة على العديد من التصرفات",
+            "ru": "Широкие полномочия на многие действия",
+            "zh": "对多种行为的广泛授权",
+            "es": "Amplia autoridad sobre muchas acciones"
+          },
+          {
+            "en": "Limited to one specific task or subject",
+            "ar": "محدودة بمهمة أو موضوع واحد محدد",
+            "ru": "Ограничена одной конкретной задачей или предметом",
+            "zh": "仅限于一项特定任务或主题",
+            "es": "Limitado a una tarea o tema específico"
+          }
+        ],
+        [
+          {
+            "en": "Risk Level",
+            "ar": "مستوى المخاطرة",
+            "ru": "Уровень риска",
+            "zh": "风险水平",
+            "es": "Nivel de Riesgo"
+          },
+          {
+            "en": "High — agent may dispose of assets broadly",
+            "ar": "مرتفع — قد يتصرف الوكيل في الأصول على نطاق واسع",
+            "ru": "Высокий — представитель может широко распоряжаться активами",
+            "zh": "高——代理人可广泛处置资产",
+            "es": "Alto — el agente puede disponer ampliamente de los activos"
+          },
+          {
+            "en": "Low — authority restricted to one purpose",
+            "ar": "منخفض — الصلاحية مقصورة على غرض واحد",
+            "ru": "Низкий — полномочия ограничены одной целью",
+            "zh": "低——权限仅限于一个目的",
+            "es": "Bajo — autoridad restringida a un propósito"
+          }
+        ],
+        [
+          {
+            "en": "Duration",
+            "ar": "المدة",
+            "ru": "Срок действия",
+            "zh": "期限",
+            "es": "Duración"
+          },
+          {
+            "en": "Usually long-term until revoked",
+            "ar": "عادةً طويلة الأجل حتى الإلغاء",
+            "ru": "Обычно долгосрочная до отзыва",
+            "zh": "通常为长期，直至撤销",
+            "es": "Generalmente a largo plazo hasta su revocación"
+          },
+          {
+            "en": "Ends when the task is completed",
+            "ar": "تنتهي عند إتمام المهمة",
+            "ru": "Прекращается по завершении задачи",
+            "zh": "任务完成时终止",
+            "es": "Termina cuando se completa la tarea"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": {
+        "en": "How to Draft a Valid Special Power of Attorney",
+        "ar": "كيف تصوغ وكالة خاصة صحيحة؟",
+        "ru": "Как составить действительную специальную доверенность",
+        "zh": "如何起草有效的特别授权委托书",
+        "es": "Cómo Redactar un Poder Notarial Especial Válido"
+      }
+    },
+    {
+      "type": "steps",
+      "items": [
+        {
+          "title": {
+            "en": "1. Define the exact task",
+            "ar": "1. حدد المهمة الدقيقة",
+            "ru": "1. Определите точную задачу",
+            "zh": "1. 明确具体任务",
+            "es": "1. Defina la tarea exacta"
+          },
+          "body": {
+            "en": "Identify the single transaction the agent will perform. Be specific: name the property, the vehicle, the bank account, or the court case.",
+            "ar": "حدد المعاملة الواحدة التي سيقوم بها الوكيل. كن محددًا: اذكر العقار أو المركبة أو الحساب البنكي أو القضية.",
+            "ru": "Определите единственную сделку, которую выполнит представитель. Будьте конкретны: укажите недвижимость, автомобиль, банковский счет или судебное дело.",
+            "zh": "确定代理人将执行的单一交易。要具体：说明房产、车辆、银行账户或法院案件。",
+            "es": "Identifique la transacción única que realizará el agente. Sea específico: nombre la propiedad, el vehículo, la cuenta bancaria o el caso judicial."
+          }
+        },
+        {
+          "title": {
+            "en": "2. State the powers expressly",
+            "ar": "2. اذكر الصلاحيات صراحةً",
+            "ru": "2. Укажите полномочия прямо",
+            "zh": "2. 明确列明权限",
+            "es": "2. Indique las facultades expresamente"
+          },
+          "body": {
+            "en": "List the specific acts the agent is authorized to perform. Vague wording such as \"manage all matters\" may be rejected by authorities.",
+            "ar": "اذكر التصرفات المحددة التي يخول للوكيل القيام بها. قد ترفض الجهات الصياغة الغامضة مثل \"إدارة جميع الأمور\".",
+            "ru": "Перечислите конкретные действия, которые уполномочен совершать представитель. Расплывчатые формулировки, такие как «управлять всеми делами», могут быть отклонены органами.",
+            "zh": "列出授权代理人执行的具体行为。模糊的措辞如“管理所有事务”可能会被当局拒绝。",
+            "es": "Enumere los actos específicos que el agente está autorizado a realizar. La redacción vaga como \"gestionar todos los asuntos\" puede ser rechazada por las autoridades."
+          }
+        },
+        {
+          "title": {
+            "en": "3. Prepare supporting documents",
+            "ar": "3. جهز المستندات الداعمة",
+            "ru": "3. Подготовьте подтверждающие документы",
+            "zh": "3. 准备支持文件",
+            "es": "3. Prepare los documentos de respaldo"
+          },
+          "body": {
+            "en": "You will typically need the principal's Emirates ID or passport, the agent's identity documents, and documents relating to the specific transaction (e.g., title deed, Mulkiya, or case number).",
+            "ar": "ستحتاج عادةً إلى الهوية الإماراتية أو جواز سفر الموكل، ومستندات هوية الوكيل، ومستندات تتعلق بالمعاملة المحددة (مثل سند الملكية أو الملكية أو رقم القضية).",
+            "ru": "Как правило, вам понадобятся Emirates ID или паспорт доверителя, документы, удостоверяющие личность представителя, и документы, относящиеся к конкретной сделке (например, свидетельство о праве собственности, Mulkiya или номер дела).",
+            "zh": "您通常需要委托人的阿联酋身份证或护照、代理人的身份证明文件，以及与具体交易相关的文件（例如产权证、Mulkiya 或案件编号）。",
+            "es": "Normalmente necesitará el Emirates ID o pasaporte del poderdante, los documentos de identidad del agente y documentos relacionados con la transacción específica (por ejemplo, título de propiedad, Mulkiya o número de caso)."
+          }
+        },
+        {
+          "title": {
+            "en": "4. Notarize through the correct channel",
+            "ar": "4. وثق عبر القناة الصحيحة",
+            "ru": "4. Заверьте через правильный канал",
+            "zh": "4. 通过正确渠道进行公证",
+            "es": "4. Notarice a través del canal correcto"
+          },
+          "body": {
+            "en": "The SPA must be notarized before a UAE Notary Public or a licensed private notary. For remote notarization, ensure both parties meet the eligibility criteria. For more information, see our [[/power-of-attorney/special|Special Power of Attorney service]].",
+            "ar": "يجب توثيق الوكالة الخاصة أمام كاتب عدل إماراتي أو كاتب عدل خاص مرخص. للتوثيق عن بُعد، تأكد من استيفاء الطرفين لمعايير الأهلية. لمزيد من المعلومات، راجع [[/power-of-attorney/special|خدمة الوكالة الخاصة]].",
+            "ru": "SPA должна быть заверена нотариусом ОАЭ или лицензированным частным нотариусом. Для дистанционного заверения убедитесь, что обе стороны соответствуют критериям. Для получения дополнительной информации см. нашу [[/power-of-attorney/special|услугу специальной доверенности]].",
+            "zh": "SPA 必须由阿联酋公证人或持牌私人公证人公证。对于远程公证，请确保双方符合资格标准。有关更多信息，请参阅我们的[[/power-of-attorney/special|特别授权委托书服务]]。",
+            "es": "El SPA debe ser notarizado ante un Notario Público de los EAU o un notario privado autorizado. Para la notarización remota, asegúrese de que ambas partes cumplan con los criterios de elegibilidad. Para obtener más información, consulte nuestro [[/power-of-attorney/special|servicio de Poder Notarial Especial]]."
+          }
+        }
+      ]
+    },
+    {
+      "type": "warning",
+      "title": {
+        "en": "Do Not Use a General POA When a Special POA Is Required",
+        "ar": "لا تستخدم وكالة عامة عندما تكون هناك حاجة إلى وكالة خاصة",
+        "ru": "Не используйте общую доверенность, когда требуется специальная",
+        "zh": "当需要特别授权时，不要使用一般授权",
+        "es": "No Utilice un Poder General Cuando se Requiere un Poder Especial"
+      },
+      "text": {
+        "en": "Using a General POA for a task that only requires a Special POA exposes you to serious risks. The agent could potentially sell other assets, incur debts, or act in ways you never intended. Authorities, including DLD and banks, increasingly reject General POAs for specific transactions and require explicit, limited wording. Always match the scope of the POA to the task.",
+        "ar": "استخدام وكالة عامة لمهمة تتطلب فقط وكالة خاصة يعرضك لمخاطر جسيمة. قد يبيع الوكيل أصولًا أخرى، أو يتكبد ديونًا، أو يتصرف بطرق لم تقصدها أبدًا. ترفض الجهات، بما في ذلك دائرة الأراضي والبنوك، بشكل متزايد الوكالات العامة للمعاملات المحددة وتتطلب صياغة صريحة ومحدودة. طابق دائمًا نطاق الوكالة مع المهمة.",
+        "ru": "Использование общей доверенности для задачи, требующей только специальной, подвергает вас серьезным рискам. Представитель потенциально может продать другие активы, incur debts или действовать способами, которые вы никогда не предполагали. Органы, включая DLD и банки, все чаще отклоняют общие доверенности для конкретных сделок и требуют явных, ограниченных формулировок. Всегда соотносите объем доверенности с задачей.",
+        "zh": "对只需要特别授权的任务使用一般授权会使您面临严重风险。代理人可能会出售其他资产、产生债务或以您从未打算的方式行事。包括 DLD 和银行在内的当局越来越多地拒绝将一般授权委托书用于特定交易，并要求明确、有限的措辞。始终使授权书的范围与任务相匹配。",
+        "es": "Usar un Poder General para una tarea que solo requiere un Poder Especial le expone a serios riesgos. El agente podría vender otros activos, contraer deudas o actuar de maneras que nunca pretendió. Las autoridades, incluido el DLD y los bancos, rechazan cada vez más los Poderes Generales para transacciones específicas y exigen una redacción explícita y limitada. Siempre haga coincidir el alcance del poder con la tarea."
+      }
+    },
+    {
+      "type": "para",
+      "text": {
+        "en": "A Special Power of Attorney is not just a legal formality—it is a risk management tool. By defining the exact scope of your agent's authority, you protect your assets while still getting the job done. If you need to delegate a specific task in the UAE, the safest approach is to draft a Special POA tailored to that transaction. For general ongoing representation, you may need a [[/power-of-attorney/general|General Power of Attorney]]. For help with either, see our [[/power-of-attorney|Power of Attorney services]].",
+        "ar": "الوكالة الخاصة ليست مجرد شكلية قانونية - إنها أداة لإدارة المخاطر. من خلال تحديد النطاق الدقيق لصلاحيات وكيلك، تحمي أصولك مع إنجاز المهمة. إذا كنت بحاجة إلى تفويض مهمة محددة في الإمارات، فإن النهج الأكثر أمانًا هو صياغة وكالة خاصة مصممة لتلك المعاملة. للتمثيل العام المستمر، قد تحتاج إلى [[/power-of-attorney/general|وكالة عامة]]. للمساعدة في أي منهما، راجع [[/power-of-attorney|خدمات الوكالات]].",
+        "ru": "Специальная доверенность — это не просто юридическая формальность, а инструмент управления рисками. Определив точный объем полномочий представителя, вы защищаете свои активы и при этом выполняете задачу. Если вам нужно делегировать конкретную задачу в ОАЭ, самый безопасный подход — составить специальную доверенность, адаптированную к этой сделке. Для общего постоянного представительства вам может понадобиться [[/power-of-attorney/general|общая доверенность]]. Для помощи в любом из этих случаев см. наши [[/power-of-attorney|услуги по доверенностям]].",
+        "zh": "特别授权委托书不仅仅是一种法律形式——它是一种风险管理工具。通过明确界定代理人权限的准确范围，您可以在完成任务的同时保护您的资产。如果您需要在阿联酋委托一项特定任务，最安全的方法是针对该交易起草一份特别授权委托书。对于一般性的持续代理，您可能需要一份[[/power-of-attorney/general|一般授权委托书]]。如需帮助，请参阅我们的[[/power-of-attorney|授权委托书服务]]。",
+        "es": "Un Poder Notarial Especial no es solo una formalidad legal: es una herramienta de gestión de riesgos. Al definir el alcance exacto de la autoridad de su agente, protege sus activos mientras realiza la tarea. Si necesita delegar una tarea específica en los EAU, el enfoque más seguro es redactar un Poder Especial adaptado a esa transacción. Para representación general continua, puede necesitar un [[/power-of-attorney/general|Poder Notarial General]]. Para obtener ayuda con cualquiera de los dos, consulte nuestros [[/power-of-attorney|servicios de Poder Notarial]]."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "When should I use a Special Power of Attorney instead of a General POA?",
+        "ar": "متى يجب أن أستخدم وكالة خاصة بدلاً من وكالة عامة؟",
+        "ru": "Когда следует использовать специальную доверенность вместо общей?",
+        "zh": "何时应使用特别授权委托书而不是一般授权？",
+        "es": "¿Cuándo debo usar un Poder Especial en lugar de un Poder General?"
+      },
+      "a": {
+        "en": "Use a Special POA when you need to authorize a specific transaction only—such as selling one property, operating one bank account, or representing you in one court case. It limits the agent's authority and automatically ends when the task is done.",
+        "ar": "استخدم وكالة خاصة عندما تحتاج إلى تفويض معاملة محددة فقط - مثل بيع عقار واحد، أو تشغيل حساب بنكي واحد، أو تمثيلك في قضية قضائية واحدة. تحد من صلاحيات الوكيل وتنتهي تلقائيًا عند إتمام المهمة.",
+        "ru": "Используйте специальную доверенность, когда вам нужно уполномочить только конкретную сделку — например, продажу одной недвижимости, управление одним банковским счетом или представление ваших интересов в одном судебном деле. Она ограничивает полномочия представителя и автоматически прекращается после выполнения задачи.",
+        "zh": "当您只需要授权一项特定交易时——例如出售一处房产、操作一个银行账户或在某一法院案件中代表您——请使用特别授权委托书。它限制了代理人的权限，并在任务完成后自动终止。",
+        "es": "Use un Poder Especial cuando solo necesite autorizar una transacción específica, como vender una propiedad, operar una cuenta bancaria o representarle en un caso judicial. Limita la autoridad del agente y termina automáticamente cuando se completa la tarea."
+      }
+    },
+    {
+      "q": {
+        "en": "Does a Special Power of Attorney expire?",
+        "ar": "هل تنتهي صلاحية الوكالة الخاصة؟",
+        "ru": "Истекает ли срок действия специальной доверенности?",
+        "zh": "特别授权委托书会过期吗？",
+        "es": "¿Caduca un Poder Notarial Especial?"
+      },
+      "a": {
+        "en": "A Special POA ends automatically once the specific task is completed. It can also have a stated expiry date (e.g., one year). The principal may also revoke it at any time through the proper notarial procedure.",
+        "ar": "تنتهي الوكالة الخاصة تلقائيًا بمجرد إتمام المهمة المحددة. يمكن أن يكون لها أيضًا تاريخ انتهاء محدد (مثل سنة واحدة). يمكن للموكل أيضًا إلغاؤها في أي وقت من خلال الإجراء التوثيقي المناسب.",
+        "ru": "Специальная доверенность прекращается автоматически после выполнения конкретной задачи. Она также может иметь указанную дату истечения (например, один год). Доверитель также может отозвать её в любое время через надлежащую нотариальную процедуру.",
+        "zh": "特别授权委托书在特定任务完成后自动终止。它也可以有指定的到期日（例如一年）。委托人也可以通过适当的公证程序随时撤销它。",
+        "es": "Un Poder Especial termina automáticamente una vez que se completa la tarea específica. También puede tener una fecha de caducidad indicada (por ejemplo, un año). El poderdante también puede revocarlo en cualquier momento mediante el procedimiento notarial adecuado."
+      }
+    },
+    {
+      "q": {
+        "en": "Can a Special Power of Attorney be revoked?",
+        "ar": "هل يمكن إلغاء الوكالة الخاصة؟",
+        "ru": "Можно ли отозвать специальную доверенность?",
+        "zh": "特别授权委托书可以撤销吗？",
+        "es": "¿Se puede revocar un Poder Notarial Especial?"
+      },
+      "a": {
+        "en": "Yes. The principal can revoke a Special POA at any time by visiting a notary public to issue a Notice of Revocation and officially notifying the agent. It is important to document this notification to prevent future actions by the agent.",
+        "ar": "نعم. يمكن للموكل إلغاء الوكالة الخاصة في أي وقت من خلال زيارة كاتب العدل لإصدار إشعار بالإلغاء وإخطار الوكيل رسميًا. من المهم توثيق هذا الإخطار لمنع أي تصرفات مستقبلية من الوكيل.",
+        "ru": "Да. Доверитель может отозвать специальную доверенность в любое время, обратившись к нотариусу для выдачи уведомления об отзыве и официально уведомив представителя. Важно задокументировать это уведомление, чтобы предотвратить будущие действия представителя.",
+        "zh": "可以。委托人可以随时通过前往公证处发出撤销通知并正式通知代理人来撤销特别授权委托书。记录此通知以防止代理人未来采取行动非常重要。",
+        "es": "Sí. El poderdante puede revocar un Poder Especial en cualquier momento visitando a un notario para emitir un Aviso de Revocación y notificar oficialmente al agente. Es importante documentar esta notificación para evitar acciones futuras del agente."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I use a General POA for a property sale in Dubai?",
+        "ar": "هل يمكنني استخدام وكالة عامة لبيع عقار في دبي؟",
+        "ru": "Можно ли использовать общую доверенность для продажи недвижимости в Дубае?",
+        "zh": "我可以使用一般授权委托书在迪拜出售房产吗？",
+        "es": "¿Puedo usar un Poder General para vender una propiedad en Dubái?"
+      },
+      "a": {
+        "en": "It is not recommended. DLD and other authorities often require explicit, transaction-specific powers for property sales. A General POA may be rejected. For property transactions, a Special Real Estate POA is the safer and more reliable option. See our [[/power-of-attorney/real-estate|Real Estate POA service]].",
+        "ar": "لا ينصح بذلك. غالبًا ما تتطلب دائرة الأراضي والجهات الأخرى صلاحيات صريحة خاصة بالمعاملة لبيع العقارات. قد يتم رفض الوكالة العامة. لمعاملات العقارات، تعتبر الوكالة العقارية الخاصة الخيار الأكثر أمانًا وموثوقية. راجع [[/power-of-attorney/real-estate|خدمة الوكالة العقارية]].",
+        "ru": "Это не рекомендуется. DLD и другие органы часто требуют явных, специфичных для сделки полномочий для продажи недвижимости. Общая доверенность может быть отклонена. Для сделок с недвижимостью специальная доверенность на недвижимость является более безопасным и надежным вариантом. См. нашу [[/power-of-attorney/real-estate|услугу доверенности на недвижимость]].",
+        "zh": "不建议这样做。DLD 和其他当局通常要求房产销售具有明确的、针对具体交易的权限。一般授权委托书可能会被拒绝。对于房产交易，特别房地产授权委托书是更安全、更可靠的选择。请参阅我们的[[/power-of-attorney/real-estate|房地产授权委托书服务]]。",
+        "es": "No se recomienda. El DLD y otras autoridades a menudo exigen facultades explícitas y específicas de la transacción para la venta de propiedades. Un Poder General puede ser rechazado. Para transacciones inmobiliarias, un Poder Especial Inmobiliario es la opción más segura y confiable. Consulte nuestro [[/power-of-attorney/real-estate|servicio de Poder Inmobiliario]]."
+      }
+    }
+  ],
+  "related": [
+    "power-of-attorney-types-dubai",
+    "difference-between-general-and-special-poa-uae",
+    "how-to-get-poa-dubai"
+  ]
+},
+
+
     "power-of-attorney-types-dubai": {
       "title_en": "Types of Power of Attorney in Dubai — Choose by Transaction, Not by Label",
       "title_ar": "أنواع الوكالات في دبي — اختر الوكالة بحسب المعاملة لا بحسب الاسم",
