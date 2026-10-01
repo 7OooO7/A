@@ -69,6 +69,7 @@ const blogContent = content.blog_content as Record<string, {
 }>
 
 const BLOG_SLUGS = [
+  'special-power-of-attorney-uae-guide',
   'how-to-get-poa-dubai',
   'power-of-attorney-types-dubai',
   'difference-between-general-and-special-poa-uae',
