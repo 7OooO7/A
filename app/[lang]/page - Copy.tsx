@@ -284,33 +284,36 @@ export default async function HomePage({ params }: Props) {
           </div>
           <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {services.poa.types.map((type, idx) => (
-              <Link key={type.slug} href={`/${lang}/power-of-attorney/${type.slug}`} title={t(type.title, lang)}
+              <Link key={type.slug} href={`/${lang}/power-of-attorney/${type.slug}`}
                 className={`group relative bg-gradient-to-br ${POA_COLORS[idx % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">{t(type.title, lang)}</h3>
                   <span className="shrink-0 text-xs font-semibold text-gold-600 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
-                <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{t(type.desc, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3 line-clamp-2">{t(type.desc, lang)}</p>
+                <span className="text-xs text-gold-600 font-semibold group-hover:text-gold-500 transition-colors">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
             {EXTRA_POA.map((svc, i) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} title={t(svc.t, lang)}
+              <Link key={svc.href} href={`/${lang}/${svc.href}`}
                 className={`group relative bg-gradient-to-br ${POA_COLORS[(services.poa.types.length + i) % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">{t(svc.t, lang)}</h3>
                   <span className="shrink-0 text-xs font-semibold text-gold-600 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
-                <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3 line-clamp-2">{t(svc.d, lang)}</p>
+                <span className="text-xs text-gold-600 font-semibold group-hover:text-gold-500 transition-colors">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
             {EXTRA_POA2.map((svc, i) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} title={t(svc.t, lang)}
+              <Link key={svc.href} href={`/${lang}/${svc.href}`}
                 className={`group relative bg-gradient-to-br ${POA_COLORS[(services.poa.types.length + EXTRA_POA.length + i) % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">{t(svc.t, lang)}</h3>
                   <span className="shrink-0 text-xs font-semibold text-gold-600 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
-                <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3 line-clamp-2">{t(svc.d, lang)}</p>
+                <span className="text-xs text-gold-600 font-semibold group-hover:text-gold-500 transition-colors">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
           </div>
@@ -340,9 +343,10 @@ export default async function HomePage({ params }: Props) {
                   </h3>
                   <span className="shrink-0 text-xs font-semibold text-navy-500 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
-                <p className="text-xs text-navy-500 leading-relaxed">
+                <p className="text-xs text-navy-500 leading-relaxed mb-3">
                   {(svc as any)[`desc_${lang}`] || svc.desc_en}
                 </p>
+                <span className="text-xs text-gold-600 font-semibold group-hover:text-gold-500 transition-colors">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
           </div>
@@ -358,13 +362,15 @@ export default async function HomePage({ params }: Props) {
             {services.attestation.types.map((type) => (
               <Link key={type.slug} href={`/${lang}/attestation/${type.slug}`} className="service-card group">
                 <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700">{t(type.title, lang)}</h3>
-                <p className="text-xs text-navy-500 leading-relaxed">{t(type.desc, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3">{t(type.desc, lang)}</p>
+                <span className="text-xs font-semibold text-gold-600">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
             {EXTRA_ATTEST.map((svc) => (
               <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card group">
                 <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700">{t(svc.t, lang)}</h3>
-                <p className="text-xs text-navy-500 leading-relaxed">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3">{t(svc.d, lang)}</p>
+                <span className="text-xs font-semibold text-gold-600">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
           </div>
@@ -379,16 +385,19 @@ export default async function HomePage({ params }: Props) {
           <div className="grid gap-4 sm:grid-cols-2">
             <Link href={`/${lang}/legal-notice/eviction`} className="service-card group">
               <h3 className="font-bold text-navy-900 text-sm mb-2">{t(services.eviction_notice.title, lang)}</h3>
-              <p className="text-xs text-navy-500 leading-relaxed">{t(services.eviction_notice.desc, lang)}</p>
+              <p className="text-xs text-navy-500 leading-relaxed mb-3">{t(services.eviction_notice.desc, lang)}</p>
+              <span className="text-xs font-semibold text-gold-600">{t(cta.learn_more, lang)} →</span>
             </Link>
             <Link href={`/${lang}/legal-notice`} className="service-card group">
               <h3 className="font-bold text-navy-900 text-sm mb-2">{t(services.legal_notice.title, lang)}</h3>
-              <p className="text-xs text-navy-500 leading-relaxed">{t(services.legal_notice.desc, lang)}</p>
+              <p className="text-xs text-navy-500 leading-relaxed mb-3">{t(services.legal_notice.desc, lang)}</p>
+              <span className="text-xs font-semibold text-gold-600">{t(cta.learn_more, lang)} →</span>
             </Link>
             {EXTRA_TENANCY.map((svc) => (
               <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card group">
                 <h3 className="font-bold text-navy-900 text-sm mb-2">{t(svc.t, lang)}</h3>
-                <p className="text-xs text-navy-500 leading-relaxed">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3">{t(svc.d, lang)}</p>
+                <span className="text-xs font-semibold text-gold-600">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
           </div>
@@ -407,7 +416,8 @@ export default async function HomePage({ params }: Props) {
             {RDC_SERVICES.map((svc) => (
               <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card group">
                 <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700">{t(svc.t, lang)}</h3>
-                <p className="text-xs text-navy-500 leading-relaxed">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-500 leading-relaxed mb-3">{t(svc.d, lang)}</p>
+                <span className="text-xs font-semibold text-gold-600">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
           </div>
@@ -423,7 +433,8 @@ export default async function HomePage({ params }: Props) {
             {[services.e_notary, services.legal_translation].map((s) => (
               <Link key={s.slug} href={`/${lang}/${s.slug}`} className="service-card-dark group">
                 <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(s.title, lang)}</h3>
-                <p className="text-xs text-navy-400 leading-relaxed">{t(s.desc, lang)}</p>
+                <p className="text-xs text-navy-400 leading-relaxed mb-3">{t(s.desc, lang)}</p>
+                <span className="text-xs font-semibold text-gold-500">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
             <Link href={`/${lang}/mobile-notary`} className="service-card-dark group">
@@ -433,13 +444,15 @@ export default async function HomePage({ params }: Props) {
             {EXTRA_REMOTE.map((svc) => (
               <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card-dark group">
                 <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(svc.t, lang)}</h3>
-                <p className="text-xs text-navy-400 leading-relaxed">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-400 leading-relaxed mb-3">{t(svc.d, lang)}</p>
+                <span className="text-xs font-semibold text-gold-500">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
             {EXTRA_REMOTE2.map((svc) => (
               <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card-dark group">
                 <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(svc.t, lang)}</h3>
-                <p className="text-xs text-navy-400 leading-relaxed">{t(svc.d, lang)}</p>
+                <p className="text-xs text-navy-400 leading-relaxed mb-3">{t(svc.d, lang)}</p>
+                <span className="text-xs font-semibold text-gold-500">{t(cta.learn_more, lang)} →</span>
               </Link>
             ))}
           </div>
