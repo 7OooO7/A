@@ -215,16 +215,16 @@ export default async function HomePage({ params }: Props) {
                 <Link href={`/${lang}/power-of-attorney`} className="inline-flex items-center gap-2 bg-navy-800 text-navy-200 font-bold px-7 py-3.5 rounded-xl hover:bg-navy-700 transition-colors text-sm border border-navy-700">{t(H.all_svc, lang)}</Link>
               </div>
               {/* Stats */}
-              <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-navy-800">
+              <div className="flex flex-nowrap items-center gap-x-4 sm:gap-x-6 mt-8 pt-6 border-t border-navy-800">
                 {[
                   {num:'5,000+', a:{en:'Documents',ar:'وثيقة',ru:'Документов',zh:'文件',es:'Documentos'}, b:{en:'Notarized',ar:'موثقة',ru:'Заверено',zh:'公证完成',es:'Notarizados'}},
                   {num:'5', a:{en:'Languages',ar:'لغات',ru:'Языков',zh:'种语言',es:'Idiomas'}, b:{en:'Supported',ar:'مدعومة',ru:'Поддержка',zh:'支持',es:'Soportados'}},
                   {num:'7', a:{en:'Days/Week',ar:'أيام أسبوعياً',ru:'Дней/неделю',zh:'天/周',es:'Días/Semana'}, b:{en:'Support',ar:'دعم',ru:'Поддержка',zh:'支持',es:'Soporte'}},
                 ].map((s,i) => (
-                  <div key={i} className="flex items-center">
-                    {i > 0 && <div className="w-px h-8 bg-navy-600 mx-3" />}
-                    <span className="font-serif text-xl font-bold text-gold-400">{s.num}</span>
-                    <div className="text-[10px] text-navy-400 leading-tight ms-2">
+                  <div key={i} className="flex items-center shrink-0">
+                    {i > 0 && <div className="w-px h-9 bg-navy-600 me-4 sm:me-6" />}
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-gold-400">{s.num}</span>
+                    <div className="text-xs sm:text-sm text-navy-400 leading-tight ms-2 sm:ms-3">
                       <div className="text-white font-semibold">{t(s.a,lang)}</div>
                       <div>{t(s.b,lang)}</div>
                     </div>
