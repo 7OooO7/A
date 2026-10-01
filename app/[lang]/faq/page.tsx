@@ -1,0 +1,78 @@
+import type { Metadata } from 'next'
+import { LANGS, type Lang, t, getPageFaq, getServiceFaq, HREFLANG_MAP, getPageContent } from '@/lib/i18n'
+import FAQSection from '@/components/FAQSection'
+
+import { LegalServiceSchema } from '@/components/SchemaMarkup'
+interface Props { params: Promise<{ lang: Lang }> }
+export async function generateStaticParams() { return LANGS.map((lang) => ({ lang })) }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params
+  const seo = (getPageContent('/faq') as any)?.seo
+  return {
+    title: seo?.meta_title?.[lang] ?? seo?.meta_title?.en,
+    description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
+    openGraph: {
+      title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
+      description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
+      url: `https://www.enotarydubai.ae/${lang}/faq/`,
+      siteName: 'E-Notary Dubai',
+      locale: ({ en: 'en_US', ar: 'ar_AE', ru: 'ru_RU', zh: 'zh_CN', es: 'es_ES' } as Record<string, string>)[lang],
+      type: 'website',
+    },
+    alternates: { canonical: `https://www.enotarydubai.ae/${lang}/faq/`,
+      languages: {
+        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.enotarydubai.ae/${l}/faq/`])),
+        'x-default': `https://www.enotarydubai.ae/en/faq/`,
+      }
+    },
+  }
+}
+
+// Each section reads from the canonical page-level FAQ (page_content[path].faq).
+// `serviceKey` is used only for topics that have no dedicated page.
+const SECTIONS: Array<{ path?: string; serviceKey?: string; label: Record<string, string> }> = [
+  { path: '/faq', label: { en: 'General Questions', ar: 'أسئلة عامة', ru: 'Общие вопросы', zh: '常见问题', es: 'Preguntas Generales' } },
+  { path: '/power-of-attorney', label: { en: 'Power of Attorney', ar: 'الوكالات الرسمية', ru: 'Доверенности', zh: '授权委托书', es: 'Poder Notarial' } },
+  { path: '/attestation/mofa', label: { en: 'MOFA & Embassy Attestation', ar: 'تصديق وزارة الخارجية والسفارات', ru: 'Заверение МИД и посольств', zh: '外交部与使馆认证', es: 'Atestación MOFA y embajadas' } },
+  { path: '/legal-notice/eviction', label: { en: 'Eviction Notices', ar: 'إشعارات الإخلاء', ru: 'Уведомления о выселении', zh: '驱逐通知', es: 'Avisos de Desalojo' } },
+  { path: '/legal-notice', label: { en: 'Legal Notices', ar: 'الإنذارات القانونية', ru: 'Юридические уведомления', zh: '法律通知', es: 'Notificaciones Legales' } },
+  { serviceKey: 'overseas_poa', label: { en: 'POA from Outside UAE', ar: 'وكالة من خارج الإمارات', ru: 'Доверенность из-за рубежа', zh: '海外授权书', es: 'POA desde el Exterior' } },
+  { path: '/e-notary', label: { en: 'E-Notary & Remote Services', ar: 'التوثيق الإلكتروني والخدمات عن بُعد', ru: 'Электронный нотариус', zh: '电子公证与远程服务', es: 'Notario Electrónico' } },
+  { path: '/pricing', label: { en: 'Pricing & Fees', ar: 'الأسعار والرسوم', ru: 'Цены и сборы', zh: '价格与费用', es: 'Precios y Tarifas' } },
+]
+
+export default async function FAQPage({ params }: Props) {
+  const { lang } = await params
+
+  return (
+    <div className="bg-navy-50 min-h-[80vh]">
+      <LegalServiceSchema lang={lang} path="/faq" />
+      <div className="hero-bg py-12">
+        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+          <h1 id="faq-heading" className="font-serif text-3xl font-bold text-white sm:text-4xl mb-3">
+            {t({ en: 'Frequently Asked Questions', ar: 'الأسئلة الشائعة', ru: 'Часто задаваемые вопросы', zh: '常见问题', es: 'Preguntas Frecuentes' }, lang)}
+          </h1>
+          <p className="text-navy-300 text-sm">
+            {t({ en: 'Everything about POA, attestation, eviction notices and notarization in Dubai.', ar: 'كل شيء عن الوكالات والتصديق وإشعارات الإخلاء والتوثيق في دبي.', ru: 'Всё о доверенностях, легализации и нотариусе в Дубае.', zh: '关于迪拜授权书、认证、驱逐通知和公证的一切。', es: 'Todo sobre POA, autenticación, avisos de desalojo y notarización en Dubái.' }, lang)}
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-4xl px-4 lg:px-8 py-12 space-y-12">
+        {SECTIONS.map(({ path, serviceKey, label }) => {
+          const items = path ? getPageFaq(path) : getServiceFaq(serviceKey as string)
+          if (!items.length) return null
+          return (
+            <div key={path ?? serviceKey}>
+              <h2 className="gold-line font-serif text-xl font-bold text-navy-900 mb-6 inline-block">
+                {t(label, lang)}
+              </h2>
+              <FAQSection items={items} lang={lang} />
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
