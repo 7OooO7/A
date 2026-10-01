@@ -284,34 +284,31 @@ export default async function HomePage({ params }: Props) {
           </div>
           <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {services.poa.types.map((type, idx) => (
-              <Link key={type.slug} href={`/${lang}/power-of-attorney/${type.slug}`} title={t(type.title, lang)}
-                className={`group relative bg-gradient-to-br ${POA_COLORS[idx % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
+              <div key={type.slug} className={`group relative bg-gradient-to-br ${POA_COLORS[idx % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">{t(type.title, lang)}</h3>
+                  <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2"><Link href={`/${lang}/power-of-attorney/${type.slug}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(type.title, lang)}</Link></h3>
                   <span className="shrink-0 text-xs font-semibold text-gold-600 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
                 <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{t(type.desc, lang)}</p>
-              </Link>
+              </div>
             ))}
             {EXTRA_POA.map((svc, i) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} title={t(svc.t, lang)}
-                className={`group relative bg-gradient-to-br ${POA_COLORS[(services.poa.types.length + i) % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
+              <div key={svc.href} className={`group relative bg-gradient-to-br ${POA_COLORS[(services.poa.types.length + i) % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">{t(svc.t, lang)}</h3>
+                  <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                   <span className="shrink-0 text-xs font-semibold text-gold-600 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
                 <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
             {EXTRA_POA2.map((svc, i) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} title={t(svc.t, lang)}
-                className={`group relative bg-gradient-to-br ${POA_COLORS[(services.poa.types.length + EXTRA_POA.length + i) % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
+              <div key={svc.href} className={`group relative bg-gradient-to-br ${POA_COLORS[(services.poa.types.length + EXTRA_POA.length + i) % POA_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">{t(svc.t, lang)}</h3>
+                  <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                   <span className="shrink-0 text-xs font-semibold text-gold-600 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
                 <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -332,18 +329,19 @@ export default async function HomePage({ params }: Props) {
           </div>
           <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {CORP_SERVICES.map((svc, idx) => (
-              <Link key={svc.slug} href={`/${lang}/corporate/${svc.slug}`}
-                className={`group relative bg-gradient-to-br ${CORP_COLORS[idx % CORP_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
+              <div key={svc.slug} className={`group relative bg-gradient-to-br ${CORP_COLORS[idx % CORP_COLORS.length]} border rounded-2xl p-5 hover:-translate-y-0.5 transition-all duration-200 hover:shadow-lg`}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="font-bold text-navy-900 text-sm leading-snug group-hover:text-navy-700 flex-1 pe-2">
-                    {(svc as any)[lang] || svc.en}
+                    <Link href={`/${lang}/corporate/${svc.slug}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">
+                        {(svc as any)[lang] || svc.en}
+                    </Link>
                   </h3>
                   <span className="shrink-0 text-xs font-semibold text-navy-500 bg-white/60 px-2 py-0.5 rounded-full border border-white/80">{t(H.same_day,lang)}</span>
                 </div>
                 <p className="text-xs text-navy-500 leading-relaxed">
                   {(svc as any)[`desc_${lang}`] || svc.desc_en}
                 </p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -356,16 +354,16 @@ export default async function HomePage({ params }: Props) {
           <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 sm:text-3xl mb-8">{t(H.attest_h, lang)}</h2>
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
             {services.attestation.types.map((type) => (
-              <Link key={type.slug} href={`/${lang}/attestation/${type.slug}`} className="service-card group">
-                <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700">{t(type.title, lang)}</h3>
+              <div key={type.slug} className="relative service-card group">
+                <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700"><Link href={`/${lang}/attestation/${type.slug}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(type.title, lang)}</Link></h3>
                 <p className="text-xs text-navy-500 leading-relaxed">{t(type.desc, lang)}</p>
-              </Link>
+              </div>
             ))}
             {EXTRA_ATTEST.map((svc) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card group">
-                <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700">{t(svc.t, lang)}</h3>
+              <div key={svc.href} className="relative service-card group">
+                <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                 <p className="text-xs text-navy-500 leading-relaxed">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -377,19 +375,19 @@ export default async function HomePage({ params }: Props) {
           <p className="overline-label mb-2">{t({en:'Tenant & Landlord',ar:'المستأجر والمؤجر',ru:'Арендатор и арендодатель',zh:'租客及房东',es:'Inquilino y Propietario'}, lang)}</p>
           <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 sm:text-3xl mb-8">{t(H.tenancy_h, lang)}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Link href={`/${lang}/legal-notice/eviction`} className="service-card group">
-              <h3 className="font-bold text-navy-900 text-sm mb-2">{t(services.eviction_notice.title, lang)}</h3>
+            <div className="relative service-card group">
+              <h3 className="font-bold text-navy-900 text-sm mb-2"><Link href={`/${lang}/legal-notice/eviction`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(services.eviction_notice.title, lang)}</Link></h3>
               <p className="text-xs text-navy-500 leading-relaxed">{t(services.eviction_notice.desc, lang)}</p>
-            </Link>
-            <Link href={`/${lang}/legal-notice`} className="service-card group">
-              <h3 className="font-bold text-navy-900 text-sm mb-2">{t(services.legal_notice.title, lang)}</h3>
+            </div>
+            <div className="relative service-card group">
+              <h3 className="font-bold text-navy-900 text-sm mb-2"><Link href={`/${lang}/legal-notice`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(services.legal_notice.title, lang)}</Link></h3>
               <p className="text-xs text-navy-500 leading-relaxed">{t(services.legal_notice.desc, lang)}</p>
-            </Link>
+            </div>
             {EXTRA_TENANCY.map((svc) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card group">
-                <h3 className="font-bold text-navy-900 text-sm mb-2">{t(svc.t, lang)}</h3>
+              <div key={svc.href} className="relative service-card group">
+                <h3 className="font-bold text-navy-900 text-sm mb-2"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                 <p className="text-xs text-navy-500 leading-relaxed">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -405,10 +403,10 @@ export default async function HomePage({ params }: Props) {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {RDC_SERVICES.map((svc) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card group">
-                <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700">{t(svc.t, lang)}</h3>
+              <div key={svc.href} className="relative service-card group">
+                <h3 className="font-bold text-navy-900 text-sm mb-2 group-hover:text-navy-700"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                 <p className="text-xs text-navy-500 leading-relaxed">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -421,26 +419,26 @@ export default async function HomePage({ params }: Props) {
           <h2 className="gold-line font-serif text-2xl font-bold text-white sm:text-3xl mb-8">{t(H.remote_h, lang)}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[services.e_notary, services.legal_translation].map((s) => (
-              <Link key={s.slug} href={`/${lang}/${s.slug}`} className="service-card-dark group">
-                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(s.title, lang)}</h3>
+              <div key={s.slug} className="relative service-card-dark group">
+                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors"><Link href={`/${lang}/${s.slug}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(s.title, lang)}</Link></h3>
                 <p className="text-xs text-navy-400 leading-relaxed">{t(s.desc, lang)}</p>
-              </Link>
+              </div>
             ))}
-            <Link href={`/${lang}/mobile-notary`} className="service-card-dark group">
-              <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(H.mobile_t, lang)}</h3>
+            <div className="relative service-card-dark group">
+              <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors"><Link href={`/${lang}/mobile-notary`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(H.mobile_t, lang)}</Link></h3>
               <p className="text-xs text-navy-400 leading-relaxed">{t(H.mobile_d, lang)}</p>
-            </Link>
+            </div>
             {EXTRA_REMOTE.map((svc) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card-dark group">
-                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(svc.t, lang)}</h3>
+              <div key={svc.href} className="relative service-card-dark group">
+                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                 <p className="text-xs text-navy-400 leading-relaxed">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
             {EXTRA_REMOTE2.map((svc) => (
-              <Link key={svc.href} href={`/${lang}/${svc.href}`} className="service-card-dark group">
-                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors">{t(svc.t, lang)}</h3>
+              <div key={svc.href} className="relative service-card-dark group">
+                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-gold-400 transition-colors"><Link href={`/${lang}/${svc.href}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl">{t(svc.t, lang)}</Link></h3>
                 <p className="text-xs text-navy-400 leading-relaxed">{t(svc.d, lang)}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
