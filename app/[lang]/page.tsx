@@ -207,7 +207,7 @@ export default async function HomePage({ params }: Props) {
                 <span className="badge-navy">{t(H.b3,lang)}</span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-                {t(H.h1, lang)}
+{t(H.h1, lang)}
               </h1>
               <p className="text-navy-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">{t(H.sub, lang)}</p>
               <div className="flex flex-wrap gap-3">
@@ -222,12 +222,12 @@ export default async function HomePage({ params }: Props) {
                   {num:'7', a:{en:'Days/Week',ar:'أيام أسبوعياً',ru:'Дней/неделю',zh:'天/周',es:'Días/Semana'}, b:{en:'Support',ar:'دعم',ru:'Поддержка',zh:'支持',es:'Soporte'}},
                 ].map((s,i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <span className="font-serif text-2xl font-bold text-gold-400">{s.num}</span>
-                    <div className="text-xs text-navy-400 leading-tight">
+                    <span className="font-serif text-xl font-bold text-gold-400">{s.num}</span>
+                    <div className="text-[10px] text-navy-400 leading-tight">
                       <div className="text-white font-semibold">{t(s.a,lang)}</div>
                       <div>{t(s.b,lang)}</div>
                     </div>
-                    {i < 3 && <div className="w-px bg-navy-700 self-stretch ms-2" />}
+                    {i < 2 && <div className="w-px bg-navy-600 self-stretch ms-2" />}
                   </div>
                 ))}
               </div>
