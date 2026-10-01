@@ -51,41 +51,21 @@ const LABELS = {
   read: { en: 'Read article →', ar: '← اقرأ المقال', ru: 'Читать →', zh: '阅读文章 →', es: 'Leer artículo →' },
 }
 
-function slugToTitle(slug: string): string {
-  return slug.split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ')
-    .replace('Poa', 'POA')
-    .replace('Rdc', 'RDC')
-    .replace('Uae', 'UAE')
-    .replace('Mofa', 'MOFA')
-    .replace('Dld', 'DLD')
-}
-
 const blogContent = content.blog_content as Record<string, {
   title_en?: string; title_ar?: string; title_ru?: string; title_zh?: string; title_es?: string;
   meta_en?: string; meta_ar?: string; meta_ru?: string; meta_zh?: string; meta_es?: string;
   date?: string;
 }>
 
-const BLOG_SLUGS = [
-  'how-to-get-poa-dubai',
-  'power-of-attorney-types-dubai',
-  'difference-between-general-and-special-poa-uae',
-  'poa-for-banking-uae-guide',
-  'corporate-poa-vs-individual-poa-uae',
-  'mofa-attestation-guide',
-  'eviction-notice-requirements-dubai',
-  'whatsapp-eviction-notice-dubai-valid',
-  'rdc-filing-guide-dubai',
-  'how-to-attend-rdc-hearing-dubai-2026',
-  'last-will-testament-dubai-expats',
-  'travelling-minor-child-uae-rules',
-  'notary-public-vs-lawyer-dubai',
-  'notarize-documents-without-visiting-uae',
-  'affidavit-dubai-complete-guide',
-  'corporate-documents-dubai',
-]
+// ═══════════════════════════════════════════════════════════════
+// ✅ الإصلاح: قراءة المقالات تلقائياً من content.json
+// ═══════════════════════════════════════════════════════════════
+const BLOG_SLUGS = Object.keys(blogContent).sort((a, b) => {
+  const dateA = blogContent[a]?.date ? new Date(blogContent[a].date).getTime() : 0
+  const dateB = blogContent[b]?.date ? new Date(blogContent[b].date).getTime() : 0
+  return dateB - dateA  // الأحدث أولاً
+})
+// ═══════════════════════════════════════════════════════════════
 
 export default async function BlogPage({ params }: Props) {
   const { lang } = await params
@@ -114,15 +94,16 @@ export default async function BlogPage({ params }: Props) {
             const bc = blogContent[slug]
             const titleKey = `title_${lang}` as keyof typeof bc
             const metaKey = `meta_${lang}` as keyof typeof bc
-            const title = (bc?.[titleKey] as string) || bc?.title_en || slugToTitle(slug)
+            const title = (bc?.[titleKey] as string) || bc?.title_en || slug
             const desc = (bc?.[metaKey] as string) || bc?.meta_en || ''
             const date = bc?.date ? new Date(bc.date).toLocaleDateString(
               lang === 'ar' ? 'ar-AE' : lang === 'zh' ? 'zh-CN' : lang === 'ru' ? 'ru-RU' : lang === 'es' ? 'es-ES' : 'en-GB',
               { year: 'numeric', month: 'short', day: 'numeric' }
             ) : null
             return (
-              <div
+              <Link
                 key={slug}
+                href={`/${lang}/blog/${slug}`}
                 className="blog-card group"
               >
                 <div className="flex items-center justify-between mb-3">
@@ -134,17 +115,15 @@ export default async function BlogPage({ params }: Props) {
                   </span>
                 </div>
                 <h2 className="font-serif font-bold text-navy-900 text-sm leading-snug mb-2 group-hover:text-gold-600 transition-colors line-clamp-2">
-                  <Link
-                    href={`/${lang}/blog/${slug}`}
-                    className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-gold-400 focus-visible:after:rounded-2xl"
-                  >
-                    {title}
-                  </Link>
+                  {title}
                 </h2>
                 {desc && (
-                  <p className="text-xs text-navy-500 leading-relaxed line-clamp-2">{desc}</p>
+                  <p className="text-xs text-navy-500 leading-relaxed mb-4 line-clamp-2">{desc}</p>
                 )}
-              </div>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-gold-600 group-hover:gap-2 transition-all duration-200">
+                  {t(LABELS.read, lang)}
+                </span>
+              </Link>
             )
           })}
         </div>
