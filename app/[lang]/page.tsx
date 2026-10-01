@@ -221,13 +221,13 @@ export default async function HomePage({ params }: Props) {
                   {num:'5', a:{en:'Languages',ar:'لغات',ru:'Языков',zh:'种语言',es:'Idiomas'}, b:{en:'Supported',ar:'مدعومة',ru:'Поддержка',zh:'支持',es:'Soportados'}},
                   {num:'7', a:{en:'Days/Week',ar:'أيام أسبوعياً',ru:'Дней/неделю',zh:'天/周',es:'Días/Semana'}, b:{en:'Support',ar:'دعم',ru:'Поддержка',zh:'支持',es:'Soporte'}},
                 ].map((s,i) => (
-                  <div key={i} className="flex items-center gap-2">
+                  <div key={i} className="flex items-center">
+                    {i > 0 && <div className="w-px h-8 bg-navy-600 mx-3" />}
                     <span className="font-serif text-xl font-bold text-gold-400">{s.num}</span>
-                    <div className="text-[10px] text-navy-400 leading-tight">
+                    <div className="text-[10px] text-navy-400 leading-tight ms-2">
                       <div className="text-white font-semibold">{t(s.a,lang)}</div>
                       <div>{t(s.b,lang)}</div>
                     </div>
-                    {i < 2 && <div className="w-px bg-navy-600 self-stretch ms-2" />}
                   </div>
                 ))}
               </div>
