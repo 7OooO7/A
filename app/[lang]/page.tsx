@@ -198,7 +198,7 @@ export default async function HomePage({ params }: Props) {
       {/* HERO */}
       <section className="relative hero-bg overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 15% 50%, rgba(212,180,58,.06) 0%, transparent 60%), radial-gradient(ellipse at 85% 20%, rgba(74,106,138,.12) 0%, transparent 60%)'}} />
-        <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-16 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 lg:px-8 pt-16 lg:pt-24 pb-10 lg:pb-14">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2 mb-6">
