@@ -202,8 +202,8 @@ export default async function HomePage({ params }: Props) {
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="badge-green">⚡ {t(H.b1,lang)}</span>
-                <span className="badge-gold">{t(H.b2,lang)}</span>
+                <span className="badge-green">{t(H.b2,lang)}</span>
+                <span className="badge-navy">⚡ {t(H.b1,lang)}</span>
                 <span className="badge-navy">{t(H.b3,lang)}</span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
