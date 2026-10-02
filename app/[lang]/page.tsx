@@ -210,21 +210,21 @@ export default async function HomePage({ params }: Props) {
 {t(H.h1, lang)}
               </h1>
               <p className="text-navy-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">{t(H.sub, lang)}</p>
-               <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3">
   <a href={waUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#20b958] transition-colors text-sm">
     {WA_ICON}{t(H.start, lang)}
+  </a>
+
+  <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 bg-white text-navy-900 font-bold px-7 py-3.5 rounded-xl hover:bg-gold-50 transition-colors text-sm border border-white/80">
+    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+    {t({ en:'Email', ar:'راسلنا', ru:'Почта', zh:'邮件', es:'Email' }, lang)}
   </a>
 
   <Link href={`/${lang}/power-of-attorney`} className="inline-flex items-center gap-2 bg-navy-800 text-navy-200 font-bold px-7 py-3.5 rounded-xl hover:bg-navy-700 transition-colors text-sm border border-navy-700">
     {t(H.all_svc, lang)}
   </Link>
-
-  <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 bg-navy-800 text-navy-200 font-bold px-7 py-3.5 rounded-xl hover:bg-navy-700 transition-colors text-sm border border-navy-700">
-    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>
-    {t({ en:'Email Us', ar:'راسلنا', ru:'Почта', zh:'邮件', es:'Escríbenos' }, lang)}
-  </a>
 </div>
 
               {/* Stats */}
