@@ -15,37 +15,37 @@
       "friday": "Fri: WhatsApp only"
     }
   },
-  "languages": [
-    {
-      "code": "en",
-      "label": "EN",
-      "title": "English",
-      "dir": "ltr"
-    },
-    {
-      "code": "ar",
-      "label": "ع",
-      "title": "عربي",
-      "dir": "rtl"
-    },
-    {
-      "code": "ru",
-      "label": "РУ",
-      "title": "Русский",
-      "dir": "ltr"
-    },
-    {
-      "code": "zh",
-      "label": "中",
-      "title": "中文",
-      "dir": "ltr"
-    },
-    {
-      "code": "es",
-      "label": "ES",
-      "title": "Español",
-      "dir": "ltr"
-    }
+"languages": [
+  {
+    "code": "en",
+    "label": "English",
+    "title": "English",
+    "dir": "ltr"
+  },
+  {
+    "code": "ar",
+    "label": "العربية",
+    "title": "عربي",
+    "dir": "rtl"
+  },
+  {
+    "code": "ru",
+    "label": "Русский",
+    "title": "Русский",
+    "dir": "ltr"
+  },
+  {
+    "code": "zh",
+    "label": "中文",
+    "title": "中文",
+    "dir": "ltr"
+  },
+  {
+    "code": "es",
+    "label": "Español",
+    "title": "Español",
+    "dir": "ltr"
+  }
   ],
   "nav": {
     "poa": {
