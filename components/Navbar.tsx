@@ -162,6 +162,7 @@ export default function Navbar({ lang }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeKey, setActiveKey] = useState<string | null>(null)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
+  const [langOpen, setLangOpen] = useState(false)
   const pathname = usePathname()
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navItems = buildNav(lang)
@@ -349,25 +350,59 @@ export default function Navbar({ lang }: Props) {
 
           {/* ── Right side ── */}
           <div className="flex items-center gap-2 shrink-0">
-            {/* Language switcher */}
-            <div className="hidden sm:flex items-center">
-              {languages.map((l, i) => (
-                <span key={l.code} className="flex items-center">
-                  {i > 0 && <span className="text-navy-600 text-xs mx-0.5">|</span>}
-                  <Link
-                    href={switchLangPath(l.code)}
-                    className={`text-xs font-semibold px-1.5 py-1 rounded transition-colors ${
-                      lang === l.code
-                        ? 'text-gold-400'
-                        : 'text-navy-400 hover:text-gold-400'
-                    }`}
-                    title={l.title}
-                  >
-                    {l.label}
-                  </Link>
-                </span>
-              ))}
-            </div>
+
+{/* ── Language Dropdown ── */}
+<div 
+  className="relative hidden sm:block"
+  onMouseEnter={() => setLangOpen(true)}
+  onMouseLeave={() => setLangOpen(false)}
+>
+  <button
+    className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
+      langOpen ? 'text-gold-400 bg-white/[0.07]' : 'text-navy-300 hover:text-white hover:bg-white/[0.05]'
+    }`}
+  >
+    {/* أيقونة الكرة الأرضية */}
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+    </svg>
+    {/* عرض اللغة الحالية */}
+    <span>{languages.find(l => l.code === lang)?.label || 'EN'}</span>
+    <svg className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : 'opacity-50'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  {/* القائمة المنسدلة */}
+  {langOpen && (
+    <div 
+      className="absolute top-full mt-2 bg-white rounded-xl shadow-2xl border border-navy-100/80 p-1.5 z-50 min-w-[140px]"
+      style={{
+        [isRTL ? 'left' : 'right']: 0, // تفتح لليسار في العربية ولليمين في الإنجليزية
+      }}
+    >
+      {languages.map((l) => (
+        <Link
+          key={l.code}
+          href={switchLangPath(l.code)}
+          className={`flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${
+            lang === l.code
+              ? 'bg-gold-50 text-gold-600 font-bold'
+              : 'text-navy-600 hover:bg-navy-50 hover:text-navy-900 font-medium'
+          }`}
+          onClick={() => setLangOpen(false)}
+        >
+          <span>{l.label}</span>
+          {lang === l.code && (
+            <svg className="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            </svg>
+          )}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
 
             {/* Phone */}
             <a
