@@ -68,24 +68,13 @@ const blogContent = content.blog_content as Record<string, {
   date?: string;
 }>
 
-const BLOG_SLUGS = [
-  'how-to-get-poa-dubai',
-  'power-of-attorney-types-dubai',
-  'difference-between-general-and-special-poa-uae',
-  'poa-for-banking-uae-guide',
-  'corporate-poa-vs-individual-poa-uae',
-  'mofa-attestation-guide',
-  'eviction-notice-requirements-dubai',
-  'whatsapp-eviction-notice-dubai-valid',
-  'rdc-filing-guide-dubai',
-  'how-to-attend-rdc-hearing-dubai-2026',
-  'last-will-testament-dubai-expats',
-  'travelling-minor-child-uae-rules',
-  'notary-public-vs-lawyer-dubai',
-  'notarize-documents-without-visiting-uae',
-  'affidavit-dubai-complete-guide',
-  'corporate-documents-dubai',
-]
+const BLOG_SLUGS = Object.keys(blogContent)
+  .filter((slug) => blogContent[slug] && (blogContent[slug] as any).title_en)
+  .sort((a, b) => {
+    const dateA = blogContent[a]?.date ? new Date(blogContent[a].date).getTime() : 0
+    const dateB = blogContent[b]?.date ? new Date(blogContent[b].date).getTime() : 0
+    return dateB - dateA
+  })
 
 export default async function BlogPage({ params }: Props) {
   const { lang } = await params
