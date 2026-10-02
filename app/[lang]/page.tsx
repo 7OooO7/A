@@ -87,10 +87,6 @@ const CORP_SERVICES = [
   { slug: 'contract', en: 'Commercial Contract', ar: 'عقد تجاري', ru: 'Коммерческий договор', zh: '商业合同', es: 'Contrato Comercial', desc_en: 'Service agreements & business partnerships', desc_ar: 'اتفاقيات الخدمات والشراكات التجارية', desc_ru: 'Договоры услуг и деловые партнёрства', desc_es: 'Acuerdos de servicio y asociaciones comerciales' },
 ]
 
-// Services with live pages that had no card in the homepage body.
-// Card copy is condensed from each page's own meta description.
-
-// RDC case-type pages — own homepage section.
 const RDC_SERVICES = [
   { href: 'rdc-support/eviction-case',
     t: { en:'Eviction Case', ar:'دعوى الإخلاء', ru:'Дело о выселении', zh:'驱逐案件', es:'Caso de Desalojo' },
@@ -121,7 +117,6 @@ const RDC_SERVICES = [
     d: { en:'Landlord refusing your rent or cheques. The request puts the rent or the keys before the RDC judge.', ar:'المؤجر يرفض استلام الأجرة أو الشيكات. الطلب يعرض الأجرة أو المفاتيح على قاضي المركز.', ru:'Арендодатель отказывается принять плату или чеки. Заявление передаёт аренду или ключи судье RDC.', zh:'房东拒收租金或支票。该申请将租金或钥匙提交租赁纠纷中心法官。', es:'El propietario rechaza su alquiler o cheques. La solicitud pone el alquiler o las llaves ante el juez del RDC.' } },
 ]
 
-// Sub-pages under existing sections that had no card.
 const EXTRA_POA2 = [
   { href: 'power-of-attorney/real-estate/sale',
     t: { en:'Property Sale POA', ar:'وكالة بيع عقار', ru:'Доверенность на продажу', zh:'房产出售授权书', es:'POA de Venta de Inmueble' },
@@ -198,7 +193,7 @@ export default async function HomePage({ params }: Props) {
       {/* HERO */}
       <section className="relative hero-bg overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{background:'radial-gradient(ellipse at 15% 50%, rgba(212,180,58,.06) 0%, transparent 60%), radial-gradient(ellipse at 85% 20%, rgba(74,106,138,.12) 0%, transparent 60%)'}} />
-        <div className="relative mx-auto max-w-7xl px-4 lg:px-8 pt-16 lg:pt-24 pb-10 lg:pb-14">
+        <div className="relative mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)] pt-16 lg:pt-24 pb-10 lg:pb-14">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2 mb-6">
@@ -274,7 +269,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      {/* What is a Notary Public — direct answer */}
+      {/* What is a Notary Public */}
       <section className="bg-white py-12 border-t border-navy-100">
         <div className="mx-auto max-w-4xl px-4 lg:px-8">
           <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 sm:text-3xl mb-4">{t(H.wnp_h, lang)}</h2>
@@ -284,7 +279,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* POA */}
       <section className="bg-white py-16 border-t border-navy-100">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div>
               <p className="overline-label mb-2">{t({en:'Most Requested',ar:'الأكثر طلباً',ru:'Наиболее востребовано',zh:'最受欢迎',es:'Más solicitado'}, lang)}</p>
@@ -329,7 +324,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* CORPORATE */}
       <section className="bg-navy-50 py-16 border-t border-navy-100">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div>
               <p className="overline-label mb-2">{t({en:'For Corporate & Business Clients',ar:'للشركات وعملاء الأعمال',ru:'Для корпоративных клиентов',zh:'企业及商业客户',es:'Para Clientes Corporativos y Empresariales'}, lang)}</p>
@@ -362,7 +357,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Attestation */}
       <section className="bg-white py-16 border-t border-navy-100">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <p className="overline-label mb-2">{t({en:'Government & Embassy',ar:'الجهات الحكومية والبعثات الدبلوماسية',ru:'Правительство и посольство',zh:'政府及大使馆',es:'Gobierno y Embajada'}, lang)}</p>
           <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 sm:text-3xl mb-8">{t(H.attest_h, lang)}</h2>
           <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
@@ -384,7 +379,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Tenancy */}
       <section className="bg-navy-50 py-16 border-t border-navy-100">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <p className="overline-label mb-2">{t({en:'Tenant & Landlord',ar:'المستأجر والمؤجر',ru:'Арендатор и арендодатель',zh:'租客及房东',es:'Inquilino y Propietario'}, lang)}</p>
           <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 sm:text-3xl mb-8">{t(H.tenancy_h, lang)}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -408,7 +403,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* RDC — Rental Disputes Centre */}
       <section className="bg-white py-16 border-t border-navy-100">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="mb-10">
             <p className="overline-label mb-2">{t({en:'Rental Disputes Settlement Centre',ar:'مركز فض المنازعات الإيجارية',ru:'Центр разрешения арендных споров',zh:'租赁纠纷解决中心',es:'Centro de Resolución de Disputas de Alquiler'}, lang)}</p>
             <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 sm:text-3xl">{t({en:'RDC Case Support',ar:'دعم قضايا مركز فض المنازعات الإيجارية',ru:'Поддержка дел в RDC',zh:'租赁纠纷中心案件支持',es:'Apoyo en Casos del RDC'}, lang)}</h2>
@@ -427,7 +422,7 @@ export default async function HomePage({ params }: Props) {
 
       {/* Remote */}
       <section className="bg-navy-900 py-16 border-t border-navy-800">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <p className="overline-label mb-2 text-gold-500/70">{t({en:'No Office Visit Required',ar:'من دون زيارة المكتب',ru:'Без визита в офис',zh:'无需到访办公室',es:'Sin Visita Necesaria'}, lang)}</p>
           <h2 className="gold-line font-serif text-2xl font-bold text-white sm:text-3xl mb-8">{t(H.remote_h, lang)}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

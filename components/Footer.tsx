@@ -57,18 +57,16 @@ const HEADERS = {
 export default function Footer({ lang }: Props) {
   return (
     <footer className="bg-navy-900 border-t border-navy-800">
-      <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
+      {/* ✅ Dynamic container */}
+      <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)] py-12">
 
-        {/* ── Main grid: Brand + 4 link columns ── */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
-
-          {/* Brand column — spans 2 cols on lg */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-9 h-9 rounded-xl bg-navy-700 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/logo.png" 
-                    alt="E-Notary Dubai" 
+                  <img
+                    src="/logo.png"
+                    alt="E-Notary Dubai"
                     className="w-full h-full object-contain p-1"
                   />
                 </div>
@@ -92,7 +90,6 @@ export default function Footer({ lang }: Props) {
             </a>
           </div>
 
-          {/* POA column */}
           <div>
             <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wide mb-4">{t(HEADERS.poa, lang)}</h3>
             <ul className="space-y-2">
@@ -106,7 +103,6 @@ export default function Footer({ lang }: Props) {
             </ul>
           </div>
 
-          {/* Notary column */}
           <div>
             <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wide mb-4">{t(HEADERS.notary, lang)}</h3>
             <ul className="space-y-2">
@@ -120,7 +116,6 @@ export default function Footer({ lang }: Props) {
             </ul>
           </div>
 
-          {/* Tenancy column */}
           <div>
             <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wide mb-4">{t(HEADERS.tenancy, lang)}</h3>
             <ul className="space-y-2">
@@ -134,7 +129,6 @@ export default function Footer({ lang }: Props) {
             </ul>
           </div>
 
-          {/* Resources + Contact column */}
           <div>
             <h3 className="text-xs font-bold text-navy-400 uppercase tracking-wide mb-4">{t(HEADERS.resources, lang)}</h3>
             <ul className="space-y-2 mb-8">
@@ -181,7 +175,6 @@ export default function Footer({ lang }: Props) {
           </div>
         </div>
 
-        {/* ── Authority logos marquee ── */}
         <div className="mt-10 pt-8 border-t border-navy-800" dir="ltr">
           <AcceptedByMarquee
             variant="light"
@@ -193,12 +186,10 @@ export default function Footer({ lang }: Props) {
           />
         </div>
 
-        {/* ── Payment methods ── */}
         <div className="mt-6 pt-6 border-t border-navy-800">
           <PaymentMethods lang={lang} tone="dark" />
         </div>
 
-        {/* ── Bottom bar ── */}
         <div className="mt-6 pt-6 border-t border-navy-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-navy-500">{t(footer.copyright, lang)}</p>
           <p className="text-xs text-navy-600">{t(footer.disclaimer, lang)}</p>

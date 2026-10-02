@@ -16,7 +16,6 @@ const WA_ICON = (
 function buildNav(lang: Lang) {
   const l = lang
   return [
-    // ── 1. POWER OF ATTORNEY — Mega Menu (3 columns) ──────────────────────────
     {
       key: 'poa',
       label: { en: 'Power of Attorney', ar: 'الوكالات الرسمية', ru: 'Доверенности', zh: '授权委托书', es: 'Poderes Notariales' },
@@ -58,8 +57,6 @@ function buildNav(lang: Lang) {
       ],
       cta: { href: `/${l}/power-of-attorney`, label: { en: 'All POA Types →', ar: '← جميع أنواع الوكالات', ru: 'Все типы →', zh: '全部类型 →', es: 'Todos los Tipos →' } },
     },
-
-    // ── 2. CORPORATE ─────────────────────────────────────────────────────────
     {
       key: 'corporate',
       label: { en: 'Corporate', ar: 'الشركات', ru: 'Корпоративные', zh: '企业', es: 'Corporativo' },
@@ -73,8 +70,6 @@ function buildNav(lang: Lang) {
         { href: `/${l}/corporate/contract`,              label: { en: 'Commercial Contract',  ar: 'عقد تجاري',           ru: 'Коммерч. договор',     zh: '商业合同',    es: 'Contrato' } },
       ],
     },
-
-    // ── 3. NOTARIZATION & ATTESTATION ────────────────────────────────────────
     {
       key: 'notarization',
       label: { en: 'Notarization', ar: 'التوثيق والتصديق', ru: 'Нотариат', zh: '公证与认证', es: 'Notarización' },
@@ -92,8 +87,6 @@ function buildNav(lang: Lang) {
         { href: `/${l}/legal-translation/court`,   label: { en: '↳ Court Translation',  ar: '↳ ترجمة للمحاكم',    ru: '↳ Судебный перевод',    zh: '↳ 法院翻译',   es: '↳ Trad. Judicial' } },
       ],
     },
-
-    // ── 4. TENANCY & LEGAL ───────────────────────────────────────────────────
     {
       key: 'tenancy',
       label: { en: 'Tenancy & Legal', ar: 'الإيجار والقانون', ru: 'Аренда и право', zh: '租赁与法律', es: 'Arrendamiento' },
@@ -106,8 +99,6 @@ function buildNav(lang: Lang) {
         { href: `/${l}/what-is-tableegh`,              label: { en: 'What is Tableegh?',       ar: 'ما هو التبليغ؟',        ru: 'Что такое Tableegh?',      zh: '什么是Tableegh?', es: '¿Qué es Tableegh?' } },
       ],
     },
-
-    // ── 5. RENTAL DISPUTES (RDC) ─────────────────────────────────────────────
     {
       key: 'rdc',
       label: { en: 'Rental Disputes', ar: 'المنازعات الإيجارية', ru: 'Арендные споры', zh: '租赁纠纷', es: 'Disputas de Alquiler' },
@@ -140,8 +131,6 @@ function buildNav(lang: Lang) {
       ],
       cta: { href: `/${l}/rdc-support`, label: { en: 'All RDC Services →', ar: '← جميع خدمات مركز فض المنازعات الإيجارية', ru: 'Все услуги RDC →', zh: '全部RDC服务 →', es: 'Todos los Servicios RDC →' } },
     },
-
-    // ── 6. RESOURCES ─────────────────────────────────────────────────────────
     {
       key: 'resources',
       label: { en: 'Resources', ar: 'المصادر', ru: 'Ресурсы', zh: '资源', es: 'Recursos' },
@@ -193,7 +182,6 @@ export default function Navbar({ lang }: Props) {
     }, 250)
   }
 
-  // قفل التمرير عند فتح الـ drawer
   useEffect(() => {
     if (drawerOpen) {
       document.body.style.overflow = 'hidden'
@@ -203,7 +191,6 @@ export default function Navbar({ lang }: Props) {
     return () => { document.body.style.overflow = '' }
   }, [drawerOpen])
 
-  // إغلاق الـ drawer عند تغيير الصفحة
   useEffect(() => {
     setDrawerOpen(false)
     setExpanded(null)
@@ -219,10 +206,10 @@ export default function Navbar({ lang }: Props) {
         className="sticky top-0 z-40 shadow-xl shadow-navy-900/30"
         style={{ background: '#0a1628', borderBottom: '1px solid rgba(212,180,58,0.12)' }}
       >
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        {/* ✅ Dynamic container */}
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="flex h-16 items-center justify-between gap-3">
 
-            {/* ── Logo ── */}
             <Link href={`/${lang}`} className="flex items-center gap-1.5 sm:gap-3 shrink-0 group min-w-0">
               <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
                 <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1" />
@@ -233,10 +220,7 @@ export default function Navbar({ lang }: Props) {
               </div>
             </Link>
 
-            {/* ── Right side: Language + Phone + WhatsApp + Hamburger ── */}
             <div className="flex items-center gap-2 shrink-0">
-
-              {/* Language Dropdown */}
               <div className="relative hidden sm:block">
                 <button
                   onClick={() => setLangOpen((v) => !v)}
@@ -286,7 +270,6 @@ export default function Navbar({ lang }: Props) {
                 )}
               </div>
 
-              {/* Phone — hidden below xl */}
               <a
                 href={`tel:${site.phone}`}
                 className="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-navy-300 hover:text-white px-3 py-1.5 rounded-lg border border-navy-700 hover:border-navy-500 transition-colors whitespace-nowrap"
@@ -294,7 +277,6 @@ export default function Navbar({ lang }: Props) {
                 <span dir="ltr" className="inline-block">{site.phone_display}</span>
               </a>
 
-              {/* WhatsApp — always visible from sm+ */}
               <a
                 href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
                 target="_blank"
@@ -306,7 +288,6 @@ export default function Navbar({ lang }: Props) {
                 <span className="hidden sm:inline">{t(cta.whatsapp, lang)}</span>
               </a>
 
-              {/* Hamburger — always visible */}
               <button
                 onClick={() => setDrawerOpen(true)}
                 className="p-2.5 rounded-lg text-navy-300 hover:text-white hover:bg-navy-800 transition-colors"
@@ -321,7 +302,6 @@ export default function Navbar({ lang }: Props) {
         </div>
       </header>
 
-      {/* ── Drawer overlay ── */}
       <div
         className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
           drawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -330,7 +310,6 @@ export default function Navbar({ lang }: Props) {
         aria-hidden="true"
       />
 
-      {/* ── Drawer panel ── */}
       <aside
         className={`fixed top-0 bottom-0 z-50 w-[85vw] max-w-sm bg-[#0a1628] shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
           drawerOpen
@@ -345,7 +324,6 @@ export default function Navbar({ lang }: Props) {
         role="dialog"
         aria-modal="true"
       >
-        {/* Drawer header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-navy-800 shrink-0">
           <span className="font-serif font-bold text-white text-base">Menu</span>
           <button
@@ -359,10 +337,7 @@ export default function Navbar({ lang }: Props) {
           </button>
         </div>
 
-        {/* Drawer content */}
         <div className="flex-1 overflow-y-auto px-3 py-3">
-
-          {/* Language quick row */}
           <div className="flex items-center gap-1 px-2 pb-3 mb-2 border-b border-navy-800">
             {languages.map((l, i) => (
               <span key={l.code} className="flex items-center">
@@ -380,7 +355,6 @@ export default function Navbar({ lang }: Props) {
             ))}
           </div>
 
-          {/* Nav sections */}
           {navItems.map((item) => (
             <div key={item.key} className="mb-1">
               <button
@@ -398,7 +372,6 @@ export default function Navbar({ lang }: Props) {
 
               {expanded === item.key && (
                 <div className="bg-navy-800/50 mx-1 rounded-xl mb-2 py-1">
-                  {/* Mega menu columns */}
                   {(item as any).mega && (item as any).cols.map((col: any, ci: number) => (
                     <div key={ci}>
                       {col.heading && (
@@ -419,7 +392,6 @@ export default function Navbar({ lang }: Props) {
                     </div>
                   ))}
 
-                  {/* Regular items */}
                   {!(item as any).mega && (item as any).items?.map((sub: any) => (
                     <Link
                       key={sub.href}
@@ -431,7 +403,6 @@ export default function Navbar({ lang }: Props) {
                     </Link>
                   ))}
 
-                  {/* Section CTA */}
                   {(item as any).cta && (
                     <Link
                       href={(item as any).cta.href}
@@ -447,7 +418,6 @@ export default function Navbar({ lang }: Props) {
           ))}
         </div>
 
-        {/* Drawer footer */}
         <div className="px-4 py-4 border-t border-navy-800 flex flex-col gap-2 shrink-0">
           <a
             href={`tel:${site.phone}`}
