@@ -1,16 +1,60 @@
 import { NextResponse, type NextRequest } from 'next/server'
+import { LANGS } from '@/lib/i18n'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // E-Notary Dubai — Edge Middleware
 //
 // Responsibilities:
-//   1. Rate limiting — block aggressive scrapers / content-harvesters
-//   2. Bot user-agent filtering — block known scraping tools at the door
-//   3. Defense-in-depth path blocking for /data/* and config-like paths
-//   4. Pass-through for legitimate traffic (SEO bots explicitly allowed)
+//   1. Automatic language detection (Accept-Language + cookie preference)
+//   2. Rate limiting — block aggressive scrapers / content-harvesters
+//   3. Bot user-agent filtering — block known scraping tools at the door
+//   4. Defense-in-depth path blocking for /data/* and config-like paths
+//   5. Pass-through for legitimate traffic (SEO bots explicitly allowed)
 //
 // Runs on Vercel's Edge runtime (very fast, very cheap, global).
 // ─────────────────────────────────────────────────────────────────────────────
+
+// ── Language detection ──────────────────────────────────────────────────────
+const DEFAULT_LANG = 'en'
+const LANG_COOKIE = 'preferred-lang'
+const LANG_COOKIE_MAX_AGE = 60 * 60 * 24 * 365 // 1 year
+
+/**
+ * Picks the best supported language from an Accept-Language header.
+ * Example: "ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7" → "ar"
+ */
+function detectLanguage(acceptLang: string): string {
+  if (!acceptLang) return DEFAULT_LANG
+
+  const langs = acceptLang
+    .split(',')
+    .map((part) => {
+      const [code, q] = part.trim().split(';q=')
+      return {
+        code: code.trim().toLowerCase(),
+        quality: q ? parseFloat(q) : 1,
+      }
+    })
+    .sort((a, b) => b.quality - a.quality)
+
+  for (const { code } of langs) {
+    // ar-AE → ar ، en-US → en ، zh-Hans-CN → zh
+    const base = code.split('-')[0]
+    if ((LANGS as readonly string[]).includes(base)) {
+      return base
+    }
+  }
+  return DEFAULT_LANG
+}
+
+/**
+ * Returns true if the pathname already starts with a supported language code.
+ */
+function hasLangPrefix(pathname: string): boolean {
+  return (LANGS as readonly string[]).some(
+    (lang) => pathname === `/${lang}` || pathname.startsWith(`/${lang}/`)
+  )
+}
 
 // ── Rate limiter (in-memory, per edge instance) ─────────────────────────────
 // Note: Vercel's edge is distributed, so this is a per-POP limiter. It's
@@ -151,6 +195,40 @@ function isBlockedPath(pathname: string): boolean {
   return BLOCKED_PATH_PATTERNS.some((re) => re.test(pathname))
 }
 
+// ── Language redirect handler ────────────────────────────────────────────────
+// Only runs after security checks pass. Handles two cases:
+//   1. Path has no language prefix → detect and redirect (e.g. `/` → `/ar/`)
+//   2. Path has a language prefix   → save the preference to a cookie
+function handleLanguage(req: NextRequest, pathname: string): NextResponse | null {
+  const hasPrefix = hasLangPrefix(pathname)
+
+  // Case A: path already has a language — save it to cookie and pass through
+  if (hasPrefix) {
+    const currentLang = pathname.split('/')[1]
+    const res = NextResponse.next()
+    res.cookies.set(LANG_COOKIE, currentLang, {
+      maxAge: LANG_COOKIE_MAX_AGE,
+      path: '/',
+      sameSite: 'lax',
+    })
+    return res
+  }
+
+  // Case B: no language prefix — determine target language
+  // 1. User's saved preference (cookie) wins
+  const cookieLang = req.cookies.get(LANG_COOKIE)?.value
+  const targetLang =
+    cookieLang && (LANGS as readonly string[]).includes(cookieLang)
+      ? cookieLang
+      // 2. Otherwise, detect from Accept-Language header
+      : detectLanguage(req.headers.get('accept-language') || '')
+
+  // Redirect preserving the rest of the path + query string
+  const url = req.nextUrl.clone()
+  url.pathname = `/${targetLang}${pathname === '/' ? '' : pathname}`
+  return NextResponse.redirect(url)
+}
+
 // ── Main middleware ──────────────────────────────────────────────────────────
 
 export function middleware(req: NextRequest) {
@@ -188,6 +266,14 @@ export function middleware(req: NextRequest) {
     limited.headers.set('X-RateLimit-Limit', String(RATE_MAX_REQUESTS))
     limited.headers.set('X-RateLimit-Remaining', String(remaining))
     return limited
+  }
+
+  // 4. Language detection + redirect (runs after security checks pass)
+  //    Only for GET/HEAD requests — never for API calls or non-safe methods,
+  //    so we never break form submissions or webhooks.
+  if (SAFE_METHODS.has(req.method)) {
+    const langResponse = handleLanguage(req, pathname)
+    if (langResponse) return langResponse
   }
 
   return NextResponse.next()
