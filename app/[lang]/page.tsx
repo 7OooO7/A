@@ -217,9 +217,9 @@ export default async function HomePage({ params }: Props) {
     {t({ en:'Email', ar:'راسلنا', ru:'Почта', zh:'邮件', es:'Email' }, lang)}
   </a>
 
-  <Link href={`/${lang}/power-of-attorney`} className="inline-flex items-center gap-2 bg-navy-800 text-navy-200 font-bold px-7 py-3.5 rounded-xl hover:bg-navy-700 transition-colors text-sm border border-navy-700">
+  <a href="#services" className="inline-flex items-center gap-2 bg-navy-800 text-navy-200 font-bold px-7 py-3.5 rounded-xl hover:bg-navy-700 transition-colors text-sm border border-navy-700">
     {t(H.all_svc, lang)}
-  </Link>
+  </a>
 </div>
 
               {/* Stats */}
