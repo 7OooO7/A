@@ -1,0 +1,212 @@
+{
+  "version": "1.0",
+  "description": "General services internal links — 5 languages",
+  "section": "services",
+
+  "settings": {
+    "maxLinksPerPage": 6,
+    "excludeSelfLinks": true,
+    "linkFirstOccurrenceOnly": true,
+    "skipHeadings": true,
+    "minParagraphLength": 80
+  },
+
+  "doNotLink": [
+    "Dubai", "UAE", "دبي", "الإمارات", "Дубай", "ОАЭ", "迪拜", "阿联酋", "Dubái", "EAU",
+    "contact", "about", "اتصل", "عن الشركة", "контакты", "关于", "contacto",
+    "WhatsApp", "Email", "Phone"
+  ],
+
+  "keywords": [
+    {
+      "id": "e-notary",
+      "term": {
+        "en": "E-Notary",
+        "ar": "الكاتب العدل الإلكتروني",
+        "ru": "Электронный нотариус",
+        "zh": "电子公证",
+        "es": "Notario Electrónico"
+      },
+      "targetUrl": "/e-notary",
+      "enabled": true
+    },
+    {
+      "id": "mobile-notary",
+      "term": {
+        "en": "Mobile Notary",
+        "ar": "الكاتب العدل المتنقل",
+        "ru": "Выездной нотариус",
+        "zh": "上门公证",
+        "es": "Notario Móvil"
+      },
+      "targetUrl": "/mobile-notary",
+      "enabled": true
+    },
+    {
+      "id": "emergency-notary",
+      "term": {
+        "en": "Emergency Notary",
+        "ar": "الكاتب العدل الطارئ",
+        "ru": "Срочный нотариус",
+        "zh": "紧急公证",
+        "es": "Notario Urgente"
+      },
+      "targetUrl": "/emergency-notary",
+      "enabled": true
+    },
+    {
+      "id": "affidavit",
+      "term": {
+        "en": "Affidavit",
+        "ar": "الإقرار المحلف",
+        "ru": "Аффидевит",
+        "zh": "宣誓书",
+        "es": "Declaración Jurada"
+      },
+      "targetUrl": "/affidavit",
+      "enabled": true
+    },
+    {
+      "id": "certified-true-copy",
+      "term": {
+        "en": "Certified True Copy",
+        "ar": "النسخة طبق الأصل",
+        "ru": "Заверенная копия",
+        "zh": "认证副本",
+        "es": "Copia Certificada"
+      },
+      "targetUrl": "/certified-true-copy",
+      "enabled": true
+    },
+    {
+      "id": "last-will",
+      "term": {
+        "en": "Last Will & Testament",
+        "ar": "الوصية",
+        "ru": "Завещание",
+        "zh": "遗嘱",
+        "es": "Testamento"
+      },
+      "targetUrl": "/last-will-testament-dubai",
+      "enabled": true
+    },
+    {
+      "id": "poa-cancellation",
+      "term": {
+        "en": "POA Cancellation",
+        "ar": "إلغاء الوكالة",
+        "ru": "Отмена доверенности",
+        "zh": "撤销授权委托书",
+        "es": "Cancelación de Poder"
+      },
+      "targetUrl": "/poa-cancellation",
+      "enabled": true
+    },
+    {
+      "id": "legal-translation",
+      "term": {
+        "en": "Legal Translation",
+        "ar": "الترجمة القانونية",
+        "ru": "Юридический перевод",
+        "zh": "法律翻译",
+        "es": "Traducción Legal"
+      },
+      "targetUrl": "/legal-translation",
+      "enabled": true
+    },
+    {
+      "id": "legal-translation-court",
+      "term": {
+        "en": "Court Document Translation",
+        "ar": "ترجمة مستندات المحاكم",
+        "ru": "Судебный перевод",
+        "zh": "法院文件翻译",
+        "es": "Traducción Judicial"
+      },
+      "targetUrl": "/legal-translation/court",
+      "enabled": true
+    },
+    {
+      "id": "document-rejection",
+      "term": {
+        "en": "Document Rejection",
+        "ar": "رفض المستندات",
+        "ru": "Отклонение документов",
+        "zh": "文件被拒处理",
+        "es": "Documento Rechazado"
+      },
+      "targetUrl": "/document-rejection",
+      "enabled": true
+    },
+    {
+      "id": "why-poa-rejected",
+      "term": {
+        "en": "POA Rejection",
+        "ar": "رفض الوكالة",
+        "ru": "Отклонение доверенности",
+        "zh": "授权被拒原因",
+        "es": "Rechazo de Poder"
+      },
+      "targetUrl": "/why-poa-rejected-dubai",
+      "enabled": true
+    }
+  ],
+
+  "pages": {
+    "/e-notary": {
+      "applyKeywords": [
+        "mobile-notary", "emergency-notary", "affidavit"
+      ]
+    },
+    "/mobile-notary": {
+      "applyKeywords": [
+        "e-notary", "emergency-notary"
+      ]
+    },
+    "/emergency-notary": {
+      "applyKeywords": [
+        "e-notary", "mobile-notary"
+      ]
+    },
+    "/affidavit": {
+      "applyKeywords": [
+        "certified-true-copy", "legal-translation", "e-notary"
+      ]
+    },
+    "/certified-true-copy": {
+      "applyKeywords": [
+        "affidavit", "legal-translation"
+      ]
+    },
+    "/last-will-testament-dubai": {
+      "applyKeywords": [
+        "affidavit"
+      ]
+    },
+    "/poa-cancellation": {
+      "applyKeywords": [
+        "legal-translation"
+      ]
+    },
+    "/legal-translation": {
+      "applyKeywords": [
+        "legal-translation-court", "certified-true-copy"
+      ]
+    },
+    "/legal-translation/court": {
+      "applyKeywords": [
+        "legal-translation"
+      ]
+    },
+    "/document-rejection": {
+      "applyKeywords": [
+        "why-poa-rejected", "legal-translation"
+      ]
+    },
+    "/why-poa-rejected-dubai": {
+      "applyKeywords": [
+        "document-rejection"
+      ]
+    }
+  }
+}

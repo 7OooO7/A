@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "description": "Legal notices internal links — 5 languages",
+  "section": "legal-notice",
+
+  "settings": {
+    "maxLinksPerPage": 6,
+    "excludeSelfLinks": true,
+    "linkFirstOccurrenceOnly": true,
+    "skipHeadings": true,
+    "minParagraphLength": 80
+  },
+
+  "doNotLink": [
+    "Dubai", "UAE", "دبي", "الإمارات", "Дубай", "ОАЭ", "迪拜", "阿联酋", "Dubái", "EAU",
+    "contact", "about", "اتصل", "عن الشركة", "контакты", "关于", "contacto",
+    "WhatsApp", "Email", "Phone"
+  ],
+
+  "keywords": [
+    {
+      "id": "legal-notice",
+      "term": {
+        "en": "Legal Notice",
+        "ar": "إنذار قانوني",
+        "ru": "Юридическое уведомление",
+        "zh": "法律通知",
+        "es": "Notificación Legal"
+      },
+      "targetUrl": "/legal-notice",
+      "enabled": true
+    },
+    {
+      "id": "legal-notice-eviction",
+      "term": {
+        "en": "Eviction Notice",
+        "ar": "إنذار إخلاء",
+        "ru": "Уведомление о выселении",
+        "zh": "驱逐通知",
+        "es": "Aviso de Desalojo"
+      },
+      "targetUrl": "/legal-notice/eviction",
+      "enabled": true
+    },
+    {
+      "id": "legal-notice-poa-cancellation",
+      "term": {
+        "en": "POA Revocation Notice",
+        "ar": "إنذار إلغاء الوكالة",
+        "ru": "Уведомление об отзыве доверенности",
+        "zh": "授权撤销通知",
+        "es": "Aviso de Revocación de Poder"
+      },
+      "targetUrl": "/legal-notice/poa-cancellation",
+      "enabled": true
+    },
+    {
+      "id": "what-is-tableegh",
+      "term": {
+        "en": "Tableegh",
+        "ar": "التبليغ",
+        "ru": "Tableegh",
+        "zh": "Tableegh",
+        "es": "Tableegh"
+      },
+      "targetUrl": "/what-is-tableegh",
+      "enabled": true
+    },
+    {
+      "id": "poa-cancellation",
+      "term": {
+        "en": "POA Cancellation",
+        "ar": "إلغاء الوكالة",
+        "ru": "Отмена доверенности",
+        "zh": "撤销授权委托书",
+        "es": "Cancelación de Poder"
+      },
+      "targetUrl": "/poa-cancellation",
+      "enabled": true
+    },
+    {
+      "id": "rdc-support",
+      "term": {
+        "en": "RDC Support",
+        "ar": "دعم مركز فض المنازعات الإيجارية",
+        "ru": "Поддержка RDC",
+        "zh": "RDC支持",
+        "es": "Soporte RDC"
+      },
+      "targetUrl": "/rdc-support",
+      "enabled": true
+    }
+  ],
+
+  "pages": {
+    "/legal-notice": {
+      "applyKeywords": [
+        "legal-notice-eviction", "legal-notice-poa-cancellation",
+        "what-is-tableegh", "poa-cancellation"
+      ]
+    },
+    "/legal-notice/eviction": {
+      "applyKeywords": [
+        "legal-notice", "rdc-support", "what-is-tableegh"
+      ]
+    },
+    "/legal-notice/poa-cancellation": {
+      "applyKeywords": [
+        "legal-notice", "poa-cancellation"
+      ]
+    },
+    "/what-is-tableegh": {
+      "applyKeywords": [
+        "legal-notice", "legal-notice-eviction", "rdc-support"
+      ]
+    }
+  }
+}

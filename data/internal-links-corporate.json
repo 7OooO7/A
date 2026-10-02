@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "description": "Corporate internal links — 5 languages",
+  "section": "corporate",
+
+  "settings": {
+    "maxLinksPerPage": 6,
+    "excludeSelfLinks": true,
+    "linkFirstOccurrenceOnly": true,
+    "skipHeadings": true,
+    "minParagraphLength": 80
+  },
+
+  "doNotLink": [
+    "Dubai", "UAE", "دبي", "الإمارات", "Дубай", "ОАЭ", "迪拜", "阿联酋", "Dubái", "EAU",
+    "contact", "about", "اتصل", "عن الشركة", "контакты", "关于", "contacto",
+    "WhatsApp", "Email", "Phone"
+  ],
+
+  "keywords": [
+    {
+      "id": "corporate-moa",
+      "term": {
+        "en": "Memorandum of Association",
+        "ar": "عقد التأسيس",
+        "ru": "Учредительный договор",
+        "zh": "公司章程",
+        "es": "Acta Constitutiva"
+      },
+      "targetUrl": "/corporate/moa",
+      "enabled": true
+    },
+    {
+      "id": "corporate-moa-amendment",
+      "term": {
+        "en": "MOA Amendment",
+        "ar": "تعديل عقد التأسيس",
+        "ru": "Изменение учредительного договора",
+        "zh": "公司章程修订",
+        "es": "Modificación del Acta Constitutiva"
+      },
+      "targetUrl": "/corporate/moa-amendment",
+      "enabled": true
+    },
+    {
+      "id": "corporate-board-resolution",
+      "term": {
+        "en": "Board Resolution",
+        "ar": "قرار مجلس الإدارة",
+        "ru": "Решение совета директоров",
+        "zh": "董事会决议",
+        "es": "Resolución del Consejo"
+      },
+      "targetUrl": "/corporate/board-resolution",
+      "enabled": true
+    },
+    {
+      "id": "corporate-share-transfer",
+      "term": {
+        "en": "Share Transfer",
+        "ar": "نقل الحصص",
+        "ru": "Передача доли",
+        "zh": "股权转让",
+        "es": "Transferencia de Participaciones"
+      },
+      "targetUrl": "/corporate/share-transfer",
+      "enabled": true
+    },
+    {
+      "id": "corporate-shareholder-agreement",
+      "term": {
+        "en": "Shareholder Agreement",
+        "ar": "اتفاقية الشركاء",
+        "ru": "Соглашение участников",
+        "zh": "股东协议",
+        "es": "Acuerdo de Socios"
+      },
+      "targetUrl": "/corporate/shareholder-agreement",
+      "enabled": true
+    },
+    {
+      "id": "corporate-contract",
+      "term": {
+        "en": "Commercial Contract",
+        "ar": "عقد تجاري",
+        "ru": "Коммерческий договор",
+        "zh": "商业合同",
+        "es": "Contrato Comercial"
+      },
+      "targetUrl": "/corporate/contract",
+      "enabled": true
+    },
+    {
+      "id": "corporate-liquidation",
+      "term": {
+        "en": "Company Liquidation",
+        "ar": "تصفية الشركات",
+        "ru": "Ликвидация компании",
+        "zh": "公司清算",
+        "es": "Liquidación de Empresa"
+      },
+      "targetUrl": "/corporate/liquidation",
+      "enabled": true
+    },
+    {
+      "id": "poa-company-formation",
+      "term": {
+        "en": "Company Formation Power of Attorney",
+        "ar": "وكالة تأسيس شركة",
+        "ru": "Доверенность на регистрацию компании",
+        "zh": "公司注册授权委托书",
+        "es": "Poder Notarial para Formación de Empresa"
+      },
+      "targetUrl": "/power-of-attorney/company-formation",
+      "enabled": true
+    },
+    {
+      "id": "legal-translation",
+      "term": {
+        "en": "Legal Translation",
+        "ar": "الترجمة القانونية",
+        "ru": "Юридический перевод",
+        "zh": "法律翻译",
+        "es": "Traducción Legal"
+      },
+      "targetUrl": "/legal-translation",
+      "enabled": true
+    }
+  ],
+
+  "pages": {
+    "/corporate/moa": {
+      "applyKeywords": [
+        "corporate-moa-amendment", "corporate-board-resolution",
+        "corporate-share-transfer", "corporate-liquidation"
+      ]
+    },
+    "/corporate/moa-amendment": {
+      "applyKeywords": [
+        "corporate-moa", "corporate-share-transfer", "corporate-board-resolution"
+      ]
+    },
+    "/corporate/board-resolution": {
+      "applyKeywords": [
+        "corporate-moa", "corporate-contract", "poa-company-formation"
+      ]
+    },
+    "/corporate/share-transfer": {
+      "applyKeywords": [
+        "corporate-moa", "corporate-moa-amendment", "corporate-shareholder-agreement"
+      ]
+    },
+    "/corporate/shareholder-agreement": {
+      "applyKeywords": [
+        "corporate-moa", "corporate-share-transfer", "corporate-contract"
+      ]
+    },
+    "/corporate/contract": {
+      "applyKeywords": [
+        "corporate-board-resolution", "corporate-shareholder-agreement",
+        "legal-translation"
+      ]
+    },
+    "/corporate/liquidation": {
+      "applyKeywords": [
+        "corporate-moa", "corporate-board-resolution"
+      ]
+    }
+  }
+}

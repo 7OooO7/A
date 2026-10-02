@@ -1,0 +1,211 @@
+{
+  "version": "1.0",
+  "description": "RDC internal links — 5 languages",
+  "section": "rdc-support",
+
+  "settings": {
+    "maxLinksPerPage": 6,
+    "excludeSelfLinks": true,
+    "linkFirstOccurrenceOnly": true,
+    "skipHeadings": true,
+    "minParagraphLength": 80
+  },
+
+  "doNotLink": [
+    "Dubai", "UAE", "دبي", "الإمارات", "Дубай", "ОАЭ", "迪拜", "阿联酋", "Dubái", "EAU",
+    "contact", "about", "اتصل", "عن الشركة", "контакты", "关于", "contacto",
+    "WhatsApp", "Email", "Phone"
+  ],
+
+  "keywords": [
+    {
+      "id": "rdc-support",
+      "term": {
+        "en": "RDC Support",
+        "ar": "دعم مركز فض المنازعات الإيجارية",
+        "ru": "Поддержка RDC",
+        "zh": "RDC支持",
+        "es": "Soporte RDC"
+      },
+      "targetUrl": "/rdc-support",
+      "enabled": true
+    },
+    {
+      "id": "rdc-eviction-case",
+      "term": {
+        "en": "Eviction Case at RDC",
+        "ar": "دعوى الإخلاء",
+        "ru": "Дело о выселении в RDC",
+        "zh": "RDC驱逐诉讼",
+        "es": "Demanda de Desalojo en RDC"
+      },
+      "targetUrl": "/rdc-support/eviction-case",
+      "enabled": true
+    },
+    {
+      "id": "rdc-rent-claim",
+      "term": {
+        "en": "Unpaid Rent Claim",
+        "ar": "المطالبة بالأجرة المتأخرة",
+        "ru": "Взыскание задолженности по аренде",
+        "zh": "拖欠租金追讨",
+        "es": "Reclamación de Alquiler Impagado"
+      },
+      "targetUrl": "/rdc-support/rent-claim",
+      "enabled": true
+    },
+    {
+      "id": "rdc-execution",
+      "term": {
+        "en": "RDC Execution",
+        "ar": "تنفيذ الأحكام الإيجارية",
+        "ru": "Исполнение решения RDC",
+        "zh": "RDC执行",
+        "es": "Ejecución RDC"
+      },
+      "targetUrl": "/rdc-support/execution",
+      "enabled": true
+    },
+    {
+      "id": "rdc-e-requests",
+      "term": {
+        "en": "RDC E-Requests",
+        "ar": "الطلبات الإلكترونية للمركز",
+        "ru": "Электронные запросы RDC",
+        "zh": "RDC电子申请",
+        "es": "Solicitudes Electrónicas RDC"
+      },
+      "targetUrl": "/rdc-support/e-requests",
+      "enabled": true
+    },
+    {
+      "id": "rdc-contract-renewal",
+      "term": {
+        "en": "Tenancy Renewal Case",
+        "ar": "دعوى تجديد عقد الإيجار",
+        "ru": "Дело о продлении аренды",
+        "zh": "租赁续约诉讼",
+        "es": "Demanda de Renovación de Arrendamiento"
+      },
+      "targetUrl": "/rdc-support/contract-renewal",
+      "enabled": true
+    },
+    {
+      "id": "rdc-tenant-defence",
+      "term": {
+        "en": "Tenant Defence",
+        "ar": "دفاع المستأجر",
+        "ru": "Защита арендатора",
+        "zh": "租客抗辩",
+        "es": "Defensa del Inquilino"
+      },
+      "targetUrl": "/rdc-support/tenant-defence",
+      "enabled": true
+    },
+    {
+      "id": "rdc-urgent-orders",
+      "term": {
+        "en": "Urgent Petition Orders",
+        "ar": "الأوامر على العرائض",
+        "ru": "Срочные заявления в RDC",
+        "zh": "紧急申请令",
+        "es": "Órdenes Urgentes"
+      },
+      "targetUrl": "/rdc-support/urgent-orders",
+      "enabled": true
+    },
+    {
+      "id": "rdc-bounced-cheque",
+      "term": {
+        "en": "Bounced Cheque Execution",
+        "ar": "تنفيذ الشيكات المرتجعة",
+        "ru": "Исполнительное дело по чекам",
+        "zh": "支票退票执行",
+        "es": "Ejecución de Cheques Devueltos"
+      },
+      "targetUrl": "/rdc-support/bounced-cheque",
+      "enabled": true
+    },
+    {
+      "id": "rdc-offer-and-deposit",
+      "term": {
+        "en": "Offer and Deposit",
+        "ar": "العرض والإيداع",
+        "ru": "Оферта и депонирование",
+        "zh": "提存申请",
+        "es": "Oferta y Consignación"
+      },
+      "targetUrl": "/rdc-support/offer-and-deposit",
+      "enabled": true
+    },
+    {
+      "id": "legal-notice-eviction",
+      "term": {
+        "en": "Eviction Notice",
+        "ar": "إنذار إخلاء",
+        "ru": "Уведомление о выселении",
+        "zh": "驱逐通知",
+        "es": "Aviso de Desalojo"
+      },
+      "targetUrl": "/legal-notice/eviction",
+      "enabled": true
+    }
+  ],
+
+  "pages": {
+    "/rdc-support": {
+      "applyKeywords": [
+        "rdc-eviction-case", "rdc-rent-claim", "rdc-execution",
+        "rdc-e-requests", "rdc-contract-renewal", "rdc-tenant-defence"
+      ]
+    },
+    "/rdc-support/eviction-case": {
+      "applyKeywords": [
+        "legal-notice-eviction", "rdc-support",
+        "rdc-execution", "rdc-rent-claim"
+      ]
+    },
+    "/rdc-support/rent-claim": {
+      "applyKeywords": [
+        "rdc-support", "rdc-execution",
+        "rdc-bounced-cheque", "rdc-eviction-case"
+      ]
+    },
+    "/rdc-support/execution": {
+      "applyKeywords": [
+        "rdc-support", "rdc-e-requests",
+        "rdc-eviction-case", "rdc-rent-claim"
+      ]
+    },
+    "/rdc-support/e-requests": {
+      "applyKeywords": [
+        "rdc-execution", "rdc-support", "rdc-rent-claim"
+      ]
+    },
+    "/rdc-support/contract-renewal": {
+      "applyKeywords": [
+        "rdc-offer-and-deposit", "rdc-support", "rdc-tenant-defence"
+      ]
+    },
+    "/rdc-support/tenant-defence": {
+      "applyKeywords": [
+        "rdc-support", "rdc-offer-and-deposit", "legal-notice-eviction"
+      ]
+    },
+    "/rdc-support/urgent-orders": {
+      "applyKeywords": [
+        "rdc-support", "rdc-offer-and-deposit", "rdc-execution"
+      ]
+    },
+    "/rdc-support/bounced-cheque": {
+      "applyKeywords": [
+        "rdc-rent-claim", "rdc-execution", "rdc-e-requests"
+      ]
+    },
+    "/rdc-support/offer-and-deposit": {
+      "applyKeywords": [
+        "rdc-contract-renewal", "rdc-tenant-defence", "rdc-support"
+      ]
+    }
+  }
+}

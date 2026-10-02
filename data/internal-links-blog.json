@@ -1,0 +1,232 @@
+{
+  "version": "1.0",
+  "description": "Blog internal links — 5 languages",
+  "section": "blog",
+
+  "settings": {
+    "maxLinksPerPage": 8,
+    "excludeSelfLinks": true,
+    "linkFirstOccurrenceOnly": true,
+    "skipHeadings": true,
+    "minParagraphLength": 80
+  },
+
+  "doNotLink": [
+    "Dubai", "UAE", "دبي", "الإمارات", "Дубай", "ОАЭ", "迪拜", "阿联酋", "Dubái", "EAU",
+    "contact", "about", "اتصل", "عن الشركة", "контакты", "关于", "contacto",
+    "WhatsApp", "Email", "Phone"
+  ],
+
+  "keywords": [
+    {
+      "id": "poa-overview",
+      "term": { "en": "Power of Attorney", "ar": "الوكالة القانونية", "ru": "Доверенность", "zh": "授权委托书", "es": "Poder Notarial" },
+      "targetUrl": "/power-of-attorney",
+      "enabled": true
+    },
+    {
+      "id": "poa-general",
+      "term": { "en": "General Power of Attorney", "ar": "الوكالة العامة", "ru": "Генеральная доверенность", "zh": "一般授权委托书", "es": "Poder Notarial General" },
+      "targetUrl": "/power-of-attorney/general",
+      "enabled": true
+    },
+    {
+      "id": "poa-special",
+      "term": { "en": "Special Power of Attorney", "ar": "الوكالة الخاصة", "ru": "Специальная доверенность", "zh": "特别授权委托书", "es": "Poder Notarial Especial" },
+      "targetUrl": "/power-of-attorney/special",
+      "enabled": true
+    },
+    {
+      "id": "poa-real-estate",
+      "term": { "en": "Real Estate Power of Attorney", "ar": "الوكالة العقارية", "ru": "Доверенность на недвижимость", "zh": "房产授权委托书", "es": "Poder Notarial de Bienes Raíces" },
+      "targetUrl": "/power-of-attorney/real-estate",
+      "enabled": true
+    },
+    {
+      "id": "poa-real-estate-sale",
+      "term": { "en": "Property Sale Power of Attorney", "ar": "وكالة بيع عقار", "ru": "Доверенность на продажу недвижимости", "zh": "房产出售授权委托书", "es": "Poder Notarial para Venta de Propiedad" },
+      "targetUrl": "/power-of-attorney/real-estate/sale",
+      "enabled": true
+    },
+    {
+      "id": "poa-bank",
+      "term": { "en": "Bank Power of Attorney", "ar": "الوكالة البنكية", "ru": "Банковская доверенность", "zh": "银行授权委托书", "es": "Poder Notarial Bancario" },
+      "targetUrl": "/power-of-attorney/bank",
+      "enabled": true
+    },
+    {
+      "id": "poa-court",
+      "term": { "en": "Court Power of Attorney", "ar": "الوكالة القضائية", "ru": "Судебная доверенность", "zh": "法院授权委托书", "es": "Poder Notarial Judicial" },
+      "targetUrl": "/power-of-attorney/court",
+      "enabled": true
+    },
+    {
+      "id": "poa-child-travel",
+      "term": { "en": "Child Travel Consent", "ar": "موافقة سفر الطفل", "ru": "Согласие на выезд ребёнка", "zh": "儿童旅行同意书", "es": "Consentimiento de Viaje de Menor" },
+      "targetUrl": "/power-of-attorney/child-travel",
+      "enabled": true
+    },
+    {
+      "id": "poa-inheritance",
+      "term": { "en": "Inheritance Power of Attorney", "ar": "وكالة الميراث", "ru": "Доверенность по наследству", "zh": "继承授权委托书", "es": "Poder Notarial de Herencia" },
+      "targetUrl": "/power-of-attorney/inheritance",
+      "enabled": true
+    },
+    {
+      "id": "attestation-mofa",
+      "term": { "en": "MOFA Attestation", "ar": "تصديق وزارة الخارجية", "ru": "Легализация MOFA", "zh": "外交部认证", "es": "Autenticación MOFA" },
+      "targetUrl": "/attestation/mofa",
+      "enabled": true
+    },
+    {
+      "id": "legal-notice-eviction",
+      "term": { "en": "Eviction Notice", "ar": "إنذار إخلاء", "ru": "Уведомление о выселении", "zh": "驱逐通知", "es": "Aviso de Desalojo" },
+      "targetUrl": "/legal-notice/eviction",
+      "enabled": true
+    },
+    {
+      "id": "rdc-support",
+      "term": { "en": "RDC Support", "ar": "دعم مركز فض المنازعات الإيجارية", "ru": "Поддержка RDC", "zh": "RDC支持", "es": "Soporte RDC" },
+      "targetUrl": "/rdc-support",
+      "enabled": true
+    },
+    {
+      "id": "rdc-eviction-case",
+      "term": { "en": "Eviction Case at RDC", "ar": "دعوى الإخلاء", "ru": "Дело о выселении в RDC", "zh": "RDC驱逐诉讼", "es": "Demanda de Desalojo en RDC" },
+      "targetUrl": "/rdc-support/eviction-case",
+      "enabled": true
+    },
+    {
+      "id": "corporate-moa",
+      "term": { "en": "Memorandum of Association", "ar": "عقد التأسيس", "ru": "Учредительный договор", "zh": "公司章程", "es": "Acta Constitutiva" },
+      "targetUrl": "/corporate/moa",
+      "enabled": true
+    },
+    {
+      "id": "corporate-board-resolution",
+      "term": { "en": "Board Resolution", "ar": "قرار مجلس الإدارة", "ru": "Решение совета директоров", "zh": "董事会决议", "es": "Resolución del Consejo" },
+      "targetUrl": "/corporate/board-resolution",
+      "enabled": true
+    },
+    {
+      "id": "affidavit",
+      "term": { "en": "Affidavit", "ar": "الإقرار المحلف", "ru": "Аффидевит", "zh": "宣誓书", "es": "Declaración Jurada" },
+      "targetUrl": "/affidavit",
+      "enabled": true
+    },
+    {
+      "id": "legal-translation",
+      "term": { "en": "Legal Translation", "ar": "الترجمة القانونية", "ru": "Юридический перевод", "zh": "法律翻译", "es": "Traducción Legal" },
+      "targetUrl": "/legal-translation",
+      "enabled": true
+    },
+    {
+      "id": "e-notary",
+      "term": { "en": "E-Notary", "ar": "الكاتب العدل الإلكتروني", "ru": "Электронный нотариус", "zh": "电子公证", "es": "Notario Electrónico" },
+      "targetUrl": "/e-notary",
+      "enabled": true
+    },
+    {
+      "id": "last-will",
+      "term": { "en": "Last Will & Testament", "ar": "الوصية", "ru": "Завещание", "zh": "遗嘱", "es": "Testamento" },
+      "targetUrl": "/last-will-testament-dubai",
+      "enabled": true
+    },
+    {
+      "id": "what-is-tableegh",
+      "term": { "en": "Tableegh", "ar": "التبليغ", "ru": "Tableegh", "zh": "Tableegh", "es": "Tableegh" },
+      "targetUrl": "/what-is-tableegh",
+      "enabled": true
+    }
+  ],
+
+  "pages": {
+    "/blog/how-to-get-poa-dubai": {
+      "applyKeywords": [
+        "poa-overview", "poa-general", "poa-special",
+        "poa-real-estate", "poa-bank", "poa-court"
+      ]
+    },
+    "/blog/power-of-attorney-types-dubai": {
+      "applyKeywords": [
+        "poa-general", "poa-special", "poa-real-estate",
+        "poa-bank", "poa-court", "poa-child-travel", "poa-inheritance"
+      ]
+    },
+    "/blog/difference-between-general-and-special-poa-uae": {
+      "applyKeywords": [
+        "poa-overview", "poa-general", "poa-special",
+        "poa-real-estate", "poa-bank", "poa-court"
+      ]
+    },
+    "/blog/poa-for-banking-uae-guide": {
+      "applyKeywords": [
+        "poa-bank", "poa-general", "poa-special",
+        "corporate-board-resolution", "corporate-moa"
+      ]
+    },
+    "/blog/corporate-poa-vs-individual-poa-uae": {
+      "applyKeywords": [
+        "poa-overview", "poa-general", "corporate-moa",
+        "corporate-board-resolution", "poa-bank"
+      ]
+    },
+    "/blog/mofa-attestation-guide": {
+      "applyKeywords": [
+        "attestation-mofa", "legal-translation", "poa-overview"
+      ]
+    },
+    "/blog/eviction-notice-requirements-dubai": {
+      "applyKeywords": [
+        "legal-notice-eviction", "rdc-support",
+        "rdc-eviction-case", "what-is-tableegh"
+      ]
+    },
+    "/blog/whatsapp-eviction-notice-dubai-valid": {
+      "applyKeywords": [
+        "legal-notice-eviction", "rdc-support", "what-is-tableegh"
+      ]
+    },
+    "/blog/rdc-filing-guide-dubai": {
+      "applyKeywords": [
+        "rdc-support", "rdc-eviction-case", "legal-notice-eviction"
+      ]
+    },
+    "/blog/how-to-attend-rdc-hearing-dubai-2026": {
+      "applyKeywords": [
+        "rdc-support", "rdc-eviction-case", "legal-notice-eviction"
+      ]
+    },
+    "/blog/last-will-testament-dubai-expats": {
+      "applyKeywords": [
+        "last-will", "poa-inheritance", "affidavit", "attestation-mofa"
+      ]
+    },
+    "/blog/travelling-minor-child-uae-rules": {
+      "applyKeywords": [
+        "poa-child-travel", "legal-translation", "attestation-mofa"
+      ]
+    },
+    "/blog/notary-public-vs-lawyer-dubai": {
+      "applyKeywords": [
+        "affidavit", "poa-overview", "e-notary"
+      ]
+    },
+    "/blog/notarize-documents-without-visiting-uae": {
+      "applyKeywords": [
+        "e-notary", "poa-overview", "attestation-mofa"
+      ]
+    },
+    "/blog/affidavit-dubai-complete-guide": {
+      "applyKeywords": [
+        "affidavit", "legal-translation", "e-notary"
+      ]
+    },
+    "/blog/corporate-documents-dubai": {
+      "applyKeywords": [
+        "corporate-moa", "corporate-board-resolution",
+        "corporate-share-transfer", "legal-translation"
+      ]
+    }
+  }
+}
