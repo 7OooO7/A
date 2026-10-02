@@ -27,7 +27,7 @@ export function t(obj: Record<string, string> | undefined, lang: Lang): string {
 export function getWaUrl(message: string): string {
   return `https://wa.me/${content.site.phone.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
 }
-
+  
 export function generateLangParams() {
   return LANGS.map((lang) => ({ lang }))
 }
