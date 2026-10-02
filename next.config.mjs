@@ -87,13 +87,11 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // ❌ REMOVED 2026-10-03: `'/' → '/en/'` rule.
-      // Reason: it forced every visitor to English and prevented the
-      // middleware from detecting the visitor's preferred language.
-      // The middleware now handles `'/'` → `'/<detected-lang>/'` per visitor.
-      // SEO note: Googlebot sends `Accept-Language: en-US` and will land on
-      // `/en/` as before, so ranking for the English canonical is unchanged.
-
+      {
+        source: '/',
+        destination: '/en/',
+        permanent: true,
+      },
       // 301 permanent: /attestation/apostille → /attestation/mofa (UAE is not a Hague member)
       {
         source: '/:lang(en|ar|ru|zh|es)/attestation/apostille',
@@ -247,17 +245,24 @@ const nextConfig = {
         destination: '/en/legal-notice/eviction/',
         permanent: true,
       },
-
-      // ❌ REMOVED 2026-10-03: catch-all rules that forced un-prefixed paths
-      // to `/en/...`:
-      //   source: '/:path((?!en|ar|ru|zh|es|_next|assets|api)[^/.]+)' → '/en/:path/'
-      //   source: '/:path((?!en|ar|ru|zh|es|_next|assets|api)[^/]+)/:rest+' → '/en/:path/:rest+/'
-      // Reason: they prevented per-visitor language detection on any
-      // un-prefixed path. The middleware now handles this:
-      //   `/about`  → `/ar/about/`  (for an Arabic visitor)
-      //   `/about`  → `/en/about/`  (for an English visitor)
-      // SEO note: Googlebot sends `Accept-Language: en-US` and continues to
-      // be served the English canonical, exactly as before.
+      // 301 permanent: bare (un-prefixed) paths → default language.
+      // Fixes the GSC 404 report (/faq, /contact, /power-of-attorney/vehicle …).
+      // Must stay last: it is a catch-all and would otherwise shadow the
+      // specific rules above. Excludes real top-level assets and API routes.
+      {
+        // [^/.]+ excludes every root-level file (anything with an extension):
+        // favicon.ico, favicon.svg, site.webmanifest, icon-*.png, robots.txt,
+        // sitemap.xml, llms.txt — and anything added later. No page slug on this
+        // site contains a dot, so real pages still redirect normally.
+        source: '/:path((?!en|ar|ru|zh|es|_next|assets|api)[^/.]+)',
+        destination: '/en/:path/',
+        permanent: true,
+      },
+      {
+        source: '/:path((?!en|ar|ru|zh|es|_next|assets|api)[^/]+)/:rest+',
+        destination: '/en/:path/:rest+/',
+        permanent: true,
+      },
     ]
   },
 
