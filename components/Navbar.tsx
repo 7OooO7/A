@@ -371,6 +371,17 @@ export default function Navbar({ lang }: Props) {
               <span dir="ltr" className="inline-block">{site.phone_display}</span>
             </a>
 
+           {/* Email CTA */}
+            <a
+              href={`mailto:${site.email}?subject=Inquiry%20from%20Website&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.`}
+              className="hidden sm:flex items-center gap-1.5 text-sm font-bold px-3.5 py-1.5 rounded-lg transition-colors bg-white text-navy-900 hover:bg-gold-50 border border-navy-200"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="hidden md:inline">{t({en:'Email',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}</span>
+            </a>
+
             {/* WhatsApp CTA */}
             <a
               href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
