@@ -58,7 +58,7 @@ export default function Footer({ lang }: Props) {
   return (
     <footer className="bg-navy-900 border-t border-navy-800">
       {/* ✅ Dynamic container */}
-      <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)] py-12">
+      <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
