@@ -207,7 +207,7 @@ export default function Navbar({ lang }: Props) {
         style={{ background: '#0a1628', borderBottom: '1px solid rgba(212,180,58,0.12)' }}
       >
         {/* ✅ Dynamic container */}
-                <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="flex h-16 items-center justify-between gap-3">
 
             <Link href={`/${lang}`} className="flex items-center gap-1.5 sm:gap-3 shrink-0 group min-w-0">
