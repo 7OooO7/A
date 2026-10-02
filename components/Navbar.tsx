@@ -218,7 +218,7 @@ export default function Navbar({ lang }: Props) {
     langTimeoutRef.current = setTimeout(() => {
       setLangOpen(false)
       langTimeoutRef.current = null
-    }, 500)   // ⬅️ 250ms (سريع كما طلبت)
+    }, 250) 
   }
   
 
