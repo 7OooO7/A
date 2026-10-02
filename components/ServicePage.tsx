@@ -123,13 +123,13 @@ export default function ServicePage({
       {breadcrumbSchemaItems.length > 0 && <BreadcrumbSchema items={breadcrumbSchemaItems}/>}
       {faqItems && faqItems.length > 0 && <FAQSchema items={faqItems} lang={lang}/>}
 
-      {/* ── HERO ── */}
+      {/* ── HERO — matches homepage layout exactly ── */}
       <section className="relative hero-bg pt-12 lg:pt-16 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-8 lg:pb-10">
+        <div className="relative mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)] pb-10 lg:pb-14">
 
           {/* Breadcrumb */}
           {breadcrumb && breadcrumb.length > 0 && (
-            <nav className="flex flex-wrap items-center gap-1.5 mb-5 text-xs text-navy-500">
+            <nav className="flex flex-wrap items-center gap-1.5 mb-6 text-xs text-navy-500">
               <Link href={`/${lang}`} className="hover:text-navy-300 transition-colors">{t(L.home, lang)}</Link>
               {breadcrumb.map((crumb, i) => (
                 <span key={i} className="flex items-center gap-1.5">
@@ -144,24 +144,22 @@ export default function ServicePage({
           )}
 
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
-            <div className="max-w-2xl">
+            {/* ── Left: text ── */}
+            <div className="max-w-3xl">
               {subtitle && (
                 <p className="overline-label mb-3">{t(subtitle, lang)}</p>
               )}
-              <h1 className="font-serif font-bold text-white mb-4 leading-[1.08] tracking-tight"
-                style={{fontSize:'clamp(28px, 4vw, 44px)', letterSpacing:'-0.02em'}}>
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
                 {t(title, lang)}
               </h1>
-              <p className="leading-relaxed mb-6 font-light"
-                style={{color:'#7a9cc0', fontSize:'14px', maxWidth:'520px'}}>
+              <p className="text-navy-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
                 {t(description, lang)}
               </p>
 
               {/* Badges */}
-              <div className="flex flex-wrap items-center gap-2 mb-5">
+              <div className="flex flex-wrap items-center gap-2 mb-6">
                 {authority && (
-                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-md"
-                    style={{background:'rgba(74,106,150,.2)',color:'#b8cde0',border:'1px solid rgba(74,106,150,.3)'}}>
+                  <span className="badge-navy">
                     <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                     </svg>
@@ -169,49 +167,45 @@ export default function ServicePage({
                   </span>
                 )}
                 {!noTimeline && (
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-md"
-                  style={{background:'rgba(74,106,150,.2)',color:'#b8cde0',border:'1px solid rgba(74,106,150,.3)'}}>
-                  {t(expressTimeline ? L.express : L.same_day, lang)}
-                </span>
+                  <span className="badge-navy">
+                    {t(expressTimeline ? L.express : L.same_day, lang)}
+                  </span>
                 )}
                 {!hideQrBadge && (
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-md"
-                  style={{background:'rgba(74,106,150,.2)',color:'#b8cde0',border:'1px solid rgba(74,106,150,.3)'}}>
-                  {t(L.qr_code, lang)}
-                </span>
+                  <span className="badge-navy">
+                    {t(L.qr_code, lang)}
+                  </span>
                 )}
               </div>
 
-              {/* Stats row */}
-              <div className="hero-stats-row mb-5">
-                <div className="hero-stat-item">
-                  <span className="hero-stat-num">5,000+</span>
-                  <div className="hero-stat-label">
-                    <strong>{t({en:'Documents',ar:'وثيقة',ru:'Документов',zh:'份文件',es:'Documentos'}, lang)}</strong>
-                    {t(preparedStat
-                      ? {en:'Prepared',ar:'مُجهَّزة',ru:'Подготовлено',zh:'已办理',es:'Preparados'}
-                      : {en:'Notarized',ar:'موثقة',ru:'Заверено',zh:'已公证',es:'Notarizados'}, lang)}
+              {/* Stats row — same as homepage */}
+              <div className="flex flex-nowrap items-center justify-between sm:justify-start mt-8 pt-6 border-t border-navy-800">
+                <div className="flex items-center min-w-0">
+                  <span className="font-serif font-bold text-gold-400 text-[clamp(1rem,5vw,1.875rem)]">5,000+</span>
+                  <div className="text-navy-400 leading-tight ms-[clamp(0.25rem,1.5vw,0.75rem)] text-[clamp(9px,2.6vw,14px)] min-w-0">
+                    <div className="text-white font-semibold">{t({en:'Documents',ar:'وثيقة',ru:'Документов',zh:'份文件',es:'Documentos'}, lang)}</div>
+                    <div>{t(preparedStat ? {en:'Prepared',ar:'مُجهَّزة',ru:'Подготовлено',zh:'已办理',es:'Preparados'} : {en:'Notarized',ar:'موثقة',ru:'Заверено',zh:'已公证',es:'Notarizados'}, lang)}</div>
                   </div>
                 </div>
-                <div className="hero-stat-sep" />
-                <div className="hero-stat-item">
-                  <span className="hero-stat-num">5</span>
-                  <div className="hero-stat-label">
-                    <strong>{t({en:'Languages',ar:'لغات',ru:'Языков',zh:'种语言',es:'Idiomas'}, lang)}</strong>
-                    {t({en:'Supported',ar:'مدعومة',ru:'Поддержка',zh:'支持',es:'Soportados'}, lang)}
+                <div className="w-px h-8 sm:h-9 shrink-0 bg-navy-600 mx-[clamp(0.5rem,3vw,1.5rem)]" />
+                <div className="flex items-center min-w-0">
+                  <span className="font-serif font-bold text-gold-400 text-[clamp(1rem,5vw,1.875rem)]">5</span>
+                  <div className="text-navy-400 leading-tight ms-[clamp(0.25rem,1.5vw,0.75rem)] text-[clamp(9px,2.6vw,14px)] min-w-0">
+                    <div className="text-white font-semibold">{t({en:'Languages',ar:'لغات',ru:'Языков',zh:'种语言',es:'Idiomas'}, lang)}</div>
+                    <div>{t({en:'Supported',ar:'مدعومة',ru:'Поддержка',zh:'支持',es:'Soportados'}, lang)}</div>
                   </div>
                 </div>
               </div>
 
-              {/* CTA buttons */}
-              <div className="flex flex-wrap gap-3">
+              {/* CTA buttons — same sizing as homepage */}
+              <div className="flex flex-wrap gap-3 mt-8">
                 <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                  className="btn-wa px-6 py-3 shadow-lg shadow-black/20">
+                  className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#20b958] transition-colors text-sm">
                   {WA_ICON} {t(L.start_wa, lang)}
                 </a>
                 {extraButtons?.map((btn) => (
                   <Link key={btn.href} href={btn.href}
-                    className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-colors ${
+                    className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-colors ${
                       btn.variant === 'primary' ? 'bg-gold-400 text-navy-900 hover:bg-gold-300'
                       : 'bg-navy-800 text-navy-200 hover:bg-navy-700 border border-navy-700'
                     }`}>
@@ -221,17 +215,17 @@ export default function ServicePage({
               </div>
             </div>
 
-            {/* poa-doc image right column */}
+            {/* ── Right: poa-doc image — same size as homepage ── */}
             <div className="hidden lg:flex items-center justify-center">
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl"
-                  style={{background:'radial-gradient(ellipse at center, rgba(212,180,58,.06) 0%, transparent 70%)'}} />
+                  style={{background:'radial-gradient(ellipse at center, rgba(212,180,58,.07) 0%, transparent 70%)'}} />
                 <picture>
                   <source srcSet="/assets/hero/poa-doc.webp" type="image/webp" />
                   <img src="/assets/hero/poa-doc.png" alt="UAE Notary Document"
-                    width={793} height={651} decoding="async"
-                    className="relative w-[340px] h-auto"
-                    style={{filter:'drop-shadow(0 0 30px rgba(212,180,58,.12))'}} />
+                    width={793} height={651} decoding="async" fetchPriority="high"
+                    className="relative w-[480px] xl:w-[500px] h-auto"
+                    style={{filter:'drop-shadow(0 0 40px rgba(212,180,58,.13))'}} />
                 </picture>
               </div>
             </div>
@@ -262,7 +256,7 @@ export default function ServicePage({
 
       {/* ── MAIN CONTENT ── */}
       <section className="bg-white py-12">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-10">
 
             {/* ── Left: main content ── */}
