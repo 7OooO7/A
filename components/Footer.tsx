@@ -65,9 +65,13 @@ export default function Footer({ lang }: Props) {
           {/* Brand column — spans 2 cols on lg */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-navy-700 flex items-center justify-center">
-                <span className="font-serif font-bold text-gold-400 text-lg">P</span>
-              </div>
+              <div className="w-9 h-9 rounded-xl bg-navy-700 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/logo.png" 
+                    alt="E-Notary Dubai" 
+                    className="w-full h-full object-contain p-1"
+                  />
+                </div>
               <div>
                 <div className="font-serif font-bold text-white text-base leading-none">E-Notary Dubai</div>
                 <div className="text-[10px] text-navy-400 uppercase tracking-widest leading-none mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
