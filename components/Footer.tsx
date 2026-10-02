@@ -62,19 +62,19 @@ export default function Footer({ lang }: Props) {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-navy-700 flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/logo.png"
-                    alt="E-Notary Dubai"
-                    className="w-full h-full object-contain p-1"
-                  />
-                </div>
-              <div>
-                <div className="font-serif font-bold text-white text-base leading-none">E-Notary Dubai</div>
-                <div className="text-[10px] text-gold-500/60 uppercase tracking-widest leading-none mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
-              </div>
-            </div>
+<div className="flex items-center gap-3 mb-4">
+  <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center overflow-hidden shadow-md shadow-gold-400/10 shrink-0">
+    <img
+      src="/logo-icon.png"
+      alt="E-Notary Dubai"
+      className="w-full h-full object-contain p-1.5"
+    />
+  </div>
+  <div>
+    <div className="font-serif font-bold text-white text-base leading-none">E-Notary Dubai</div>
+    <div className="text-[10px] text-gold-500/60 uppercase tracking-widest leading-none mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
+  </div>
+</div>
             <p className="text-sm text-navy-300 leading-relaxed mb-4">
               {t(footer.tagline, lang)}
             </p>

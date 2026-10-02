@@ -210,15 +210,15 @@ export default function Navbar({ lang }: Props) {
         <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="flex h-16 items-center justify-between gap-3">
 
-            <Link href={`/${lang}`} className="flex items-center gap-1.5 sm:gap-3 shrink-0 group min-w-0">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
-                <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1" />
-              </div>
-              <div className="hidden md:block leading-none min-w-0">
-                <div className="font-serif font-bold text-white text-[13px] lg:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
-                <div className="text-[9px] text-gold-500/60 uppercase tracking-[0.15em] mt-0.5 truncate">LICENSED NOTARY SUPPORT · DUBAI</div>
-              </div>
-            </Link>
+            <Link href={`/${lang}`} className="flex items-center gap-2.5 shrink-0 group min-w-0">
+  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-50 transition-colors overflow-hidden shrink-0">
+    <img src="/logo-icon.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1.5" />
+  </div>
+  <div className="hidden md:block leading-none min-w-0">
+    <div className="font-serif font-bold text-white text-[13px] lg:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
+    <div className="text-[9px] text-gold-500/60 uppercase tracking-[0.15em] mt-0.5 truncate">LICENSED NOTARY SUPPORT · DUBAI</div>
+  </div>
+</Link>
 
             <div className="flex items-center gap-2 shrink-0">
               <div className="relative hidden sm:block">
