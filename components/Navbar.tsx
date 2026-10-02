@@ -195,7 +195,7 @@ export default function Navbar({ lang }: Props) {
 
           {/* ── Logo ── */}
           <Link href={`/${lang}`} className="flex items-center gap-3 shrink-0 group">
-            <div className="w-9 h-9 rounded-xl bg-gold-400 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden">
+            <div className="w-9 h-9 rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden">
               <img 
                 src="/logo.png" 
                 alt="E-Notary Dubai" 
@@ -204,7 +204,7 @@ export default function Navbar({ lang }: Props) {
             </div>
             <div className="hidden sm:block leading-none">
               <div className="font-serif font-bold text-white text-[15px] tracking-tight group-hover:text-gold-100 transition-colors">E-Notary Dubai</div>
-              <div className="text-[9px] text-gold-500/60 uppercase tracking-[0.15em] mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
+              <div className="text-[9px] text-navy-900/60 uppercase tracking-[0.15em] mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
             </div>
           </Link>
 
