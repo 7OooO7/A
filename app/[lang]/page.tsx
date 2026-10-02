@@ -236,18 +236,26 @@ export default async function HomePage({ params }: Props) {
   ))}
 </div>
 </div>
-            {/* Hero image */}
-            <div className="hidden lg:flex items-center justify-center">
+           {/* Hero image */}
+            <div className="flex items-center justify-center mt-10 lg:mt-0">
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl" style={{background:'radial-gradient(ellipse at center, rgba(212,180,58,.07) 0%, transparent 70%)'}} />
                 <picture>
                   <source srcSet="/assets/hero/poa-doc.webp" type="image/webp" />
-                  <img src="/assets/hero/poa-doc.png" alt="UAE Notary Document" width={793} height={651} decoding="async" fetchPriority="high" className="relative w-[480px] xl:w-[500px] h-auto" style={{filter:'drop-shadow(0 0 40px rgba(212,180,58,.13))'}} />
+                  <img 
+                    src="/assets/hero/poa-doc.png" 
+                    alt="UAE Notary Document" 
+                    width={793} 
+                    height={651} 
+                    decoding="async" 
+                    fetchPriority="high" 
+                    className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[480px] xl:w-[500px] h-auto object-contain" 
+                    style={{filter:'drop-shadow(0 0 40px rgba(212,180,58,.13))'}} 
+                  />
                 </picture>
               </div>
             </div>
-          </div>
-        </div>
+			
         {/* Trust bar — infinite scrolling marquee */}
         <div className="relative border-t border-navy-800" dir="ltr">
           <AcceptedByMarquee
