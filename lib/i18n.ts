@@ -163,6 +163,8 @@ export function getPageBlocks(url: string): RichBlock[] {
 // ─────────────────────────────────────────────────────────────────────────────
 // Typed top-level exports — import directly from i18n instead of content.json
 // ─────────────────────────────────────────────────────────────────────────────
+
+
 export const site         = content.site
 export const languages    = content.languages
 export const nav          = content.nav
