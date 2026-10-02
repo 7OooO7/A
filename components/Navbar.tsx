@@ -584,25 +584,32 @@ export default function Navbar({ lang }: Props) {
                 <span dir="ltr" className="inline-block">{site.phone_display}</span>
               </a>
 
-              {/* Email — full width */}
-              <a
-                href={`mailto:${site.email}?subject=Inquiry%20from%20Website&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.`}
-                className="flex items-center justify-center gap-2 text-sm font-bold text-navy-900 px-4 py-2.5 rounded-xl bg-white hover:bg-gold-50 transition-colors w-full"
-              >
-                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                {t({en:'Email Us',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}
-              </a>
+            {/* Email CTA — bigger on mobile, unchanged on desktop */}
+            <a
+              href={`mailto:${site.email}?subject=Inquiry%20from%20Website&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.`}
+              className="flex items-center justify-center gap-1.5 text-sm font-bold w-11 h-11 sm:w-auto sm:h-auto sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-lg transition-colors bg-white text-navy-900 hover:bg-gold-50 border border-navy-200 shrink-0"
+              title={t({en:'Email',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}
+            >
+              <svg className="w-5 h-5 sm:w-4 sm:h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="hidden sm:inline">{t({en:'Email',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}</span>
+            </a>
 
               {/* WhatsApp — full width */}
-              <a
-                href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
-                target="_blank" rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-sm font-bold text-white px-4 py-2.5 rounded-xl w-full"
-                style={{ background: '#25D366' }}
-              >
+           <a
+              href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 text-sm font-bold h-11 px-3 rounded-lg sm:h-auto sm:px-3.5 sm:py-1.5 transition-colors text-white shrink-0"
+              style={{ background: '#25D366' }}
+            >
+              <span className="w-5 h-5 sm:w-4 sm:h-4 shrink-0 inline-flex items-center justify-center">
                 {WA_ICON}
-                {t(cta.whatsapp, lang)}
-              </a>
-            </div>
+              </span>
+              {/* النص على الهاتف: "Start on WhatsApp" | النص على الكمبيوتر: "WhatsApp" */}
+              <span className="sm:hidden">
+                {t({en:'Start on WhatsApp',ar:'ابدأ على واتساب',ru:'Начать в WhatsApp',zh:'在WhatsApp开始',es:'Iniciar en WhatsApp'}, lang)}
+              </span>
+              <span className="hidden sm:inline">{t(cta.whatsapp, lang)}</span>
+            </a>
