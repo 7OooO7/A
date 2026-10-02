@@ -74,7 +74,7 @@ export default function Footer({ lang }: Props) {
                 </div>
               <div>
                 <div className="font-serif font-bold text-white text-base leading-none">E-Notary Dubai</div>
-                <div className="text-[10px] text-gold-400/50 uppercase tracking-widest leading-none mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
+                <div className="text-[10px] text-gold-500/60 uppercase tracking-widest leading-none mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
               </div>
             </div>
             <p className="text-sm text-navy-300 leading-relaxed mb-4">

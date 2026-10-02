@@ -204,7 +204,7 @@ export default function Navbar({ lang }: Props) {
             </div>
             <div className="hidden sm:block leading-none">
               <div className="font-serif font-bold text-white text-[15px] tracking-tight group-hover:text-gold-100 transition-colors">E-Notary Dubai</div>
-              <div className="text-[9px] text-navy-900/60 uppercase tracking-[0.15em] mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
+              <div className="text-[9px] text-gold-500/60 uppercase tracking-[0.15em] mt-0.5">LICENSED NOTARY SUPPORT · DUBAI</div>
             </div>
           </Link>
 
