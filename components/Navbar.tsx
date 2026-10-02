@@ -201,6 +201,15 @@ export default function Navbar({ lang }: Props) {
     }
     setLangOpen(true)
   }
+  
+    function toggleLang() {
+    if (langTimeoutRef.current) {
+      clearTimeout(langTimeoutRef.current)
+      langTimeoutRef.current = null
+    }
+    setLangOpen((prev) => !prev)
+  }
+  
 
   function scheduleLangClose() {
     if (langTimeoutRef.current) {
@@ -384,21 +393,20 @@ export default function Navbar({ lang }: Props) {
             {/* ── Language Dropdown ── */}
             <div
               className="relative hidden sm:block"
-              onMouseEnter={openLang}
-              onMouseLeave={scheduleLangClose}
+              onPointerEnter={openLang}
+              onPointerLeave={scheduleLangClose}
             >
               <button
+                onClick={toggleLang}
                 className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                   langOpen
                     ? 'text-gold-400 bg-white/[0.07]'
                     : 'text-navy-300 hover:text-white hover:bg-white/[0.05]'
                 }`}
               >
-                {/* أيقونة الكرة الأرضية */}
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
-                {/* اللغة الحالية */}
                 <span>{languages.find((l) => l.code === lang)?.title || 'English'}</span>
                 <svg className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : 'opacity-50'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
@@ -407,20 +415,18 @@ export default function Navbar({ lang }: Props) {
 
               {langOpen && (
                 <>
-                  {/* جسر شفاف يملأ الفجوة بين الزر والقائمة */}
                   <div
                     className="absolute top-full left-0 right-0 h-2 z-40"
-                    onMouseEnter={openLang}
-                    onMouseLeave={scheduleLangClose}
+                    onPointerEnter={openLang}
+                    onPointerLeave={scheduleLangClose}
                   />
-                  {/* القائمة المنسدلة */}
                   <div
                     className="absolute top-full mt-2 bg-white rounded-xl shadow-2xl border border-navy-100/80 p-1.5 z-50 min-w-[160px]"
                     style={{
                       [isRTL ? 'left' : 'right']: 0,
                     }}
-                    onMouseEnter={openLang}
-                    onMouseLeave={scheduleLangClose}
+                    onPointerEnter={openLang}
+                    onPointerLeave={scheduleLangClose}
                   >
                     {languages.map((l) => (
                       <Link
@@ -459,12 +465,12 @@ export default function Navbar({ lang }: Props) {
             <a
               href={`mailto:${site.email}?subject=Inquiry%20from%20Website&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.`}
               className="flex items-center justify-center gap-1.5 text-sm font-bold w-11 h-11 sm:w-auto sm:h-auto sm:px-3.5 sm:py-1.5 rounded-lg transition-colors bg-white text-navy-900 hover:bg-gold-50 border border-navy-200 shrink-0"
-              title={t({en:'Email',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}
+              title={t({en:'Email',ar:'راسلنا',ru:'Почта',zh:'邮件',es:'Email'}, lang)}
             >
               <svg className="w-5 h-5 sm:w-4 sm:h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span className="hidden sm:inline">{t({en:'Email',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}</span>
+            <span className="hidden sm:inline">{t({en:'Email',ar:'راسلنا',ru:'Почта',zh:'邮件',es:'Email'}, lang)}</span>
             </a>
 			
 			
@@ -594,7 +600,7 @@ export default function Navbar({ lang }: Props) {
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                {t({en:'Email Us',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}
+                {t({en:'Email Us',ar:'راسلنا',ru:'Почта',zh:'邮件',es:'Email'}, lang)}
               </a>
 
               {/* WhatsApp — full width */}
