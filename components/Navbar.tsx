@@ -181,6 +181,12 @@ export default function Navbar({ lang }: Props) {
 
   function openDropdown(key: string) {
     if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    // أغلق قائمة اللغات فوراً عند فتح قائمة تنقل
+    if (langTimeoutRef.current) {
+      clearTimeout(langTimeoutRef.current)
+      langTimeoutRef.current = null
+    }
+    setLangOpen(false)
     setActiveKey(key)
   }
 
@@ -203,7 +209,7 @@ export default function Navbar({ lang }: Props) {
     langTimeoutRef.current = setTimeout(() => {
       setLangOpen(false)
       langTimeoutRef.current = null
-    }, 800)
+    }, 500)   // ⬅️ 250ms (سريع كما طلبت)
   }
   
 
