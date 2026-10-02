@@ -584,10 +584,10 @@ export default function Navbar({ lang }: Props) {
                 <span dir="ltr" className="inline-block">{site.phone_display}</span>
               </a>
 
-              {/* Email — same size as WhatsApp */}
+              {/* Email — full width */}
               <a
                 href={`mailto:${site.email}?subject=Inquiry%20from%20Website&body=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.`}
-                className="flex items-center justify-center gap-2 text-sm font-bold text-navy-900 px-4 py-2.5 rounded-xl bg-white hover:bg-gold-50 transition-colors"
+                className="flex items-center justify-center gap-2 text-sm font-bold text-navy-900 px-4 py-2.5 rounded-xl bg-white hover:bg-gold-50 transition-colors w-full"
               >
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -595,11 +595,11 @@ export default function Navbar({ lang }: Props) {
                 {t({en:'Email Us',ar:'راسلنا',ru:'Email',zh:'邮件',es:'Email'}, lang)}
               </a>
 
-              {/* WhatsApp */}
+              {/* WhatsApp — full width */}
               <a
                 href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
                 target="_blank" rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-sm font-bold text-white px-4 py-2.5 rounded-xl"
+                className="flex items-center justify-center gap-2 text-sm font-bold text-white px-4 py-2.5 rounded-xl w-full"
                 style={{ background: '#25D366' }}
               >
                 {WA_ICON}
