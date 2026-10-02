@@ -195,8 +195,12 @@ export default function Navbar({ lang }: Props) {
 
           {/* ── Logo ── */}
           <Link href={`/${lang}`} className="flex items-center gap-3 shrink-0 group">
-            <div className="w-9 h-9 rounded-xl bg-gold-400 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors">
-              <span className="font-serif font-bold text-navy-900 text-lg leading-none">P</span>
+            <div className="w-9 h-9 rounded-xl bg-gold-400 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden">
+              <img 
+                src="/logo.png" 
+                alt="E-Notary Dubai" 
+                className="w-full h-full object-contain p-1"
+              />
             </div>
             <div className="hidden sm:block leading-none">
               <div className="font-serif font-bold text-white text-[15px] tracking-tight group-hover:text-gold-100 transition-colors">E-Notary Dubai</div>
