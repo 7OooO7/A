@@ -278,7 +278,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* POA */}
-      <section className="bg-white py-16 border-t border-navy-100">
+      <section id="services" className="bg-white py-16 border-t border-navy-100 scroll-mt-20">
         <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div>
