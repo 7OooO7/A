@@ -255,6 +255,7 @@ export default async function HomePage({ params }: Props) {
                 </picture>
               </div>
             </div>
+			</div>
 			
         {/* Trust bar — infinite scrolling marquee */}
         <div className="relative border-t border-navy-800" dir="ltr">
