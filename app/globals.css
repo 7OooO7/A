@@ -63,6 +63,19 @@
 
 @layer components {
 
+  /* ══════════════════════════════════════════════════════════════════
+     DYNAMIC PAGE CONTAINER
+     ─ Width grows with screen, capped at 1600px
+     ─ Padding scales 16px → 48px smoothly
+     ─ Works in LTR & RTL automatically
+     ══════════════════════════════════════════════════════════════════ */
+  .container-page {
+    margin-inline: auto;
+    width: 100%;
+    max-width: min(1600px, 95vw);
+    padding-inline: clamp(1rem, 4vw, 3rem);
+  }
+
   /* ── Gold underline ── */
   .gold-line {
     @apply relative inline-block pb-2;
@@ -435,9 +448,6 @@
   [dir="rtl"] .rich-content .checklist-item {
     @apply flex-row-reverse;
   }
-
-
-
 
 }
 
