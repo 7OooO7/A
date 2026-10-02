@@ -391,13 +391,12 @@ export default function Navbar({ lang }: Props) {
           <div className="flex items-center gap-2 shrink-0">
 
             {/* ── Language Dropdown ── */}
-            <div
-              className="relative hidden sm:block"
-              onPointerEnter={openLang}
-              onPointerLeave={scheduleLangClose}
-            >
+            <div className="relative hidden sm:block">
+              {/* الزر مع onClick toggle */}
               <button
                 onClick={toggleLang}
+                onMouseEnter={openLang}
+                onMouseLeave={scheduleLangClose}
                 className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                   langOpen
                     ? 'text-gold-400 bg-white/[0.07]'
@@ -415,18 +414,20 @@ export default function Navbar({ lang }: Props) {
 
               {langOpen && (
                 <>
+                  {/* جسر شفاف */}
                   <div
                     className="absolute top-full left-0 right-0 h-2 z-40"
-                    onPointerEnter={openLang}
-                    onPointerLeave={scheduleLangClose}
+                    onMouseEnter={openLang}
+                    onMouseLeave={scheduleLangClose}
                   />
+                  {/* القائمة المنسدلة */}
                   <div
                     className="absolute top-full mt-2 bg-white rounded-xl shadow-2xl border border-navy-100/80 p-1.5 z-50 min-w-[160px]"
                     style={{
                       [isRTL ? 'left' : 'right']: 0,
                     }}
-                    onPointerEnter={openLang}
-                    onPointerLeave={scheduleLangClose}
+                    onMouseEnter={openLang}
+                    onMouseLeave={scheduleLangClose}
                   >
                     {languages.map((l) => (
                       <Link
