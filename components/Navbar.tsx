@@ -150,8 +150,10 @@ function buildNav(lang: Lang) {
 export default function Navbar({ lang }: Props) {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
+  const [activeKey, setActiveKey] = useState<string | null>(null)
   const [langOpen, setLangOpen] = useState(false)
   const pathname = usePathname()
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const langTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navItems = buildNav(lang)
   const isRTL = lang === 'ar'
@@ -164,6 +166,20 @@ export default function Navbar({ lang }: Props) {
       return segments.join('/')
     }
     return `/${targetLang}`
+  }
+
+  function openDropdown(key: string) {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    if (langTimeoutRef.current) {
+      clearTimeout(langTimeoutRef.current)
+      langTimeoutRef.current = null
+    }
+    setLangOpen(false)
+    setActiveKey(key)
+  }
+
+  function scheduleClose() {
+    timeoutRef.current = setTimeout(() => setActiveKey(null), 250)
   }
 
   function openLang() {
@@ -194,9 +210,11 @@ export default function Navbar({ lang }: Props) {
   useEffect(() => {
     setDrawerOpen(false)
     setExpanded(null)
+    setActiveKey(null)
   }, [pathname])
 
   useEffect(() => () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
     if (langTimeoutRef.current) clearTimeout(langTimeoutRef.current)
   }, [])
 
@@ -206,34 +224,167 @@ export default function Navbar({ lang }: Props) {
         className="sticky top-0 z-40 shadow-xl shadow-navy-900/30"
         style={{ background: '#0a1628', borderBottom: '1px solid rgba(212,180,58,0.12)' }}
       >
-        {/* ✅ Dynamic container */}
-        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
-          <div className="flex h-16 items-center justify-between gap-3">
+        <div className="mx-auto max-w-7xl px-3 lg:px-5">
+          <div className="flex h-16 items-center justify-between gap-2">
 
-            <Link href={`/${lang}`} className="flex items-center gap-1.5 sm:gap-3 shrink-0 group min-w-0">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
-                <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1" />
+            {/* ── Logo ── */}
+            <Link href={`/${lang}`} className="flex items-center gap-2 shrink-0 group min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-50 transition-colors overflow-hidden shrink-0">
+                <img src="/logo-icon.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1.5" />
               </div>
-              <div className="hidden md:block leading-none min-w-0">
-                <div className="font-serif font-bold text-white text-[13px] lg:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
+              <div className="hidden lg:block leading-none min-w-0">
+                <div className="font-serif font-bold text-white text-[13px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
                 <div className="text-[9px] text-gold-500/60 uppercase tracking-[0.15em] mt-0.5 truncate">LICENSED NOTARY SUPPORT · DUBAI</div>
               </div>
             </Link>
 
-            <div className="flex items-center gap-2 shrink-0">
+            {/* ── Desktop Nav — shows from md+ ── */}
+            <nav className="hidden md:flex items-center gap-0 flex-1 justify-center">
+              {navItems.map((item) => {
+                const label = t(item.label, lang)
+                const isActive = activeKey === item.key
+                return (
+                  <div
+                    key={item.key}
+                    className="relative"
+                    onMouseEnter={() => openDropdown(item.key)}
+                    onMouseLeave={scheduleClose}
+                  >
+                    <button
+                      className={`flex items-center gap-1 px-2 lg:px-2.5 py-2 text-[11px] lg:text-[12px] xl:text-[13px] font-medium rounded-lg transition-all duration-150 whitespace-nowrap ${
+                        isActive
+                          ? 'text-gold-400 bg-white/[0.07]'
+                          : 'text-navy-300 hover:text-white hover:bg-white/[0.05]'
+                      }`}
+                    >
+                      {label}
+                      <svg
+                        className={`w-2.5 h-2.5 transition-transform duration-200 ${isActive ? 'rotate-180 text-gold-400' : 'opacity-40'}`}
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* ── Mega Menu ── */}
+                    {(item as any).mega && (
+                      <>
+                        {isActive && (
+                          <div className="absolute top-full left-0 right-0 h-3 z-40" onMouseEnter={() => openDropdown(item.key)} />
+                        )}
+                        <div
+                          className={`absolute top-full mt-3 bg-white rounded-2xl shadow-2xl border border-navy-100/80 z-50 p-5 transition-opacity duration-150 ${
+                            isActive ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
+                          }`}
+                          style={{
+                            width: 'min(720px, calc(100vw - 2rem))',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            maxWidth: 'calc(100vw - 2rem)',
+                          }}
+                          onMouseEnter={() => openDropdown(item.key)}
+                          onMouseLeave={scheduleClose}
+                        >
+                          <div className="grid grid-cols-3 gap-x-6">
+                            {(item as any).cols.map((col: any, ci: number) => (
+                              <div key={ci}>
+                                <div className="flex items-center gap-2 mb-3 px-2">
+                                  <div className="h-px flex-1 bg-navy-100" />
+                                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-navy-400 shrink-0">
+                                    {t(col.heading, lang)}
+                                  </p>
+                                  <div className="h-px flex-1 bg-navy-100" />
+                                </div>
+                                <div className="space-y-0.5">
+                                  {col.items.map((sub: any) => (
+                                    <Link
+                                      key={sub.href}
+                                      href={sub.href}
+                                      className="flex items-center gap-2 px-2 py-1.5 text-sm text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg transition-colors group"
+                                      onClick={() => setActiveKey(null)}
+                                    >
+                                      <span className="w-1 h-1 rounded-full bg-gold-400 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                      {t(sub.label, lang)}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-4 pt-3 border-t border-navy-100">
+                            <Link
+                              href={(item as any).cta.href}
+                              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-bold transition-all group"
+                              style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%)' }}
+                              onClick={() => setActiveKey(null)}
+                            >
+                              <span className="text-white group-hover:text-gold-300 transition-colors">{t((item as any).cta.label, lang)}</span>
+                              <svg className="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isRTL ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
+                              </svg>
+                            </Link>
+                          </div>
+                        </div>
+                      </>
+                    )}
+
+                    {/* ── Regular Dropdown ── */}
+                    {!(item as any).mega && (item as any).items && (
+                      <>
+                        {isActive && (
+                          <div className="absolute top-full left-0 right-0 h-3 z-40" onMouseEnter={() => openDropdown(item.key)} />
+                        )}
+                        <div
+                          className={`absolute top-full mt-3 bg-white rounded-2xl shadow-2xl border border-navy-100/80 p-2 z-50 transition-opacity duration-150 ${
+                            isActive ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
+                          }`}
+                          style={{
+                            minWidth: 240,
+                            maxWidth: 'calc(100vw - 2rem)',
+                            insetInlineStart: isRTL ? 'auto' : '-4px',
+                            insetInlineEnd: isRTL ? '-4px' : 'auto',
+                          }}
+                          onMouseEnter={() => openDropdown(item.key)}
+                          onMouseLeave={scheduleClose}
+                        >
+                          {(item as any).items.map((sub: any) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              className="flex items-center gap-2.5 px-3 py-2 text-sm text-navy-600 hover:text-navy-900 hover:bg-gold-400/5 rounded-lg transition-all group border border-transparent hover:border-gold-400/15"
+                              onClick={() => setActiveKey(null)}
+                            >
+                              <svg className="w-3.5 h-3.5 text-gold-400 shrink-0 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isRTL ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
+                              </svg>
+                              <span className="font-medium">{t(sub.label, lang)}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )
+              })}
+            </nav>
+
+            {/* ── Right side ── */}
+            <div className="flex items-center gap-1.5 shrink-0">
+
+              {/* Language — sm+ */}
               <div className="relative hidden sm:block">
                 <button
                   onClick={() => setLangOpen((v) => !v)}
                   onMouseEnter={openLang}
                   onMouseLeave={scheduleLangClose}
-                  className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
+                  className={`flex items-center gap-1 px-2 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                     langOpen ? 'text-gold-400 bg-white/[0.07]' : 'text-navy-300 hover:text-white hover:bg-white/[0.05]'
                   }`}
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
-                  <span>{languages.find((l) => l.code === lang)?.title || 'English'}</span>
+                  <span className="hidden xl:inline">{languages.find((l) => l.code === lang)?.title || 'English'}</span>
                   <svg className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : 'opacity-50'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -270,27 +421,30 @@ export default function Navbar({ lang }: Props) {
                 )}
               </div>
 
+              {/* Phone — only 2xl+ */}
               <a
                 href={`tel:${site.phone}`}
-                className="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-navy-300 hover:text-white px-3 py-1.5 rounded-lg border border-navy-700 hover:border-navy-500 transition-colors whitespace-nowrap"
+                className="hidden 2xl:flex items-center gap-1.5 text-xs font-semibold text-navy-300 hover:text-white px-2.5 py-1.5 rounded-lg border border-navy-700 hover:border-navy-500 transition-colors whitespace-nowrap"
               >
                 <span dir="ltr" className="inline-block">{site.phone_display}</span>
               </a>
 
+              {/* WhatsApp — ALWAYS visible from sm+ */}
               <a
                 href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 text-sm font-bold h-11 px-3 sm:h-auto sm:px-3.5 sm:py-1.5 rounded-lg transition-colors text-white shrink-0"
+                className="flex items-center justify-center gap-1.5 text-xs font-bold h-10 px-2.5 sm:h-auto sm:px-3 sm:py-1.5 rounded-lg transition-colors text-white shrink-0"
                 style={{ background: '#25D366' }}
               >
-                <span className="w-5 h-5 sm:w-4 sm:h-4 shrink-0 inline-flex items-center justify-center">{WA_ICON}</span>
-                <span className="hidden sm:inline">{t(cta.whatsapp, lang)}</span>
+                <span className="w-4 h-4 shrink-0 inline-flex items-center justify-center">{WA_ICON}</span>
+                <span className="hidden xl:inline whitespace-nowrap">{t(cta.whatsapp, lang)}</span>
               </a>
 
+              {/* Hamburger — only below md */}
               <button
                 onClick={() => setDrawerOpen(true)}
-                className="p-2.5 rounded-lg text-navy-300 hover:text-white hover:bg-navy-800 transition-colors"
+                className="md:hidden p-2 rounded-lg text-navy-300 hover:text-white hover:bg-navy-800 transition-colors"
                 aria-label="Open menu"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -302,8 +456,9 @@ export default function Navbar({ lang }: Props) {
         </div>
       </header>
 
+      {/* ── Drawer for mobile (md:hidden) ── */}
       <div
-        className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
           drawerOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setDrawerOpen(false)}
@@ -311,7 +466,7 @@ export default function Navbar({ lang }: Props) {
       />
 
       <aside
-        className={`fixed top-0 bottom-0 z-50 w-[85vw] max-w-sm bg-[#0a1628] shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
+        className={`fixed top-0 bottom-0 z-50 w-[85vw] max-w-sm bg-[#0a1628] shadow-2xl transition-transform duration-300 ease-out flex flex-col md:hidden ${
           drawerOpen
             ? 'translate-x-0'
             : isRTL ? '-translate-x-full' : 'translate-x-full'
