@@ -106,9 +106,9 @@ function WarningBlock({ block, lang }: { block: Extract<RichBlock, {type:'warnin
 function InfoBlock({ block, lang }: { block: Extract<RichBlock, {type:'info'}>, lang: Lang }) {
   const isRTL = lang === 'ar'
   return (
-    <div className={`flex gap-3 bg-navy-50 border border-navy-200 rounded-xl px-4 py-4 my-4 ${isRTL ? 'border-r-4 border-r-navy-400 flex-row-reverse' : 'border-l-4 border-l-navy-400'}`}>
-      <span className="text-navy-400 mt-0.5 shrink-0"><InfoIcon /></span>
-      <div className={`min-w-0 flex-1 ${isRTL ? 'text-right' : ''}`}>
+    <div className={`flex gap-3 bg-navy-50 border border-navy-200 rounded-xl px-4 py-4 my-4 ${isRTL ? 'border-r-4 border-r-navy-400 flex-row-reverse text-right' : 'border-l-4 border-l-navy-400'}`}>
+      <span className="text-navy-400 mt-0.5"><InfoIcon /></span>
+      <div className="min-w-0">
         {block.title && <p className="text-navy-700 text-xs font-bold uppercase tracking-wide mb-1">{t(block.title, lang)}</p>}
         <p className="text-navy-600 text-sm leading-relaxed">{linkify(t(block.text, lang), lang)}</p>
       </div>
