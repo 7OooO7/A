@@ -80,9 +80,9 @@ function WarningBlock({ block, lang }: { block: Extract<RichBlock, {type:'warnin
     <div className={`flex gap-0 rounded-xl overflow-hidden my-5 ${isRTL ? 'flex-row-reverse' : ''}`}
       style={{background:'#fffbf0',border:'1px solid rgba(201,162,39,.25)'}}>
       <div style={{width:3,flexShrink:0,background:'#d4b43a'}} />
-      <div className={`flex gap-3 px-4 py-4 w-full ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+      <div className={`flex gap-3 px-4 py-4 w-full ${isRTL ? 'flex-row-reverse' : ''}`}>
         <span className="shrink-0 mt-0.5" style={{color:'#c9a227'}}><AlertIcon /></span>
-        <div className="min-w-0 w-full">
+        <div className="min-w-0 flex-1 text-start">
           {block.title && <p className="text-xs font-bold uppercase tracking-wide mb-1.5" style={{color:'#8a6a00'}}>{t(block.title, lang)}</p>}
           {hasItems ? (
             <ul className="space-y-2">
@@ -90,7 +90,7 @@ function WarningBlock({ block, lang }: { block: Extract<RichBlock, {type:'warnin
                 <li key={i} className={`flex items-start gap-2 text-sm leading-relaxed ${isRTL ? 'flex-row-reverse' : ''}`}
                   style={{color:'#5a4800', borderBottom: i < block.items!.length - 1 ? '1px solid rgba(212,180,58,.15)' : 'none', paddingBottom: i < block.items!.length - 1 ? '0.5rem' : 0}}>
                   <span className="shrink-0 font-bold" style={{color:'#c9a227'}}>{i + 1}.</span>
-                  <span style={{fontWeight:300}}>{linkify(t(item, lang), lang)}</span>
+                  <span className="flex-1 text-start" style={{fontWeight:300}}>{linkify(t(item, lang), lang)}</span>
                 </li>
               ))}
             </ul>
@@ -106,9 +106,9 @@ function WarningBlock({ block, lang }: { block: Extract<RichBlock, {type:'warnin
 function InfoBlock({ block, lang }: { block: Extract<RichBlock, {type:'info'}>, lang: Lang }) {
   const isRTL = lang === 'ar'
   return (
-    <div className={`flex gap-3 bg-navy-50 border border-navy-200 rounded-xl px-4 py-4 my-4 ${isRTL ? 'border-r-4 border-r-navy-400 flex-row-reverse text-right' : 'border-l-4 border-l-navy-400'}`}>
-      <span className="text-navy-400 mt-0.5"><InfoIcon /></span>
-      <div className="min-w-0">
+    <div className={`flex gap-3 bg-navy-50 border border-navy-200 rounded-xl px-4 py-4 my-4 ${isRTL ? 'border-r-4 border-r-navy-400 flex-row-reverse' : 'border-l-4 border-l-navy-400'}`}>
+      <span className="text-navy-400 mt-0.5 shrink-0"><InfoIcon /></span>
+      <div className="min-w-0 flex-1 text-start">
         {block.title && <p className="text-navy-700 text-xs font-bold uppercase tracking-wide mb-1">{t(block.title, lang)}</p>}
         <p className="text-navy-600 text-sm leading-relaxed">{linkify(t(block.text, lang), lang)}</p>
       </div>
@@ -119,9 +119,9 @@ function InfoBlock({ block, lang }: { block: Extract<RichBlock, {type:'info'}>, 
 function SuccessBlock({ block, lang }: { block: Extract<RichBlock, {type:'success'}>, lang: Lang }) {
   const isRTL = lang === 'ar'
   return (
-    <div className={`flex gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-4 my-4 ${isRTL ? 'border-r-4 border-r-green-500 flex-row-reverse text-right' : 'border-l-4 border-l-green-500'}`}>
-      <span className="text-green-500 mt-0.5"><SuccessIcon /></span>
-      <div className="min-w-0">
+    <div className={`flex gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-4 my-4 ${isRTL ? 'border-r-4 border-r-green-500 flex-row-reverse' : 'border-l-4 border-l-green-500'}`}>
+      <span className="text-green-500 mt-0.5 shrink-0"><SuccessIcon /></span>
+      <div className="min-w-0 flex-1 text-start">
         {block.title && <p className="text-green-800 text-xs font-bold uppercase tracking-wide mb-1">{t(block.title, lang)}</p>}
         <p className="text-green-700 text-sm leading-relaxed">{linkify(t(block.text, lang), lang)}</p>
       </div>
@@ -153,15 +153,13 @@ function StepsBlock({ block, lang }: { block: Extract<RichBlock, {type:'steps'}>
     <div className="my-6 space-y-0">
       {block.items.map((item, i) => (
         <div key={i} className={`flex gap-4 relative ${isRTL ? 'flex-row-reverse' : ''}`}>
-          {/* connector line */}
           {i < block.items.length - 1 && (
             <div className={`absolute top-8 ${isRTL ? 'right-[19px]' : 'left-[19px]'} w-px h-[calc(100%-1.5rem)] bg-gold-400/30`} />
           )}
-          {/* number circle */}
           <div className="shrink-0 w-10 h-10 rounded-full bg-navy-900 border-2 border-gold-400 flex items-center justify-center z-10">
             <span className="font-serif font-bold text-gold-400 text-sm">{i + 1}</span>
           </div>
-          <div className={`pb-6 min-w-0 ${isRTL ? 'text-right' : ''}`}>
+          <div className="pb-6 min-w-0 flex-1 text-start">
             <p className="font-semibold text-navy-900 text-sm mb-1">{t(item.title, lang)}</p>
             <p className="text-navy-600 text-sm leading-relaxed">{linkify(t(item.body, lang), lang)}</p>
           </div>
@@ -179,20 +177,20 @@ function ChecklistBlock({ block, lang }: { block: Extract<RichBlock, {type:'chec
         <div className={`px-5 py-3 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}
           style={{background:'#0a1628',borderBottom:'1px solid rgba(212,180,58,.15)'}}>
           <div style={{width:3,height:14,background:'#d4b43a',borderRadius:2,flexShrink:0}} />
-          <p className="text-gold-400 text-[10px] font-bold uppercase tracking-[.12em]">{t(block.title, lang)}</p>
+          <p className="text-gold-400 text-[10px] font-bold uppercase tracking-[.12em] flex-1 text-start">{t(block.title, lang)}</p>
         </div>
       )}
-      <ul dir={isRTL ? 'rtl' : 'ltr'} style={{background:'#fafbff'}}>
+      <ul style={{background:'#fafbff'}}>
         {block.items.map((item, i) => (
           <li key={i} className={`flex items-start gap-3 px-5 py-3 ${isRTL ? 'flex-row-reverse' : ''}`}
             style={{borderBottom: i < block.items.length - 1 ? '1px solid #f0f2f8' : 'none'}}>
             <span className="shrink-0 mt-0.5 w-4 h-4 rounded-full flex items-center justify-center"
-              style={{background:'rgba(29,158,117,.1)',border:'1px solid rgba(29,158,117,.3)',flexShrink:0}}>
+              style={{background:'rgba(29,158,117,.1)',border:'1px solid rgba(29,158,117,.3)'}}>
               <svg className="w-2.5 h-2.5" fill="none" stroke="#1d9e75" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
               </svg>
             </span>
-            <span className="text-sm leading-relaxed" style={{color:'#2a3a5a',fontWeight:300}}>{linkify(t(item, lang), lang)}</span>
+            <span className="flex-1 text-start text-sm leading-relaxed" style={{color:'#2a3a5a',fontWeight:300}}>{linkify(t(item, lang), lang)}</span>
           </li>
         ))}
       </ul>
@@ -303,12 +301,12 @@ function SourcesBlock({ block, lang }: { block: Extract<RichBlock, {type:'source
   const heading = block.title ? t(block.title, lang) : ({ en:'Official sources', ar:'المصادر الرسمية', ru:'Официальные источники', zh:'官方来源', es:'Fuentes oficiales' } as Record<string,string>)[lang]
   const reviewed = ({ en:'Reviewed', ar:'آخر مراجعة', ru:'Проверено', zh:'审核日期', es:'Revisado' } as Record<string,string>)[lang]
   return (
-    <div className={`my-6 rounded-xl border border-navy-200 bg-white p-5 ${isRTL ? 'text-right' : ''}`}>
+    <div className="my-6 rounded-xl border border-navy-200 bg-white p-5">
       <div className={`flex flex-wrap items-center justify-between gap-2 mb-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
         <p className="text-xs font-bold uppercase tracking-wider text-navy-800">{heading}</p>
         {block.updated && <span className="text-[11px] text-navy-400">{reviewed}: {block.updated}</span>}
       </div>
-      <ul className="space-y-2">
+      <ul className={`space-y-2 ${isRTL ? 'text-right' : ''}`}>
         {block.links.map((item, i) => (
           <li key={i}>
             <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-sm text-navy-700 underline decoration-gold-400/60 underline-offset-4 hover:text-navy-900">
