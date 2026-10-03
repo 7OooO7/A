@@ -124,11 +124,11 @@ export default function Footer({ lang }: Props) {
             <h3 className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: '#C9A84C' }}>{t(HEADERS.contact, lang)}</h3>
             <ul className="space-y-2.5">
               <li>
-                <a href={`tel:${site.phone}`} className="flex items-center gap-2 text-sm transition-colors footer-link" style={{ color: 'var(--text-inverse-2)' }} dir="ltr">
+                <a href={`tel:${site.phone}`} className="flex items-center gap-2 text-sm transition-colors footer-link" style={{ color: 'var(--text-inverse-2)' }}>
   <svg className="w-3.5 h-3.5 shrink-0" style={{ color: '#C9A84C' }} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z" />
   </svg>
-  <span className="inline-block">{site.phone_display}</span>
+  <span className="inline-block" dir="ltr">{site.phone_display}</span>
 </a>
               </li>
               <li>
