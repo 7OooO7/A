@@ -207,7 +207,7 @@ export default function Navbar({ lang }: Props) {
         style={{ background: '#0a1628', borderBottom: '1px solid rgba(212,180,58,0.12)' }}
       >
         {/* ✅ Dynamic container */}
-        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
+        <div className="mx-auto w-full max-w-[min(1920px,98vw)] px-[clamp(0.75rem,2.5vw,2rem)]">
           <div className="flex h-16 items-center justify-between gap-2 xl:gap-3">
 
             <Link href={`/${lang}`} className="flex items-center gap-1.5 lg:gap-2 shrink-0 group min-w-0">
@@ -221,11 +221,11 @@ export default function Navbar({ lang }: Props) {
             </Link>
 
             {/* ── Desktop Nav — أفقي، يظهر من lg+ ── */}
-            <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0">
+            <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0 overflow-hidden">
               {navItems.map((item) => {
                 const label = t(item.label, lang)
                 return (
-                  <div key={item.key} className="relative group">
+                  <div key={item.key} className="relative group shrink-0">
                     <button
                       className="flex items-center gap-0.5 xl:gap-1 px-1.5 xl:px-2 2xl:px-2.5 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-medium rounded-lg transition-all duration-150 text-navy-300 hover:text-white hover:bg-white/[0.05] whitespace-nowrap"
                     >
@@ -271,7 +271,7 @@ export default function Navbar({ lang }: Props) {
               })}
             </nav>
 
-            <div className="flex items-center gap-1.5 xl:gap-2 shrink-0">
+            <div className="flex items-center gap-1 xl:gap-1.5 shrink-0">
               <div className="relative hidden sm:block">
                 <button
                   onClick={() => setLangOpen((v) => !v)}
