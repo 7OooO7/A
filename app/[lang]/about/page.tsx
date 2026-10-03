@@ -69,6 +69,8 @@ const SERVICES: ({ href?: string } & Record<string, string>)[] = [
 export default async function AboutPage({ params }: Props) {
   const { lang } = await params
   const waUrl = `https://wa.me/${site.phone.replace(/\D/g,'')}?text=${encodeURIComponent('I need notary support in Dubai')}`
+  // Dynamic year — updates automatically every January 1st
+  const currentYear = new Date().getFullYear()
 
   return (
     <div className="bg-white">
@@ -134,11 +136,11 @@ export default async function AboutPage({ params }: Props) {
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
           <p className="text-amber-800 text-sm leading-relaxed">
             {t({
-              en: 'E-Notary Dubai provides document preparation and coordination services. Official notarization or attestation is issued by the competent authority or licensed provider. © 2026 E-Notary Dubai · Dubai',
-              ar: 'E-Notary Dubai تقدم خدمات إعداد وتنسيق المستندات. يصدر التوثيق أو التصديق الرسمي من الجهة المختصة أو مقدم الخدمة المرخص. © 2026 E-Notary Dubai · دبي',
-              ru: 'E-Notary Dubai предоставляет услуги по подготовке и координации документов. Официальное нотариальное заверение или аттестацию выдаёт компетентный орган или лицензированный провайдер. © 2026 E-Notary Dubai · Дубай',
-              zh: 'E-Notary Dubai 提供文件准备与流程协调服务。正式公证或认证由主管机关或持牌服务方作出。© 2026 E-Notary Dubai · 迪拜',
-              es: 'E-Notary Dubai ofrece servicios de preparación y coordinación documental. La notarización o atestación oficial la emite la autoridad competente o un proveedor autorizado. © 2026 E-Notary Dubai · Dubái'
+              en: `E-Notary Dubai provides document preparation and coordination services. Official notarization or attestation is issued by the competent authority or licensed provider. © ${currentYear} E-Notary Dubai · Dubai`,
+              ar: `E-Notary Dubai تقدم خدمات إعداد وتنسيق المستندات. يصدر التوثيق أو التصديق الرسمي من الجهة المختصة أو مقدم الخدمة المرخص. © ${currentYear} E-Notary Dubai · دبي`,
+              ru: `E-Notary Dubai предоставляет услуги по подготовке и координации документов. Официальное нотариальное заверение или аттестацию выдаёт компетентный орган или лицензированный провайдер. © ${currentYear} E-Notary Dubai · Дубай`,
+              zh: `E-Notary Dubai 提供文件准备与流程协调服务。正式公证或认证由主管机关或持牌服务方作出。© ${currentYear} E-Notary Dubai · 迪拜`,
+              es: `E-Notary Dubai ofrece servicios de preparación y coordinación documental. La notarización o atestación oficial la emite la autoridad competente o un proveedor autorizado. © ${currentYear} E-Notary Dubai · Dubái`
             }, lang)}
           </p>
         </div>
