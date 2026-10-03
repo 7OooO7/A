@@ -542,8 +542,7 @@ export default async function HomePage({ params }: Props) {
             </Link>
           </div>
           <p className="text-sm" style={{ color: 'var(--text-muted)', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
-            {site.phone_display}
-          </p>
+           <span dir="ltr" className="inline-block">{site.phone_display}</span>          </p>
         </div>
       </section>
     </>
