@@ -151,7 +151,6 @@ export default function Footer({ lang }: Props) {
         {/* ── Bottom bar ── */}
         <div className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid var(--line-nav)' }}>
           <p className="text-xs" style={{ color: '#8B96A0' }}>{t(footer.copyright, lang)}</p>
-          <p className="text-xs" style={{ color: '#8B96A0' }}>{t(footer.disclaimer, lang)}</p>
         </div>
       </div>
     </footer>
