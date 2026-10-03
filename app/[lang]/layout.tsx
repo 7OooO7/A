@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import Script from 'next/script'
 import '../globals.css'
 import { notFound } from 'next/navigation'
@@ -13,56 +13,39 @@ interface Props {
   params: Promise<{ lang: string }>
 }
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
-
 export async function generateStaticParams() {
   return LANGS.map((lang) => ({ lang }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
+
   const titles: Record<string, string> = {
-    en: 'Notary Support Dubai | POA & Attestation | E-Notary Dubai',
-    ar: 'دعم كاتب العدل دبي — وكالات وتصديق — E-Notary Dubai',
-    ru: 'Нотариальная поддержка Дубай 2026 | Доверенность | E-Notary Dubai',
-    zh: '迪拜公证支持 2026 | 授权委托书及认证 | E-Notary Dubai',
-    es: 'Soporte Notarial Dubái 2026 | Poder Notarial | E-Notary Dubai',
-  }
+    en: 'POA in 30 — Power of Attorney Dubai in 30 Minutes',
+    ar: 'POA in 30 — وكالة قانونية في دبي خلال 30 دقيقة' }
   const descs: Record<string, string> = {
-    en: 'Dubai notary support — POA, MOFA attestation, legal notices & corporate documents. Same-day service via video call notarization.',
-    ar: 'دعم كاتب العدل في دبي — وكالات، تصديق الخارجية، إنذارات قانونية.',
-    ru: 'Нотариальная поддержка в Дубае — доверенности, легализация MOFA. В тот же день.',
-    zh: '迪拜公证支持 — 授权委托书，外交部认证。当日服务。',
-    es: 'Soporte notarial en Dubái — Poderes, autenticación MOFA. Mismo día.',
-  }
+    en: 'Power of Attorney in Dubai drafted, remotely notarized and delivered electronically in 30 minutes. General, Special, Property, Bank, Court, Vehicle, Company and other POA types.',
+    ar: 'وكالة قانونية في دبي تُصاغ وتُوثق عن بُعد وتُسلَّم إلكترونياً خلال 30 دقيقة. الوكالات العامة والخاصة والعقارية والبنكية والقضائية ووكالات المركبات والشركات وغيرها.' }
+
   return {
     title: titles[lang] || titles.en,
     description: descs[lang] || descs.en,
     robots: 'index, follow',
     alternates: {
-      canonical: `https://www.enotarydubai.ae/${lang}/`,
+      canonical: `https://www.poain30.ae/${lang}/`,
       languages: {
-        'en-AE': 'https://www.enotarydubai.ae/en/',
-        'ar-AE': 'https://www.enotarydubai.ae/ar/',
-        'ru-AE': 'https://www.enotarydubai.ae/ru/',
-        'zh-Hans-AE': 'https://www.enotarydubai.ae/zh/',
-        'es-AE': 'https://www.enotarydubai.ae/es/',
-        'x-default': 'https://www.enotarydubai.ae/en/',
-      },
-    },
+        'en-AE': 'https://www.poain30.ae/en/',
+        'ar-AE': 'https://www.poain30.ae/ar/',
+        'x-default': 'https://www.poain30.ae/en/' } },
     openGraph: {
       title: titles[lang] || titles.en,
       description: descs[lang] || descs.en,
-      url: `https://www.enotarydubai.ae/${lang}/`,
-      siteName: 'E-Notary Dubai',
-      locale: lang,
+      url: `https://www.poain30.ae/${lang}/`,
+      siteName: 'POA in 30',
+      locale: lang === 'ar' ? 'ar_AE' : 'en_AE',
       type: 'website',
-    },
-    twitter: { card: 'summary_large_image' },
-  }
+      images: [{ url: 'https://www.poain30.ae/og-default.png', width: 1200, height: 630, alt: 'POA in 30 — Power of Attorney Dubai' }] },
+    twitter: { card: 'summary_large_image', images: ['https://www.poain30.ae/og-default.png'] } }
 }
 
 export default async function LangLayout({ children, params }: Props) {
@@ -78,35 +61,58 @@ export default async function LangLayout({ children, params }: Props) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap"
+        />
+        <meta name="theme-color" content="#0F2137" />
         <meta name="geo.region" content="AE-DU" />
         <meta name="geo.placename" content="Dubai, UAE" />
         <meta name="geo.position" content="25.2048;55.2708" />
         <meta name="ICBM" content="25.2048, 55.2708" />
-        <LocalBusinessSchema />
+        <LocalBusinessSchema lang={lang as Lang} />
       </head>
-      <body className={`${fontClass} antialiased bg-white text-navy-900`}>
-        {/* Google Analytics — loaded via next/script for proper scheduling,
-            hydration safety, and compatibility with static generation. */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${site.ga}`}
-          strategy="afterInteractive"
+      <body className={`${fontClass} antialiased`} style={{ backgroundColor: 'var(--bg-base)', color: 'var(--text-primary)' }}>
+        {/* Google Analytics — only loaded when a GA4 ID is configured */}
+        {site.ga && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${site.ga}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.ga}');`}
+            </Script>
+          </>
+        )}
+        {/* Canary: per-render fingerprint for plagiarism detection.
+            If our content shows up on another site verbatim with these
+            data attributes intact, we have evidence of direct scraping. */}
+        <div
+          aria-hidden="true"
+          style={{ display: 'none' }}
+          data-owner="poain30.ae"
+          data-ref="POA30-2026"
+          data-canary={`POA30-${lang}-${new Date().toISOString().slice(0, 10)}`}
         />
-        <Script id="ga-init" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.ga}');`}
-        </Script>
-        {/* Invisible HTML watermark (defense-in-depth content tracking) */}
-        <div aria-hidden="true" style={{ display: 'none' }} data-owner="enotarydubai.ae" data-ref="ENDX-2026" />
-        <a href="#main-content" className="skip-link">{
-          lang === 'ar' ? 'انتقل إلى المحتوى' :
-          lang === 'ru' ? 'Перейти к содержимому' :
-          lang === 'zh' ? '跳到内容' :
-          lang === 'es' ? 'Saltar al contenido' :
-          'Skip to content'
-        }</a>
+        {/* Honeypot link — invisible to humans, irresistible to crawlers.
+            Edge middleware bans any IP that touches /honeypot/ for 1 hour. */}
+        <a
+          href="/honeypot/"
+          rel="nofollow"
+          aria-hidden="true"
+          tabIndex={-1}
+          className="honeypot-trap"
+        >
+          .
+        </a>
+        {/* Anti-copy keyboard / right-click protection (client component) */}
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:start-2 focus:bg-ink-700 focus:text-white focus:px-3 focus:py-2 focus:rounded-lg focus:z-50">
+          {lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}
+        </a>
         <Navbar lang={lang as Lang} />
         <main id="main-content">{children}</main>
         <Footer lang={lang as Lang} />
-        {/* FloatingWA handles both WhatsApp button AND scroll-to-top in React */}
         <FloatingWA lang={lang as Lang} />
       </body>
     </html>

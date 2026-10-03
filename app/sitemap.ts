@@ -2,45 +2,12 @@ import { MetadataRoute } from 'next'
 import { LANGS, HREFLANG_MAP } from '@/lib/i18n'
 import content from '@/data/content.json'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Manual content timestamp — bump ONLY when page content genuinely changes.
-// Never use new Date() here: it resets every URL's lastModified on each deploy,
-// burning crawl budget re-crawling unchanged pages (root cause of 55/400 indexed).
-// ─────────────────────────────────────────────────────────────────────────────
-const LAST_CONTENT_UPDATE = new Date('2026-07-20')
+const BASE = 'https://www.poain30.ae'
 
-// Per-page overrides. Add a path here ONLY when that page's visible/indexable
-// content materially changed — never for code-only or technical patches.
-const PAGE_LAST_MODIFIED: Record<string, Date> = (() => {
-  const SEP_2026 = new Date('2026-09-09')
-  const rebuiltPoaPages = [
-    '/power-of-attorney',
-    '/power-of-attorney/general',
-    '/power-of-attorney/special',
-    '/power-of-attorney/real-estate',
-    '/power-of-attorney/vehicle',
-    '/power-of-attorney/bank',
-    '/power-of-attorney/court',
-    '/power-of-attorney/company-formation',
-    '/power-of-attorney/child-travel',
-  ]
-  const map: Record<string, Date> = {}
-  for (const path of rebuiltPoaPages) map[path] = SEP_2026
-  return map
-})()
-
-function pageLastModified(path: string): Date {
-  return PAGE_LAST_MODIFIED[path] ?? LAST_CONTENT_UPDATE
-}
-
-/** Real per-article lastModified from blog_content.date_updated (fallback: date). */
-function blogLastModified(slug: string): Date {
-  const bc = (content.blog_content as Record<string, { date?: string; date_updated?: string }>)[slug]
-  const d = bc?.date_updated || bc?.date
-  return d ? new Date(d) : LAST_CONTENT_UPDATE
-}
-
-const BASE = 'https://www.enotarydubai.ae'
+/** Date of the last sitewide content update. Set manually when content
+ *  genuinely changes — NEVER new Date(): build-time dates reset lastModified
+ *  on every deploy and burn crawl budget (the documented E-Notary mistake). */
+const LAST_CONTENT_UPDATE = new Date('2026-09-28')
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Path classification for SEO priority
@@ -49,23 +16,21 @@ const BASE = 'https://www.enotarydubai.ae'
 // appear in the sitemap without any code change here.
 // ─────────────────────────────────────────────────────────────────────────────
 
-/** 5 Main Hub pages — flagship landing pages that drive the bulk of organic
+/** Main POA hub pages — flagship landing pages that drive the bulk of organic
  *  traffic and act as parents in the internal-link graph. Priority 0.9. */
 const MAIN_HUBS = new Set<string>([
   '/power-of-attorney',
   '/power-of-attorney/real-estate',
   '/power-of-attorney/vehicle',
-  '/legal-notice',
-  '/corporate/moa',
+  '/power-of-attorney/bank',
+  '/e-notary',
 ])
 
 /** Informational / boilerplate pages. Priority 0.5. */
 const INFO_PAGES = new Set<string>([
-  '/pricing',
   '/faq',
   '/about',
   '/contact',
-  '/blog',
   '/what-is-tableegh',
   '/document-rejection',
   '/why-poa-rejected-dubai',
@@ -79,27 +44,7 @@ const REDIRECTED_PATHS = new Set<string>([])
 
 /** Real routes that don't have a page_content entry (e.g. dynamically rendered
  *  index pages). Added to the sitemap alongside page_content keys. */
-const EXTRA_PATHS: string[] = ['/blog']
-
-// Must stay in sync with BLOG_SLUGS in app/[lang]/blog/page.tsx
-const BLOG_SLUGS = [
-  'how-to-get-poa-dubai',
-  'power-of-attorney-types-dubai',
-  'difference-between-general-and-special-poa-uae',
-  'poa-for-banking-uae-guide',
-  'corporate-poa-vs-individual-poa-uae',
-  'mofa-attestation-guide',
-  'eviction-notice-requirements-dubai',
-  'whatsapp-eviction-notice-dubai-valid',
-  'rdc-filing-guide-dubai',
-  'how-to-attend-rdc-hearing-dubai-2026',
-  'last-will-testament-dubai-expats',
-  'travelling-minor-child-uae-rules',
-  'notary-public-vs-lawyer-dubai',
-  'notarize-documents-without-visiting-uae',
-  'affidavit-dubai-complete-guide',
-  'corporate-documents-dubai',
-]
+const EXTRA_PATHS: string[] = []
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helpers
@@ -113,16 +58,20 @@ function priorityFor(path: string): number {
 }
 
 function changeFreqFor(path: string): 'weekly' | 'monthly' {
-  if (path === '/' || path === '/blog') return 'weekly'
+  if (path === '/') return 'weekly'
   return 'monthly'
 }
 
 /** Build the hreflang alternates map for a given site-relative path.
  *  `cleanPath` should be '' for the home page, otherwise start with '/'. */
 function hreflangAlternates(cleanPath: string): Record<string, string> {
-  return Object.fromEntries(
-    LANGS.map((l) => [HREFLANG_MAP[l], `${BASE}/${l}${cleanPath}/`]),
-  )
+  return {
+    ...Object.fromEntries(
+      LANGS.map((l) => [HREFLANG_MAP[l], `${BASE}/${l}${cleanPath}/`]),
+    ),
+    // Mirrors the x-default each page already declares in its HTML <head>.
+    'x-default': `${BASE}/en${cleanPath}/`,
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -141,6 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   //    dedupe, drop redirected paths, and sort for deterministic output.
   const allPaths = Array.from(new Set([...contentPaths, ...EXTRA_PATHS]))
     .filter((p) => !REDIRECTED_PATHS.has(p))
+    .filter((p) => !p.includes('_old'))
     .sort()
 
   for (const path of allPaths) {
@@ -151,28 +101,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const lang of LANGS) {
       entries.push({
         url: `${BASE}/${lang}${cleanPath}/`,
-        lastModified: pageLastModified(path),
+        lastModified: LAST_CONTENT_UPDATE,
         changeFrequency,
         priority,
         alternates: {
-          languages: hreflangAlternates(cleanPath),
-        },
-      })
+          languages: hreflangAlternates(cleanPath) } })
     }
   }
 
-  // 3. Blog posts — hreflang alternates across all 5 languages.
-  for (const slug of BLOG_SLUGS) {
-    const cleanPath = `/blog/${slug}`
+  // 3. Blog posts — real per-article dates from blog_content.updated.
+  const posts = ((content as Record<string, unknown>).blog_content ?? []) as Array<{
+    slug: string
+    updated: string
+  }>
+  // Blog index (only once there is at least one post)
+  if (posts.length > 0) {
+    const newest = posts
+      .map((p) => new Date(p.updated))
+      .reduce((a, b) => (a > b ? a : b))
+    for (const lang of LANGS) {
+      entries.push({
+        url: `${BASE}/${lang}/blog/`,
+        lastModified: newest,
+        changeFrequency: 'weekly',
+        priority: 0.6,
+        alternates: { languages: hreflangAlternates('/blog') },
+      })
+    }
+  }
+  for (const post of posts) {
+    const cleanPath = `/blog/${post.slug}`
     for (const lang of LANGS) {
       entries.push({
         url: `${BASE}/${lang}${cleanPath}/`,
-        lastModified: blogLastModified(slug),
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
-        alternates: {
-          languages: hreflangAlternates(cleanPath),
-        },
+        lastModified: new Date(post.updated),
+        changeFrequency: 'monthly',
+        priority: 0.6,
+        alternates: { languages: hreflangAlternates(cleanPath) },
       })
     }
   }

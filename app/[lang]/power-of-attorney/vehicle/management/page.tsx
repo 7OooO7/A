@@ -1,8 +1,7 @@
+import { withSocial } from '@/lib/seo/metadata'
 import type { Metadata } from 'next'
 import { LANGS, type Lang, getPageContent, getPageBlocks, getPageFaq, HREFLANG_MAP } from '@/lib/i18n'
 import ServicePage from '@/components/ServicePage'
-import { LegalServiceSchema } from '@/components/SchemaMarkup'
-import { relatedFor, breadcrumbFor } from '@/lib/serviceLinks'
 
 interface Props { params: Promise<{ lang: Lang }> }
 
@@ -10,28 +9,20 @@ export async function generateStaticParams() {
   return LANGS.map((l) => ({ lang: l }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+async function baseMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   const seo = (getPageContent('/power-of-attorney/vehicle/management') as any)?.seo
   return {
     title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
     description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-    openGraph: {
-      title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
-      description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-      url: `https://www.enotarydubai.ae/${lang}/power-of-attorney/vehicle/management/`,
-      siteName: 'E-Notary Dubai',
-      locale: ({ en: 'en_US', ar: 'ar_AE', ru: 'ru_RU', zh: 'zh_CN', es: 'es_ES' } as Record<string, string>)[lang],
-      type: 'website',
-    },
     alternates: {
-      canonical: `https://www.enotarydubai.ae/${lang}/power-of-attorney/vehicle/management/`,
+      canonical: `https://www.poain30.ae/${lang}/power-of-attorney/vehicle/management/`,
       languages: {
-        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.enotarydubai.ae/${l}/power-of-attorney/vehicle/management/`])),
-        'x-default': `https://www.enotarydubai.ae/en/power-of-attorney/vehicle/management/`,
-      },
-    },
-  }
+        ...Object.fromEntries(
+        LANGS.map((l) => [HREFLANG_MAP[l], `https://www.poain30.ae/${l}/power-of-attorney/vehicle/management/`])
+      ),
+        'x-default': `https://www.poain30.ae/en/power-of-attorney/vehicle/management/`,
+      } } }
 }
 
 export default async function Page({ params }: Props) {
@@ -39,8 +30,8 @@ export default async function Page({ params }: Props) {
   const seo = (getPageContent('/power-of-attorney/vehicle/management') as any)?.seo
   return (
     <>
-      <LegalServiceSchema lang={lang} path="/power-of-attorney/vehicle/management" />
       <ServicePage
+        path={'/power-of-attorney/vehicle/management'}
         lang={lang}
         title={seo?.h1}
         description={seo?.meta_description}
@@ -48,9 +39,21 @@ export default async function Page({ params }: Props) {
         waMessage={(seo?.wa_message?.[lang] ?? seo?.wa_message?.en) as string}
         faqItems={getPageFaq('/power-of-attorney/vehicle/management')}
         richBlocks={getPageBlocks('/power-of-attorney/vehicle/management')}
-      relatedServices={relatedFor(lang, '/power-of-attorney/vehicle/management')}
-      breadcrumb={breadcrumbFor(lang, '/power-of-attorney/vehicle/management')}
+        breadcrumb={[
+          { label: lang === 'ar' ? 'الوكالات الرسمية' : 'Power of Attorney', href: '/power-of-attorney' },
+          { label: lang === 'ar' ? 'وكالة مركبة' : 'Vehicle POA', href: '/power-of-attorney/vehicle' },
+          { label: lang === 'ar' ? 'وكالة إدارة مركبة' : 'Vehicle Management POA', href: '/power-of-attorney/vehicle/management' },
+        ]}
+        relatedServices={[
+          { label: { en: 'Vehicle POA Hub', ar: 'مركز وكالة المركبة' }, href: '/power-of-attorney/vehicle' },
+          { label: { en: 'Vehicle Sale POA', ar: 'وكالة بيع مركبة' }, href: '/power-of-attorney/vehicle/sale' },
+          { label: { en: 'Vehicle Export POA', ar: 'وكالة تصدير مركبة' }, href: '/power-of-attorney/vehicle/export' },
+        ]}
       />
     </>
   )
+}
+
+export async function generateMetadata(...args: Parameters<typeof baseMetadata>): Promise<Metadata> {
+  return withSocial(await baseMetadata(...args))
 }

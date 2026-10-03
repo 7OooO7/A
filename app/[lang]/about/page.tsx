@@ -1,170 +1,215 @@
+import { withSocial } from '@/lib/seo/metadata'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { LANGS, type Lang, t, site, HREFLANG_MAP, getPageContent } from '@/lib/i18n'
-import { LegalServiceSchema } from '@/components/SchemaMarkup'
+import { LANGS, type Lang, t, site, HREFLANG_MAP, getWaUrl } from '@/lib/i18n'
+import { ContentPageSchema } from '@/components/SchemaMarkup'
 
 interface Props { params: Promise<{ lang: Lang }> }
 export async function generateStaticParams() { return LANGS.map((l) => ({ lang: l })) }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+async function baseMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
-  const seo = (getPageContent('/about') as any)?.seo
+  const titles: Record<string, string> = {
+    en: 'About POA in 30 | Power of Attorney Specialists Dubai',
+    ar: 'عن POA in 30 | متخصصون في الوكالات في دبي' }
+  const descs: Record<string, string> = {
+    en: 'POA in 30 is a Dubai service focused on Power of Attorney drafting and remote notarization coordination — from first WhatsApp message to notarized electronic POA in 30 minutes.',
+    ar: 'POA in 30 خدمة في دبي متخصصة في صياغة الوكالات وتنسيق توثيقها عن بُعد — منذ أول رسالة عبر واتساب حتى استلام الوكالة الإلكترونية الموثقة خلال 30 دقيقة.' }
   return {
-    title: seo?.meta_title?.[lang] ?? seo?.meta_title?.en,
-    description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
+    title: titles[lang] || titles.en,
+    description: descs[lang] || descs.en,
     alternates: {
-      canonical: `https://www.enotarydubai.ae/${lang}/about/`,
+      canonical: `https://www.poain30.ae/${lang}/about/`,
       languages: {
-        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.enotarydubai.ae/${l}/about/`])),
-        'x-default': `https://www.enotarydubai.ae/en/about/`,
-      },
-    },
+        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.poain30.ae/${l}/about/`])),
+        'x-default': `https://www.poain30.ae/en/about/`,
+      } },
     openGraph: {
-      title: seo?.meta_title?.[lang] ?? seo?.meta_title?.en,
-      description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-      url: `https://www.enotarydubai.ae/${lang}/about/`,
-      siteName: 'E-Notary Dubai',
-      locale: ({ en: 'en_US', ar: 'ar_AE', ru: 'ru_RU', zh: 'zh_CN', es: 'es_ES' } as Record<string, string>)[lang],
-      type: 'website',
-    },
-  }
+      title: titles[lang] || titles.en,
+      description: descs[lang] || descs.en,
+      url: `https://www.poain30.ae/${lang}/about/` } }
 }
 
 const L = {
-  h1:       { en: 'About E-Notary Dubai', ar: 'عن E-Notary Dubai', ru: 'О E-Notary Dubai', zh: '关于E-Notary Dubai', es: 'Sobre E-Notary Dubai' },
-  sub:      { en: 'Dubai\'s notary facilitation service', ar: 'خدمة دعم وتنسيق التوثيق في دبي', ru: 'Служба нотариальной поддержки в Дубае', zh: '迪拜公证支持与协调服务', es: 'Servicio de soporte notarial en Dubái' },
-  what_h:   { en: 'How We Can Help', ar: 'كيف نساعدك', ru: 'Как мы помогаем', zh: '我们如何帮助您', es: 'Cómo Podemos Ayudarle' },
-  what_p: {
-    en: 'At E-Notary Dubai, we help you prepare and review documents and coordinate the appropriate process for each matter, including notarization, attestation, translation, and submission to the relevant authorities. We make sure your documents are prepared in line with the requirements of the receiving authority and coordinate the necessary steps to make the process clear and straightforward. Where official notarization or certification is required, it is completed by the competent government authority or an authorized licensed service provider in accordance with the applicable procedure.',
-    ar: 'في E-Notary Dubai نساعدك في تجهيز المستندات ومراجعتها وتنسيق الإجراءات المناسبة لكل معاملة، بما في ذلك التوثيق والتصديق والترجمة والتقديم لدى الجهات المختصة. نحرص على إعداد المستندات وفق متطلبات الجهة المعنية، ونتولى تنسيق الخطوات اللازمة لتكون الإجراءات واضحة وسهلة للعميل. وعندما تتطلب المعاملة توثيقًا أو تصديقًا رسميًا، يتم الإجراء من خلال الجهة الحكومية المختصة أو مقدم الخدمة المرخص والمخوّل بذلك وفقًا للإجراءات المعمول بها.',
-    ru: 'В E-Notary Dubai мы помогаем подготовить и проверить документы, а также координируем подходящую процедуру для каждого обращения, включая нотариальное оформление, легализацию, перевод и подачу документов в соответствующие органы. Мы следим за тем, чтобы документы были подготовлены в соответствии с требованиями принимающего органа, и координируем необходимые этапы, чтобы процесс был понятным и удобным для клиента. Если требуется официальное нотариальное удостоверение или заверение, соответствующая процедура выполняется компетентным государственным органом или уполномоченным лицензированным поставщиком услуг в установленном порядке.',
-    zh: '在 E-Notary Dubai，我们协助您准备和审核文件，并根据不同业务协调相应的办理流程，包括公证、认证、翻译以及向相关主管机构提交文件。我们确保文件按照受理机构的要求妥善准备，并协调整个办理步骤，使流程更加清晰、便捷。如相关业务需要正式公证或认证，该正式程序将由主管政府机构或经授权的持牌服务提供方按照适用程序办理。',
-    es: 'En E-Notary Dubai le ayudamos a preparar y revisar sus documentos y coordinamos el procedimiento adecuado para cada trámite, incluyendo notarización, legalización, traducción y presentación ante las autoridades correspondientes. Nos aseguramos de que la documentación esté preparada de acuerdo con los requisitos de la entidad receptora y coordinamos los pasos necesarios para que el proceso sea claro y sencillo para el cliente. Cuando se requiera una notarización o certificación oficial, el trámite será realizado por la autoridad gubernamental competente o por un proveedor de servicios autorizado y debidamente licenciado, conforme al procedimiento aplicable.',
-  },
-
-  why_h:    { en: 'Why E-Notary Dubai?', ar: 'لماذا E-Notary Dubai؟', ru: 'Почему E-Notary Dubai?', zh: '为什么选择E-Notary Dubai？', es: '¿Por qué E-Notary Dubai?' },
-  cta_h:    { en: 'Ready to Start?', ar: 'مستعد للبدء؟', ru: 'Готовы начать?', zh: '准备好开始了吗？', es: '¿Listo para Comenzar?' },
-  cta_p:    { en: 'WhatsApp us — tell us what you need and we will review the request, quote and estimated timeline for the service.', ar: 'راسلنا على واتساب — أخبرنا بما تحتاج، وسنراجع الطلب ونوضح عرض السعر والمدة التقديرية بحسب الخدمة.', ru: 'Напишите нам в WhatsApp — расскажите, что нужно, и мы проверим запрос, расчёт и ориентировочный срок.', zh: '通过WhatsApp告诉我们您的需求，我们会审核请求并说明报价和预计时间。', es: 'Escríbanos por WhatsApp — díganos qué necesita y revisaremos la solicitud, cotización y plazo estimado.' },
-  wa_btn:   { en: 'Start on WhatsApp', ar: 'ابدأ عبر واتساب', ru: 'Начать в WhatsApp', zh: '通过WhatsApp开始', es: 'Iniciar en WhatsApp' },
-}
+  kicker:   { en: 'About POA in 30', ar: 'عن POA in 30' },
+  h1_lead:  { en: "Dubai's Power of Attorney specialists,", ar: 'متخصصون في الوكالات القانونية في دبي،' },
+  h1_em:    { en: 'in 30 minutes.', ar: 'في 30 دقيقة.' },
+  sub:      { en: 'We focus on Power of Attorney: transaction-specific bilingual drafting, remote notarization coordination, and electronic delivery in 30 minutes. Not a law firm. We are POA document specialists.', ar: 'نركز على الوكالات القانونية: صياغة ثنائية اللغة بحسب المعاملة، وتنسيق التوثيق عن بُعد، والتسليم الإلكتروني خلال 30 دقيقة. لسنا مكتب محاماة؛ نحن متخصصون في إعداد الوكالات.' },
+  what_kicker: { en: '— What we do', ar: '— ما نفعله' },
+  what_h:   { en: 'Power of Attorney, drafted for the transaction.', ar: 'وكالة تُصاغ وفق المعاملة المقصودة.' },
+  what_p:   { en: 'POA in 30 prepares transaction-specific Powers of Attorney for use in Dubai and the UAE, then coordinates the applicable official remote notarization route. Our focus is precision: the right powers, the right transaction details, and the right receiving authority.', ar: 'تُعد POA in 30 وكالات مخصصة للمعاملة للاستخدام في دبي والإمارات، ثم تنسق مسار التوثيق الرسمي عن بُعد المطبق. تركيزنا على الدقة: الصلاحيات المناسبة، وبيانات المعاملة الصحيحة، والجهة المستلمة المقصودة.' },
+  why_kicker: { en: '— Why us', ar: '— لماذا نحن' },
+  why_h:    { en: 'Built for speed, drafted for the receiving authority.', ar: 'مصممة للسرعة، ومصاغة وفق متطلبات الجهة المستلمة.' },
+  cta_h:    { en: 'Ready when you are.', ar: 'جاهزون متى أردت.' },
+  cta_p:    { en: 'Send a WhatsApp with what you need. We respond in minutes with cost and timeline.', ar: 'أرسل واتساب بما تحتاجه. نرد خلال دقائق بالتكلفة والجدول الزمني.' },
+  wa_btn:   { en: 'Start on WhatsApp', ar: 'ابدأ عبر واتساب' },
+  disclaim: { en: 'POA in 30 is a document preparation and coordination service — not a law firm. We do not provide legal advice. All notarization is performed by UAE-licensed Notary Public authorities.', ar: 'POA in 30 خدمة إعداد وتنسيق مستندات — وليست مكتب محاماة. لا نقدم استشارات قانونية. يُنفَّذ التوثيق بواسطة كتّاب العدل المرخصين في الإمارات.' } }
 
 const WHY_POINTS = [
-  { en: 'Priority preparation for urgent files — official completion depends on the competent authority', ar: 'أولوية في تجهيز الملفات العاجلة — والإنجاز الرسمي يعتمد على الجهة المختصة', ru: 'Приоритетная подготовка срочных файлов — официальные сроки зависят от компетентного органа', zh: '紧急文件可优先准备——官方完成时间取决于主管机关', es: 'Preparación prioritaria de expedientes urgentes — la finalización oficial depende de la autoridad' },
-  { en: 'Drafted in the correct format for the correct authority', ar: 'صياغة بالصيغة الصحيحة للجهة الصحيحة', ru: 'Составление в правильном формате для нужного органа', zh: '按正确格式为正确机构起草', es: 'Redactados en el formato correcto para la autoridad correcta' },
-  { en: 'Remote coordination where the official route permits; some transactions still require in-person steps', ar: 'تنسيق عن بُعد عندما يسمح المسار الرسمي؛ وبعض المعاملات تظل بحاجة إلى حضور شخصي', ru: 'Удалённая координация там, где это допускает официальный маршрут; некоторые сделки требуют личного присутствия', zh: '官方流程允许时可远程协调；部分交易仍需要本人到场', es: 'Coordinación remota cuando la vía oficial lo permite; algunos trámites requieren presencia personal' },
-  { en: 'Arabic, English or bilingual preparation according to the transaction and receiving authority', ar: 'إعداد بالعربية أو الإنجليزية أو بصيغة ثنائية اللغة بحسب المعاملة والجهة المستلمة', ru: 'Арабский, английский или двуязычный формат — по требованиям сделки и принимающего органа', zh: '根据交易及接收机关要求采用阿拉伯语、英语或双语格式', es: 'Preparación en árabe, inglés o formato bilingüe según el trámite y la autoridad receptora' },
-  { en: 'Documents used before UAE authorities — DLD, RTA, MOFA, Dubai Courts, banks', ar: 'مستندات تُستخدم أمام جهات الإمارات — دائرة الأراضي، هيئة الطرق، الخارجية، محاكم دبي، البنوك', ru: 'Документы используются в органах ОАЭ — DLD, RTA, MOFA, суды Дубая, банки', zh: '文件用于向阿联酋各机构提交——土地局、交通局、外交部、迪拜法院、银行', es: 'Documentos que se utilizan ante las autoridades de los EAU — DLD, RTA, MOFA, Tribunales de Dubái, bancos' },
-  { en: 'Fast WhatsApp support — 7 days', ar: 'دعم سريع عبر واتساب — 7 أيام', ru: 'Быстрая поддержка в WhatsApp — 7 дней', zh: 'WhatsApp 快速支持——每周7天', es: 'Soporte rápido por WhatsApp — 7 días' },
-  { en: 'Transparent pricing — exact cost confirmed before you proceed', ar: 'أسعار شفافة — التكلفة الدقيقة تُؤكَّد قبل البدء', ru: 'Прозрачные цены — точная стоимость подтверждается до начала', zh: '透明定价——开始前确认精确费用', es: 'Precios transparentes — costo exacto confirmado antes de proceder' },
+  { en: '30-minute POA service — from first WhatsApp message to notarized electronic POA', ar: 'خدمة وكالة خلال 30 دقيقة — منذ أول رسالة عبر واتساب حتى استلام الوكالة الإلكترونية الموثقة' },
+  { en: 'Drafted to receiving authority specifications', ar: 'مصاغة وفق متطلبات الجهة المستلمة' },
+  { en: 'Fully remote — notarization via video call, no office visits required', ar: 'عن بُعد بالكامل — التوثيق بمكالمة فيديو، بدون زيارات مكتبية' },
+  { en: 'Bilingual Arabic and English drafting on every document', ar: 'صياغة ثنائية اللغة عربي وإنجليزي على كل وثيقة' },
+  { en: 'Transaction-specific drafting for DLD, RTA, banks, courts, companies and other receiving authorities', ar: 'صياغة مخصصة للمعاملة لدى دائرة الأراضي وهيئة الطرق والبنوك والمحاكم والشركات وغيرها من الجهات المستلمة' },
+  { en: 'WhatsApp first, talk to a person — no forms, no call-back queues', ar: 'واتساب أولاً، تحدث مع شخص — لا نماذج، لا قوائم انتظار' },
 ]
 
-const SERVICES: ({ href?: string } & Record<string, string>)[] = [
-  { en: 'All types of Power of Attorney (General, Real Estate, Vehicle, Bank, Court, Corporate)', ar: 'جميع أنواع الوكالات (العامة، العقارية، المركبات، المصرفية، القضائية، وكالات الشركات)', ru: 'Все виды доверенностей (общие, недвижимость, транспорт, банк, суд, корпоративные)', zh: '所有类型授权委托书（一般、房产、车辆、银行、法院、企业）', es: 'Todos los tipos de Poderes Notariales', href: 'power-of-attorney' },
-  { en: 'Affidavits and Sworn Statements', ar: 'الإقرارات والتصريحات', ru: 'Аффидевиты и присяжные заявления', zh: '宣誓书及宣誓声明', es: 'Declaraciones Juradas', href: 'affidavit' },
-  { en: 'Signature Authentication', ar: 'تصديق التوقيع', ru: 'Удостоверение подписи', zh: '签名认证', es: 'Autenticación de Firma' },
-  { en: 'Certified True Copies', ar: 'النسخ طبق الأصل', ru: 'Заверенные копии', zh: '核证副本', es: 'Copias Certificadas', href: 'certified-true-copy' },
-  { en: 'Last Will & Testament', ar: 'الوصية الأخيرة', ru: 'Завещание', zh: '遗嘱', es: 'Testamento', href: 'last-will-testament-dubai' },
-  { en: 'MOFA Attestation & Embassy Attestation', ar: 'تصديق وزارة الخارجية وتصديق السفارات', ru: 'Легализация МИД и посольств', zh: '外交部认证与使馆认证', es: 'Atestación MOFA y de embajadas', href: 'attestation/mofa' },
-  { en: 'Legal Translation (MOJ-registered translator coordination where required)', ar: 'الترجمة القانونية (تنسيق مع مترجم مقيد بوزارة العدل عند الحاجة)', ru: 'Юридический перевод (координация с зарегистрированным переводчиком при необходимости)', zh: '法律翻译（需要时协调司法部注册译员）', es: 'Traducción Legal (coordinación con traductor registrado cuando corresponda)', href: 'legal-translation' },
-  { en: 'Eviction Notices (Article 25 compliant, Tableegh delivery)', ar: 'إشعارات الإخلاء (متوافقة مع المادة 25، تسليم عبر تبليغ)', ru: 'Уведомления о выселении (статья 25, доставка Tableegh)', zh: '驱逐通知（符合第25条，经Tableegh送达）', es: 'Avisos de Desalojo (Artículo 25, entrega por Tableegh)', href: 'legal-notice/eviction' },
-  { en: 'Legal Notices (all types)', ar: 'الإنذارات القانونية (جميع الأنواع)', ru: 'Юридические уведомления (все виды)', zh: '法律通知（所有类型）', es: 'Notificaciones Legales (todos los tipos)', href: 'legal-notice' },
-  { en: 'RDC Support (Rental Disputes Centre)', ar: 'دعم مركز فض المنازعات الإيجارية', ru: 'Поддержка RDC (Центр по арендным спорам)', zh: 'RDC支持（租赁纠纷中心）', es: 'Soporte RDC (Centro de Disputas de Arrendamiento)', href: 'rdc-support' },
-  { en: 'Remote E-Notary coordination where the official service permits electronic/video processing', ar: 'تنسيق التوثيق الإلكتروني عن بُعد عندما تسمح الخدمة الرسمية بالإجراء الإلكتروني/المرئي', ru: 'Координация удалённого e-Notary там, где официальный сервис допускает электронную/видео-процедуру', zh: '官方服务允许电子/视频办理时的远程电子公证协调', es: 'Coordinación de E-Notary remoto cuando el servicio oficial permite trámite electrónico/vídeo', href: 'e-notary' },
-  { en: 'Corporate Documents (MOA, Board Resolutions, Share Transfers)', ar: 'مستندات الشركات (عقد التأسيس، قرارات مجلس الإدارة، نقل الحصص)', ru: 'Корпоративные документы (MOA, решения совета, передача акций)', zh: '企业文件（章程、董事会决议、股权转让）', es: 'Documentos Corporativos (MOA, Resoluciones del Directorio, Transferencias)', href: 'corporate/board-resolution' },
+const SERVICES = [
+  { en: 'General Power of Attorney',       ar: 'الوكالة العامة', href: 'power-of-attorney/general' },
+  { en: 'Special Power of Attorney',       ar: 'الوكالة الخاصة', href: 'power-of-attorney/special' },
+  { en: 'Real Estate POA',                 ar: 'الوكالة العقارية', href: 'power-of-attorney/real-estate' },
+  { en: 'Bank POA',                        ar: 'الوكالة البنكية', href: 'power-of-attorney/bank' },
+  { en: 'Court POA',                       ar: 'الوكالة القضائية', href: 'power-of-attorney/court' },
+  { en: 'Vehicle POA',                     ar: 'وكالة المركبات', href: 'power-of-attorney/vehicle' },
+  { en: 'Company Formation POA',           ar: 'وكالة تأسيس شركة', href: 'power-of-attorney/company-formation' },
+  { en: 'Child Travel Authorization',      ar: 'إذن سفر الطفل', href: 'power-of-attorney/child-travel' },
+  { en: 'POA Cancellation',                ar: 'إلغاء الوكالة', href: 'poa-cancellation' },
 ]
-
-export default async function AboutPage({ params }: Props) {
+export default async function Page({ params }: Props) {
   const { lang } = await params
-  const waUrl = `https://wa.me/${site.phone.replace(/\D/g,'')}?text=${encodeURIComponent('I need notary support in Dubai')}`
-  // Dynamic year — updates automatically every January 1st
-  const currentYear = new Date().getFullYear()
+  const isRTL = lang === 'ar'
+  const headingFont = isRTL ? "'IBM Plex Sans Arabic', sans-serif" : "'Plus Jakarta Sans', sans-serif"
+  const waUrl = getWaUrl(t({ en: 'Hello POA in 30, I would like to know more.', ar: 'مرحبًا POA in 30، أريد معرفة المزيد.' }, lang))
 
   return (
-    <div className="bg-white">
-      <LegalServiceSchema lang={lang} path="/about" />
-      {/* Hero */}
-      <div className="hero-bg py-14">
-        <div className="mx-auto max-w-4xl px-4 lg:px-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-2xl bg-navy-700 flex items-center justify-center overflow-hidden shadow-lg shadow-gold-400/20 shrink-0">
-              <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1.5" />
-            </div>
-            <div>
-              <div className="font-serif font-bold text-white text-xl">E-Notary Dubai</div>
-              <div className="text-xs text-navy-400 uppercase tracking-widest">LICENSED NOTARY SUPPORT · DUBAI</div>
-            </div>
-          </div>
-          <h1 className="font-serif text-3xl font-bold text-white sm:text-4xl mb-4">{t(L.h1, lang)}</h1>
-          <p className="text-navy-300 text-base leading-relaxed max-w-2xl">{t(L.sub, lang)}</p>
+    <>
+      <ContentPageSchema lang={lang} path="/about" />
+
+      {/* Masthead */}
+      <div className="bg-cream border-b border-ink-100/60">
+        <div className="mx-auto max-w-6xl px-4 lg:px-8 py-3 flex items-center justify-between">
+          <span className="text-[11px] tracking-[0.18em] uppercase text-ink-500 font-medium">{t(L.kicker, lang)}</span>
+          <span className="text-[11px] tracking-[0.18em] uppercase text-ink-500 font-medium hidden sm:inline">Dubai · UAE</span>
         </div>
       </div>
- 
-      <div className="mx-auto max-w-4xl px-4 lg:px-8 py-14 space-y-14">
-        {/* What we do */}
-        <div>
-          <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 mb-6 inline-block">{t(L.what_h, lang)}</h2>
-          <p className="text-navy-600 leading-relaxed mb-6">{t(L.what_p, lang)}</p>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {SERVICES.map((svc, i) => {
-              const inner = (
-                <>
-                  <span className="text-gold-500 font-bold mt-0.5 shrink-0 text-sm">✓</span>
-                  <span className="text-sm text-navy-700 group-hover:text-navy-900">{t(svc, lang)}</span>
-                </>
-              )
-              const cls = "flex items-start gap-2 p-3 rounded-xl border border-navy-100 bg-navy-50 transition-all group"
-              // an entry with no href has no page of its own — render it as plain text
-              return svc.href ? (
-                <Link key={i} href={`/${lang}/${svc.href}`}
-                  className={cls + " hover:border-gold-400/40 hover:bg-white"}>
-                  {inner}
-                </Link>
-              ) : (
-                <div key={i} className={cls}>{inner}</div>
-              )
-            })}
-          </div>
-        </div>
 
-        {/* Why E-Notary Dubai */}
-        <div>
-          <h2 className="gold-line font-serif text-2xl font-bold text-navy-900 mb-6 inline-block">{t(L.why_h, lang)}</h2>
-          <div className="space-y-3">
-            {WHY_POINTS.map((p, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 bg-navy-50 rounded-xl border border-navy-100">
-                <span className="text-gold-500 font-bold mt-0.5 shrink-0">✓</span>
-                <p className="text-sm text-navy-700 leading-relaxed">{t(p, lang)}</p>
-              </div>
-            ))}
+      {/* Hero — centered editorial */}
+      <section className="bg-cream pt-12 pb-10 lg:pt-20 lg:pb-16">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="block w-8 h-px bg-gold-500/60" />
+            <span className="text-[11px] tracking-[0.2em] uppercase text-gold-600 font-medium">
+              {isRTL ? 'عن الشركة' : 'About'}
+            </span>
+            <span className="block w-8 h-px bg-gold-500/60" />
           </div>
+
+          <h1
+            className="text-ink-900 leading-[1.05] tracking-tight font-normal"
+            style={{ fontFamily: headingFont, fontSize: 'clamp(32px, 5vw, 52px)', letterSpacing: '-0.015em' }}
+          >
+            {t(L.h1_lead, lang)}
+            <br/>
+            <em className="text-gold-600 not-italic" style={{ fontStyle: 'italic' }}>
+              {t(L.h1_em, lang)}
+            </em>
+          </h1>
+
+          <p className="text-ink-600 mt-6 mx-auto leading-relaxed"
+             style={{ fontFamily: headingFont, fontStyle: 'italic', fontSize: 'clamp(15px, 1.6vw, 18px)', maxWidth: '560px' }}>
+            {t(L.sub, lang)}
+          </p>
+          {/* Notarization path — compliance rule 0.1-1, verbatim */}
+          <p className="mt-4 mx-auto flex items-start justify-center gap-2 text-sm text-ink-600" style={{ maxWidth: '620px' }}>
+            <svg className="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="9" stroke="#C9A84C" strokeWidth="1.5" />
+              <path d="M6 10.2l2.6 2.6L14 7.5" stroke="#C9A84C" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+            <span>
+              {lang === 'ar'
+                ? 'يتم التوثيق عبر محاكم دبي أو وزارة العدل الإماراتية من خلال مكالمة فيديو.'
+                : 'Notarization happens through Dubai Courts or the UAE Ministry of Justice via a video call.'}
+            </span>
+          </p>
+
         </div>
-  
-        {/* Disclaimer */}
-        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-          <p className="text-amber-800 text-sm leading-relaxed">
-            {t({
-              en: `E-Notary Dubai provides document preparation and coordination services. Official notarization or attestation is issued by the competent authority or licensed provider. © ${currentYear} E-Notary Dubai · Dubai`,
-              ar: `E-Notary Dubai تقدم خدمات إعداد وتنسيق المستندات. يصدر التوثيق أو التصديق الرسمي من الجهة المختصة أو مقدم الخدمة المرخص. © ${currentYear} E-Notary Dubai · دبي`,
-              ru: `E-Notary Dubai предоставляет услуги по подготовке и координации документов. Официальное нотариальное заверение или аттестацию выдаёт компетентный орган или лицензированный провайдер. © ${currentYear} E-Notary Dubai · Дубай`,
-              zh: `E-Notary Dubai 提供文件准备与流程协调服务。正式公证或认证由主管机关或持牌服务方作出。© ${currentYear} E-Notary Dubai · 迪拜`,
-              es: `E-Notary Dubai ofrece servicios de preparación y coordinación documental. La notarización o atestación oficial la emite la autoridad competente o un proveedor autorizado. © ${currentYear} E-Notary Dubai · Dubái`
-            }, lang)}
+      </section>
+
+      {/* What we do — magazine grid */}
+      <section className="bg-cream py-14 lg:py-20 border-t border-ink-100/40">
+        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+          <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-3">{t(L.what_kicker, lang)}</p>
+          <h2 className="text-ink-900 font-normal mb-5"
+              style={{ fontFamily: headingFont, fontSize: 'clamp(24px, 3vw, 32px)', letterSpacing: '-0.01em' }}>
+            {t(L.what_h, lang)}
+          </h2>
+          <p className="text-ink-700 leading-[1.85] text-base lg:text-[17px] mb-10"
+             style={{ fontFamily: headingFont }}>
+            {t(L.what_p, lang)}
+          </p>
+
+          {/* Services list — editorial, no boxy cards */}
+          <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2 border-t border-ink-200 pt-8">
+            {SERVICES.map((svc, i) => (
+              <li key={i}>
+                <Link href={`/${lang}/${svc.href}`}
+                      className="group flex items-baseline gap-3 text-ink-700 hover:text-gold-600 transition-colors py-1"
+                      style={{ fontFamily: headingFont, fontSize: '16px' }}>
+                  <span className="text-gold-500 opacity-60 group-hover:opacity-100 shrink-0">→</span>
+                  <span>{t(svc, lang)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Why us */}
+      <section className="bg-soft-sand py-14 lg:py-20 border-t border-ink-100/40">
+        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+          <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-3">{t(L.why_kicker, lang)}</p>
+          <h2 className="text-ink-900 font-normal mb-8"
+              style={{ fontFamily: headingFont, fontSize: 'clamp(24px, 3vw, 32px)', letterSpacing: '-0.01em' }}>
+            {t(L.why_h, lang)}
+          </h2>
+          <ol className="space-y-4">
+            {WHY_POINTS.map((p, i) => (
+              <li key={i} className="grid grid-cols-[auto_1fr] gap-4 items-baseline">
+                <span className="text-gold-500 font-normal text-2xl" style={{ fontFamily: headingFont }}>
+                  {String(i + 1).padStart(2, '0')}.
+                </span>
+                <p className="text-ink-800 leading-relaxed text-base lg:text-lg" style={{ fontFamily: headingFont }}>
+                  {t(p, lang)}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="bg-cream py-10 border-t border-ink-100/40">
+        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+          <p className="text-ink-500 text-sm leading-relaxed text-center" style={{ fontFamily: headingFont, fontStyle: 'italic' }}>
+            {t(L.disclaim, lang)}
           </p>
         </div>
-      
-        {/* CTA */}
-        <div className="rounded-2xl bg-navy-900 p-10 text-center">
-          <h2 className="font-serif text-2xl font-bold text-white mb-3">{t(L.cta_h, lang)}</h2>
-          <p className="text-navy-300 text-sm mb-6 max-w-md mx-auto">{t(L.cta_p, lang)}</p>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-ink-900 py-16 lg:py-20">
+        <div className="mx-auto max-w-2xl px-4 lg:px-8 text-center">
+          <h2 className="text-cream font-normal mb-4 leading-tight"
+              style={{ fontFamily: headingFont, fontSize: 'clamp(28px, 4vw, 40px)', letterSpacing: '-0.01em' }}>
+            {t(L.cta_h, lang)}
+          </h2>
+          <p className="text-ink-200 leading-relaxed mb-8 mx-auto max-w-md text-base"
+             style={{ fontFamily: headingFont, fontStyle: 'italic' }}>
+            {t(L.cta_p, lang)}
+          </p>
           <a href={waUrl} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-8 py-3.5 rounded-xl hover:bg-[#20b958] transition-colors text-sm">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+             className="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-cream font-medium text-sm rounded-full px-7 py-3.5 transition-colors">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
             </svg>
             {t(L.wa_btn, lang)}
           </a>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
+}
+
+export async function generateMetadata(...args: Parameters<typeof baseMetadata>): Promise<Metadata> {
+  return withSocial(await baseMetadata(...args))
 }

@@ -1,8 +1,7 @@
+import { withSocial } from '@/lib/seo/metadata'
 import type { Metadata } from 'next'
 import { LANGS, type Lang, getPageContent, getPageBlocks, getPageFaq, HREFLANG_MAP } from '@/lib/i18n'
 import ServicePage from '@/components/ServicePage'
-import { LegalServiceSchema } from '@/components/SchemaMarkup'
-import { relatedFor, breadcrumbFor } from '@/lib/serviceLinks'
 
 interface Props { params: Promise<{ lang: Lang }> }
 
@@ -10,28 +9,20 @@ export async function generateStaticParams() {
   return LANGS.map((l) => ({ lang: l }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+async function baseMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   const seo = (getPageContent('/last-will-testament-dubai') as any)?.seo
   return {
     title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
     description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-    openGraph: {
-      title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
-      description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-      url: `https://www.enotarydubai.ae/${lang}/last-will-testament-dubai/`,
-      siteName: 'E-Notary Dubai',
-      locale: ({ en: 'en_US', ar: 'ar_AE', ru: 'ru_RU', zh: 'zh_CN', es: 'es_ES' } as Record<string, string>)[lang],
-      type: 'website',
-    },
     alternates: {
-      canonical: `https://www.enotarydubai.ae/${lang}/last-will-testament-dubai/`,
+      canonical: `https://www.poain30.ae/${lang}/last-will-testament-dubai/`,
       languages: {
-        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.enotarydubai.ae/${l}/last-will-testament-dubai/`])),
-        'x-default': `https://www.enotarydubai.ae/en/last-will-testament-dubai/`,
-      },
-    },
-  }
+        ...Object.fromEntries(
+        LANGS.map((l) => [HREFLANG_MAP[l], `https://www.poain30.ae/${l}/last-will-testament-dubai/`])
+      ),
+        'x-default': `https://www.poain30.ae/en/last-will-testament-dubai/`,
+      } } }
 }
 
 export default async function Page({ params }: Props) {
@@ -39,18 +30,29 @@ export default async function Page({ params }: Props) {
   const seo = (getPageContent('/last-will-testament-dubai') as any)?.seo
   return (
     <>
-      <LegalServiceSchema lang={lang} path="/last-will-testament-dubai" />
       <ServicePage
+        path={'/last-will-testament-dubai'}
         lang={lang}
         title={seo?.h1}
         description={seo?.meta_description}
         authority={seo?.authority}
         waMessage={(seo?.wa_message?.[lang] ?? seo?.wa_message?.en) as string}
+        breadcrumb={[
+          { label: lang === 'ar' ? 'الوصية' : 'Last Will', href: '/last-will-testament-dubai' }
+        ]}
+        relatedServices={[
+          { label: { en: 'RDC Support', ar: 'دعم مركز فض النزاعات' }, href: '/rdc-support' },
+          { label: { en: 'POA Rejected?', ar: 'وكالة مرفوضة؟' }, href: '/why-poa-rejected-dubai' },
+          { label: { en: 'Document Rejected?', ar: 'وثيقة مرفوضة؟' }, href: '/document-rejection' },
+          { label: { en: 'What is Tableegh?', ar: 'ما هو التبليغ؟' }, href: '/what-is-tableegh' }
+        ]}
         faqItems={getPageFaq('/last-will-testament-dubai')}
         richBlocks={getPageBlocks('/last-will-testament-dubai')}
-        relatedServices={relatedFor(lang, '/last-will-testament-dubai')}
-        breadcrumb={breadcrumbFor(lang, '/last-will-testament-dubai')}
       />
     </>
   )
+}
+
+export async function generateMetadata(...args: Parameters<typeof baseMetadata>): Promise<Metadata> {
+  return withSocial(await baseMetadata(...args))
 }

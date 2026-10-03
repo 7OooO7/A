@@ -1,8 +1,7 @@
+import { withSocial } from '@/lib/seo/metadata'
 import type { Metadata } from 'next'
 import { LANGS, type Lang, getPageContent, getPageBlocks, getPageFaq, HREFLANG_MAP } from '@/lib/i18n'
 import ServicePage from '@/components/ServicePage'
-import { LegalServiceSchema } from '@/components/SchemaMarkup'
-import { relatedFor, breadcrumbFor } from '@/lib/serviceLinks'
 
 interface Props { params: Promise<{ lang: Lang }> }
 
@@ -10,28 +9,20 @@ export async function generateStaticParams() {
   return LANGS.map((l) => ({ lang: l }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+async function baseMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   const seo = (getPageContent('/legal-notice/eviction') as any)?.seo
   return {
     title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
     description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-    openGraph: {
-      title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
-      description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-      url: `https://www.enotarydubai.ae/${lang}/legal-notice/eviction/`,
-      siteName: 'E-Notary Dubai',
-      locale: ({ en: 'en_US', ar: 'ar_AE', ru: 'ru_RU', zh: 'zh_CN', es: 'es_ES' } as Record<string, string>)[lang],
-      type: 'website',
-    },
     alternates: {
-      canonical: `https://www.enotarydubai.ae/${lang}/legal-notice/eviction/`,
+      canonical: `https://www.poain30.ae/${lang}/legal-notice/eviction/`,
       languages: {
-        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.enotarydubai.ae/${l}/legal-notice/eviction/`])),
-        'x-default': `https://www.enotarydubai.ae/en/legal-notice/eviction/`,
-      },
-    },
-  }
+        ...Object.fromEntries(
+        LANGS.map((l) => [HREFLANG_MAP[l], `https://www.poain30.ae/${l}/legal-notice/eviction/`])
+      ),
+        'x-default': `https://www.poain30.ae/en/legal-notice/eviction/`,
+      } } }
 }
 
 export default async function Page({ params }: Props) {
@@ -39,18 +30,29 @@ export default async function Page({ params }: Props) {
   const seo = (getPageContent('/legal-notice/eviction') as any)?.seo
   return (
     <>
-      <LegalServiceSchema lang={lang} path="/legal-notice/eviction" />
       <ServicePage
+        path={'/legal-notice/eviction'}
         lang={lang}
         title={seo?.h1}
         description={seo?.meta_description}
         authority={seo?.authority}
         waMessage={(seo?.wa_message?.[lang] ?? seo?.wa_message?.en) as string}
+        breadcrumb={[
+          { label: lang === 'ar' ? 'الإنذارات القانونية' : 'Legal Notice', href: '/legal-notice' },
+          { label: lang === 'ar' ? 'إنذار إخلاء' : 'Eviction Notice', href: '/legal-notice/eviction' }
+        ]}
+        relatedServices={[
+          { label: { en: 'POA Cancellation', ar: 'إلغاء وكالة' }, href: '/legal-notice/poa-cancellation' },
+          { label: { en: 'Court-Certified', ar: 'التوثيق الإلكتروني' }, href: '/e-notary' },
+          { label: { en: 'What is Tableegh?', ar: 'ما هو التبليغ؟' }, href: '/what-is-tableegh' }
+        ]}
         faqItems={getPageFaq('/legal-notice/eviction')}
         richBlocks={getPageBlocks('/legal-notice/eviction')}
-        relatedServices={relatedFor(lang, '/legal-notice/eviction')}
-        breadcrumb={breadcrumbFor(lang, '/legal-notice/eviction')}
       />
     </>
   )
+}
+
+export async function generateMetadata(...args: Parameters<typeof baseMetadata>): Promise<Metadata> {
+  return withSocial(await baseMetadata(...args))
 }

@@ -1,7 +1,12 @@
 import content from '@/data/content.json'
 
-export type Lang = 'en' | 'ar' | 'ru' | 'zh' | 'es'
-export const LANGS: Lang[] = ['en', 'ar', 'ru', 'zh', 'es']
+// ─────────────────────────────────────────────────────────────────────────────
+// POA in 30 — i18n (EN + AR only)
+// Simplified from E-Notary Dubai's 5-language setup: RU, ZH, ES removed.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export type Lang = 'en' | 'ar'
+export const LANGS: Lang[] = ['en', 'ar']
 export const DEFAULT_LANG: Lang = 'en'
 
 export function isValidLang(lang: string): lang is Lang {
@@ -13,9 +18,7 @@ export function getDir(lang: Lang): 'ltr' | 'rtl' {
 }
 
 export function getFontClass(lang: Lang): string {
-  if (lang === 'ar') return 'font-arab'
-  if (lang === 'zh') return 'font-zh'
-  return 'font-sans'
+  return lang === 'ar' ? 'font-arab' : 'font-sans'
 }
 
 /** Get text in the current language, fall back to EN, then AR */
@@ -27,41 +30,37 @@ export function t(obj: Record<string, string> | undefined, lang: Lang): string {
 export function getWaUrl(message: string): string {
   return `https://wa.me/${content.site.phone.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
 }
-  
+
 export function generateLangParams() {
   return LANGS.map((lang) => ({ lang }))
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Hreflang helpers — Chinese requires script subtag (zh-Hans) for proper
-// Google indexing of Simplified Chinese targeting Chinese investors in Dubai.
+// Hreflang — EN and AR targeted at UAE + x-default
 // ─────────────────────────────────────────────────────────────────────────────
 export const HREFLANG_MAP: Record<Lang, string> = {
   en: 'en-AE',
   ar: 'ar-AE',
-  ru: 'ru-AE',
-  zh: 'zh-Hans-AE',
-  es: 'es-AE',
 }
 
-/** Get the hreflang code for a given language (e.g. 'zh' -> 'zh-Hans-AE') */
 export function getHreflang(lang: Lang): string {
   return HREFLANG_MAP[lang]
 }
 
-/** Build the alternates.languages object for a given URL path.
- *  Path should start with '/' and end with '/' (e.g. '/about/'). */
+/** Build alternates.languages for a URL path. Path must start and end with '/'. */
 export function buildHreflangAlternates(path: string): Record<string, string> {
-  const base = 'https://www.enotarydubai.ae'
-  return Object.fromEntries(
-    LANGS.map((l) => [HREFLANG_MAP[l], `${base}/${l}${path}`])
-  )
+  const base = 'https://www.poain30.ae'
+  const alternates: Record<string, string> = {}
+  for (const l of LANGS) {
+    alternates[HREFLANG_MAP[l]] = `${base}/${l}${path}`
+  }
+  // x-default points to English as the canonical fallback
+  alternates['x-default'] = `${base}/en${path}`
+  return alternates
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// RichBlock — Union type defined HERE as the single source of truth.
-// All components that render rich content should import RichBlock from i18n,
-// NOT from a sibling component, to avoid circular-import TypeScript errors.
+// RichBlock — union type for all rich-content blocks used in pages
 // ─────────────────────────────────────────────────────────────────────────────
 export type RichBlock =
   | { type: 'heading';   text: Record<string, string> }
@@ -69,27 +68,23 @@ export type RichBlock =
   | { type: 'warning';   text: Record<string, string>; title?: Record<string, string> }
   | { type: 'info';      text: Record<string, string>; title?: Record<string, string> }
   | { type: 'success';   text: Record<string, string>; title?: Record<string, string> }
-  | { type: 'law';       ref: string; text: Record<string, string> }
+  | { type: 'law';       ref: string | Record<string, string>; text: Record<string, string>; sourceUrl?: string }
   | { type: 'checklist'; title?: Record<string, string>; items: Array<Record<string, string>> }
   | { type: 'steps';     items: Array<{ title: Record<string, string>; body: Record<string, string> }> }
   | { type: 'process';   items: Array<{ icon: string; title: Record<string, string>; body: Record<string, string> }> }
   | { type: 'compare';   left: { title: Record<string, string>; items: Array<Record<string, string>> }; right: { title: Record<string, string>; items: Array<Record<string, string>> } }
   | { type: 'stats';     items: Array<{ value: string; label: Record<string, string>; sub?: Record<string, string> }> }
   | { type: 'table';     headers: Array<Record<string, string>>; rows: Array<Array<Record<string, string>>> }
-  | { type: 'sources';   title?: Record<string, string>; updated?: string; links: Array<{ label: Record<string, string>; url: string }> }
   | { type: 'divider' }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FaqItem
+// FaqItem (EN + AR only)
 // ─────────────────────────────────────────────────────────────────────────────
-
-/** Normalized FAQ item with all 5 languages */
 export interface FaqItem {
-  q: { en: string; ar: string; ru: string; zh: string; es: string }
-  a: { en: string; ar: string; ru: string; zh: string; es: string }
+  q: { en: string; ar: string }
+  a: { en: string; ar: string }
 }
 
-/** Normalize a raw FAQ entry (may have only en/ar) into a full FaqItem */
 export function normalizeFaqItem(item: {
   q: Record<string, string>
   a: Record<string, string>
@@ -98,73 +93,73 @@ export function normalizeFaqItem(item: {
     q: {
       en: item.q['en'] || '',
       ar: item.q['ar'] || '',
-      ru: item.q['ru'] || item.q['en'] || '',
-      zh: item.q['zh'] || item.q['en'] || '',
-      es: item.q['es'] || item.q['en'] || '',
     },
     a: {
       en: item.a['en'] || '',
       ar: item.a['ar'] || '',
-      ru: item.a['ru'] || item.a['en'] || '',
-      zh: item.a['zh'] || item.a['en'] || '',
-      es: item.a['es'] || item.a['en'] || '',
     },
   }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PageContent type — matches the real shape in content.json exactly
+// PageContent shape (matches content.json)
 // ─────────────────────────────────────────────────────────────────────────────
 interface PageContent {
+  h1_en?: string
+  h1_ar?: string
+  title_en?: string
+  meta_en?: string
+  sections?: Array<Record<string, string>>
+  subsections?: Array<Record<string, string>>
+  content?: Array<Record<string, string>>
+  list_items?: Array<Record<string, string>>
   rich_blocks?: RichBlock[]
   faq?: Array<{ q: Record<string, string>; a: Record<string, string> }>
-  /** Catch-all for remaining page keys (seo, steps, etc.) */
   [key: string]: unknown
 }
 
-/** Get page-specific content from content.json */
 export function getPageContent(url: string): PageContent | null {
-  // Bridged through `unknown`: page_content's literal type has 60 distinct
-  // per-page shapes, so TS rejects the direct assertion to a uniform record.
   const pc = content.page_content as unknown as Record<string, PageContent>
   return pc[url] ?? pc[url + '/'] ?? null
 }
 
-/** Get page FAQ normalized to FaqItem[] */
 export function getPageFaq(url: string): FaqItem[] {
   const pc = getPageContent(url)
   return (pc?.faq ?? []).map(normalizeFaqItem)
 }
 
-/** Get per-service FAQ normalized to FaqItem[] */
 export function getServiceFaq(key: string): FaqItem[] {
-  const map = content.faq_services as Record<
+  const map = content.faq_services as unknown as Record<
     string,
     Array<{ q: Record<string, string>; a: Record<string, string> }>
   >
   return (map[key] ?? []).map(normalizeFaqItem)
 }
 
-/** Get required docs for a service */
 export function getRequiredDocs(key: string): Array<Record<string, string>> {
   const map = content.required_docs as Record<string, Array<Record<string, string>>>
   return map[key] ?? []
 }
 
-/** Get rich_blocks for a page — type-safe, no `any` */
 export function getPageBlocks(url: string): RichBlock[] {
   const pc = getPageContent(url)
   return (pc?.rich_blocks ?? []) as RichBlock[]
 }
 
-// getPageMeta removed — single source of truth is page_content[url].seo.*
-// (flat title_/meta_ fields deleted from page_content; blog_content keeps its own)
+export function getPageMeta(
+  slug: string,
+  lang: string,
+): { title: string; description: string } {
+  const pc = getPageContent(slug)
+  if (!pc) return { title: '', description: '' }
+  const title = ((pc[`title_${lang}`] as string | undefined) || pc.title_en || '') as string
+  const description = ((pc[`meta_${lang}`] as string | undefined) || pc.meta_en || '') as string
+  return { title, description }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Typed top-level exports — import directly from i18n instead of content.json
+// Typed top-level exports
 // ─────────────────────────────────────────────────────────────────────────────
-
-
 export const site         = content.site
 export const languages    = content.languages
 export const nav          = content.nav
@@ -172,4 +167,45 @@ export const footer       = content.footer
 export const cta          = content.cta
 export const steps        = content.steps
 export const services     = content.services
+export const trust_badges = content.trust_badges
 export const faq          = content.faq
+
+export const ui_buttons = content.ui_buttons as Record<string, Record<string, string>>
+
+// NOTE: POA in 30 does NOT display prices anywhere — pricing is quote-based.
+// The pricing export is kept for backwards compatibility but intentionally
+// unused on any rendered page. Do not surface this in UI.
+export const pricing = content.pricing as unknown as Record<
+  string,
+  Array<{ service: Record<string, string>; href: string }>
+>
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Blog — blog_content in data/content.json (structure mirrors E-Notary Dubai)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface BlogSection {
+  h2: Record<string, string>
+  paras: Array<Record<string, string>>
+  list?: { ordered?: boolean; items: Array<Record<string, string>> }
+}
+
+export interface BlogPost {
+  slug: string
+  title: Record<string, string>
+  meta: Record<string, string>
+  date: string      // first published — ISO yyyy-mm-dd
+  updated: string   // last content update — ISO yyyy-mm-dd (real date, never build time)
+  related: Array<{ href: string; label: Record<string, string> }>
+  sections: BlogSection[]
+  faq?: Array<{ q: Record<string, string>; a: Record<string, string> }>
+}
+
+export function getBlogPosts(): BlogPost[] {
+  const posts = (content as Record<string, unknown>).blog_content as BlogPost[] | undefined
+  return Array.isArray(posts) ? posts : []
+}
+
+export function getBlogPost(slug: string): BlogPost | null {
+  return getBlogPosts().find((p) => p.slug === slug) ?? null
+}

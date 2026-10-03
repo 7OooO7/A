@@ -1,10 +1,24 @@
 import Link from 'next/link'
 import FAQSection from './FAQSection'
-import { linkify, stripLinks } from './linkify'
 import RichContent, { type RichBlock } from './RichContent'
-import { FAQSchema, BreadcrumbSchema } from './SchemaMarkup'
-import AcceptedByMarquee from './AcceptedByMarquee'
-import { type Lang, t, site, getWaUrl } from '@/lib/i18n'
+import { FAQSchema, BreadcrumbSchema, ServiceSchema, ArticleSchema } from './SchemaMarkup'
+import { isExplainerPath } from '@/lib/seo/schema-builder'
+import { type Lang, t, site, getWaUrl, getPageContent } from '@/lib/i18n'
+import { siblingsOf, pillarFor } from '@/lib/seo/internal-linking'
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ServicePage — Brand Navy/Gold (visual layer rebuilt in Phase B)
+//
+// Visual DNA:
+//   • Light base background — Brand Navy/Gold system (mockup-v2 binding)
+//   • Plus Jakarta Sans (LTR) / IBM Plex Sans Arabic (RTL) for headings
+//   • Gold accent (#C9A84C) for kickers and highlights
+//   • Asymmetric magazine grid: lead column + sidebar pull quote
+//   • No "500+ Documents", no "100% First-Try", no QR-Verified, no "No hidden fees"
+//   • No "Accepted by" logo marquee (deliberate — homepage handles trust)
+//   • No POA mockup image (was a copy-paste from old E-Notary brand)
+//   • FAQ accordion is collapsed by default (handled by FAQSection)
+// ─────────────────────────────────────────────────────────────────────────────
 
 export interface FAQItem {
   q: Record<string, string>
@@ -14,15 +28,27 @@ export interface ContentSection {
   [key: string]: string | undefined
   en: string
   ar: string
-  ru?: string
-  zh?: string
-  es?: string
 }
+// Canonical notarization statement — compliance rule 0.1-1. Rendered verbatim
+// on every service page. NEVER rephrase, shorten, or substitute.
+const NOTARIZATION_LINE: Record<'standard' | 'mobile', Record<string, string>> = {
+  standard: {
+    en: 'Notarization happens through Dubai Courts or the UAE Ministry of Justice via a video call.',
+    ar: 'يتم التوثيق عبر محاكم دبي أو وزارة العدل الإماراتية من خلال مكالمة فيديو.',
+  },
+  mobile: {
+    en: 'Notarization happens through Dubai Courts or the UAE Ministry of Justice via a video call in the standard remote service; the Mobile Notary covers the situations where a video call is not possible.',
+    ar: 'يتم التوثيق عبر محاكم دبي أو وزارة العدل الإماراتية من خلال مكالمة فيديو في الخدمة القياسية عن بُعد؛ أما الكاتب العدل المتنقل فيغطي الحالات التي تتعذر فيها مكالمة الفيديو.',
+  },
+}
+
 export interface ServicePageProps {
   lang: Lang
   title: Record<string, string>
   subtitle?: Record<string, string>
   description: Record<string, string>
+  /** Which notarization compliance line to show under the hero (default 'standard'). */
+  notarizationVariant?: 'standard' | 'mobile'
   authority?: string | Record<string,string>
   waMessage: string
   bullets?: Array<Record<string, string>>
@@ -36,62 +62,89 @@ export interface ServicePageProps {
   breadcrumb?: Array<{ label: string; href: string }>
   relatedServices?: Array<{ label: Record<string,string>; href: string }>
   richBlocks?: RichBlock[]
-  expressTimeline?: boolean
-  hideQrBadge?: boolean
-  noTimeline?: boolean
-  preparedStat?: boolean
+  /** Canonical SITE path (e.g. '/power-of-attorney/real-estate'). When
+   *  provided, the page emits a richer schema graph (ProfessionalService
+   *  provider + audience + serviceType) via lib/seo/schema-builder. */
+  path?: string
   children?: React.ReactNode
 }
 
-/** Applies fn to every language value of a translated string record. */
-function mapValues(rec: Record<string,string>, fn: (s: string) => string): Record<string,string> {
-  return Object.fromEntries(Object.entries(rec).map(([k, v]) => [k, fn(v)]))
-}
-
-const WA_ICON = <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+const WA_ICON = (
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" width="16" height="16">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+  </svg>
+)
 
 const L = {
-  price_from:  { en:'From', ar:'من', ru:'От', zh:'从', es:'Desde' },
-  accepted_by: { en:'Authorities We Prepare Documents For', ar:'جهات التقديم الشائعة', ru:'Принимается', zh:'被以下机构接受', es:'Aceptado por' },
-  start_wa:    { en:'Start on WhatsApp — Fast Reply', ar:'ابدأ عبر واتساب — رد سريع', ru:'Начать в WhatsApp — быстрый ответ', zh:'通过 WhatsApp 开始 — 快速回复', es:'Iniciar en WhatsApp — Respuesta Rápida' },
-  tableegh:    { en:'⚠️ Tableegh delivery required for legal validity in Dubai Courts.', ar:'⚠️ قد يلزم التبليغ الرسمي وإثباته بحسب نوع الإجراء والمتطلبات المطبقة.', ru:'⚠️ Доставка через Tableegh обязательна для юридической силы в Dubai Courts.', zh:'⚠️ Tableegh送达是在Dubai Courts具有法律效力的必要条件。', es:'⚠️ La entrega por Tableegh es obligatoria para la validez legal en Dubai Courts.' },
-  faq_h:       { en:'Frequently Asked Questions', ar:'الأسئلة الشائعة', ru:'Часто задаваемые вопросы', zh:'常见问题', es:'Preguntas Frecuentes' },
-  req_docs_h:  { en:'Documents Required', ar:'المستندات المطلوبة', ru:'Необходимые документы', zh:'所需文件', es:'Documentos Requeridos' },
-  cta_h:       { en:'Same-Day Service', ar:'خدمة في نفس اليوم', ru:'Услуга в тот же день', zh:'当日服务', es:'Servicio el Mismo Día' },
-  cta_sub:     { en:'Contact us early for same-day processing availability.', ar:'تواصل معنا مبكراً للتحقق من إمكانية الإنجاز في نفس اليوم بحسب المعاملة والمسار الرسمي.', ru:'Свяжитесь с нами заранее, чтобы проверить возможность обработки в тот же день.', zh:'尽早联系我们以确认是否可提供当日处理。', es:'Contáctenos con antelación para confirmar disponibilidad el mismo día.' },
-  same_day:    { en:'Same-Day Service Available', ar:'خدمة في نفس اليوم متاحة', ru:'Доступна услуга в тот же день', zh:'可提供当日服务', es:'Servicio el Mismo Día Disponible' },
-  cta_h_exp:   { en:'Express Service', ar:'الخدمة السريعة', ru:'Экспресс-услуга', zh:'加急服务', es:'Servicio Exprés' },
-  cta_sub_exp: { en:'Express 1–2 business day MOFA processing available.', ar:'تتوفر خدمة سريعة لتصديق وزارة الخارجية بحسب المسار الرسمي وتوفر الخدمة.', ru:'Экспресс-обработка MOFA за 1–2 рабочих дня.', zh:'可提供1-2个工作日的外交部加急处理。', es:'Procesamiento exprés del MOFA en 1-2 días hábiles.' },
-  cta_h_file:  { en:'Start Your File', ar:'ابدأ ملفك', ru:'Начните дело', zh:'开始您的案卷', es:'Inicie su Expediente' },
-  cta_sub_file:{ en:'Send the documents you have and we review the file.', ar:'أرسل المستندات المتوفرة لديك ونراجع الملف.', ru:'Пришлите имеющиеся документы — мы изучим дело.', zh:'发送您手头的文件，我们会审核案卷。', es:'Envíe los documentos que tenga y revisamos el expediente.' },
-  express:     { en:'Express Service — 1–2 Business Days', ar:'خدمة سريعة — بحسب المسار الرسمي', ru:'Экспресс — 1–2 рабочих дня', zh:'加急服务 — 1-2个工作日', es:'Exprés — 1–2 Días Hábiles' },
-  related_h:   { en:'Related Services', ar:'خدمات ذات صلة', ru:'Похожие услуги', zh:'相关服务', es:'Servicios Relacionados' },
-  no_hidden:   { en:'No hidden fees', ar:'توضيح الرسوم قبل المتابعة', ru:'Без скрытых сборов', zh:'无隐藏费用', es:'Sin cargos ocultos' },
-  qr_code:     { en:'QR-Verified', ar:'قابل للتحقق عبر رمز QR', ru:'QR-верификация', zh:'二维码验证', es:'Verificado QR' },
-  home:        { en:'Home', ar:'الرئيسية', ru:'Главная', zh:'首页', es:'Inicio' },
-}
+  start_wa:    { en:'Start on WhatsApp', ar:'ابدأ عبر واتساب' },
+  reply_min:   { en:'We reply in minutes during business hours.', ar:'نرد خلال دقائق أثناء ساعات العمل.' },
+  faq_h:       { en:'Frequently asked', ar:'الأسئلة الشائعة' },
+  faq_sub:     { en:'Plain answers to the questions we hear most.', ar:'إجابات واضحة على الأسئلة الأكثر شيوعاً.' },
+  req_docs_h:  { en:'Documents we will ask you for', ar:'المستندات التي سنطلبها منك' },
+  related_h:   { en:'Related services', ar:'خدمات ذات صلة' },
+  tableegh:    { en:'Tableegh delivery is required for legal validity in Dubai Courts.', ar:'التسليم عبر التبليغ مطلوب للصلاحية القانونية في محاكم دبي.' },
+  pull_quote:  { en:'If the receiving authority is named on the face of the document, the first draft is usually the only draft.', ar:'إذا ذُكرت الجهة المستلمة على وجه الوثيقة، فإن المسودة الأولى عادة ما تكون المسودة الوحيدة.' },
+  pull_attrib: { en:'— Note from counsel', ar:'— ملاحظة من المستشار' },
+  home:        { en:'Home', ar:'الرئيسية' },
+  ready:       { en:'Ready when you are.', ar:'جاهزون متى أردت.' },
+  ready_sub:   { en:'Send a WhatsApp with the details. We respond in minutes.', ar:'أرسل التفاصيل عبر واتساب. نرد خلال دقائق.' } }
 
 function ts(s: ContentSection, lang: Lang): string {
   return s[lang] || s.en || s.ar || ''
 }
 const SKIP_PHRASES = ['ready to get','whatsapp','contact us','get started','frequently asked','how it works']
 function shouldSkip(section: ContentSection): boolean {
-  // Only check English version — prevents accidentally hiding Arabic/Russian/Chinese content
   const enText = (section.en || '').toLowerCase()
   return SKIP_PHRASES.some(s => enText.includes(s))
 }
 
-import PaymentMethods from '@/components/PaymentMethods'
-
 export default function ServicePage({
   lang, title, subtitle, description, authority, waMessage,
+  notarizationVariant = 'standard',
   bullets, sections, subsections, bodyContent, requiredDocs,
-  faqItems, extraButtons, isTableegh, breadcrumb, relatedServices, richBlocks, expressTimeline, hideQrBadge, noTimeline, preparedStat, children
+  faqItems, extraButtons, isTableegh, breadcrumb, relatedServices, richBlocks, path, children
 }: ServicePageProps) {
   const waUrl = getWaUrl(waMessage)
   const isRTL = lang === 'ar'
+  const headingFont = isRTL ? "'IBM Plex Sans Arabic', sans-serif" : "'Plus Jakarta Sans', sans-serif"
 
-  // Filter visible items
+  // ───────────────────────────────────────────────────────────────────────
+  // Auto-derive sibling links from the path when caller didn't pass any.
+  // This implements the pillar-pattern related-services rail without
+  // requiring every page.tsx to wire it up by hand.
+  // ───────────────────────────────────────────────────────────────────────
+  const autoRelated: Array<{ label: Record<string,string>; href: string }> = []
+  if ((!relatedServices || relatedServices.length === 0) && path) {
+    const sibs = siblingsOf(path).slice(0, 4)
+    for (const sib of sibs) {
+      const pc = getPageContent(sib) as Record<string, unknown> | null
+      const h1_en = (pc?.h1_en as string | undefined) || ''
+      const h1_ar = (pc?.h1_ar as string | undefined) || ''
+      const labelEn = h1_en.split(/\s—\s|\s\|\s/)[0] || sib
+      const labelAr = h1_ar.split(/\s—\s|\s\|\s/)[0] || sib
+      autoRelated.push({
+        href: sib,
+        label: { en: labelEn, ar: labelAr },
+      })
+    }
+    // If we found a parent pillar, surface it as the first item with a "↑" hint
+    const parent = pillarFor(path)
+    if (parent) {
+      const pcp = getPageContent(parent) as Record<string, unknown> | null
+      const parentH1En = (pcp?.h1_en as string | undefined) || parent
+      const parentH1Ar = (pcp?.h1_ar as string | undefined) || parent
+      const parentEn = parentH1En.split(/\s—\s|\s\|\s/)[0]
+      const parentAr = parentH1Ar.split(/\s—\s|\s\|\s/)[0]
+      autoRelated.unshift({
+        href: parent,
+        label: { en: `↑ ${parentEn}`, ar: `↑ ${parentAr}` },
+      })
+    }
+  }
+  const effectiveRelated = (relatedServices && relatedServices.length > 0)
+    ? relatedServices
+    : autoRelated
+
   const visSections = (sections || []).filter(s => {
     const tx = ts(s, lang)
     return tx && !shouldSkip(s)
@@ -105,368 +158,408 @@ export default function ServicePage({
     return tx && !shouldSkip(s)
   })
 
-  // BreadcrumbList JSON-LD — built from the same `breadcrumb` prop that drives
-  // the visible UI nav, with Home prepended to match what users see.
+  // Split title around an em-dash or comma so we can italicize the second half (editorial accent)
+  const titleText = t(title, lang)
+  let titleLead = titleText
+  let titleEm = ''
+  const dashSplit = titleText.split(/\s+—\s+/)
+  if (dashSplit.length === 2) {
+    titleLead = dashSplit[0]
+    titleEm = dashSplit[1]
+  } else {
+    const commaSplit = titleText.split(/,\s+/)
+    if (commaSplit.length === 2 && commaSplit[1].length < 60) {
+      titleLead = commaSplit[0] + ','
+      titleEm = commaSplit[1]
+    }
+  }
+
   const breadcrumbSchemaItems =
     breadcrumb && breadcrumb.length > 0
       ? [
-          { name: t(L.home, lang), url: `https://www.enotarydubai.ae/${lang}/` },
+          { name: t(L.home, lang), url: `https://www.poain30.ae/${lang}/` },
           ...breadcrumb.map((crumb) => ({
             name: crumb.label,
-            url: `https://www.enotarydubai.ae/${lang}${crumb.href}/`.replace(/\/+$/, '/'),
-          })),
+            url: `https://www.poain30.ae/${lang}${crumb.href}/`.replace(/\/+$/, '/') })),
         ]
       : []
 
   return (
     <>
-      {breadcrumbSchemaItems.length > 0 && <BreadcrumbSchema items={breadcrumbSchemaItems}/>}
+      {breadcrumbSchemaItems.length > 0 ? <BreadcrumbSchema items={breadcrumbSchemaItems}/> : path ? <BreadcrumbSchema lang={lang} path={path}/> : null}
       {faqItems && faqItems.length > 0 && <FAQSchema items={faqItems} lang={lang}/>}
-
-      {/* ── HERO — matches homepage layout exactly ── */}
-      <section className="relative hero-bg pt-12 lg:pt-16 overflow-hidden">
-        <div className="relative mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)] pb-10 lg:pb-14">
-
-          {/* Breadcrumb */}
-          {breadcrumb && breadcrumb.length > 0 && (
-            <nav className="flex flex-wrap items-center gap-1.5 mb-6 text-xs text-navy-500">
-              <Link href={`/${lang}`} className="hover:text-navy-300 transition-colors">{t(L.home, lang)}</Link>
-              {breadcrumb.map((crumb, i) => (
-                <span key={i} className="flex items-center gap-1.5">
-                  <span className="text-navy-700">/</span>
-                  {i === breadcrumb.length - 1
-                    ? <span className="text-navy-400">{crumb.label}</span>
-                    : <Link href={`/${lang}${crumb.href}`} className="hover:text-navy-300 transition-colors">{crumb.label}</Link>
-                  }
-                </span>
-              ))}
-            </nav>
-          )}
-
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
-            {/* ── Left: text ── */}
-            <div className="max-w-3xl">
-              {subtitle && (
-                <p className="overline-label mb-3">{t(subtitle, lang)}</p>
-              )}
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-                {t(title, lang)}
-              </h1>
-              <p className="text-navy-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-                {t(description, lang)}
-              </p>
-
-              {/* Badges */}
-              <div className="flex flex-wrap items-center gap-2 mb-6">
-                {authority && (
-                  <span className="badge-navy">
-                    <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                    </svg>
-                    {typeof authority === 'string' ? authority : t(authority as Record<string,string>, lang)}
-                  </span>
-                )}
-                {!noTimeline && (
-                  <span className="badge-navy">
-                    {t(expressTimeline ? L.express : L.same_day, lang)}
-                  </span>
-                )}
-                {!hideQrBadge && (
-                  <span className="badge-navy">
-                    {t(L.qr_code, lang)}
-                  </span>
-                )}
-              </div>
-
-              {/* Stats row — same as homepage */}
-              <div className="flex flex-nowrap items-center justify-between sm:justify-start mt-8 pt-6 border-t border-navy-800">
-                <div className="flex items-center min-w-0">
-                  <span className="font-serif font-bold text-gold-400 text-[clamp(1rem,5vw,1.875rem)]">5,000+</span>
-                  <div className="text-navy-400 leading-tight ms-[clamp(0.25rem,1.5vw,0.75rem)] text-[clamp(9px,2.6vw,14px)] min-w-0">
-                    <div className="text-white font-semibold">{t({en:'Documents',ar:'وثيقة',ru:'Документов',zh:'份文件',es:'Documentos'}, lang)}</div>
-                    <div>{t(preparedStat ? {en:'Prepared',ar:'مُجهَّزة',ru:'Подготовлено',zh:'已办理',es:'Preparados'} : {en:'Notarized',ar:'موثقة',ru:'Заверено',zh:'已公证',es:'Notarizados'}, lang)}</div>
-                  </div>
-                </div>
-                <div className="w-px h-8 sm:h-9 shrink-0 bg-navy-600 mx-[clamp(0.5rem,3vw,1.5rem)]" />
-                <div className="flex items-center min-w-0">
-                  <span className="font-serif font-bold text-gold-400 text-[clamp(1rem,5vw,1.875rem)]">5</span>
-                  <div className="text-navy-400 leading-tight ms-[clamp(0.25rem,1.5vw,0.75rem)] text-[clamp(9px,2.6vw,14px)] min-w-0">
-                    <div className="text-white font-semibold">{t({en:'Languages',ar:'لغات',ru:'Языков',zh:'种语言',es:'Idiomas'}, lang)}</div>
-                    <div>{t({en:'Supported',ar:'مدعومة',ru:'Поддержка',zh:'支持',es:'Soportados'}, lang)}</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA buttons — same sizing as homepage */}
-              <div className="flex flex-wrap gap-3 mt-8">
-                <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#20b958] transition-colors text-sm">
-                  {WA_ICON} {t(L.start_wa, lang)}
-                </a>
-                {extraButtons?.map((btn) => (
-                  <Link key={btn.href} href={btn.href}
-                    className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-colors ${
-                      btn.variant === 'primary' ? 'bg-gold-400 text-navy-900 hover:bg-gold-300'
-                      : 'bg-navy-800 text-navy-200 hover:bg-navy-700 border border-navy-700'
-                    }`}>
-                    {t(btn.label, lang)}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* ── Right: poa-doc image — same size as homepage ── */}
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl"
-                  style={{background:'radial-gradient(ellipse at center, rgba(212,180,58,.07) 0%, transparent 70%)'}} />
-                <picture>
-                  <source srcSet="/assets/hero/poa-doc.webp" type="image/webp" />
-                  <img src="/assets/hero/poa-doc.png" alt="UAE Notary Document"
-                    width={793} height={651} decoding="async" fetchPriority="high"
-                    className="relative w-[480px] xl:w-[500px] h-auto"
-                    style={{filter:'drop-shadow(0 0 40px rgba(212,180,58,.13))'}} />
-                </picture>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Trust bar — infinite scrolling marquee (full width, same as homepage) */}
-        <div className="relative border-t border-navy-800" dir="ltr">
-          <AcceptedByMarquee
-            variant="light"
-            logoHeight={56}
-            gap={14}
-            speed={50}
-            title={t(L.accepted_by, lang)}
-            showTitle={true}
+      {path
+        ? (isExplainerPath(path) ? <ArticleSchema lang={lang} path={path} /> : <ServiceSchema lang={lang} path={path} />)
+        : <ServiceSchema
+            name={t(title, lang)}
+            url={breadcrumbSchemaItems.length > 0
+              ? breadcrumbSchemaItems[breadcrumbSchemaItems.length - 1].url
+              : `https://www.poain30.ae/${lang}/`}
+            description={t(description, lang)}
           />
+      }
+
+      {/* ═══ MASTHEAD ROW (magazine-style date/section) ═══ */}
+      <div className="border-b" style={{ backgroundColor: 'var(--bg-base)', borderColor: 'var(--border-default)' }}>
+        <div className="mx-auto max-w-6xl px-4 lg:px-8 py-3 flex items-center justify-between">
+          <span className="text-[11px] tracking-[0.18em] uppercase text-ink-500 font-medium">
+            {subtitle ? t(subtitle, lang) : 'POA in 30 · Dubai'}
+          </span>
+          <span className="text-[11px] tracking-[0.18em] uppercase text-ink-500 font-medium hidden sm:inline">
+            Dubai · UAE
+          </span>
+        </div>
+      </div>
+
+      {/* ═══ BREADCRUMB ═══ */}
+      {breadcrumb && breadcrumb.length > 0 && (
+        <div style={{ backgroundColor: 'var(--bg-base)' }}>
+          <nav className="mx-auto max-w-6xl px-4 lg:px-8 py-4 flex flex-wrap items-center gap-1.5 text-xs" style={{ color: 'var(--text-muted)' }}>
+            <Link href={`/${lang}`} className="hover:text-gold-600 transition-colors">{t(L.home, lang)}</Link>
+            {breadcrumb.map((crumb, i) => (
+              <span key={i} className="flex items-center gap-1.5">
+                <span className="text-ink-300">/</span>
+                {i === breadcrumb.length - 1
+                  ? <span className="text-ink-700 font-medium">{crumb.label}</span>
+                  : <Link href={`/${lang}${crumb.href}`} className="hover:text-gold-600 transition-colors">{crumb.label}</Link>
+                }
+              </span>
+            ))}
+          </nav>
+        </div>
+      )}
+
+      {/* ═══ HERO — centered editorial headline ═══ */}
+      <section className="pt-12 pb-10 lg:pt-20 lg:pb-16" style={{ backgroundColor: 'var(--bg-base)' }}>
+        <div className="mx-auto max-w-3xl px-4 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="block w-8 h-px" style={{ backgroundColor: 'var(--brand-gold)', opacity: 0.5 }} />
+            <span className="text-[11px] tracking-[0.18em] uppercase font-medium" style={{ color: 'var(--brand-gold)', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
+              {subtitle ? t(subtitle, lang) : (lang === 'ar' ? 'خدمة قانونية' : 'Legal service')}
+            </span>
+            <span className="block w-8 h-px" style={{ backgroundColor: 'var(--brand-gold)', opacity: 0.5 }} />
+          </div>
+
+          <h1
+            className="text-ink-900 leading-[1.05] tracking-tight font-normal"
+            style={{
+              fontFamily: headingFont,
+              fontSize: 'clamp(32px, 5vw, 52px)',
+              letterSpacing: '-0.015em' }}
+          >
+            {titleLead}
+            {titleEm && (
+              <>
+                <br />
+                <em className="not-italic" style={{ fontStyle: 'italic', color: 'var(--brand-gold)' }}>
+                  {titleEm}
+                </em>
+              </>
+            )}
+          </h1>
+
+          <p
+            className="text-ink-600 mt-6 mx-auto leading-relaxed"
+            style={{
+              fontFamily: headingFont,
+              fontStyle: 'italic',
+              fontSize: 'clamp(15px, 1.6vw, 18px)',
+              maxWidth: '560px' }}
+          >
+            {t(description, lang)}
+          </p>
+
+          {/* Notarization path — compliance rule 0.1-1, verbatim */}
+          <p className="mt-4 mx-auto flex items-start justify-center gap-2 text-sm text-ink-600"
+             style={{ maxWidth: '620px' }}>
+            <svg className="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" aria-hidden="true" width="16" height="16">
+              <circle cx="10" cy="10" r="9" stroke="#C9A84C" strokeWidth="1.5" />
+              <path d="M6 10.2l2.6 2.6L14 7.5" stroke="#C9A84C" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+            <span>{t(NOTARIZATION_LINE[notarizationVariant], lang)}</span>
+          </p>
+
+          {/* CTA row */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {WA_ICON} {t(L.start_wa, lang)}
+            </a>
+            {extraButtons?.map((btn) => (
+              <Link
+                key={btn.href}
+                href={btn.href}
+                className="btn-outline"
+              >
+                {t(btn.label, lang)}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-ink-400">{t(L.reply_min, lang)}</p>
         </div>
       </section>
 
-      {/* Tableegh notice */}
+      {/* ═══ Tableegh notice ═══ */}
       {isTableegh && (
-        <div className="bg-amber-50 border-y border-amber-200 py-3">
-          <div className="mx-auto max-w-5xl px-4 lg:px-8">
-            <p className="text-amber-800 text-sm font-medium">{t(L.tableegh, lang)}</p>
+        <div className="bg-gold-50/70 border-y border-gold-200/50 py-3">
+          <div className="mx-auto max-w-3xl px-4 lg:px-8">
+            <p className="text-gold-800 text-xs lg:text-sm font-medium text-center"
+               style={{ fontFamily: headingFont, fontStyle: 'italic' }}>
+              {t(L.tableegh, lang)}
+            </p>
           </div>
         </div>
       )}
 
-      {/* ── MAIN CONTENT ── */}
-      <section className="bg-white py-12">
-        <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
-          <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-10">
+      {/* ═══ MAIN BODY — magazine asymmetric grid ═══ */}
+      <section className="py-14 lg:py-20 border-t" style={{ backgroundColor: 'var(--bg-base)', borderColor: 'var(--border-default)' }}>
+        <div className="mx-auto max-w-6xl px-4 lg:px-8">
 
-            {/* ── Left: main content ── */}
-            <article
-              className="space-y-10 min-w-0"
-              itemScope
-              itemType="https://schema.org/Service"
-            >
+          {/* Body in a 2-col grid: lead + pull-quote sidebar */}
+          <div className="lg:grid lg:grid-cols-[1.6fr_1fr] lg:gap-12">
 
-              {/* When richBlocks has content, skip generic sections to avoid duplication */}
-              {richBlocks && richBlocks.length > 0 ? null : (
-              <>
-              {/* Generic bullets fallback */}
-              {bullets && bullets.length > 0 && !visSections.length && (
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {bullets.map((b, i) => (
-                    <div key={i} className="feature-card">
-                      <span className="feature-icon">
-                        <svg className="w-3 h-3 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/>
-                        </svg>
-                      </span>
-                      <p className="text-sm text-navy-700 leading-relaxed">{t(b, lang)}</p>
-                    </div>
-                  ))}
-                </div>
+            <article className="space-y-10 min-w-0" itemScope itemType="https://schema.org/Service">
+
+              {/* Drop-cap intro (first paragraph or first body paragraph) */}
+              {paragraphs.length > 0 && !richBlocks?.length && (
+                <p
+                  className="text-ink-800 leading-[1.85] text-base lg:text-[17px]"
+                  style={{ fontFamily: headingFont }}
+                >
+                  <span
+                    className="float-start font-normal text-gold-600 me-2"
+                    style={{
+                      fontFamily: headingFont,
+                      fontSize: '3.4em',
+                      lineHeight: '0.85',
+                      paddingTop: '0.1em' }}
+                  >
+                    {(ts(paragraphs[0], lang) || '').charAt(0)}
+                  </span>
+                  {(ts(paragraphs[0], lang) || '').slice(1)}
+                </p>
               )}
 
-              {/* Sections + content paired or separate */}
-              {visSections.length > 0 && paragraphs.length > 0 && visSections.length === paragraphs.length ? (
-                <div className="space-y-8">
-                  {visSections.map((section, i) => {
+              {/* Remaining sections paired with paragraphs */}
+              {!richBlocks?.length && visSections.length > 0 && paragraphs.length > 1 && (
+                <div className="space-y-10">
+                  {visSections.slice(paragraphs.length === visSections.length ? 1 : 0).map((section, i) => {
+                    const idx = paragraphs.length === visSections.length ? i + 1 : i + 1
                     const heading = ts(section, lang)
-                    const para = ts(paragraphs[i], lang)
+                    const para = paragraphs[idx] ? ts(paragraphs[idx], lang) : ''
                     return (
                       <div key={i}>
-                        <h2 className="gold-line font-serif text-xl font-bold text-navy-900 mb-3">{heading}</h2>
-                        {para && <p className="text-sm text-navy-600 leading-relaxed">{para}</p>}
-                      </div>
-                    )
-                  })}
-                </div>
-              ) : (
-                <>
-                  {visSections.length > 0 && (
-                    <div className="space-y-6">
-                      {visSections.map((section, i) => (
-                        <h2 key={i} className="gold-line font-serif text-xl font-bold text-navy-900">
-                          {ts(section, lang)}
+                        <h2
+                          className="text-ink-900 font-normal mb-4"
+                          style={{
+                            fontFamily: headingFont,
+                            fontSize: 'clamp(22px, 2.6vw, 28px)',
+                            letterSpacing: '-0.01em' }}
+                        >
+                          {heading}
                         </h2>
-                      ))}
-                    </div>
-                  )}
-                  {paragraphs.length > 0 && (
-                    <div className="space-y-4">
-                      {paragraphs.map((p, i) => {
-                        const txt = ts(p, lang)
-                        if (!txt) return null
-                        return <p key={i} className="text-sm text-navy-600 leading-relaxed">{txt}</p>
-                      })}
-                    </div>
-                  )}
-                </>
-              )}
-
-              {/* Subsections as feature cards */}
-              {visSubs.length > 0 && (
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {visSubs.map((sub, i) => {
-                    const subTitle = ts(sub, lang)
-                    if (!subTitle) return null
-                    return (
-                      <div key={i} className="feature-card">
-                        <span className="feature-icon">
-                          <svg className="w-3 h-3 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/>
-                          </svg>
-                        </span>
-                        <p className="text-sm text-navy-700 font-medium leading-relaxed">{subTitle}</p>
+                        {para && (
+                          <p className="text-ink-700 leading-[1.85] text-base lg:text-[17px]"
+                             style={{ fontFamily: headingFont }}>
+                            {para}
+                          </p>
+                        )}
                       </div>
                     )
                   })}
                 </div>
               )}
 
-              </>
+              {/* Fallback for when sections/paragraphs don't pair cleanly */}
+              {!richBlocks?.length && (visSections.length === 0 || paragraphs.length <= 1) && paragraphs.length > 0 && (
+                <div className="space-y-6">
+                  {paragraphs.slice(1).map((p, i) => {
+                    const txt = ts(p, lang)
+                    if (!txt) return null
+                    return (
+                      <p key={i} className="text-ink-700 leading-[1.85] text-base lg:text-[17px]"
+                         style={{ fontFamily: headingFont }}>
+                        {txt}
+                      </p>
+                    )
+                  })}
+                </div>
               )}
 
-              {/* Rich content blocks — distinctive visual sections */}
+              {/* Generic bullets fallback */}
+              {!richBlocks?.length && bullets && bullets.length > 0 && !visSections.length && (
+                <ul className="space-y-3">
+                  {bullets.map((b, i) => (
+                    <li key={i} className="flex items-start gap-3 text-ink-700 leading-relaxed text-base"
+                        style={{ fontFamily: headingFont }}>
+                      <span className="text-gold-500 mt-1.5 shrink-0">·</span>
+                      <span>{t(b, lang)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Subsections — categories. Numbered editorial list. */}
+              {!richBlocks?.length && visSubs.length > 0 && (
+                <div className="border-t border-ink-200 pt-8">
+                  <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-4">
+                    {lang === 'ar' ? `الفئات · ${visSubs.length}` : `Categories · ${visSubs.length}`}
+                  </p>
+                  <ol className="space-y-4">
+                    {visSubs.map((sub, i) => {
+                      const subText = ts(sub, lang)
+                      if (!subText) return null
+                      return (
+                        <li key={i} className="grid grid-cols-[auto_1fr] gap-4 items-baseline">
+                          <span className="text-gold-500 font-normal text-2xl"
+                                style={{ fontFamily: headingFont }}>
+                            {String(i + 1).padStart(2, '0')}.
+                          </span>
+                          <p className="text-ink-800 leading-relaxed text-base lg:text-lg"
+                             style={{ fontFamily: headingFont }}>
+                            {subText}
+                          </p>
+                        </li>
+                      )
+                    })}
+                  </ol>
+                </div>
+              )}
+
+              {/* Rich content blocks */}
               {richBlocks && richBlocks.length > 0 && (
                 <RichContent blocks={richBlocks} lang={lang} />
               )}
 
               {/* Required docs */}
               {requiredDocs && requiredDocs.length > 0 && (
-                <div>
-                  <h2 className="gold-line font-serif text-xl font-bold text-navy-900 mb-4">
+                <div className="border-t border-ink-200 pt-8">
+                  <h2
+                    className="text-ink-900 font-normal mb-5"
+                    style={{
+                      fontFamily: headingFont,
+                      fontSize: 'clamp(22px, 2.6vw, 28px)',
+                      letterSpacing: '-0.01em' }}
+                  >
                     {t(L.req_docs_h, lang)}
                   </h2>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {requiredDocs.map((doc, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-navy-700 bg-navy-50 rounded-xl px-4 py-3 border border-navy-100">
-                        <span className="text-gold-500 font-bold mt-0.5 shrink-0">{i+1}.</span>
-                        {t(doc, lang)}
+                      <li key={i} className="flex items-start gap-3 text-ink-700 leading-relaxed text-base"
+                          style={{ fontFamily: headingFont }}>
+                        <span className="text-gold-500 font-normal mt-0.5 shrink-0"
+                              style={{ fontFamily: headingFont }}>·</span>
+                        <span>{t(doc, lang)}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               )}
 
-              {/* Custom slot */}
               {children}
 
               {/* FAQ */}
               {faqItems && faqItems.length > 0 && (
-                <div>
-                  <h2 id="faq-heading" className="gold-line font-serif text-xl font-bold text-navy-900 mb-6">
-                    {t(L.faq_h, lang)}
+                <div className="border-t border-ink-200 pt-8">
+                  <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-3">
+                    — {t(L.faq_h, lang)}
+                  </p>
+                  <h2
+                    id="faq-heading"
+                    className="text-ink-900 font-normal mb-3"
+                    style={{
+                      fontFamily: headingFont,
+                      fontSize: 'clamp(22px, 2.6vw, 28px)',
+                      letterSpacing: '-0.01em' }}
+                  >
+                    {t(L.faq_sub, lang)}
                   </h2>
-                  <FAQSection
-                    items={faqItems.map((it) => ({ q: it.q, a: mapValues(it.a, stripLinks) }))}
-                    answerNodes={faqItems.map((it) => linkify(t(it.a, lang), lang))}
-                    lang={lang}
-                  />
+                  <FAQSection items={faqItems} lang={lang}/>
                 </div>
               )}
 
-              {/* Mobile CTA */}
-              <div className="lg:hidden cta-block">
-                <p className="text-gold-400 text-xs font-bold uppercase tracking-widest mb-1">{t(noTimeline ? L.cta_h_file : expressTimeline ? L.cta_h_exp : L.cta_h, lang)}</p>
-                <p className="text-navy-400 text-xs mb-5">{t(noTimeline ? L.cta_sub_file : expressTimeline ? L.cta_sub_exp : L.cta_sub, lang)}</p>
-                <div className="flex flex-wrap gap-3 justify-center">
-                  <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                    className="btn-wa px-8 py-3.5">
-                    {WA_ICON} {t(L.start_wa, lang)}
-                  </a>
-                  <a href={`tel:${site.phone}`}
-                    className="inline-flex items-center gap-2 bg-navy-800 text-navy-200 font-bold px-6 py-3.5 rounded-xl hover:bg-navy-700 transition-colors text-sm border border-navy-700">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/>
-                    </svg>
-                    {site.phone_display}
-                  </a>
-                </div>
-              </div>
             </article>
 
-            {/* ── Sticky Sidebar (desktop only) ── */}
-            <aside className="hidden lg:block" aria-label="Service Navigation">
-              <div className="sticky top-20 space-y-3">
+            {/* ═══ SIDEBAR — pull quote + related services ═══ */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-20 space-y-8">
 
-                {/* CTA card */}
-                <div className="rounded-xl overflow-hidden" style={{background:'#060e1f',border:'1px solid rgba(212,180,58,.12)'}}>
-                  <div className="px-5 py-3" style={{background:'rgba(212,180,58,.08)',borderBottom:'1px solid rgba(212,180,58,.12)'}}>
-                    <p className="text-[10px] font-bold uppercase tracking-[.14em]" style={{color:'#d4b43a'}}>{t(noTimeline ? L.cta_h_file : expressTimeline ? L.cta_h_exp : L.cta_h, lang)}</p>
-                  </div>
-                  <div className="px-5 py-4">
-                    <p className="text-xs leading-relaxed mb-4" style={{color:'#4a6a96',fontWeight:300}}>{t(noTimeline ? L.cta_sub_file : expressTimeline ? L.cta_sub_exp : L.cta_sub, lang)}</p>
-                    <a href={waUrl} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full font-bold text-sm text-white rounded-lg py-3 mb-2.5 transition-colors hover:opacity-90"
-                      style={{background:'#25D366'}}>
-                      {WA_ICON} WhatsApp
-                    </a>
-                    <a href={`tel:${site.phone}`}
-                      className="flex items-center justify-center gap-2 w-full text-xs font-semibold rounded-lg py-2.5 transition-colors"
-                      style={{background:'rgba(255,255,255,.05)',color:'#7a9cc0',border:'1px solid rgba(74,106,150,.3)'}}>
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/>
-                      </svg>
-                      {site.phone_display}
-                    </a>
-                  </div>
-                  <div className="px-5 pb-4 pt-1" style={{borderTop:'1px solid rgba(74,106,150,.18)'}}>
-                      <PaymentMethods lang={lang} tone="dark" />
-                    </div>
+                {/* Pull quote */}
+                <div className="ps-6" style={{ borderInlineStart: '2px solid var(--brand-gold)' }}>
+                  <p
+                    className="text-ink-700 leading-relaxed mb-3"
+                    style={{
+                      fontFamily: headingFont,
+                      fontStyle: 'italic',
+                      fontSize: '17px' }}
+                  >
+                    "{t(L.pull_quote, lang)}"
+                  </p>
+                  <p className="text-[11px] tracking-[0.14em] uppercase text-ink-500">
+                    {t(L.pull_attrib, lang)}
+                  </p>
                 </div>
 
-                {/* No hidden fees */}
-                <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl"
-                  style={{background:'rgba(29,158,117,.06)',border:'1px solid rgba(29,158,117,.15)'}}>
-                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="#1d9e75" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                  <p className="text-xs font-semibold" style={{color:'#0f6e56'}}>{t(L.no_hidden, lang)}</p>
-                </div>
-
-                {/* Related services */}
-                {relatedServices && relatedServices.length > 0 && (
-                  <div className="rounded-xl overflow-hidden" style={{border:'1px solid #e8ecf5'}}>
-                    <div className="px-4 py-3" style={{borderBottom:'1px solid #f0f2f8'}}>
-                      <p className="text-[10px] font-bold uppercase tracking-[.1em]" style={{color:'#8a9abc'}}>{t(L.related_h, lang)}</p>
-                    </div>
-                    <div>
-                      {relatedServices.map((svc, i) => (
-                        <Link key={i} href={svc.href}
-                          className="flex items-center justify-between px-4 py-2.5 group transition-colors hover:bg-navy-50"
-                          style={{borderBottom: i < relatedServices.length - 1 ? '1px solid #f7f8fb' : 'none'}}>
-                          <span className="text-xs font-medium text-navy-700 group-hover:text-gold-600 transition-colors">{t(svc.label, lang)}</span>
-                          <svg className="w-3 h-3 flex-shrink-0 text-navy-400 group-hover:text-gold-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d={isRTL ? 'M15 19l-7-7 7-7' : 'M9 5l7 7-7 7'}/>
-                          </svg>
-                        </Link>
+                {/* Related services — editorial list, no boxy card */}
+                {effectiveRelated && effectiveRelated.length > 0 && (
+                  <div className="border-t border-ink-200 pt-6">
+                    <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-4">
+                      — {t(L.related_h, lang)}
+                    </p>
+                    <ul className="space-y-3">
+                      {effectiveRelated.map((svc, i) => (
+                        <li key={i}>
+                          <Link
+                            href={`/${lang}${svc.href}`}
+                            className="group inline-flex items-baseline gap-2 text-ink-700 hover:text-gold-600 transition-colors"
+                            style={{ fontFamily: headingFont, fontSize: '16px' }}
+                          >
+                            <span className="text-gold-500 opacity-60 group-hover:opacity-100">→</span>
+                            {t(svc.label, lang)}
+                          </Link>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 )}
+
               </div>
             </aside>
 
           </div>
+        </div>
+      </section>
+
+      {/* ═══ FINAL CTA — midnight background, gold button ═══ */}
+      <section className="bg-texture-dark py-16 lg:py-24" style={{ backgroundColor: 'var(--brand-midnight)' }}>
+        <div className="mx-auto max-w-2xl px-4 lg:px-8 text-center">
+          <h2
+            className="font-light mb-4 leading-tight"
+            style={{
+              fontFamily: headingFont,
+              fontSize: 'clamp(28px, 4vw, 40px)',
+              color: 'var(--text-inverse)',
+              fontWeight: 300,
+            }}
+          >
+            {t(L.ready, lang)}
+          </h2>
+          <p className="leading-relaxed mb-10 mx-auto max-w-md text-base"
+             style={{ fontFamily: headingFont, fontStyle: 'italic', color: '#9CA3AF' }}>
+            {t(L.ready_sub, lang)}
+          </p>
+          <a
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold inline-flex items-center gap-2"
+          >
+            {WA_ICON} {t(L.start_wa, lang)}
+          </a>
         </div>
       </section>
     </>

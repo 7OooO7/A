@@ -1,8 +1,7 @@
+import { withSocial } from '@/lib/seo/metadata'
 import type { Metadata } from 'next'
 import { LANGS, type Lang, getPageContent, getPageBlocks, getPageFaq, HREFLANG_MAP } from '@/lib/i18n'
 import ServicePage from '@/components/ServicePage'
-import { LegalServiceSchema } from '@/components/SchemaMarkup'
-import { relatedFor, breadcrumbFor } from '@/lib/serviceLinks'
 
 interface Props { params: Promise<{ lang: Lang }> }
 
@@ -10,28 +9,20 @@ export async function generateStaticParams() {
   return LANGS.map((l) => ({ lang: l }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+async function baseMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   const seo = (getPageContent('/legal-notice/poa-cancellation') as any)?.seo
   return {
     title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
     description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-    openGraph: {
-      title:       seo?.meta_title?.[lang]       ?? seo?.meta_title?.en,
-      description: seo?.meta_description?.[lang] ?? seo?.meta_description?.en,
-      url: `https://www.enotarydubai.ae/${lang}/legal-notice/poa-cancellation/`,
-      siteName: 'E-Notary Dubai',
-      locale: ({ en: 'en_US', ar: 'ar_AE', ru: 'ru_RU', zh: 'zh_CN', es: 'es_ES' } as Record<string, string>)[lang],
-      type: 'website',
-    },
     alternates: {
-      canonical: `https://www.enotarydubai.ae/${lang}/legal-notice/poa-cancellation/`,
+      canonical: `https://www.poain30.ae/${lang}/legal-notice/poa-cancellation/`,
       languages: {
-        ...Object.fromEntries(LANGS.map((l) => [HREFLANG_MAP[l], `https://www.enotarydubai.ae/${l}/legal-notice/poa-cancellation/`])),
-        'x-default': `https://www.enotarydubai.ae/en/legal-notice/poa-cancellation/`,
-      },
-    },
-  }
+        ...Object.fromEntries(
+        LANGS.map((l) => [HREFLANG_MAP[l], `https://www.poain30.ae/${l}/legal-notice/poa-cancellation/`])
+      ),
+        'x-default': `https://www.poain30.ae/en/legal-notice/poa-cancellation/`,
+      } } }
 }
 
 export default async function Page({ params }: Props) {
@@ -39,18 +30,29 @@ export default async function Page({ params }: Props) {
   const seo = (getPageContent('/legal-notice/poa-cancellation') as any)?.seo
   return (
     <>
-      <LegalServiceSchema lang={lang} path="/legal-notice/poa-cancellation" />
       <ServicePage
+        path={'/legal-notice/poa-cancellation'}
         lang={lang}
         title={seo?.h1}
         description={seo?.meta_description}
         authority={seo?.authority}
         waMessage={(seo?.wa_message?.[lang] ?? seo?.wa_message?.en) as string}
+        breadcrumb={[
+          { label: lang === 'ar' ? 'الإنذارات القانونية' : 'Legal Notice', href: '/legal-notice' },
+          { label: lang === 'ar' ? 'إلغاء وكالة' : 'POA Cancellation', href: '/legal-notice/poa-cancellation' }
+        ]}
+        relatedServices={[
+          { label: { en: 'Eviction Notice', ar: 'إنذار إخلاء' }, href: '/legal-notice/eviction' },
+          { label: { en: 'Court-Certified', ar: 'التوثيق الإلكتروني' }, href: '/e-notary' },
+          { label: { en: 'What is Tableegh?', ar: 'ما هو التبليغ؟' }, href: '/what-is-tableegh' }
+        ]}
         faqItems={getPageFaq('/legal-notice/poa-cancellation')}
         richBlocks={getPageBlocks('/legal-notice/poa-cancellation')}
-        relatedServices={relatedFor(lang, '/legal-notice/poa-cancellation')}
-        breadcrumb={breadcrumbFor(lang, '/legal-notice/poa-cancellation')}
       />
     </>
   )
+}
+
+export async function generateMetadata(...args: Parameters<typeof baseMetadata>): Promise<Metadata> {
+  return withSocial(await baseMetadata(...args))
 }
