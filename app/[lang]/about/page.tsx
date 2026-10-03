@@ -131,7 +131,7 @@ export default async function AboutPage({ params }: Props) {
             ))}
           </div>
         </div>
-
+  
         {/* Disclaimer */}
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
           <p className="text-amber-800 text-sm leading-relaxed">
