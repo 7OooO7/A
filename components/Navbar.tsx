@@ -208,17 +208,17 @@ export default function Navbar({ lang }: Props) {
       >
         {/* ✅ Dynamic container */}
         <div className="mx-auto w-full max-w-[min(1920px,98vw)] px-[clamp(0.75rem,2.5vw,2rem)]">
-          <div className="flex h-16 items-center justify-between gap-2 xl:gap-3">
+          <div className="flex h-16 items-center justify-between gap-3 lg:gap-4 xl:gap-5">
 
-            <Link href={`/${lang}`} className="flex items-center gap-1.5 lg:gap-2 shrink-0 group min-w-0">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
-                <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1" />
-              </div>
-              <div className="hidden lg:block leading-none min-w-0">
-                <div className="font-serif font-bold text-white text-[12px] xl:text-[13px] 2xl:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
-                <div className="text-[8px] xl:text-[9px] text-gold-500/60 uppercase tracking-[0.12em] xl:tracking-[0.15em] mt-0.5 truncate">LICENSED NOTARY SUPPORT · DUBAI</div>
-              </div>
-            </Link>
+<Link href={`/${lang}`} className="flex items-center gap-1.5 shrink-0 group min-w-0">
+  <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg lg:rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
+    <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-0.5 lg:p-1" />
+  </div>
+  <div className="hidden md:block leading-none min-w-0">
+    <div className="font-serif font-bold text-white text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors whitespace-nowrap">E-Notary Dubai</div>
+    <div className="text-[7.5px] lg:text-[8px] xl:text-[9px] text-gold-500/60 uppercase tracking-[0.1em] lg:tracking-[0.12em] xl:tracking-[0.15em] mt-0.5 whitespace-nowrap">LICENSED NOTARY SUPPORT · DUBAI</div>
+  </div>
+</Link>
 
             {/* ── Desktop Nav — أفقي، يظهر من lg+ ── */}
             <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0">
