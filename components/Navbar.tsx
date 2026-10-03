@@ -221,7 +221,7 @@ export default function Navbar({ lang }: Props) {
             </Link>
 
             {/* ── Desktop Nav — أفقي، يظهر من lg+ ── */}
-            <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0 overflow-hidden">
+            <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0">
               {navItems.map((item) => {
                 const label = t(item.label, lang)
                 return (
@@ -235,7 +235,7 @@ export default function Navbar({ lang }: Props) {
                       </svg>
                     </button>
 
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
                       <div
                         className="bg-white rounded-2xl shadow-2xl border border-navy-100/80 p-2"
                         style={{ minWidth: 240, maxWidth: 'calc(100vw - 2rem)' }}
