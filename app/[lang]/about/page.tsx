@@ -77,8 +77,8 @@ export default async function AboutPage({ params }: Props) {
       <div className="hero-bg py-14">
         <div className="mx-auto max-w-4xl px-4 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-2xl bg-navy-700 flex items-center justify-center">
-              <span className="font-serif font-bold text-gold-400 text-2xl">P</span>
+            <div className="w-14 h-14 rounded-2xl bg-navy-700 flex items-center justify-center overflow-hidden shadow-lg shadow-gold-400/20 shrink-0">
+              <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1.5" />
             </div>
             <div>
               <div className="font-serif font-bold text-white text-xl">E-Notary Dubai</div>
@@ -89,7 +89,7 @@ export default async function AboutPage({ params }: Props) {
           <p className="text-navy-300 text-base leading-relaxed max-w-2xl">{t(L.sub, lang)}</p>
         </div>
       </div>
-
+ 
       <div className="mx-auto max-w-4xl px-4 lg:px-8 py-14 space-y-14">
         {/* What we do */}
         <div>
