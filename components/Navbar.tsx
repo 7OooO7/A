@@ -26,7 +26,7 @@ function buildNav(lang: Lang) {
           items: [
             { href: `/${l}/power-of-attorney/general`,           label: { en: 'General POA',         ar: 'وكالة عامة',      ru: 'Генеральная',     zh: '一般授权书',   es: 'POA General' } },
             { href: `/${l}/power-of-attorney/special`,           label: { en: 'Special POA',         ar: 'وكالة خاصة',      ru: 'Специальная',     zh: '特别授权书',   es: 'POA Especial' } },
-            { href: `/${l}/power-of-attorney/child-travel`,      label: { en: 'Child Travel Auth.',  ar: 'إذن سفر طفل',     ru: 'Выезд ребёнка',   zh: '儿童旅行授权', es: 'Viaje Menor' } },
+            { href: `/${l}/power-of-attorney/child-travel`,      label: { en: 'Child Travel Auth',  ar: 'إذن سفر طفل',     ru: 'Выезд ребёнка',   zh: '儿童旅行授权', es: 'Viaje Menor' } },
             { href: `/${l}/power-of-attorney/inheritance`,       label: { en: 'Inheritance POA',     ar: 'وكالة ميراث',     ru: 'На наследство',   zh: '继承授权书',   es: 'Herencia' } },
             { href: `/${l}/power-of-attorney/court`,             label: { en: 'Court Case POA',      ar: 'وكالة قضائية',    ru: 'Судебная',        zh: '法院授权书',   es: 'Judicial' } },
           ],
