@@ -128,15 +128,13 @@ export default async function Page({ params }: Props) {
       {/* What we do — magazine grid */}
       <section className="bg-cream py-14 lg:py-20 border-t border-ink-100/40">
         <div className="mx-auto max-w-4xl px-4 lg:px-8">
-          <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-3">{t(L.what_kicker, lang)}</p>
-          <h2 className="text-ink-900 font-normal mb-5"
-              style={{ fontFamily: headingFont, fontSize: 'clamp(24px, 3vw, 32px)', letterSpacing: '-0.01em' }}>
-            {t(L.what_h, lang)}
-          </h2>
-          <p className="text-ink-700 leading-[1.85] text-base lg:text-[17px] mb-10"
-             style={{ fontFamily: headingFont }}>
-            {t(L.what_p, lang)}
-          </p>
+          <p className="text-[11px] tracking-[0.18em] uppercase text-gold-600 font-medium mb-6">{t(L.what_kicker, lang)}</p>
+          <div className="text-ink-700 leading-[1.85] text-base lg:text-[17px] mb-10 space-y-4"
+               style={{ fontFamily: headingFont }}>
+            {t(L.what_p, lang).split('\n\n').map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))}
+          </div>
 
           {/* Services list — editorial, no boxy cards */}
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2 border-t border-ink-200 pt-8">
