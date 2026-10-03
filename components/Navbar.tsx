@@ -151,8 +151,10 @@ export default function Navbar({ lang }: Props) {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [langOpen, setLangOpen] = useState(false)
+  const [activeKey, setActiveKey] = useState<string | null>(null)
   const pathname = usePathname()
   const langTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navItems = buildNav(lang)
   const isRTL = lang === 'ar'
 
@@ -164,6 +166,20 @@ export default function Navbar({ lang }: Props) {
       return segments.join('/')
     }
     return `/${targetLang}`
+  }
+
+  function openDropdown(key: string) {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    if (langTimeoutRef.current) {
+      clearTimeout(langTimeoutRef.current)
+      langTimeoutRef.current = null
+    }
+    setLangOpen(false)
+    setActiveKey(key)
+  }
+
+  function scheduleClose() {
+    timeoutRef.current = setTimeout(() => setActiveKey(null), 300)
   }
 
   function openLang() {
@@ -194,10 +210,12 @@ export default function Navbar({ lang }: Props) {
   useEffect(() => {
     setDrawerOpen(false)
     setExpanded(null)
+    setActiveKey(null)
   }, [pathname])
 
   useEffect(() => () => {
     if (langTimeoutRef.current) clearTimeout(langTimeoutRef.current)
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
   }, [])
 
   return (
@@ -210,62 +228,141 @@ export default function Navbar({ lang }: Props) {
         <div className="mx-auto w-full max-w-[min(1920px,98vw)] px-[clamp(0.75rem,2.5vw,2rem)]">
           <div className="flex h-16 items-center justify-between gap-3 lg:gap-4 xl:gap-5">
 
-<Link href={`/${lang}`} className="flex items-center gap-1.5 shrink-0 group min-w-0">
-  <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg lg:rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
-    <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-0.5 lg:p-1" />
-  </div>
-  <div className="hidden md:block leading-none min-w-0">
-    <div className="font-serif font-bold text-white text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors whitespace-nowrap">E-Notary Dubai</div>
-    <div className="text-[7.5px] lg:text-[8px] xl:text-[9px] text-gold-500/60 uppercase tracking-[0.1em] lg:tracking-[0.12em] xl:tracking-[0.15em] mt-0.5 whitespace-nowrap">LICENSED NOTARY SUPPORT · DUBAI</div>
-  </div>
-</Link>
+            <Link href={`/${lang}`} className="flex items-center gap-1.5 shrink-0 group min-w-0">
+              <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg lg:rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
+                <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-0.5 lg:p-1" />
+              </div>
+              <div className="hidden md:block leading-none min-w-0">
+                <div className="font-serif font-bold text-white text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors whitespace-nowrap">E-Notary Dubai</div>
+                <div className="text-[7.5px] lg:text-[8px] xl:text-[9px] text-gold-500/60 uppercase tracking-[0.1em] lg:tracking-[0.12em] xl:tracking-[0.15em] mt-0.5 whitespace-nowrap">LICENSED NOTARY SUPPORT · DUBAI</div>
+              </div>
+            </Link>
 
             {/* ── Desktop Nav — أفقي، يظهر من lg+ ── */}
             <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0">
               {navItems.map((item) => {
                 const label = t(item.label, lang)
+                const isActive = activeKey === item.key
                 return (
-                  <div key={item.key} className="relative group shrink-0">
+                  <div
+                    key={item.key}
+                    className="relative shrink-0"
+                    onMouseEnter={() => openDropdown(item.key)}
+                    onMouseLeave={scheduleClose}
+                  >
                     <button
-                      className="flex items-center gap-0.5 xl:gap-1 px-1.5 xl:px-2 2xl:px-2.5 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-medium rounded-lg transition-all duration-150 text-navy-300 hover:text-white hover:bg-white/[0.05] whitespace-nowrap"
+                      className={`flex items-center gap-0.5 xl:gap-1 px-1.5 xl:px-2 2xl:px-2.5 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-medium rounded-lg transition-all duration-150 whitespace-nowrap ${
+                        isActive
+                          ? 'text-gold-400 bg-white/[0.07]'
+                          : 'text-navy-300 hover:text-white hover:bg-white/[0.05]'
+                      }`}
                     >
                       {label}
-                      <svg className="w-2.5 h-2.5 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className={`w-2.5 h-2.5 transition-transform duration-200 ${isActive ? 'rotate-180 text-gold-400' : 'opacity-40'}`}
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
 
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
-                      <div
-                        className="bg-white rounded-2xl shadow-2xl border border-navy-100/80 p-2"
-                        style={{ minWidth: 240, maxWidth: 'calc(100vw - 2rem)' }}
-                      >
-                        {((item as any).cols
-                          ? (item as any).cols.flatMap((col: any) => col.items)
-                          : (item as any).items || []
-                        ).map((sub: any) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            className="flex items-center gap-2.5 px-3 py-2 text-sm text-navy-600 hover:text-navy-900 hover:bg-gold-400/5 rounded-lg transition-all group/item border border-transparent hover:border-gold-400/15"
-                          >
-                            <svg className="w-3.5 h-3.5 text-gold-400 shrink-0 opacity-0 group-hover/item:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                            </svg>
-                            <span className="font-medium">{t(sub.label, lang)}</span>
-                          </Link>
-                        ))}
-
-                        {(item as any).cta && (
-                          <Link
-                            href={(item as any).cta.href}
-                            className="flex items-center justify-between px-3 py-2 mt-1 pt-2 rounded-lg text-sm font-bold border-t border-navy-100 text-navy-900 hover:text-gold-600 transition-colors"
-                          >
-                            {t((item as any).cta.label, lang)}
-                          </Link>
+                    {/* ── Mega Menu (POA / RDC — 3 columns) ── */}
+                    {(item as any).mega && (
+                      <>
+                        {isActive && (
+                          <div className="absolute top-full left-0 right-0 h-3 z-40" onMouseEnter={() => openDropdown(item.key)} />
                         )}
-                      </div>
-                    </div>
+                        <div
+                          className={`absolute top-full mt-3 bg-white rounded-2xl shadow-2xl border border-navy-100/80 z-50 p-5 transition-opacity duration-150 ${
+                            isActive ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
+                          }`}
+                          style={{
+                            width: 'min(720px, calc(100vw - 2rem))',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            maxWidth: 'calc(100vw - 2rem)',
+                          }}
+                          onMouseEnter={() => openDropdown(item.key)}
+                          onMouseLeave={scheduleClose}
+                        >
+                          <div className="grid grid-cols-3 gap-x-6">
+                            {(item as any).cols.map((col: any, ci: number) => (
+                              <div key={ci}>
+                                <div className="flex items-center gap-2 mb-3 px-2">
+                                  <div className="h-px flex-1 bg-navy-100" />
+                                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-navy-400 shrink-0">
+                                    {t(col.heading, lang)}
+                                  </p>
+                                  <div className="h-px flex-1 bg-navy-100" />
+                                </div>
+                                <div className="space-y-0.5">
+                                  {col.items.map((sub: any) => (
+                                    <Link
+                                      key={sub.href}
+                                      href={sub.href}
+                                      className="flex items-center gap-2 px-2 py-1.5 text-sm text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg transition-colors group"
+                                    >
+                                      <span className="w-1 h-1 rounded-full bg-gold-400 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                      {t(sub.label, lang)}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+
+                          {(item as any).cta && (
+                            <div className="mt-4 pt-3 border-t border-navy-100">
+                              <Link
+                                href={(item as any).cta.href}
+                                className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-bold transition-all group"
+                                style={{ background: 'linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%)' }}
+                              >
+                                <span className="text-white group-hover:text-gold-300 transition-colors">{t((item as any).cta.label, lang)}</span>
+                                <svg className="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isRTL ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
+                                </svg>
+                              </Link>
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    )}
+
+                    {/* ── Regular Dropdown ── */}
+                    {!(item as any).mega && (item as any).items && (
+                      <>
+                        {isActive && (
+                          <div className="absolute top-full left-0 right-0 h-3 z-40" onMouseEnter={() => openDropdown(item.key)} />
+                        )}
+                        <div
+                          className={`absolute top-full mt-3 bg-white rounded-2xl shadow-2xl border border-navy-100/80 p-2 z-50 transition-opacity duration-150 ${
+                            isActive ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
+                          }`}
+                          style={{
+                            minWidth: 240,
+                            maxWidth: 'calc(100vw - 2rem)',
+                            insetInlineStart: isRTL ? 'auto' : '-4px',
+                            insetInlineEnd: isRTL ? '-4px' : 'auto',
+                          }}
+                          onMouseEnter={() => openDropdown(item.key)}
+                          onMouseLeave={scheduleClose}
+                        >
+                          {(item as any).items.map((sub: any) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              className="flex items-center gap-2.5 px-3 py-2 text-sm text-navy-600 hover:text-navy-900 hover:bg-gold-400/5 rounded-lg transition-all group border border-transparent hover:border-gold-400/15"
+                            >
+                              <svg className="w-3.5 h-3.5 text-gold-400 shrink-0 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isRTL ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
+                              </svg>
+                              <span className="font-medium">{t(sub.label, lang)}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </div>
                 )
               })}
