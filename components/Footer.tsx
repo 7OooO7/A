@@ -189,7 +189,7 @@ export default function Footer({ lang }: Props) {
             </ul>
           </div>
         </div>
-
+ 
         {/* ── Marquee ── */}
         <div className="mt-10 pt-8 border-t border-navy-800" dir="ltr">
           <AcceptedByMarquee
@@ -201,7 +201,7 @@ export default function Footer({ lang }: Props) {
             showTitle={true}
           />
         </div>
-
+    
         {/* ── Payment methods ── */}
         <div className="mt-6 pt-6 border-t border-navy-800">
           <PaymentMethods lang={lang} tone="dark" />
