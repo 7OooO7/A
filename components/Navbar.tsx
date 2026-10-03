@@ -208,26 +208,26 @@ export default function Navbar({ lang }: Props) {
       >
         {/* ✅ Dynamic container */}
         <div className="mx-auto w-full max-w-[min(1600px,95vw)] px-[clamp(1rem,4vw,3rem)]">
-          <div className="flex h-16 items-center justify-between gap-3">
+          <div className="flex h-16 items-center justify-between gap-2 xl:gap-3">
 
-            <Link href={`/${lang}`} className="flex items-center gap-1.5 sm:gap-3 shrink-0 group min-w-0">
+            <Link href={`/${lang}`} className="flex items-center gap-1.5 lg:gap-2 shrink-0 group min-w-0">
               <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-navy-700 flex items-center justify-center shadow-md shadow-gold-400/20 group-hover:bg-gold-300 transition-colors overflow-hidden shrink-0">
                 <img src="/logo.png" alt="E-Notary Dubai" className="w-full h-full object-contain p-1" />
               </div>
-              <div className="hidden md:block leading-none min-w-0">
-                <div className="font-serif font-bold text-white text-[13px] lg:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
-                <div className="text-[9px] text-gold-500/60 uppercase tracking-[0.15em] mt-0.5 truncate">LICENSED NOTARY SUPPORT · DUBAI</div>
+              <div className="hidden lg:block leading-none min-w-0">
+                <div className="font-serif font-bold text-white text-[12px] xl:text-[13px] 2xl:text-[15px] tracking-tight group-hover:text-gold-100 transition-colors truncate">E-Notary Dubai</div>
+                <div className="text-[8px] xl:text-[9px] text-gold-500/60 uppercase tracking-[0.12em] xl:tracking-[0.15em] mt-0.5 truncate">LICENSED NOTARY SUPPORT · DUBAI</div>
               </div>
             </Link>
 
             {/* ── Desktop Nav — أفقي، يظهر من lg+ ── */}
-            <nav className="hidden lg:flex items-center gap-0 flex-1 justify-center">
+            <nav className="hidden lg:flex items-center flex-1 justify-center min-w-0">
               {navItems.map((item) => {
                 const label = t(item.label, lang)
                 return (
                   <div key={item.key} className="relative group">
                     <button
-                      className="flex items-center gap-1 px-2 lg:px-2.5 py-2 text-[11px] lg:text-[12px] xl:text-[13px] font-medium rounded-lg transition-all duration-150 text-navy-300 hover:text-white hover:bg-white/[0.05] whitespace-nowrap"
+                      className="flex items-center gap-0.5 xl:gap-1 px-1.5 xl:px-2 2xl:px-2.5 py-2 text-[11px] xl:text-[12px] 2xl:text-[13px] font-medium rounded-lg transition-all duration-150 text-navy-300 hover:text-white hover:bg-white/[0.05] whitespace-nowrap"
                     >
                       {label}
                       <svg className="w-2.5 h-2.5 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -235,7 +235,6 @@ export default function Navbar({ lang }: Props) {
                       </svg>
                     </button>
 
-                    {/* ── Dropdown على hover ── */}
                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
                       <div
                         className="bg-white rounded-2xl shadow-2xl border border-navy-100/80 p-2"
@@ -272,20 +271,20 @@ export default function Navbar({ lang }: Props) {
               })}
             </nav>
 
-            <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center gap-1.5 xl:gap-2 shrink-0">
               <div className="relative hidden sm:block">
                 <button
                   onClick={() => setLangOpen((v) => !v)}
                   onMouseEnter={openLang}
                   onMouseLeave={scheduleLangClose}
-                  className={`flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
+                  className={`flex items-center gap-1 px-1.5 xl:px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                     langOpen ? 'text-gold-400 bg-white/[0.07]' : 'text-navy-300 hover:text-white hover:bg-white/[0.05]'
                   }`}
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
-                  <span>{languages.find((l) => l.code === lang)?.title || 'English'}</span>
+                  <span className="hidden xl:inline whitespace-nowrap">{languages.find((l) => l.code === lang)?.title || 'English'}</span>
                   <svg className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : 'opacity-50'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -324,7 +323,7 @@ export default function Navbar({ lang }: Props) {
 
               <a
                 href={`tel:${site.phone}`}
-                className="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-navy-300 hover:text-white px-3 py-1.5 rounded-lg border border-navy-700 hover:border-navy-500 transition-colors whitespace-nowrap"
+                className="hidden 2xl:flex items-center gap-1.5 text-xs xl:text-sm font-semibold text-navy-300 hover:text-white px-2 xl:px-3 py-1.5 rounded-lg border border-navy-700 hover:border-navy-500 transition-colors whitespace-nowrap"
               >
                 <span dir="ltr" className="inline-block">{site.phone_display}</span>
               </a>
@@ -333,11 +332,11 @@ export default function Navbar({ lang }: Props) {
                 href={`https://wa.me/${site.phone.replace(/\D/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 text-sm font-bold h-11 px-3 sm:h-auto sm:px-3.5 sm:py-1.5 rounded-lg transition-colors text-white shrink-0"
+                className="flex items-center justify-center gap-1.5 text-xs xl:text-sm font-bold h-10 sm:h-auto px-2.5 xl:px-3.5 py-1.5 rounded-lg transition-colors text-white shrink-0"
                 style={{ background: '#25D366' }}
               >
-                <span className="w-5 h-5 sm:w-4 sm:h-4 shrink-0 inline-flex items-center justify-center">{WA_ICON}</span>
-                <span className="hidden sm:inline">{t(cta.whatsapp, lang)}</span>
+                <span className="w-4 h-4 shrink-0 inline-flex items-center justify-center">{WA_ICON}</span>
+                <span className="hidden xl:inline whitespace-nowrap">{t(cta.whatsapp, lang)}</span>
               </a>
 
               <button
