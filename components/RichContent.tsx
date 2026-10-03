@@ -241,22 +241,22 @@ function CompareBlock({ block, lang }: { block: Extract<RichBlock, {type:'compar
 
 function TableBlock({ block, lang }: { block: Extract<RichBlock, {type:'table'}>, lang: Lang }) {
   return (
-    <div className="my-6 overflow-x-auto rounded-2xl border border-navy-200">
-      <table className="w-full text-sm">
+    <div className="rich-table-wrapper">
+      <table className="rich-table">
         <thead>
-          <tr className="bg-navy-900">
+          <tr>
             {block.headers.map((h, i) => (
-              <th key={i} className="text-left px-4 py-3 text-gold-400 text-xs font-bold uppercase tracking-wider">
+              <th key={i}>
                 {t(h, lang)}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody className="divide-y divide-navy-100">
+        <tbody>
           {block.rows.map((row, i) => (
-            <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-navy-50'}>
+            <tr key={i}>
               {row.map((cell, j) => (
-                <td key={j} className="px-4 py-3 text-navy-700 leading-relaxed">
+                <td key={j}>
                   {linkify(t(cell, lang), lang)}
                 </td>
               ))}
