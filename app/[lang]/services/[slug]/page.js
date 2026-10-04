@@ -4,6 +4,8 @@ import {CODES,DOMAIN,MAIL,getM} from '../../../../lib/i18n';
 import {SERVICE_SLUGS,BRAND} from '../../../../lib/brand';
 import {getService,getServices,getCategories,getUi} from '../../../../lib/services';
 import {getServiceContent,getResearch} from '../../../../lib/serviceContent';
+import marketProfiles from '../../../../lib/marketProfiles.json';
+import {isSearchReady} from '../../../../lib/editorial';
 import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>SERVICE_SLUGS.map(slug=>({lang,slug})))}
@@ -15,12 +17,12 @@ const labels=(lang,u)=>lang==='ar'?{
 export async function generateMetadata({params}){
  const {lang,slug}=await params,m=await getM(lang),s=getService(m,slug,lang),r=getResearch(slug);if(!s)return{};
  const title=`${s.title} | ${BRAND.name}`,url=absolute(lang,`/services/${slug}`);
- return{title,description:s.summary,keywords:r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:languageAlternates(`/services/${slug}`)},robots:{index:true,follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
+ return{title,description:s.summary,keywords:r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:languageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
 }
 
 export default async function ServicePage({params}){
  const {lang,slug}=await params,m=await getM(lang),u=getUi(lang),service=getService(m,slug,lang);if(!service)notFound();
- const content=getServiceContent(slug,lang),all=getServices(m,lang),research=getResearch(slug),category=getCategories(lang).find(c=>c.id===service.category),url=absolute(lang,`/services/${slug}`),L=labels(lang,u);
+ const content=getServiceContent(slug,lang),all=getServices(m,lang),research=getResearch(slug),category=getCategories(lang).find(c=>c.id===service.category),url=absolute(lang,`/services/${slug}`),L=labels(lang,u),market=marketProfiles[lang]||marketProfiles.en;
  const preferred=(research?.related||[]).map(x=>all.find(s=>s.slug===x)).filter(Boolean);
  const related=[...preferred,...all.filter(s=>s.slug!==slug&&s.category===service.category&&!preferred.some(p=>p.slug===s.slug))].slice(0,5);
  const faq=(content?.questions||[]).map((q,i)=>({q,a:L.faqAnswers[i]||L.faqAnswers[0]}));
