@@ -7,7 +7,7 @@ import {getServiceContent,getResearch} from '../../../../lib/serviceContent';
 import marketProfiles from '../../../../lib/marketProfiles.json';
 import {isSearchReady} from '../../../../lib/editorial';
 import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
-import {findContextualSpan,isProtectedBrandPhrase} from '../../../../lib/internalLinks';
+import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLinks';
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>SERVICE_SLUGS.map(slug=>({lang,slug})))}
 
@@ -31,11 +31,7 @@ export default async function ServicePage({params}){
  const preferred=(research?.related||[]).map(x=>all.find(s=>s.slug===x)).filter(Boolean);
  const related=preferred.filter(r=>r.slug!==slug);
  const linkedDestinations=new Set();
- const anchorVariants=(r)=>{
-   const local=getServiceContent(r.slug,lang);
-   const raw=[r.title,...(local?.keywords||[])];
-   return [...new Set(raw.flatMap(x=>String(x||'').split(/\s*[\/|]\s*|\s*\([^)]*\)\s*/)).map(x=>x.trim()).filter(x=>x.length>=5 && !isProtectedBrandPhrase(x)))].sort((a,b)=>b.length-a.length);
- };
+ const anchorVariants=(r)=>buildAnchorVariants(r,lang,getServiceContent(r.slug,lang),related,all);
  const renderText=(text)=>{
    if(!text)return text;
    let parts=[String(text)];
