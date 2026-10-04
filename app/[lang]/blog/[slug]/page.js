@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getM, fmt, waLink, SLUGS, CODES, RTL, DOMAIN } from '../../../../lib/i18n';
+import { getM, fmt, MAIL, SLUGS, CODES, RTL, DOMAIN } from '../../../../lib/i18n';
 import { IMG, BD } from '../../../../lib/art';
 
 export const dynamicParams = false;
@@ -38,7 +38,7 @@ export default async function Article({ params }) {
         <h1>{z[0]}</h1>
         <p className="lead">{z[1]}</p>
         <p>{z[2]}</p>
-        <a className="btn p" href={waLink(m)} target="_blank" rel="noopener noreferrer">{m.wa}</a>
+        <a className="btn p" href={`mailto:${MAIL}?subject=POA%20Dubai%20Request`}>{m.wa}</a>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       </article>
     </main>
