@@ -7,6 +7,7 @@ import {getServiceContent,getResearch} from '../../../../lib/serviceContent';
 import marketProfiles from '../../../../lib/marketProfiles.json';
 import {isSearchReady} from '../../../../lib/editorial';
 import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
+import {findContextualMatch,isProtectedBrandPhrase} from '../../../../lib/internalLinks';
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>SERVICE_SLUGS.map(slug=>({lang,slug})))}
 
@@ -33,7 +34,7 @@ export default async function ServicePage({params}){
  const anchorVariants=(r)=>{
    const local=getServiceContent(r.slug,lang);
    const raw=[r.title,...(local?.keywords||[])];
-   return [...new Set(raw.flatMap(x=>String(x||'').split(/\s*[\/|]\s*|\s*\([^)]*\)\s*/)).map(x=>x.trim()).filter(x=>x.length>=5))].sort((a,b)=>b.length-a.length);
+   return [...new Set(raw.flatMap(x=>String(x||'').split(/\s*[\/|]\s*|\s*\([^)]*\)\s*/)).map(x=>x.trim()).filter(x=>x.length>=5 && !isProtectedBrandPhrase(x)))].sort((a,b)=>b.length-a.length);
  };
  const renderText=(text)=>{
    if(!text)return text;
@@ -47,7 +48,7 @@ export default async function ServicePage({params}){
        const next=[];
        for(const part of parts){
          if(typeof part!=='string'||linked){next.push(part);continue;}
-         const i=part.toLocaleLowerCase(lang).indexOf(phrase.toLocaleLowerCase(lang));
+         const i=findContextualMatch(part,phrase,lang);
          if(i<0){next.push(part);continue;}
          const before=part.slice(0,i),match=part.slice(i,i+phrase.length),after=part.slice(i+phrase.length);
          if(before)next.push(before);

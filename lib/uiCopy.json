@@ -38,7 +38,15 @@
       "Prepare email request",
       "Please do not send passwords or payment-card details through this form.",
       "Back to home"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "What document or UAE service do you need?",
+      "placeholder": "Search by document, service or purpose…",
+      "results": "Search results",
+      "noResultsTitle": "Can’t find the right service?",
+      "noResultsText": "Contact us and describe the document or matter. We’ll help identify the right route and coordinate the next steps.",
+      "whatsapp": "WhatsApp us"
+    }
   },
   "sv": {
     "explore": "Utforska alla tjänster",
@@ -79,7 +87,15 @@
       "Förbered e-postförfrågan",
       "Skicka inte lösenord eller kortuppgifter via formuläret.",
       "Till startsidan"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Vilket dokument eller vilken UAE-tjänst behöver du?",
+      "placeholder": "Sök efter dokument, tjänst eller ändamål…",
+      "results": "Sökresultat",
+      "noResultsTitle": "Hittar du inte rätt tjänst?",
+      "noResultsText": "Kontakta oss och beskriv dokumentet eller ärendet. Vi hjälper dig att hitta rätt väg och samordna nästa steg.",
+      "whatsapp": "Kontakta oss på WhatsApp"
+    }
   },
   "ar": {
     "explore": "استعرض جميع الخدمات",
@@ -120,7 +136,15 @@
       "تجهيز الطلب عبر البريد",
       "يرجى عدم إرسال كلمات المرور أو بيانات بطاقات الدفع عبر النموذج.",
       "العودة للرئيسية"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "ما المستند أو الخدمة التي تحتاج إلى إنجازها في الإمارات؟",
+      "placeholder": "ابحث باسم المستند أو الخدمة أو الغرض من المعاملة…",
+      "results": "نتائج البحث",
+      "noResultsTitle": "لم تجد المستند أو الخدمة المناسبة؟",
+      "noResultsText": "تواصل معنا واشرح لنا المستند أو المعاملة التي تحتاجها، وسنساعدك في تحديد الإجراء الصحيح وتنسيق الخطوات اللازمة.",
+      "whatsapp": "تواصل معنا عبر واتساب"
+    }
   },
   "de": {
     "explore": "Alle Leistungen ansehen",
@@ -161,7 +185,15 @@
       "E-Mail-Anfrage vorbereiten",
       "Bitte senden Sie über dieses Formular keine Passwörter oder Zahlungskartendaten.",
       "Zur Startseite"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Welches Dokument oder welche UAE-Dienstleistung benötigen Sie?",
+      "placeholder": "Nach Dokument, Dienstleistung oder Zweck suchen…",
+      "results": "Suchergebnisse",
+      "noResultsTitle": "Nicht die passende Dienstleistung gefunden?",
+      "noResultsText": "Kontaktieren Sie uns und beschreiben Sie das Dokument oder Anliegen. Wir helfen Ihnen, den richtigen Ablauf zu bestimmen und die nächsten Schritte zu koordinieren.",
+      "whatsapp": "Per WhatsApp kontaktieren"
+    }
   },
   "fr": {
     "explore": "Voir tous les services",
@@ -202,7 +234,15 @@
       "Préparer la demande par e-mail",
       "N’envoyez pas de mots de passe ni de données de carte bancaire via ce formulaire.",
       "Retour à l’accueil"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "De quel document ou service aux EAU avez-vous besoin ?",
+      "placeholder": "Recherchez par document, service ou objectif…",
+      "results": "Résultats de recherche",
+      "noResultsTitle": "Vous ne trouvez pas le bon service ?",
+      "noResultsText": "Contactez-nous et décrivez le document ou la démarche. Nous vous aiderons à identifier la procédure adaptée et à coordonner les prochaines étapes.",
+      "whatsapp": "Nous contacter sur WhatsApp"
+    }
   },
   "nl": {
     "explore": "Bekijk alle diensten",
@@ -243,7 +283,15 @@
       "E-mailaanvraag voorbereiden",
       "Stuur via dit formulier geen wachtwoorden of betaalkaartgegevens.",
       "Terug naar home"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Welk document of welke VAE-dienst heeft u nodig?",
+      "placeholder": "Zoek op document, dienst of doel…",
+      "results": "Zoekresultaten",
+      "noResultsTitle": "Kunt u de juiste dienst niet vinden?",
+      "noResultsText": "Neem contact met ons op en beschrijf het document of de zaak. Wij helpen de juiste route te bepalen en de volgende stappen te coördineren.",
+      "whatsapp": "Contact via WhatsApp"
+    }
   },
   "da": {
     "explore": "Se alle tjenester",
@@ -284,7 +332,15 @@
       "Forbered e-mailforespørgsel",
       "Send ikke adgangskoder eller betalingskortoplysninger via formularen.",
       "Tilbage til forsiden"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Hvilket dokument eller hvilken UAE-tjeneste har du brug for?",
+      "placeholder": "Søg efter dokument, tjeneste eller formål…",
+      "results": "Søgeresultater",
+      "noResultsTitle": "Kan du ikke finde den rigtige tjeneste?",
+      "noResultsText": "Kontakt os og beskriv dokumentet eller sagen. Vi hjælper med at finde den rigtige proces og koordinere de næste trin.",
+      "whatsapp": "Kontakt os på WhatsApp"
+    }
   },
   "no": {
     "explore": "Se alle tjenester",
@@ -325,7 +381,15 @@
       "Forbered e-postforespørsel",
       "Ikke send passord eller betalingskortopplysninger via skjemaet.",
       "Tilbake til forsiden"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Hvilket dokument eller hvilken UAE-tjeneste trenger du?",
+      "placeholder": "Søk etter dokument, tjeneste eller formål…",
+      "results": "Søkeresultater",
+      "noResultsTitle": "Finner du ikke riktig tjeneste?",
+      "noResultsText": "Kontakt oss og beskriv dokumentet eller saken. Vi hjelper deg med å finne riktig prosess og koordinere de neste stegene.",
+      "whatsapp": "Kontakt oss på WhatsApp"
+    }
   },
   "fi": {
     "explore": "Katso kaikki palvelut",
@@ -366,7 +430,15 @@
       "Valmistele sähköpostipyyntö",
       "Älä lähetä salasanoja tai maksukorttitietoja tällä lomakkeella.",
       "Takaisin etusivulle"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Minkä asiakirjan tai UAE-palvelun tarvitset?",
+      "placeholder": "Hae asiakirjan, palvelun tai tarkoituksen mukaan…",
+      "results": "Hakutulokset",
+      "noResultsTitle": "Etkö löydä oikeaa palvelua?",
+      "noResultsText": "Ota meihin yhteyttä ja kuvaile asiakirja tai asia. Autamme tunnistamaan oikean menettelyn ja koordinoimaan seuraavat vaiheet.",
+      "whatsapp": "Ota yhteyttä WhatsAppissa"
+    }
   },
   "es": {
     "explore": "Ver todos los servicios",
@@ -407,7 +479,15 @@
       "Preparar solicitud por correo",
       "No envíe contraseñas ni datos de tarjetas de pago mediante este formulario.",
       "Volver al inicio"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "¿Qué documento o servicio de EAU necesita?",
+      "placeholder": "Busque por documento, servicio o finalidad…",
+      "results": "Resultados de búsqueda",
+      "noResultsTitle": "¿No encuentra el servicio adecuado?",
+      "noResultsText": "Contáctenos y describa el documento o trámite. Le ayudaremos a identificar la vía adecuada y a coordinar los siguientes pasos.",
+      "whatsapp": "Contactar por WhatsApp"
+    }
   },
   "it": {
     "explore": "Vedi tutti i servizi",
@@ -448,7 +528,15 @@
       "Prepara richiesta e-mail",
       "Non invii password o dati di carte di pagamento tramite questo modulo.",
       "Torna alla home"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Di quale documento o servizio negli EAU hai bisogno?",
+      "placeholder": "Cerca per documento, servizio o finalità…",
+      "results": "Risultati di ricerca",
+      "noResultsTitle": "Non trovi il servizio giusto?",
+      "noResultsText": "Contattaci e descrivi il documento o la pratica. Ti aiuteremo a individuare il percorso corretto e a coordinare i passaggi successivi.",
+      "whatsapp": "Contattaci su WhatsApp"
+    }
   },
   "pt": {
     "explore": "Ver todos os serviços",
@@ -489,7 +577,15 @@
       "Preparar pedido por e-mail",
       "Não envie palavras-passe nem dados de cartões de pagamento através deste formulário.",
       "Voltar ao início"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "De que documento ou serviço nos EAU precisa?",
+      "placeholder": "Pesquise por documento, serviço ou finalidade…",
+      "results": "Resultados da pesquisa",
+      "noResultsTitle": "Não encontrou o serviço certo?",
+      "noResultsText": "Contacte-nos e descreva o documento ou assunto. Ajudaremos a identificar o procedimento adequado e a coordenar os próximos passos.",
+      "whatsapp": "Contactar pelo WhatsApp"
+    }
   },
   "pl": {
     "explore": "Zobacz wszystkie usługi",
@@ -530,7 +626,15 @@
       "Przygotuj zapytanie e-mail",
       "Nie przesyłaj przez formularz haseł ani danych kart płatniczych.",
       "Powrót do strony głównej"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Jakiego dokumentu lub usługi w ZEA potrzebujesz?",
+      "placeholder": "Szukaj według dokumentu, usługi lub celu…",
+      "results": "Wyniki wyszukiwania",
+      "noResultsTitle": "Nie możesz znaleźć właściwej usługi?",
+      "noResultsText": "Skontaktuj się z nami i opisz dokument lub sprawę. Pomożemy ustalić właściwą procedurę i skoordynować kolejne kroki.",
+      "whatsapp": "Napisz do nas na WhatsApp"
+    }
   },
   "ro": {
     "explore": "Vezi toate serviciile",
@@ -571,7 +675,15 @@
       "Pregătiți cererea prin e-mail",
       "Nu trimiteți parole sau date de card prin acest formular.",
       "Înapoi la pagina principală"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "De ce document sau serviciu din EAU aveți nevoie?",
+      "placeholder": "Căutați după document, serviciu sau scop…",
+      "results": "Rezultatele căutării",
+      "noResultsTitle": "Nu găsiți serviciul potrivit?",
+      "noResultsText": "Contactați-ne și descrieți documentul sau situația. Vă ajutăm să identificați procedura potrivită și să coordonați pașii următori.",
+      "whatsapp": "Contactați-ne pe WhatsApp"
+    }
   },
   "el": {
     "explore": "Δείτε όλες τις υπηρεσίες",
@@ -612,7 +724,15 @@
       "Προετοιμασία αιτήματος email",
       "Μην στέλνετε κωδικούς ή στοιχεία καρτών μέσω της φόρμας.",
       "Επιστροφή στην αρχική"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Ποιο έγγραφο ή υπηρεσία στα ΗΑΕ χρειάζεστε;",
+      "placeholder": "Αναζήτηση ανά έγγραφο, υπηρεσία ή σκοπό…",
+      "results": "Αποτελέσματα αναζήτησης",
+      "noResultsTitle": "Δεν βρίσκετε τη σωστή υπηρεσία;",
+      "noResultsText": "Επικοινωνήστε μαζί μας και περιγράψτε το έγγραφο ή την υπόθεση. Θα σας βοηθήσουμε να εντοπίσετε τη σωστή διαδικασία και να συντονίσετε τα επόμενα βήματα.",
+      "whatsapp": "Επικοινωνία μέσω WhatsApp"
+    }
   },
   "cs": {
     "explore": "Zobrazit všechny služby",
@@ -653,7 +773,15 @@
       "Připravit e-mailovou žádost",
       "Neposílejte přes formulář hesla ani údaje platebních karet.",
       "Zpět na úvod"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Jaký dokument nebo službu v SAE potřebujete?",
+      "placeholder": "Hledejte podle dokumentu, služby nebo účelu…",
+      "results": "Výsledky vyhledávání",
+      "noResultsTitle": "Nemůžete najít správnou službu?",
+      "noResultsText": "Kontaktujte nás a popište dokument nebo záležitost. Pomůžeme určit správný postup a koordinovat další kroky.",
+      "whatsapp": "Kontaktovat přes WhatsApp"
+    }
   },
   "hu": {
     "explore": "Összes szolgáltatás",
@@ -694,7 +822,15 @@
       "E-mail-kérelem előkészítése",
       "Ne küldjön jelszavakat vagy bankkártyaadatokat ezen az űrlapon.",
       "Vissza a főoldalra"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Milyen dokumentumra vagy EAE-szolgáltatásra van szüksége?",
+      "placeholder": "Keresés dokumentum, szolgáltatás vagy cél szerint…",
+      "results": "Keresési eredmények",
+      "noResultsTitle": "Nem találja a megfelelő szolgáltatást?",
+      "noResultsText": "Lépjen kapcsolatba velünk, és írja le a dokumentumot vagy ügyet. Segítünk meghatározni a megfelelő eljárást és összehangolni a következő lépéseket.",
+      "whatsapp": "Kapcsolat WhatsAppon"
+    }
   },
   "bg": {
     "explore": "Всички услуги",
@@ -735,7 +871,15 @@
       "Подгответе заявка по имейл",
       "Не изпращайте пароли или данни за платежни карти чрез формуляра.",
       "Към началната страница"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Какъв документ или услуга в ОАЕ ви е необходима?",
+      "placeholder": "Търсете по документ, услуга или цел…",
+      "results": "Резултати от търсенето",
+      "noResultsTitle": "Не намирате подходящата услуга?",
+      "noResultsText": "Свържете се с нас и опишете документа или случая. Ще помогнем да определим правилната процедура и да координираме следващите стъпки.",
+      "whatsapp": "Свържете се по WhatsApp"
+    }
   },
   "hr": {
     "explore": "Pogledajte sve usluge",
@@ -776,7 +920,15 @@
       "Pripremi upit e-poštom",
       "Ne šaljite lozinke ni podatke platnih kartica putem obrasca.",
       "Natrag na početnu"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Koji dokument ili uslugu u UAE trebate?",
+      "placeholder": "Pretražite prema dokumentu, usluzi ili svrsi…",
+      "results": "Rezultati pretraživanja",
+      "noResultsTitle": "Ne možete pronaći odgovarajuću uslugu?",
+      "noResultsText": "Kontaktirajte nas i opišite dokument ili predmet. Pomoći ćemo utvrditi odgovarajući postupak i koordinirati sljedeće korake.",
+      "whatsapp": "Kontaktirajte nas putem WhatsAppa"
+    }
   },
   "sk": {
     "explore": "Zobraziť všetky služby",
@@ -817,7 +969,15 @@
       "Pripraviť e-mailovú žiadosť",
       "Neposielajte cez formulár heslá ani údaje platobných kariet.",
       "Späť na úvod"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Aký dokument alebo službu v SAE potrebujete?",
+      "placeholder": "Hľadajte podľa dokumentu, služby alebo účelu…",
+      "results": "Výsledky vyhľadávania",
+      "noResultsTitle": "Neviete nájsť správnu službu?",
+      "noResultsText": "Kontaktujte nás a opíšte dokument alebo záležitosť. Pomôžeme určiť správny postup a koordinovať ďalšie kroky.",
+      "whatsapp": "Kontaktovať cez WhatsApp"
+    }
   },
   "sl": {
     "explore": "Oglejte si vse storitve",
@@ -858,7 +1018,15 @@
       "Pripravi e-poštno povpraševanje",
       "Prek obrazca ne pošiljajte gesel ali podatkov plačilnih kartic.",
       "Nazaj na domačo stran"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Kateri dokument ali storitev v ZAE potrebujete?",
+      "placeholder": "Iščite po dokumentu, storitvi ali namenu…",
+      "results": "Rezultati iskanja",
+      "noResultsTitle": "Ne najdete prave storitve?",
+      "noResultsText": "Kontaktirajte nas in opišite dokument ali zadevo. Pomagali bomo določiti ustrezen postopek in uskladiti naslednje korake.",
+      "whatsapp": "Kontaktirajte nas prek WhatsAppa"
+    }
   },
   "et": {
     "explore": "Vaata kõiki teenuseid",
@@ -899,7 +1067,15 @@
       "Koosta e-kirja päring",
       "Ärge saatke vormi kaudu paroole ega maksekaardi andmeid.",
       "Tagasi avalehele"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Millist dokumenti või AÜE teenust vajate?",
+      "placeholder": "Otsige dokumendi, teenuse või eesmärgi järgi…",
+      "results": "Otsingutulemused",
+      "noResultsTitle": "Ei leia sobivat teenust?",
+      "noResultsText": "Võtke meiega ühendust ja kirjeldage dokumenti või asja. Aitame leida õige menetluse ja koordineerida järgmised sammud.",
+      "whatsapp": "Võtke ühendust WhatsAppis"
+    }
   },
   "lv": {
     "explore": "Skatīt visus pakalpojumus",
@@ -940,7 +1116,15 @@
       "Sagatavot e-pasta pieprasījumu",
       "Nesūtiet paroles vai maksājumu karšu datus, izmantojot šo veidlapu.",
       "Atpakaļ uz sākumlapu"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Kāds dokuments vai AAE pakalpojums jums nepieciešams?",
+      "placeholder": "Meklējiet pēc dokumenta, pakalpojuma vai mērķa…",
+      "results": "Meklēšanas rezultāti",
+      "noResultsTitle": "Neatrodat vajadzīgo pakalpojumu?",
+      "noResultsText": "Sazinieties ar mums un aprakstiet dokumentu vai lietu. Palīdzēsim noteikt pareizo procedūru un koordinēt nākamos soļus.",
+      "whatsapp": "Sazinieties WhatsApp"
+    }
   },
   "lt": {
     "explore": "Peržiūrėti visas paslaugas",
@@ -981,7 +1165,15 @@
       "Parengti užklausą el. paštu",
       "Nesiųskite slaptažodžių ar mokėjimo kortelių duomenų per šią formą.",
       "Atgal į pradžią"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Kokio dokumento ar JAE paslaugos jums reikia?",
+      "placeholder": "Ieškokite pagal dokumentą, paslaugą ar tikslą…",
+      "results": "Paieškos rezultatai",
+      "noResultsTitle": "Nerandate tinkamos paslaugos?",
+      "noResultsText": "Susisiekite su mumis ir aprašykite dokumentą ar reikalą. Padėsime nustatyti tinkamą procedūrą ir suderinti tolesnius veiksmus.",
+      "whatsapp": "Susisiekite per WhatsApp"
+    }
   },
   "mt": {
     "explore": "Ara s-servizzi kollha",
@@ -1022,7 +1214,15 @@
       "Ipprepara talba bl-email",
       "Tibgħatx passwords jew dettalji ta’ karti ta’ ħlas permezz tal-formola.",
       "Lura għall-paġna ewlenija"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Liema dokument jew servizz fl-UAE għandek bżonn?",
+      "placeholder": "Fittex skont id-dokument, is-servizz jew l-għan…",
+      "results": "Riżultati tat-tfittxija",
+      "noResultsTitle": "Ma sibtx is-servizz it-tajjeb?",
+      "noResultsText": "Ikkuntattjana u ddeskrivi d-dokument jew il-każ. Ngħinuk tidentifika l-proċedura xierqa u nikkoordinaw il-passi li jmiss.",
+      "whatsapp": "Ikkuntattjana fuq WhatsApp"
+    }
   },
   "ga": {
     "explore": "Féach ar na seirbhísí go léir",
@@ -1063,7 +1263,15 @@
       "Ullmhaigh iarratas ríomhphoist",
       "Ná seol pasfhocail ná sonraí cárta íocaíochta tríd an bhfoirm.",
       "Ar ais go dtí an baile"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Cén doiciméad nó seirbhís UAE atá uait?",
+      "placeholder": "Cuardaigh de réir doiciméid, seirbhíse nó cuspóra…",
+      "results": "Torthaí cuardaigh",
+      "noResultsTitle": "Ní féidir leat an tseirbhís cheart a aimsiú?",
+      "noResultsText": "Déan teagmháil linn agus déan cur síos ar an doiciméad nó ar an ábhar. Cabhróimid leat an próiseas ceart a aithint agus na chéad chéimeanna eile a chomhordú.",
+      "whatsapp": "Déan teagmháil linn ar WhatsApp"
+    }
   },
   "tr": {
     "explore": "Tüm hizmetleri görüntüle",
@@ -1104,7 +1312,15 @@
       "E-posta talebi hazırla",
       "Bu form üzerinden şifre veya ödeme kartı bilgisi göndermeyin.",
       "Ana sayfaya dön"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Hangi belgeye veya BAE hizmetine ihtiyacınız var?",
+      "placeholder": "Belge, hizmet veya amaca göre arayın…",
+      "results": "Arama sonuçları",
+      "noResultsTitle": "Doğru hizmeti bulamadınız mı?",
+      "noResultsText": "Bize ulaşın ve belgeyi veya işlemi açıklayın. Doğru süreci belirlemenize ve sonraki adımları koordine etmenize yardımcı olalım.",
+      "whatsapp": "WhatsApp üzerinden iletişime geçin"
+    }
   },
   "sr": {
     "explore": "Pogledajte sve usluge",
@@ -1145,7 +1361,15 @@
       "Pripremi zahtev e-poštom",
       "Ne šaljite lozinke ili podatke platnih kartica putem obrasca.",
       "Nazad na početnu"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Koji dokument ili uslugu u UAE trebate?",
+      "placeholder": "Pretražite po dokumentu, usluzi ili nameni…",
+      "results": "Rezultati pretrage",
+      "noResultsTitle": "Ne možete da pronađete odgovarajuću uslugu?",
+      "noResultsText": "Kontaktirajte nas i opišite dokument ili predmet. Pomoći ćemo da utvrdimo odgovarajući postupak i koordiniramo sledeće korake.",
+      "whatsapp": "Kontaktirajte nas putem WhatsAppa"
+    }
   },
   "uk": {
     "explore": "Переглянути всі послуги",
@@ -1186,7 +1410,15 @@
       "Підготувати запит електронною поштою",
       "Не надсилайте паролі чи дані платіжних карток через форму.",
       "На головну"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Який документ або послуга в ОАЕ вам потрібні?",
+      "placeholder": "Шукайте за документом, послугою або метою…",
+      "results": "Результати пошуку",
+      "noResultsTitle": "Не знаходите потрібну послугу?",
+      "noResultsText": "Зв’яжіться з нами та опишіть документ або справу. Ми допоможемо визначити правильну процедуру та скоординувати наступні кроки.",
+      "whatsapp": "Зв’язатися через WhatsApp"
+    }
   },
   "sq": {
     "explore": "Shiko të gjitha shërbimet",
@@ -1227,7 +1459,15 @@
       "Përgatit kërkesën me email",
       "Mos dërgoni fjalëkalime ose të dhëna të kartave të pagesës përmes formularit.",
       "Kthehu në faqen kryesore"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Cilin dokument ose shërbim në Emiratet e Bashkuara Arabe ju nevojitet?",
+      "placeholder": "Kërkoni sipas dokumentit, shërbimit ose qëllimit…",
+      "results": "Rezultatet e kërkimit",
+      "noResultsTitle": "Nuk e gjeni shërbimin e duhur?",
+      "noResultsText": "Na kontaktoni dhe përshkruani dokumentin ose çështjen. Do t’ju ndihmojmë të përcaktoni procedurën e duhur dhe të koordinojmë hapat e ardhshëm.",
+      "whatsapp": "Na kontaktoni në WhatsApp"
+    }
   },
   "is": {
     "explore": "Sjá alla þjónustu",
@@ -1268,7 +1508,15 @@
       "Undirbúa tölvupóstbeiðni",
       "Ekki senda lykilorð eða greiðslukortaupplýsingar í gegnum eyðublaðið.",
       "Til baka á forsíðu"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Hvaða skjal eða þjónustu í UAE þarftu?",
+      "placeholder": "Leitaðu eftir skjali, þjónustu eða tilgangi…",
+      "results": "Leitarniðurstöður",
+      "noResultsTitle": "Finnurðu ekki réttu þjónustuna?",
+      "noResultsText": "Hafðu samband og lýstu skjalinu eða málinu. Við hjálpum þér að finna rétta ferlið og samræma næstu skref.",
+      "whatsapp": "Hafðu samband á WhatsApp"
+    }
   },
   "ru": {
     "explore": "Все услуги",
@@ -1309,6 +1557,14 @@
       "Подготовить запрос по электронной почте",
       "Не отправляйте пароли или данные платёжных карт через форму.",
       "На главную"
-    ]
+    ],
+    "serviceSearch": {
+      "label": "Какой документ или услуга в ОАЭ вам нужны?",
+      "placeholder": "Ищите по документу, услуге или цели…",
+      "results": "Результаты поиска",
+      "noResultsTitle": "Не нашли подходящую услугу?",
+      "noResultsText": "Свяжитесь с нами и опишите документ или вопрос. Мы поможем определить правильную процедуру и скоординировать следующие шаги.",
+      "whatsapp": "Связаться через WhatsApp"
+    }
   }
 }
