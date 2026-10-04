@@ -17,8 +17,8 @@ export default async function Home({ params }) {
  return <main>
   <section className="hero-shell"><div className="w hero"><div className="hero-layout"><div className="hero-copy"><div className="eyebrow">{u.euUae}</div><h1>{m.h1}</h1><p>{m.sub}</p></div>
    <div className="hero-finder"><HeroServiceSearch lang={lang} searchIndex={searchIndex} labels={u.serviceSearch}/></div>
-   <div className="hero-actions">{waHref?<a className="btn whatsapp-primary" href={waHref} target="_blank" rel="noopener noreferrer">{u.serviceSearch.whatsapp}</a>:<span className="btn whatsapp-primary whatsapp-unconfigured" aria-disabled="true">{u.serviceSearch.whatsapp}</span>}<Link className="btn p" href={`/${lang}/contact`}>{m.nav[1]}</Link><a className="btn g" href="#services">{u.explore}</a></div>
-   <div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div></div>
+   <div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div>
+   <div className="hero-actions">{waHref?<a className="btn whatsapp-primary" href={waHref} target="_blank" rel="noopener noreferrer">{u.serviceSearch.whatsapp}</a>:<span className="btn whatsapp-primary whatsapp-unconfigured" aria-disabled="true">{u.serviceSearch.whatsapp}</span>}<Link className="btn p" href={`/${lang}/contact`}>{m.nav[1]}</Link><a className="btn g" href="#services">{u.explore}</a></div></div>
   </div></section>
   <div className="w">
    <section id="services" className="section-head"><div><span className="kicker">{u.directory}</span><h2>{m.sh}</h2></div><p className="section-intro">{u.directoryIntro}</p></section>
