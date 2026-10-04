@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import langs from '../lib/langs.json';
 import { BRAND } from '../lib/brand';
+import { getUi } from '../lib/services';
 
 export default function Header({ lang, m }) {
+  const u=getUi(lang);
   const router = useRouter();
   const path = usePathname();
   const change = (e) => {
@@ -16,7 +18,7 @@ export default function Header({ lang, m }) {
     <header className="site-header">
       <Link className="logo" href={`/${lang}`} aria-label={BRAND.name}>
         <span className="brand-mark" aria-hidden="true">P</span>
-        <span className="brand-copy"><b>POA DUBAI</b><small>{BRAND.descriptor}</small></span>
+        <span className="brand-copy"><b>POA DUBAI</b><small>{u.euUae}</small></span>
       </Link>
       <nav id="nav">
         <Link href={`/${lang}`}>{m.nav[0]}</Link>

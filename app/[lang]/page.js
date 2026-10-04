@@ -9,7 +9,7 @@ export default async function Home({ params }) {
  const ld=[{'@context':'https://schema.org','@type':'Organization',name:BRAND.name,url:`${DOMAIN}/${lang}`,description:m.sub,email:MAIL,areaServed:['Sweden','Europe','United Arab Emirates']},
  {'@context':'https://schema.org','@type':'ItemList',name:m.sh,itemListElement:services.map((s,i)=>({'@type':'ListItem',position:i+1,name:s.title,url:`${DOMAIN}/${lang}/services/${s.slug}`}))}];
  return <main>
-  <section className="hero-shell"><div className="w hero"><div className="eyebrow">{BRAND.descriptor}</div><h1>{m.h1}</h1><p>{m.sub}</p>
+  <section className="hero-shell"><div className="w hero"><div className="eyebrow">{u.euUae}</div><h1>{m.h1}</h1><p>{m.sub}</p>
    <div className="hero-actions"><Link className="btn p" href={`/${lang}/contact`}>{m.nav[1]}</Link><a className="btn g" href="#services">{u.explore}</a></div>
    <div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div>
   </div></section>
