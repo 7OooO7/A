@@ -1,15 +1,2 @@
-import { PAY } from '../lib/art';
-import { BRAND } from '../lib/brand';
-
-export default function Footer({ m }) {
-  return (
-    <footer id="contact">
-      <div className="footer-inner">
-        <div className="footer-brand"><b>POA DUBAI</b><span>{BRAND.descriptor}</span></div>
-        <div className="footer-contact"><a href={`mailto:${BRAND.email}`}>{BRAND.email}</a></div>
-        <p className="footer-disclaimer">{m.footerNote || 'Document preparation and process coordination. Official notarisation, legalisation and authority actions are completed through the competent authority or appropriately licensed partner.'}</p>
-        <div className="pay"><small>{m.payLabel}</small><div dangerouslySetInnerHTML={{ __html: PAY }} /></div>
-      </div>
-    </footer>
-  );
-}
+import Link from 'next/link'; import { PAY } from '../lib/art'; import { BRAND } from '../lib/brand'; import { getUi } from '../lib/services';
+export default function Footer({m,lang}){const u=getUi(lang);return <footer id="contact"><div className="footer-inner"><div className="footer-brand"><b>POA DUBAI</b><span>{BRAND.descriptor}</span></div><div className="footer-contact"><a href={`mailto:${BRAND.email}`}>{BRAND.email}</a><span> · </span><Link href={`/${lang}/contact`}>{u.contact}</Link><span> · </span><Link href={`/${lang}/faq`}>{u.faq}</Link></div><p className="footer-disclaimer">{u.independent}</p><div className="pay"><small>{m.payLabel}</small><div dangerouslySetInnerHTML={{__html:PAY}}/></div></div></footer>}

@@ -6,7 +6,7 @@ import { APOSTILLE_DESTINATIONS, apostilleDestination } from '../../../../lib/ap
 import { absolute, languageAlternates, breadcrumbSchema, safeJsonLd, OG_LOCALE } from '../../../../lib/seo';
 
 export const dynamicParams=false;
-export function generateStaticParams(){return CODES.flatMap(lang=>APOSTILLE_DESTINATIONS.map(({slug})=>({lang,country:slug})))}
+export function generateStaticParams(){ return APOSTILLE_DESTINATIONS.map(d=>({lang:'en',country:d.slug})); })=>({lang,country:slug})))}
 export async function generateMetadata({params}){
  const {lang,country}=await params; const d=apostilleDestination(country); if(!d)return{};
  const title=`Apostille for Swedish Documents for Use in ${d.name} | ${BRAND.name}`;

@@ -7,7 +7,11 @@ import { BRAND } from '../lib/brand';
 export default function Header({ lang, m }) {
   const router = useRouter();
   const path = usePathname();
-  const change = (e) => router.push(path.replace(/^\/[^/]+/, '/' + e.target.value));
+  const change = (e) => {
+    const next=e.target.value;
+    if (/^\/en\/apostille\//.test(path) && next!=='en') return router.push(`/${next}/services/apostille`);
+    router.push(path.replace(/^\/[^/]+/, '/' + next));
+  };
   return (
     <header className="site-header">
       <Link className="logo" href={`/${lang}`} aria-label={BRAND.name}>
@@ -17,9 +21,9 @@ export default function Header({ lang, m }) {
       <nav id="nav">
         <Link href={`/${lang}`}>{m.nav[0]}</Link>
         <Link href={`/${lang}#services`}>{m.servicesLabel}</Link>
-        <Link href={`/${lang}#faq`}>{m.faqLabel}</Link>
+        <Link href={`/${lang}/faq`}>{m.faqLabel}</Link>
         <Link href={`/${lang}/blog`}>{m.blogLabel}</Link>
-        <a href="#contact">{m.nav[1]}</a>
+        <Link href={`/${lang}/contact`}>{m.nav[1]}</Link>
       </nav>
       <select id="lang" aria-label="Language" value={lang} onChange={change}>
         {langs.map((l) => <option key={l.code} value={l.code}>{l.name}</option>)}
