@@ -8,6 +8,8 @@ import marketProfiles from '../../../../lib/marketProfiles.json';
 import {isSearchReady} from '../../../../lib/editorial';
 import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
 import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLinks';
+import semanticLinkMap from '../../../../lib/semanticLinkMap.json';
+import {semanticLinkLead} from '../../../../lib/semanticLinkCopy';
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>SERVICE_SLUGS.map(slug=>({lang,slug})))}
 
@@ -28,10 +30,10 @@ export async function generateMetadata({params}){
 export default async function ServicePage({params}){
  const {lang,slug}=await params,m=await getM(lang),u=getUi(lang),service=getService(m,slug,lang);if(!service)notFound();
  const content=getServiceContent(slug,lang),all=getServices(m,lang),research=getResearch(slug),category=getCategories(lang).find(c=>c.id===service.category),url=absolute(lang,`/services/${slug}`),L=labels(lang,u,m),market=marketProfiles[lang]||marketProfiles.en;
- const preferred=(research?.related||[]).map(x=>all.find(s=>s.slug===x)).filter(Boolean);
- const related=preferred.filter(r=>r.slug!==slug);
+ const semanticTargets=(semanticLinkMap[slug]||[]).filter(x=>x!==slug);
+ const related=semanticTargets.map(x=>all.find(s=>s.slug===x)).filter(Boolean);
  const linkedDestinations=new Set();
- const anchorVariants=(r)=>buildAnchorVariants(r,lang,getServiceContent(r.slug,lang),related,all);
+ const anchorVariants=(r)=>buildAnchorVariants(r,lang,getServiceContent(r.slug,lang));
  const renderText=(text)=>{
    if(!text)return text;
    let parts=[String(text)];
@@ -57,6 +59,11 @@ export default async function ServicePage({params}){
    }
    return parts;
  };
+ const semanticFallback=()=>{
+   const missing=related.filter(r=>!linkedDestinations.has(r.slug));
+   if(!missing.length)return null;
+   return <span className="semantic-link-bridge"> {' '}{semanticLinkLead(lang)} {missing.map((r,i)=><span key={r.slug}>{i>0?(i===missing.length-1?' · ':' · '):''}<Link className="internal-link" href={`/${lang}/services/${r.slug}`}>{r.title}</Link></span>)}.</span>;
+ };
  const faq=(content?.faq||[]).slice(0,5).map(x=>({q:x.q,a:x.a}));
  const schemas=[{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:service.title,description:service.summary,serviceType:service.title,provider:{'@type':'Organization','@id':`${DOMAIN}/#organization`,name:BRAND.name,url:DOMAIN},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:category?.title||m.sh,path:`#${service.category}`},{name:service.title,path:`/services/${slug}`}]),{'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}))}];
  return <main className="w service-page">
@@ -65,7 +72,7 @@ export default async function ServicePage({params}){
   <section className="service-content"><article>
    <span className="kicker">{u.overview}</span><h2>{service.title}</h2><p>{renderText(content?.intro)}</p>
    <h2>{L.what}</h2><p>{renderText(content?.what)}</p>
-   <h2>{u.howHelp}</h2><p>{renderText(content?.howHelp)}</p>
+   <h2>{u.howHelp}</h2><p>{renderText(content?.howHelp)}{semanticFallback()}</p>
    <h2>{L.before}</h2><p>{renderText(content?.beforeYouStart)}</p>
    <h2>{L.remote}</h2><p>{renderText(content?.remote)}</p>
    <h2>{L.questions}</h2><div className="faq-list">{faq.map((x,i)=><details key={i}><summary>{x.q}</summary><p>{renderText(x.a)}</p></details>)}</div>

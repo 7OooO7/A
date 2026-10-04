@@ -1,0 +1,272 @@
+{
+  "general-power-of-attorney": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "special-power-of-attorney": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "power-of-attorney-from-abroad": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "poa-drafting": [
+    "poa-online-notarisation",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "poa-online-notarisation": [
+    "poa-drafting",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "poa-revocation-cancellation": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "court-representation-poa": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "inheritance-power-of-attorney": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "marriage-power-of-attorney": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "child-travel-consent-poa": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "bank-account-power-of-attorney": [
+    "poa-drafting",
+    "poa-online-notarisation",
+    "certified-translation"
+  ],
+  "property-sale-poa": [
+    "dubai-land-department-services",
+    "property-conveyancing-coordination",
+    "certified-translation"
+  ],
+  "property-purchase-poa": [
+    "dubai-land-department-services",
+    "property-conveyancing-coordination",
+    "certified-translation"
+  ],
+  "property-management-poa": [
+    "dubai-land-department-services",
+    "property-conveyancing-coordination",
+    "certified-translation"
+  ],
+  "property-handover-poa": [
+    "dubai-land-department-services",
+    "property-conveyancing-coordination",
+    "certified-translation"
+  ],
+  "property-gift-transfer": [
+    "dubai-land-department-services",
+    "property-conveyancing-coordination",
+    "certified-translation"
+  ],
+  "dubai-land-department-services": [
+    "property-conveyancing-coordination",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "property-conveyancing-coordination": [
+    "dubai-land-department-services",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "corporate-power-of-attorney": [
+    "certified-translation",
+    "uae-document-attestation",
+    "contract-notarisation"
+  ],
+  "company-incorporation-poa": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "company-management-poa": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "company-shares-poa": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "vat-tax-poa": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "moa-drafting-notarisation": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "moa-amendment": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "company-contract-termination": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "board-resolution-notarisation": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "share-sale-assignment": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "company-liquidation-documents": [
+    "corporate-power-of-attorney",
+    "certified-translation",
+    "uae-document-attestation"
+  ],
+  "vehicle-power-of-attorney": [
+    "poa-online-notarisation",
+    "document-verification",
+    "uae-document-attestation"
+  ],
+  "vehicle-sale-poa": [
+    "vehicle-power-of-attorney",
+    "poa-online-notarisation",
+    "document-verification"
+  ],
+  "vehicle-purchase-poa": [
+    "vehicle-power-of-attorney",
+    "poa-online-notarisation",
+    "document-verification"
+  ],
+  "vehicle-export-poa": [
+    "vehicle-power-of-attorney",
+    "poa-online-notarisation",
+    "document-verification"
+  ],
+  "contract-notarisation": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "contract-addendum": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "sales-assignment-contracts": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "affidavits-declarations": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "debt-acknowledgement": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "signature-declaration": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "residency-accommodation-declaration": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "waiver-declaration": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "legal-notices": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "non-muslim-wills": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "e-notary-dubai": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ],
+  "fast-track-notary": [
+    "e-notary-dubai",
+    "certified-translation",
+    "document-verification"
+  ],
+  "apostille": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ],
+  "document-legalisation": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ],
+  "uae-document-attestation": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ],
+  "notarisation": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ],
+  "certified-true-copy": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ],
+  "certified-translation": [
+    "document-verification",
+    "document-processing",
+    "international-courier"
+  ],
+  "document-verification": [
+    "certified-translation",
+    "document-processing",
+    "international-courier"
+  ],
+  "document-processing": [
+    "certified-translation",
+    "document-verification",
+    "international-courier"
+  ],
+  "international-courier": [
+    "certified-translation",
+    "document-verification",
+    "document-processing"
+  ]
+}
