@@ -7,7 +7,7 @@ import {getServiceContent,getResearch} from '../../../../lib/serviceContent';
 import marketProfiles from '../../../../lib/marketProfiles.json';
 import {isSearchReady} from '../../../../lib/editorial';
 import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
-import {findContextualMatch,isProtectedBrandPhrase} from '../../../../lib/internalLinks';
+import {findContextualSpan,isProtectedBrandPhrase} from '../../../../lib/internalLinks';
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>SERVICE_SLUGS.map(slug=>({lang,slug})))}
 
@@ -48,9 +48,9 @@ export default async function ServicePage({params}){
        const next=[];
        for(const part of parts){
          if(typeof part!=='string'||linked){next.push(part);continue;}
-         const i=findContextualMatch(part,phrase,lang);
-         if(i<0){next.push(part);continue;}
-         const before=part.slice(0,i),match=part.slice(i,i+phrase.length),after=part.slice(i+phrase.length);
+         const span=findContextualSpan(part,phrase,lang);
+         if(!span){next.push(part);continue;}
+         const before=part.slice(0,span.start),match=part.slice(span.start,span.end),after=part.slice(span.end);
          if(before)next.push(before);
          next.push(<Link className="internal-link" key={`${r.slug}-${linkedDestinations.size}`} href={`/${lang}/services/${r.slug}`}>{match}</Link>);
          if(after)next.push(after);
@@ -72,7 +72,7 @@ export default async function ServicePage({params}){
    <h2>{u.howHelp}</h2><p>{renderText(content?.howHelp)}</p>
    <h2>{L.before}</h2><p>{renderText(content?.beforeYouStart)}</p>
    <h2>{L.remote}</h2><p>{renderText(content?.remote)}</p>
-   <h2>{L.questions}</h2><div className="faq-list">{faq.map((x,i)=><details key={i}><summary>{renderText(x.q)}</summary><p>{renderText(x.a)}</p></details>)}</div>
+   <h2>{L.questions}</h2><div className="faq-list">{faq.map((x,i)=><details key={i}><summary>{x.q}</summary><p>{renderText(x.a)}</p></details>)}</div>
   </article><aside><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className="mini-step" key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div></aside></section>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeJsonLd(schemas)}}/>
  </main>;
