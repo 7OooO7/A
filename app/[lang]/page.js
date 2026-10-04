@@ -23,9 +23,9 @@ export default async function Home({ params }) {
       <nav className="category-nav" aria-label="Service categories">{categories.map(c=><a key={c.id} href={`#${c.id}`}>{c.title}</a>)}</nav>
       {categories.map(category=><section className="service-category" id={category.id} key={category.id}>
         <div className="category-heading"><div><span className="kicker">POA Dubai</span><h2>{category.title}</h2></div><p>{category.intro}</p></div>
-        <div className="service-grid catalog-grid">{getCategoryServices(category.id).map((service,i)=><Link className="service-card compact" href={`/${lang}/services/${service.slug}`} key={service.slug}><span className="service-no">{String(i+1).padStart(2,'0')}</span><h3>{service.title}</h3><p>{service.summary}</p><span className="card-link">View service →</span></Link>)}</div>
+        <div className="service-grid catalog-grid">{getCategoryServices(category.id).map((service)=><Link className="service-card compact" href={`/${lang}/services/${service.slug}`} key={service.slug}><h3>{service.title}</h3><p>{service.summary}</p></Link>)}</div>
       </section>)}
-      <section className="process-section"><div className="section-head"><div><span className="kicker">Simple process</span><h2>{m.ph}</h2></div></div><div className="process-grid">{m.st.map((v,i)=><div className="process-card" key={i}><span>0{i+1}</span><h3>{v[0]}</h3><p>{v[1]}</p></div>)}</div><p className="note">{m.note}</p></section>
+      <section className="process-section"><div className="section-head"><div><span className="kicker">Simple process</span><h2>{m.ph}</h2></div></div><div className="process-grid">{m.st.map((v,i)=><div className="process-card" key={i}><span>{i+1}</span><h3>{v[0]}</h3><p>{v[1]}</p></div>)}</div><p className="note">{m.note}</p></section>
       <section id="faq" className="faq-section"><div className="section-head"><div><span className="kicker">FAQ</span><h2>{m.faq[0]}</h2></div></div><div className="faq-list">{m.faq[1].map((q,i)=><details key={i}><summary>{q[0]}</summary><p>{q[1]}</p></details>)}</div></section>
     </div><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(ld)}} />
   </main>;
