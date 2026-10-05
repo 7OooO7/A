@@ -46,6 +46,10 @@
       "noResultsTitle": "Can’t find the right service?",
       "noResultsText": "Contact us and describe the document or matter. We’ll help identify the right route and coordinate the next steps.",
       "whatsapp": "WhatsApp us"
+    },
+    "preFaqWhatsapp": {
+      "title": "Get a quick answer about your request",
+      "text": "Tell us what you need to complete and message us directly on WhatsApp — it is the quickest way to get an initial answer about the appropriate route for your request."
     }
   },
   "sv": {
@@ -95,6 +99,10 @@
       "noResultsTitle": "Hittar du inte rätt tjänst?",
       "noResultsText": "Kontakta oss och beskriv dokumentet eller ärendet. Vi hjälper dig att hitta rätt väg och samordna nästa steg.",
       "whatsapp": "Kontakta oss på WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Få ett snabbt svar om ditt ärende",
+      "text": "Berätta vad du behöver få gjort och skriv direkt till oss på WhatsApp – det är det snabbaste sättet att få ett första svar om rätt väg för ditt ärende."
     }
   },
   "ar": {
@@ -144,6 +152,10 @@
       "noResultsTitle": "لم تجد المستند أو الخدمة المناسبة؟",
       "noResultsText": "تواصل معنا واشرح لنا المستند أو المعاملة التي تحتاجها، وسنساعدك في تحديد الإجراء الصحيح وتنسيق الخطوات اللازمة.",
       "whatsapp": "تواصل معنا عبر واتساب"
+    },
+    "preFaqWhatsapp": {
+      "title": "احصل على رد سريع حول معاملتك",
+      "text": "أخبرنا بما ترغب في إنجازه، وتواصل معنا مباشرة عبر واتساب — فهو أسرع وسيلة للحصول على رد أولي حول المسار المناسب لمعاملتك."
     }
   },
   "de": {
@@ -193,6 +205,10 @@
       "noResultsTitle": "Nicht die passende Dienstleistung gefunden?",
       "noResultsText": "Kontaktieren Sie uns und beschreiben Sie das Dokument oder Anliegen. Wir helfen Ihnen, den richtigen Ablauf zu bestimmen und die nächsten Schritte zu koordinieren.",
       "whatsapp": "Per WhatsApp kontaktieren"
+    },
+    "preFaqWhatsapp": {
+      "title": "Erhalten Sie schnell eine erste Antwort zu Ihrem Anliegen",
+      "text": "Sagen Sie uns, was Sie erledigen möchten, und schreiben Sie uns direkt über WhatsApp – so erhalten Sie am schnellsten eine erste Einschätzung zum passenden Ablauf für Ihr Anliegen."
     }
   },
   "fr": {
@@ -242,6 +258,10 @@
       "noResultsTitle": "Vous ne trouvez pas le bon service ?",
       "noResultsText": "Contactez-nous et décrivez le document ou la démarche. Nous vous aiderons à identifier la procédure adaptée et à coordonner les prochaines étapes.",
       "whatsapp": "Nous contacter sur WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Obtenez rapidement une première réponse à votre demande",
+      "text": "Dites-nous ce que vous souhaitez accomplir et écrivez-nous directement sur WhatsApp : c’est le moyen le plus rapide d’obtenir une première réponse sur la démarche adaptée à votre demande."
     }
   },
   "nl": {
@@ -291,6 +311,10 @@
       "noResultsTitle": "Kunt u de juiste dienst niet vinden?",
       "noResultsText": "Neem contact met ons op en beschrijf het document of de zaak. Wij helpen de juiste route te bepalen en de volgende stappen te coördineren.",
       "whatsapp": "Contact via WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Krijg snel een eerste antwoord over uw aanvraag",
+      "text": "Vertel ons wat u wilt regelen en stuur ons rechtstreeks een WhatsApp-bericht — dat is de snelste manier om een eerste antwoord te krijgen over de juiste route voor uw aanvraag."
     }
   },
   "da": {
@@ -340,6 +364,10 @@
       "noResultsTitle": "Kan du ikke finde den rigtige tjeneste?",
       "noResultsText": "Kontakt os og beskriv dokumentet eller sagen. Vi hjælper med at finde den rigtige proces og koordinere de næste trin.",
       "whatsapp": "Kontakt os på WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Få hurtigt et første svar om din sag",
+      "text": "Fortæl os, hvad du skal have ordnet, og skriv direkte til os på WhatsApp – det er den hurtigste måde at få et første svar om den rette proces for din sag."
     }
   },
   "no": {
@@ -389,6 +417,10 @@
       "noResultsTitle": "Finner du ikke riktig tjeneste?",
       "noResultsText": "Kontakt oss og beskriv dokumentet eller saken. Vi hjelper deg med å finne riktig prosess og koordinere de neste stegene.",
       "whatsapp": "Kontakt oss på WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Få raskt et første svar om saken din",
+      "text": "Fortell oss hva du trenger å få ordnet, og skriv direkte til oss på WhatsApp – det er den raskeste måten å få et første svar om riktig prosess for saken din."
     }
   },
   "fi": {
@@ -438,6 +470,10 @@
       "noResultsTitle": "Etkö löydä oikeaa palvelua?",
       "noResultsText": "Ota meihin yhteyttä ja kuvaile asiakirja tai asia. Autamme tunnistamaan oikean menettelyn ja koordinoimaan seuraavat vaiheet.",
       "whatsapp": "Ota yhteyttä WhatsAppissa"
+    },
+    "preFaqWhatsapp": {
+      "title": "Saat nopeasti ensimmäisen vastauksen asiaasi",
+      "text": "Kerro, mitä haluat hoitaa, ja ota meihin yhteyttä suoraan WhatsAppissa – se on nopein tapa saada ensimmäinen vastaus asiallesi sopivasta etenemistavasta."
     }
   },
   "es": {
@@ -487,6 +523,10 @@
       "noResultsTitle": "¿No encuentra el servicio adecuado?",
       "noResultsText": "Contáctenos y describa el documento o trámite. Le ayudaremos a identificar la vía adecuada y a coordinar los siguientes pasos.",
       "whatsapp": "Contactar por WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Obtén una respuesta rápida sobre tu trámite",
+      "text": "Cuéntanos qué necesitas gestionar y escríbenos directamente por WhatsApp: es la forma más rápida de obtener una primera respuesta sobre la vía adecuada para tu solicitud."
     }
   },
   "it": {
@@ -536,6 +576,10 @@
       "noResultsTitle": "Non trovi il servizio giusto?",
       "noResultsText": "Contattaci e descrivi il documento o la pratica. Ti aiuteremo a individuare il percorso corretto e a coordinare i passaggi successivi.",
       "whatsapp": "Contattaci su WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Ricevi rapidamente una prima risposta sulla tua richiesta",
+      "text": "Dicci cosa devi completare e scrivici direttamente su WhatsApp: è il modo più rapido per ricevere una prima indicazione sul percorso più adatto alla tua richiesta."
     }
   },
   "pt": {
@@ -585,6 +629,10 @@
       "noResultsTitle": "Não encontrou o serviço certo?",
       "noResultsText": "Contacte-nos e descreva o documento ou assunto. Ajudaremos a identificar o procedimento adequado e a coordenar os próximos passos.",
       "whatsapp": "Contactar pelo WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Receba rapidamente uma primeira resposta sobre o seu pedido",
+      "text": "Diga-nos o que precisa de tratar e fale connosco diretamente pelo WhatsApp — é a forma mais rápida de obter uma primeira orientação sobre o procedimento adequado ao seu pedido."
     }
   },
   "pl": {
@@ -634,6 +682,10 @@
       "noResultsTitle": "Nie możesz znaleźć właściwej usługi?",
       "noResultsText": "Skontaktuj się z nami i opisz dokument lub sprawę. Pomożemy ustalić właściwą procedurę i skoordynować kolejne kroki.",
       "whatsapp": "Napisz do nas na WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Uzyskaj szybką wstępną odpowiedź w swojej sprawie",
+      "text": "Napisz, co chcesz załatwić, i skontaktuj się z nami bezpośrednio przez WhatsApp — to najszybszy sposób, aby uzyskać wstępną informację o właściwej ścieżce dla Twojej sprawy."
     }
   },
   "ro": {
@@ -683,6 +735,10 @@
       "noResultsTitle": "Nu găsiți serviciul potrivit?",
       "noResultsText": "Contactați-ne și descrieți documentul sau situația. Vă ajutăm să identificați procedura potrivită și să coordonați pașii următori.",
       "whatsapp": "Contactați-ne pe WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Primește rapid un prim răspuns despre solicitarea ta",
+      "text": "Spune-ne ce ai nevoie să rezolvi și scrie-ne direct pe WhatsApp — este cea mai rapidă modalitate de a primi un prim răspuns despre procedura potrivită pentru solicitarea ta."
     }
   },
   "el": {
@@ -732,6 +788,10 @@
       "noResultsTitle": "Δεν βρίσκετε τη σωστή υπηρεσία;",
       "noResultsText": "Επικοινωνήστε μαζί μας και περιγράψτε το έγγραφο ή την υπόθεση. Θα σας βοηθήσουμε να εντοπίσετε τη σωστή διαδικασία και να συντονίσετε τα επόμενα βήματα.",
       "whatsapp": "Επικοινωνία μέσω WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Λάβετε γρήγορα μια πρώτη απάντηση για το αίτημά σας",
+      "text": "Πείτε μας τι χρειάζεστε να ολοκληρώσετε και επικοινωνήστε απευθείας μαζί μας στο WhatsApp — είναι ο πιο γρήγορος τρόπος για μια πρώτη απάντηση σχετικά με την κατάλληλη διαδικασία για το αίτημά σας."
     }
   },
   "cs": {
@@ -781,6 +841,10 @@
       "noResultsTitle": "Nemůžete najít správnou službu?",
       "noResultsText": "Kontaktujte nás a popište dokument nebo záležitost. Pomůžeme určit správný postup a koordinovat další kroky.",
       "whatsapp": "Kontaktovat přes WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Získejte rychlou první odpověď ke svému požadavku",
+      "text": "Napište nám, co potřebujete vyřídit, a kontaktujte nás přímo přes WhatsApp — je to nejrychlejší způsob, jak získat první informaci o vhodném postupu pro váš požadavek."
     }
   },
   "hu": {
@@ -830,6 +894,10 @@
       "noResultsTitle": "Nem találja a megfelelő szolgáltatást?",
       "noResultsText": "Lépjen kapcsolatba velünk, és írja le a dokumentumot vagy ügyet. Segítünk meghatározni a megfelelő eljárást és összehangolni a következő lépéseket.",
       "whatsapp": "Kapcsolat WhatsAppon"
+    },
+    "preFaqWhatsapp": {
+      "title": "Kapjon gyors első választ az ügyével kapcsolatban",
+      "text": "Írja meg, mit szeretne elintézni, és keressen minket közvetlenül WhatsAppon — így kaphat a leggyorsabban első tájékoztatást az ügyéhez megfelelő folyamatról."
     }
   },
   "bg": {
@@ -879,6 +947,10 @@
       "noResultsTitle": "Не намирате подходящата услуга?",
       "noResultsText": "Свържете се с нас и опишете документа или случая. Ще помогнем да определим правилната процедура и да координираме следващите стъпки.",
       "whatsapp": "Свържете се по WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Получете бърз първоначален отговор за Вашия случай",
+      "text": "Кажете ни какво искате да уредите и ни пишете директно в WhatsApp — това е най-бързият начин да получите първоначален отговор за подходящата процедура за Вашия случай."
     }
   },
   "hr": {
@@ -928,6 +1000,10 @@
       "noResultsTitle": "Ne možete pronaći odgovarajuću uslugu?",
       "noResultsText": "Kontaktirajte nas i opišite dokument ili predmet. Pomoći ćemo utvrditi odgovarajući postupak i koordinirati sljedeće korake.",
       "whatsapp": "Kontaktirajte nas putem WhatsAppa"
+    },
+    "preFaqWhatsapp": {
+      "title": "Brzo saznajte koji je pravi postupak za vaš zahtjev",
+      "text": "Recite nam što trebate riješiti i javite nam se izravno putem WhatsAppa — to je najbrži način da dobijete početni odgovor o odgovarajućem postupku za vaš zahtjev."
     }
   },
   "sk": {
@@ -977,6 +1053,10 @@
       "noResultsTitle": "Neviete nájsť správnu službu?",
       "noResultsText": "Kontaktujte nás a opíšte dokument alebo záležitosť. Pomôžeme určiť správny postup a koordinovať ďalšie kroky.",
       "whatsapp": "Kontaktovať cez WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Získajte rýchlu prvú odpoveď k svojej požiadavke",
+      "text": "Napíšte nám, čo potrebujete vybaviť, a kontaktujte nás priamo cez WhatsApp — je to najrýchlejší spôsob, ako získať prvú informáciu o vhodnom postupe pre vašu požiadavku."
     }
   },
   "sl": {
@@ -1026,6 +1106,10 @@
       "noResultsTitle": "Ne najdete prave storitve?",
       "noResultsText": "Kontaktirajte nas in opišite dokument ali zadevo. Pomagali bomo določiti ustrezen postopek in uskladiti naslednje korake.",
       "whatsapp": "Kontaktirajte nas prek WhatsAppa"
+    },
+    "preFaqWhatsapp": {
+      "title": "Hitro pridobite prvi odgovor glede svoje zahteve",
+      "text": "Povejte nam, kaj želite urediti, in nam pišite neposredno prek WhatsAppa — to je najhitrejši način za prvi odgovor o ustreznem postopku za vašo zahtevo."
     }
   },
   "et": {
@@ -1075,6 +1159,10 @@
       "noResultsTitle": "Ei leia sobivat teenust?",
       "noResultsText": "Võtke meiega ühendust ja kirjeldage dokumenti või asja. Aitame leida õige menetluse ja koordineerida järgmised sammud.",
       "whatsapp": "Võtke ühendust WhatsAppis"
+    },
+    "preFaqWhatsapp": {
+      "title": "Saage oma taotluse kohta kiiresti esmane vastus",
+      "text": "Öelge meile, mida soovite korraldada, ja kirjutage meile otse WhatsAppis — see on kiireim viis saada esmane vastus teie taotlusele sobiva menetluse kohta."
     }
   },
   "lv": {
@@ -1124,6 +1212,10 @@
       "noResultsTitle": "Neatrodat vajadzīgo pakalpojumu?",
       "noResultsText": "Sazinieties ar mums un aprakstiet dokumentu vai lietu. Palīdzēsim noteikt pareizo procedūru un koordinēt nākamos soļus.",
       "whatsapp": "Sazinieties WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Ātri saņemiet sākotnējo atbildi par savu pieprasījumu",
+      "text": "Pastāstiet, ko vēlaties nokārtot, un rakstiet mums tieši WhatsApp — tas ir ātrākais veids, kā saņemt sākotnēju atbildi par jūsu pieprasījumam piemērotāko procesu."
     }
   },
   "lt": {
@@ -1173,6 +1265,10 @@
       "noResultsTitle": "Nerandate tinkamos paslaugos?",
       "noResultsText": "Susisiekite su mumis ir aprašykite dokumentą ar reikalą. Padėsime nustatyti tinkamą procedūrą ir suderinti tolesnius veiksmus.",
       "whatsapp": "Susisiekite per WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Greitai gaukite pirminį atsakymą dėl savo užklausos",
+      "text": "Parašykite, ką norite sutvarkyti, ir susisiekite su mumis tiesiogiai per WhatsApp — tai greičiausias būdas gauti pirminį atsakymą apie jūsų užklausai tinkamą procesą."
     }
   },
   "mt": {
@@ -1222,6 +1318,10 @@
       "noResultsTitle": "Ma sibtx is-servizz it-tajjeb?",
       "noResultsText": "Ikkuntattjana u ddeskrivi d-dokument jew il-każ. Ngħinuk tidentifika l-proċedura xierqa u nikkoordinaw il-passi li jmiss.",
       "whatsapp": "Ikkuntattjana fuq WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Ikseb tweġiba inizjali malajr dwar it-talba tiegħek",
+      "text": "Għidilna x’għandek bżonn tlesti u ibgħatilna direttament fuq WhatsApp — huwa l-aktar mod mgħaġġel biex tikseb tweġiba inizjali dwar il-proċess adattat għat-talba tiegħek."
     }
   },
   "ga": {
@@ -1271,6 +1371,10 @@
       "noResultsTitle": "Ní féidir leat an tseirbhís cheart a aimsiú?",
       "noResultsText": "Déan teagmháil linn agus déan cur síos ar an doiciméad nó ar an ábhar. Cabhróimid leat an próiseas ceart a aithint agus na chéad chéimeanna eile a chomhordú.",
       "whatsapp": "Déan teagmháil linn ar WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Faigh freagra tosaigh go tapa faoi d’iarratas",
+      "text": "Inis dúinn cad is gá duit a chur i gcrích agus seol teachtaireacht chugainn go díreach ar WhatsApp — is é sin an bealach is tapúla chun freagra tosaigh a fháil faoin bpróiseas cuí do d’iarratas."
     }
   },
   "tr": {
@@ -1320,6 +1424,10 @@
       "noResultsTitle": "Doğru hizmeti bulamadınız mı?",
       "noResultsText": "Bize ulaşın ve belgeyi veya işlemi açıklayın. Doğru süreci belirlemenize ve sonraki adımları koordine etmenize yardımcı olalım.",
       "whatsapp": "WhatsApp üzerinden iletişime geçin"
+    },
+    "preFaqWhatsapp": {
+      "title": "Talebiniz hakkında hızlıca ilk yanıtı alın",
+      "text": "Ne yapmak istediğinizi bize anlatın ve doğrudan WhatsApp üzerinden yazın — talebiniz için uygun süreç hakkında ilk yanıtı almanın en hızlı yolu budur."
     }
   },
   "sr": {
@@ -1369,6 +1477,10 @@
       "noResultsTitle": "Ne možete da pronađete odgovarajuću uslugu?",
       "noResultsText": "Kontaktirajte nas i opišite dokument ili predmet. Pomoći ćemo da utvrdimo odgovarajući postupak i koordiniramo sledeće korake.",
       "whatsapp": "Kontaktirajte nas putem WhatsAppa"
+    },
+    "preFaqWhatsapp": {
+      "title": "Brzo dobijte prvi odgovor o svom zahtevu",
+      "text": "Recite nam šta treba da završite i pišite nam direktno putem WhatsAppa — to je najbrži način da dobijete početni odgovor o odgovarajućem postupku za vaš zahtev."
     }
   },
   "uk": {
@@ -1418,6 +1530,10 @@
       "noResultsTitle": "Не знаходите потрібну послугу?",
       "noResultsText": "Зв’яжіться з нами та опишіть документ або справу. Ми допоможемо визначити правильну процедуру та скоординувати наступні кроки.",
       "whatsapp": "Зв’язатися через WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Швидко отримайте першу відповідь щодо вашого запиту",
+      "text": "Розкажіть, що вам потрібно оформити, і напишіть нам безпосередньо у WhatsApp — це найшвидший спосіб отримати першу відповідь щодо відповідного порядку дій для вашого запиту."
     }
   },
   "sq": {
@@ -1467,6 +1583,10 @@
       "noResultsTitle": "Nuk e gjeni shërbimin e duhur?",
       "noResultsText": "Na kontaktoni dhe përshkruani dokumentin ose çështjen. Do t’ju ndihmojmë të përcaktoni procedurën e duhur dhe të koordinojmë hapat e ardhshëm.",
       "whatsapp": "Na kontaktoni në WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Merrni shpejt një përgjigje të parë për kërkesën tuaj",
+      "text": "Na tregoni çfarë duhet të përfundoni dhe na shkruani drejtpërdrejt në WhatsApp — është mënyra më e shpejtë për të marrë një përgjigje të parë për procedurën e përshtatshme për kërkesën tuaj."
     }
   },
   "is": {
@@ -1516,6 +1636,10 @@
       "noResultsTitle": "Finnurðu ekki réttu þjónustuna?",
       "noResultsText": "Hafðu samband og lýstu skjalinu eða málinu. Við hjálpum þér að finna rétta ferlið og samræma næstu skref.",
       "whatsapp": "Hafðu samband á WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Fáðu fljótt fyrsta svar um erindið þitt",
+      "text": "Segðu okkur hvað þú þarft að klára og sendu okkur skilaboð beint á WhatsApp — það er fljótlegasta leiðin til að fá fyrstu upplýsingar um rétta ferlið fyrir erindið þitt."
     }
   },
   "ru": {
@@ -1565,6 +1689,10 @@
       "noResultsTitle": "Не нашли подходящую услугу?",
       "noResultsText": "Свяжитесь с нами и опишите документ или вопрос. Мы поможем определить правильную процедуру и скоординировать следующие шаги.",
       "whatsapp": "Связаться через WhatsApp"
+    },
+    "preFaqWhatsapp": {
+      "title": "Быстро получите первый ответ по вашему запросу",
+      "text": "Расскажите, что вам нужно оформить, и напишите нам напрямую в WhatsApp — это самый быстрый способ получить первичный ответ о подходящем порядке действий для вашего запроса."
     }
   }
 }
