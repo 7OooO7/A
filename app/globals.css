@@ -436,12 +436,25 @@ button,input,select,textarea{font:inherit}
 }
 [dir="rtl"] .whatsapp-site-cta{flex-direction:row-reverse}
 
-/* Smart short-screen guard: keep sticky on laptops unless the CTA title's final visual line contains 2+ words. */
+/* Smart laptop guard: never disable sticky; compact only when the CTA title wraps tightly. */
 @media (min-width:1024px){
   .service-page .service-content>aside.sticky-wrap-guard{
-    position:static!important;
-    top:auto!important;
-    max-height:none!important;
-    overflow:visible!important;
+    position:sticky!important;
+    top:12px!important;
+    max-height:calc(100vh - 24px)!important;
+    overflow-y:auto!important;
+  }
+  .service-page .service-content>aside.sticky-wrap-guard .desktop-sticky-whatsapp{
+    margin-top:10px;
+    padding:12px;
+  }
+  .service-page .service-content>aside.sticky-wrap-guard .desktop-sticky-whatsapp h2{
+    margin-bottom:10px;
+    font-size:17px;
+    line-height:1.18;
+  }
+  .service-page .service-content>aside.sticky-wrap-guard .scope-box{
+    padding-top:14px;
+    padding-bottom:14px;
   }
 }
