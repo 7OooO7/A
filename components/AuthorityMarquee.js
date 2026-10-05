@@ -1,3 +1,6 @@
+'use client'
+import {useEffect,useRef} from 'react'
+
 function Icon({type}){
  const common={width:20,height:20,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.7,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':'true',focusable:'false'};
  const paths={
@@ -15,8 +18,26 @@ function Icon({type}){
  return <svg {...common}>{paths[type]||paths.business}</svg>
 }
 const types=['court','justice','mofa','property','vehicle','business','identity','immigration','notary','freezone'];
+
 export default function AuthorityMarquee({authorities,label}){
+ const viewportRef=useRef(null),runnerRef=useRef(null),stateRef=useRef({x:0,last:0,paused:false,dragging:false,startX:0,startOffset:0,half:1,dir:1,raf:0});
  const items=authorities.map((name,i)=>({name,type:types[i]||'business'}));
  const Track=({duplicate=false})=><div className="authority-marquee-track" aria-hidden={duplicate?'true':undefined}>{items.map((item,i)=><span className="authority-marquee-item" key={`${duplicate?'d':'p'}-${i}`}><Icon type={item.type}/><span>{item.name}</span></span>)}</div>;
- return <section className="authority-marquee-block" aria-label={label}><div className="authority-marquee"><div className="authority-marquee-runner"><Track/><Track duplicate/></div></div></section>
+ useEffect(()=>{
+  const viewport=viewportRef.current,runner=runnerRef.current,s=stateRef.current;if(!viewport||!runner)return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const measure=()=>{s.half=Math.max(1,runner.scrollWidth/2);s.dir=getComputedStyle(viewport).direction==='rtl'?1:-1};measure();
+  const ro=new ResizeObserver(measure);ro.observe(runner);
+  const normalize=()=>{if(s.dir<0){while(s.x<=-s.half)s.x+=s.half;while(s.x>0)s.x-=s.half}else{while(s.x>=s.half)s.x-=s.half;while(s.x<0)s.x+=s.half}};
+  const paint=()=>{normalize();runner.style.transform=`translate3d(${s.x}px,0,0)`};
+  const tick=(now)=>{if(!s.last)s.last=now;const dt=Math.min(40,now-s.last);s.last=now;if(!reduce&&!s.paused&&!s.dragging)s.x+=s.dir*(dt*.025);paint();s.raf=requestAnimationFrame(tick)};
+  s.raf=requestAnimationFrame(tick);
+  return()=>{cancelAnimationFrame(s.raf);ro.disconnect()}
+ },[]);
+ const down=e=>{const s=stateRef.current;s.dragging=true;s.paused=true;s.startX=e.clientX;s.startOffset=s.x;e.currentTarget.setPointerCapture?.(e.pointerId)};
+ const move=e=>{const s=stateRef.current;if(!s.dragging)return;s.x=s.startOffset+(e.clientX-s.startX)};
+ const up=e=>{const s=stateRef.current;if(!s.dragging)return;s.dragging=false;e.currentTarget.releasePointerCapture?.(e.pointerId);if(e.pointerType!=='mouse')s.paused=false};
+ const enter=()=>{stateRef.current.paused=true};
+ const leave=()=>{const s=stateRef.current;if(!s.dragging)s.paused=false};
+ return <section className="authority-marquee-block" aria-label={label}><div ref={viewportRef} className="authority-marquee" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onPointerEnter={enter} onPointerLeave={leave}><div ref={runnerRef} className="authority-marquee-runner"><Track/><Track duplicate/></div></div></section>
 }

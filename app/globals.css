@@ -292,3 +292,16 @@ button,input,select,textarea{font:inherit}
 .hero-actions .hero-email-secondary{min-height:44px!important;padding:10px 18px!important;font-size:14px!important}
 .contact-whatsapp-wrap{margin:10px 0 30px}.contact-whatsapp-btn{min-width:220px!important;min-height:54px!important;font-size:16px!important}
 @media(max-width:600px){.about-cta-actions .whatsapp-site-cta,.about-cta-actions .about-email-secondary,.contact-whatsapp-btn{width:100%!important;min-width:0!important}.hero-actions .hero-email-secondary{width:100%!important}}
+
+/* Homepage process + interactive authority marquee refinement */
+.process-section{padding-bottom:52px}
+.process-grid{align-items:stretch}
+.process-card{padding:22px 24px 24px;min-height:0}
+.process-card>span{display:inline-block;font-size:clamp(17px,1.5vw,21px);font-weight:800;line-height:1;letter-spacing:.02em;color:#8c6d39}
+.process-card h3{margin:18px 0 8px;font-size:clamp(20px,1.55vw,24px)}
+.process-card p{line-height:1.55}
+.authority-marquee{cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;overscroll-behavior-x:contain}
+.authority-marquee:active{cursor:grabbing}
+.authority-marquee-runner{animation:none!important;transform:translate3d(0,0,0)}
+@media(max-width:800px){.process-card{padding:19px 18px 20px}.process-card h3{margin-top:14px}.process-section{padding-bottom:44px}}
+@media(prefers-reduced-motion:reduce){.authority-marquee{overflow:hidden;scrollbar-width:none}.authority-marquee-track[aria-hidden="true"]{display:flex}}
