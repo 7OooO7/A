@@ -16,13 +16,21 @@ export default function HeroServiceSearch({lang,searchIndex,labels}){
   },[]);
   const results=useMemo(()=>{
     if(!query) return [];
-    const tokens=query.split(/\s+/).filter(Boolean);
+    // Reject obvious non-search input (e.g. aaaaaaa / ///////) before scoring.
+    const compact=query.replace(/\s+/g,'');
+    if(compact.length<2 || (/^(.)\1{3,}$/u.test(compact))) return [];
+    const tokens=query.split(/\s+/).filter(t=>t.length>1);
+    if(!tokens.length) return [];
     const scored=searchIndex.map(s=>{
       const title=norm(s.title), keywords=norm((s.keywords||[]).join(' | ')), summary=norm(s.summary||'');
-      const hay=`${title} | ${keywords} | ${summary}`;
-      const tokenMatch=tokens.length>1&&tokens.every(t=>hay.includes(t));
-      let score=title===query?120:title.startsWith(query)?100:title.includes(query)?85:keywords.includes(query)?65:hay.includes(query)?45:tokenMatch?35:0;
-      if(s.lang===lang) score+=3;
+      const primary=`${title} | ${keywords}`;
+      const allText=`${primary} | ${summary}`;
+      const allTokensMatch=tokens.length>1&&tokens.every(t=>allText.includes(t));
+      const primaryTokenMatch=tokens.some(t=>primary.includes(t));
+      // A single generic word must occur in the service title/approved keywords.
+      // Descriptions can support a multi-word query, but can never create a result alone.
+      let score=title===query?140:title.startsWith(query)?120:title.includes(query)?105:keywords.includes(query)?90:primary.includes(query)?80:(allTokensMatch&&primaryTokenMatch)?55:0;
+      if(s.lang===lang && score>0) score+=3;
       return {...s,score};
     }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
     const seen=new Set();
@@ -33,9 +41,9 @@ export default function HeroServiceSearch({lang,searchIndex,labels}){
     <label htmlFor="hero-service-query">{labels.label}</label>
     <div className="hero-search-box">
       <span aria-hidden="true">⌕</span>
-      <input id="hero-service-query" value={q} onFocus={()=>setOpen(true)} onChange={e=>{setQ(e.target.value);setOpen(true)}} onKeyDown={e=>{if(e.key==='Escape')setOpen(false)}} placeholder={labels.placeholder} autoComplete="off" aria-expanded={show} aria-controls="hero-search-results" />
+      <input id="hero-service-query" value={q} onFocus={()=>setOpen(true)} onChange={e=>{setQ(e.target.value);setOpen(true)}} onKeyDown={e=>{if(e.key==='Escape')setOpen(false)}} placeholder={labels.placeholder} autoComplete="off" role="combobox" aria-autocomplete="list" aria-expanded={show} aria-controls="hero-search-results" />
     </div>
-    {show&&<div id="hero-search-results" className="hero-search-results" role="listbox" aria-label={labels.results}>
+    {show&&<div id="hero-search-results" className="hero-search-results" role="region" aria-live="polite" aria-label={labels.results}>
       {results.length?results.map((s,i)=><Link key={`${s.slug}-${s.lang}-${i}`} href={`/${lang}/services/${s.slug}`} onClick={()=>setOpen(false)}>
         <span className="hero-result-head"><strong>{s.title}</strong><em>{s.languageName}</em></span>
         <small>{s.summary}</small>

@@ -30,7 +30,7 @@ export default async function Article({ params }) {
     publisher: { '@type': 'Organization', name: 'Poa Dubai' }, mainEntityOfPage: `${DOMAIN}/${lang}/blog/${slug}`,
   };
   return (
-    <main className="w">
+    <main id="main-content" className="w">
       <article id="art">
         <Link className="back" href={`/${lang}/blog`}>{RTL.includes(lang) ? '→ ' : '← '}{m.blog[0]}</Link>
         <div className="bi" dangerouslySetInnerHTML={{ __html: IMG[i] }} />

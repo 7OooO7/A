@@ -4,6 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import langs from '../lib/langs.json';
 import { BRAND } from '../lib/brand';
 import { getUi } from '../lib/services';
+import aboutCopy from '../lib/aboutCopy.json';
 
 export default function Header({ lang, m }) {
   const u=getUi(lang);
@@ -23,6 +24,7 @@ export default function Header({ lang, m }) {
       <nav id="nav">
         <Link href={`/${lang}`}>{m.nav[0]}</Link>
         <Link href={`/${lang}#services`}>{m.servicesLabel}</Link>
+        <Link href={`/${lang}/about`}>{aboutCopy[lang].title}</Link>
         <Link href={`/${lang}/faq`}>{m.faqLabel}</Link>
         <Link href={`/${lang}/blog`}>{m.blogLabel}</Link>
         <Link href={`/${lang}/contact`}>{m.nav[1]}</Link>

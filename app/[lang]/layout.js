@@ -8,6 +8,7 @@ import { languageAlternates, OG_LOCALE } from '../../lib/seo';
 import FloatingActions from '../../components/FloatingActions';
 
 export const dynamicParams = false;
+export const viewport = { width: 'device-width', initialScale: 1, viewportFit: 'cover' };
 export const generateStaticParams = () => CODES.map((lang) => ({ lang }));
 
 export async function generateMetadata({ params }) {
@@ -22,5 +23,5 @@ export default async function Layout({ children, params }) {
   const { lang } = await params;
   if (!CODES.includes(lang)) notFound();
   const m = await getM(lang);
-  return <html lang={lang} dir={RTL.includes(lang) ? 'rtl' : 'ltr'}><body><div className="header-frame"><Header lang={lang} m={{ nav: m.nav, faqLabel: m.faqLabel, blogLabel: m.blogLabel, servicesLabel: m.sh }} /></div>{children}<Footer m={m} lang={lang} /><FloatingActions whatsappLabel={m.wa || 'WhatsApp'} /></body></html>;
+  return <html lang={lang} dir={RTL.includes(lang) ? 'rtl' : 'ltr'}><body><a className="skip-link" href="#main-content">Skip to content</a><div className="header-frame"><Header lang={lang} m={{ nav: m.nav, faqLabel: m.faqLabel, blogLabel: m.blogLabel, servicesLabel: m.sh }} /></div>{children}<Footer m={m} lang={lang} /><FloatingActions whatsappLabel={m.wa || 'WhatsApp'} /></body></html>;
 }

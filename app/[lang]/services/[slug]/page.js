@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {CODES,DOMAIN,MAIL,getM} from '../../../../lib/i18n';
-import {SERVICE_SLUGS,BRAND} from '../../../../lib/brand';
+import {BRAND} from '../../../../lib/brand';
+import {getEnabledServiceSlugs} from '../../../../lib/serviceAvailability';
 import {getService,getServices,getCategories,getUi} from '../../../../lib/services';
 import {getServiceContent,getResearch} from '../../../../lib/serviceContent';
 import marketProfiles from '../../../../lib/marketProfiles.json';
@@ -11,7 +12,7 @@ import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLi
 import semanticLinkMap from '../../../../lib/semanticLinkMap.json';
 import {semanticLinkLead} from '../../../../lib/semanticLinkCopy';
 export const dynamicParams=false;
-export function generateStaticParams(){return CODES.flatMap(lang=>SERVICE_SLUGS.map(slug=>({lang,slug})))}
+export function generateStaticParams(){return CODES.flatMap(lang=>getEnabledServiceSlugs().map(slug=>({lang,slug})))}
 
 const labels=(lang,u,m)=>({
   what:u.overview,
@@ -66,7 +67,7 @@ export default async function ServicePage({params}){
  };
  const faq=(content?.faq||[]).slice(0,5).map(x=>({q:x.q,a:x.a}));
  const schemas=[{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:service.title,description:service.summary,serviceType:service.title,provider:{'@type':'Organization','@id':`${DOMAIN}/#organization`,name:BRAND.name,url:DOMAIN},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:category?.title||m.sh,path:`#${service.category}`},{name:service.title,path:`/services/${slug}`}]),{'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}))}];
- return <main className="w service-page">
+ return <main id="main-content" className="w service-page">
   <nav aria-label="Breadcrumb" className="breadcrumbs"><Link href={`/${lang}`}>{BRAND.name}</Link><span>›</span><Link href={`/${lang}#${service.category}`}>{category?.title||m.sh}</Link><span>›</span><span aria-current="page">{service.title}</span></nav>
   <section className="service-hero"><span className="kicker">{BRAND.name} · {u.euUae}</span><h1>{service.title}</h1><p>{content?.shortDescription||service.summary}</p><div className="hero-actions"><a className="btn p" href={`mailto:${MAIL}?subject=${encodeURIComponent(service.title)}`}>{m.mail}</a><Link className="btn outline" href={`/${lang}#${service.category}`}>{category?.title}</Link></div></section>
   <section className="service-content"><article>

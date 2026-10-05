@@ -16,7 +16,7 @@ export default async function Blog({ params }) {
   const { lang } = await params;
   const m = await getM(lang);
   return (
-    <main className="w">
+    <main id="main-content" className="w">
       <section id="blog">
         <h2>{m.blog[0]}</h2>
         <div id="bll">
