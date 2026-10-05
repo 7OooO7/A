@@ -285,3 +285,10 @@ button,input,select,textarea{font:inherit}
 /* Homepage WhatsApp CTA keeps the same prominent rectangular sizing as the rest of the site. */
 .hero-actions .whatsapp-primary{min-height:52px!important;min-width:190px;padding:13px 24px!important;border-radius:7px!important;font-size:15px!important;font-weight:800!important}
 @media(max-width:600px){.floating-actions .whatsapp-action{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;padding:0!important;border-radius:50%!important}.floating-actions .whatsapp-action svg{width:21px!important;height:21px!important}.hero-actions .whatsapp-primary{width:100%!important;min-width:0!important;min-height:52px!important}}
+
+/* CTA hierarchy: WhatsApp is the primary conversion action; email remains secondary. */
+.about-cta-actions .whatsapp-site-cta{min-width:220px!important;min-height:54px!important;padding:14px 26px!important;font-size:16px!important}
+.about-cta-actions .about-email-secondary{min-width:150px!important;min-height:44px!important;padding:10px 17px!important;font-size:14px!important}
+.hero-actions .hero-email-secondary{min-height:44px!important;padding:10px 18px!important;font-size:14px!important}
+.contact-whatsapp-wrap{margin:10px 0 30px}.contact-whatsapp-btn{min-width:220px!important;min-height:54px!important;font-size:16px!important}
+@media(max-width:600px){.about-cta-actions .whatsapp-site-cta,.about-cta-actions .about-email-secondary,.contact-whatsapp-btn{width:100%!important;min-width:0!important}.hero-actions .hero-email-secondary{width:100%!important}}
