@@ -382,3 +382,17 @@ button,input,select,textarea{font:inherit}
     background-color:#f7f4ee!important;
   }
 }
+
+/* Desktop service process sidebar: follows reading, bounded by service-content */
+@media (min-width:1024px){
+  .service-page .service-content>aside{
+    position:sticky;
+    top:24px;
+    align-self:start;
+    height:max-content;
+    max-height:calc(100vh - 48px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+  }
+}
