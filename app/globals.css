@@ -436,9 +436,9 @@ button,input,select,textarea{font:inherit}
 }
 [dir="rtl"] .whatsapp-site-cta{flex-direction:row-reverse}
 
-/* Short laptop screens: show the full process block statically instead of clipping a sticky sidebar. */
-@media (min-width:1024px) and (max-height:820px){
-  .service-page .service-content>aside{
+/* Smart short-screen guard: keep sticky on laptops unless the CTA title's final visual line contains 2+ words. */
+@media (min-width:1024px){
+  .service-page .service-content>aside.sticky-wrap-guard{
     position:static!important;
     top:auto!important;
     max-height:none!important;

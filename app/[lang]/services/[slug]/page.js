@@ -11,6 +11,7 @@ import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from 
 import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLinks';
 import semanticLinkMap from '../../../../lib/semanticLinkMap.json';
 import {semanticLinkLead} from '../../../../lib/semanticLinkCopy';
+import StickyProcessGuard from '../../../../components/StickyProcessGuard';
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>getEnabledServiceSlugs().map(slug=>({lang,slug})))}
 
@@ -81,7 +82,7 @@ export default async function ServicePage({params}){
    <div className="service-mobile-process" aria-label={u.process}><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div></div>
    <div className="pre-faq-cta"><div className="pre-faq-copy"><h2>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2><p>{u.preFaqWhatsapp?.text || u.faqPrompt}</p></div>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div>
    <h2>{L.questions}</h2><div className="faq-list">{faq.map((x,i)=><details key={i}><summary>{x.q}</summary><p>{renderText(x.a)}</p></details>)}</div>
-  </article><aside><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div><div className="desktop-sticky-whatsapp"><h2>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div></aside></section>
+  </article><StickyProcessGuard><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div><div className="desktop-sticky-whatsapp"><h2>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div></StickyProcessGuard></section>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeJsonLd(schemas)}}/>
  </main>;
 }
