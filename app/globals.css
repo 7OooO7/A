@@ -458,3 +458,53 @@ button,input,select,textarea{font:inherit}
     padding-bottom:14px;
   }
 }
+
+/* Desktop sticky service sidebar: never create an inner scrolling viewport */
+@media (min-width:1024px){
+  .service-sidebar,
+  .service-sidebar-sticky,
+  .service-process-sidebar,
+  .process-sidebar,
+  .sticky-process-sidebar,
+  .service-aside,
+  .service-aside-inner{
+    overflow:visible!important;
+    overflow-y:visible!important;
+    max-height:none!important;
+    scrollbar-width:none!important;
+  }
+  .service-sidebar::-webkit-scrollbar,
+  .service-sidebar-sticky::-webkit-scrollbar,
+  .service-process-sidebar::-webkit-scrollbar,
+  .process-sidebar::-webkit-scrollbar,
+  .sticky-process-sidebar::-webkit-scrollbar,
+  .service-aside::-webkit-scrollbar,
+  .service-aside-inner::-webkit-scrollbar{display:none!important}
+}
+@media (min-width:1024px) and (max-height:820px){
+  .service-process-sidebar,
+  .process-sidebar,
+  .sticky-process-sidebar,
+  .service-aside-inner{
+    top:12px!important;
+  }
+  .service-process-sidebar .process-row,
+  .process-sidebar .process-row,
+  .sticky-process-sidebar .process-row{
+    padding-top:10px!important;
+    padding-bottom:10px!important;
+  }
+  .service-process-sidebar .coordination-note,
+  .process-sidebar .coordination-note,
+  .sticky-process-sidebar .coordination-note{
+    padding-top:14px!important;
+    padding-bottom:14px!important;
+  }
+  .service-process-sidebar .whatsapp-conversion-box,
+  .process-sidebar .whatsapp-conversion-box,
+  .sticky-process-sidebar .whatsapp-conversion-box{
+    padding-top:12px!important;
+    padding-bottom:12px!important;
+  }
+}
+
