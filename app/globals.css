@@ -367,3 +367,18 @@ button,input,select,textarea{font:inherit}
   .service-mobile-process .scope-box{margin-top:16px}
   .service-mobile-process + .pre-faq-cta{margin-top:20px}
 }
+
+/* WhatsApp conversion cards: identical warm background on desktop and mobile */
+.pre-faq-cta,
+.home-whatsapp-conversion,
+.service-page .pre-faq-cta {
+  background-color:#f7f4ee!important;
+  background-image:none!important;
+}
+@media(min-width:801px){
+  .pre-faq-cta,
+  .home-whatsapp-conversion,
+  .service-page .pre-faq-cta {
+    background-color:#f7f4ee!important;
+  }
+}
