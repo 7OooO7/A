@@ -396,3 +396,29 @@ button,input,select,textarea{font:inherit}
     scrollbar-width:thin;
   }
 }
+
+
+/* Desktop-only compact WhatsApp CTA travels with the sticky process sidebar. */
+.desktop-sticky-whatsapp{display:none}
+@media (min-width:1024px){
+  .service-page .service-content>article>.pre-faq-cta{display:none!important}
+  .service-page .desktop-sticky-whatsapp{
+    display:block;
+    margin-top:16px;
+    padding:16px;
+    border:1.5px solid color-mix(in srgb,var(--navy) 72%,#fff);
+    border-radius:12px;
+    background:#f7f4ee;
+    box-shadow:0 8px 24px rgba(8,31,48,.06);
+  }
+  .service-page .desktop-sticky-whatsapp h2{
+    margin:0 0 14px;
+    font-size:18px;
+    line-height:1.25;
+  }
+  .service-page .desktop-sticky-whatsapp .whatsapp-site-cta{
+    width:100%;
+    min-width:0;
+    justify-content:center;
+  }
+}
