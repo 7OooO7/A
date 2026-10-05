@@ -346,3 +346,8 @@ button,input,select,textarea{font:inherit}
 }
 
 .pre-faq-copy{min-width:0}.pre-faq-copy h2{margin:0 0 7px;font-size:clamp(20px,2vw,27px);line-height:1.2;color:var(--navy)}.pre-faq-copy p{margin:0!important;font-weight:400!important;line-height:1.65;color:var(--muted)!important;max-width:760px}
+
+/* Conversion WhatsApp panels: stronger visual boundary without heavy styling */
+.pre-faq-cta{border:1.5px solid color-mix(in srgb,var(--navy) 72%,#fff)!important;box-shadow:0 8px 24px rgba(8,31,48,.06)}
+.home-whatsapp-conversion{margin-top:24px;margin-bottom:0}
+@media(max-width:600px){.home-whatsapp-conversion{margin-top:18px}}
