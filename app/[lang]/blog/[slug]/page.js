@@ -26,7 +26,7 @@ export default async function Article({ params }) {
   const z = m.blog[1][i];
   const ld = {
     '@context': 'https://schema.org', '@type': 'Article', headline: z[0], description: z[1], inLanguage: lang,
-    datePublished: BD[i], author: { '@type': 'Person', name: 'Mustafa' },
+    datePublished: BD[i], author: { '@type': 'Organization', name: 'POA DUBAI' },
     publisher: { '@type': 'Organization', name: 'Poa Dubai' }, mainEntityOfPage: `${DOMAIN}/${lang}/blog/${slug}`,
   };
   return (
@@ -34,7 +34,7 @@ export default async function Article({ params }) {
       <article id="art">
         <Link className="back" href={`/${lang}/blog`}>{RTL.includes(lang) ? '→ ' : '← '}{m.blog[0]}</Link>
         <div className="bi" dangerouslySetInnerHTML={{ __html: IMG[i] }} />
-        <div className="bm">Mustafa &nbsp;·&nbsp; {fmt(BD[i], lang)}</div>
+        <div className="bm">POA DUBAI &nbsp;·&nbsp; {fmt(BD[i], lang)}</div>
         <h1>{z[0]}</h1>
         <p className="lead">{z[1]}</p>
         <p>{z[2]}</p>

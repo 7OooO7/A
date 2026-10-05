@@ -23,7 +23,7 @@ export default async function Blog({ params }) {
           {m.blog[1].map((z, i) => (
             <Link className="bc" href={`/${lang}/blog/${SLUGS[i]}`} key={SLUGS[i]}>
               <div className="bi" dangerouslySetInnerHTML={{ __html: IMG[i] }} />
-              <div className="bm">Mustafa &nbsp;·&nbsp; {fmt(BD[i], lang)}</div>
+              <div className="bm">POA DUBAI &nbsp;·&nbsp; {fmt(BD[i], lang)}</div>
               <h3>{z[0]}</h3>
               <p>{z[1]}</p>
               <span className="rm">{m.rm}</span>
