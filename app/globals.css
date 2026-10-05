@@ -351,3 +351,19 @@ button,input,select,textarea{font:inherit}
 .pre-faq-cta{border:1.5px solid color-mix(in srgb,var(--navy) 72%,#fff)!important;box-shadow:0 8px 24px rgba(8,31,48,.06)}
 .home-whatsapp-conversion{margin-top:24px;margin-bottom:0}
 @media(max-width:600px){.home-whatsapp-conversion{margin-top:18px}}
+
+
+/* Service mobile flow + consistent WhatsApp conversion panel */
+.pre-faq-cta{background:#f7f4ee!important}
+.service-mobile-process{display:none}
+@media(max-width:800px){
+  .service-page .service-content>aside{display:none}
+  .service-mobile-process{display:block;margin:30px 0 8px;padding-top:2px}
+  .service-mobile-process>.kicker{display:block;margin-bottom:12px}
+  .service-mobile-process .mini-step{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .service-mobile-process .mini-step b{font-size:15px;font-weight:900;color:#8c6d39;min-width:22px}
+  .service-mobile-process .mini-step span{font-weight:650;color:var(--navy)}
+  .service-mobile-process .mini-step.process-complete{padding:14px 12px;margin-top:8px;border-bottom:1px solid color-mix(in srgb,var(--sand) 58%,var(--line))}
+  .service-mobile-process .scope-box{margin-top:16px}
+  .service-mobile-process + .pre-faq-cta{margin-top:20px}
+}
