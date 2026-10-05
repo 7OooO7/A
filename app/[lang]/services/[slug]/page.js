@@ -80,7 +80,7 @@ export default async function ServicePage({params}){
    <h2>{L.remote}</h2><p>{renderText(content?.remote)}</p>
    <div className="pre-faq-cta"><p>{m.wa||'WhatsApp'}</p>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div>
    <h2>{L.questions}</h2><div className="faq-list">{faq.map((x,i)=><details key={i}><summary>{x.q}</summary><p>{renderText(x.a)}</p></details>)}</div>
-  </article><aside><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className="mini-step" key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div></aside></section>
+  </article><aside><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div></aside></section>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeJsonLd(schemas)}}/>
  </main>;
 }

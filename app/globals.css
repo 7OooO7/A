@@ -305,3 +305,24 @@ button,input,select,textarea{font:inherit}
 .authority-marquee-runner{animation:none!important;transform:translate3d(0,0,0)}
 @media(max-width:800px){.process-card{padding:19px 18px 20px}.process-card h3{margin-top:14px}.process-section{padding-bottom:44px}}
 @media(prefers-reduced-motion:reduce){.authority-marquee{overflow:hidden;scrollbar-width:none}.authority-marquee-track[aria-hidden="true"]{display:flex}}
+
+
+/* Final homepage density, CTA alignment, process completion and blog-link refinements */
+.hero{padding:12px 0 14px!important}
+.hero-layout{align-items:start}
+.hero-actions{align-items:center}
+.hero-actions .btn{display:inline-flex;align-items:center;justify-content:center;line-height:1.2}
+.hero-actions .whatsapp-primary{min-width:220px!important;min-height:54px!important;padding:14px 26px!important;font-size:16px!important}
+.hero-actions .hero-email-secondary{min-width:150px!important;min-height:44px!important;padding:10px 18px!important;font-size:14px!important}
+.process-card:last-child{background:color-mix(in srgb,var(--sand) 34%,#fff);box-shadow:inset 0 3px 0 var(--sand)}
+.process-card:last-child>span{color:#76531f;font-weight:900}
+.process-card:last-child h3{font-weight:700}
+.mini-step.process-complete{background:color-mix(in srgb,var(--sand) 30%,#fff);border:1px solid color-mix(in srgb,var(--sand) 58%,var(--line));border-radius:10px;padding:14px 12px;margin-top:8px}
+.mini-step.process-complete b{font-size:15px;font-weight:900;color:#76531f}
+.mini-step.process-complete span{font-weight:700;color:var(--navy)}
+.bc h3{padding-bottom:20px}
+.blog-title-link{color:inherit;text-decoration:none}
+.blog-title-link:hover,.blog-title-link:focus-visible{color:#8a6733;text-decoration:underline;text-underline-offset:4px}
+.bc:hover{border-color:var(--gold)}
+@media(max-width:980px){.hero{padding:10px 0 14px!important}}
+@media(max-width:600px){.hero{padding:8px 0 12px!important}.hero-actions .whatsapp-primary{width:100%!important;min-width:0!important;min-height:54px!important}.hero-actions .hero-email-secondary{width:100%!important;min-width:0!important}.process-card:last-child{box-shadow:inset 3px 0 0 var(--sand)}}

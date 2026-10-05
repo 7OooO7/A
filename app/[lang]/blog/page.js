@@ -21,13 +21,12 @@ export default async function Blog({ params }) {
         <h2>{m.blog[0]}</h2>
         <div id="bll">
           {m.blog[1].map((z, i) => (
-            <Link className="bc" href={`/${lang}/blog/${SLUGS[i]}`} key={SLUGS[i]}>
+            <article className="bc" key={SLUGS[i]}>
               <div className="bi" dangerouslySetInnerHTML={{ __html: IMG[i] }} />
               <div className="bm">POA DUBAI &nbsp;·&nbsp; {fmt(BD[i], lang)}</div>
-              <h3>{z[0]}</h3>
+              <h3><Link className="blog-title-link" href={`/${lang}/blog/${SLUGS[i]}`}>{z[0]}</Link></h3>
               <p>{z[1]}</p>
-              <span className="rm">{m.rm}</span>
-            </Link>
+            </article>
           ))}
         </div>
       </section>
