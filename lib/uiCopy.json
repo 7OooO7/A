@@ -2,7 +2,7 @@
   "en": {
     "explore": "Explore all services",
     "remote": "Remote-first",
-    "euUae": "Europe → UAE",
+    "euUae": "Outside UAE → UAE",
     "inside": "Inside UAE",
     "multilingual": "Multilingual",
     "directory": "Complete service directory",
@@ -112,7 +112,7 @@
   "ar": {
     "explore": "استعرض جميع الخدمات",
     "remote": "خدمات عن بُعد",
-    "euUae": "أوروبا ← الإمارات",
+    "euUae": "من خارج الإمارات إلى داخلها",
     "inside": "داخل الإمارات",
     "multilingual": "متعدد اللغات",
     "directory": "دليل الخدمات الكامل",
@@ -222,7 +222,7 @@
   "fr": {
     "explore": "Voir tous les services",
     "remote": "À distance",
-    "euUae": "Europe → EAU",
+    "euUae": "Hors EAU → EAU",
     "inside": "Aux EAU",
     "multilingual": "Multilingue",
     "directory": "Catalogue complet des services",

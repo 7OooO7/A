@@ -14,7 +14,7 @@ export default async function Home({ params }) {
  const searchIndex=services.flatMap(s=>langs.map(l=>{const c=getServiceContent(s.slug,l.code)||{};return {slug:s.slug,lang:l.code,languageName:l.name,title:c.title||s.title,summary:c.shortDescription||c.intro||s.summary,keywords:c.keywords||[]};}));
  const waNumber=process.env.NEXT_PUBLIC_WHATSAPP_NUMBER||'';
  const waHref=waNumber?`https://wa.me/${waNumber.replace(/\D/g,'')}`:'';
- const ld=[{'@context':'https://schema.org','@type':'Organization',name:BRAND.name,url:`${DOMAIN}/${lang}`,description:m.sub,email:MAIL,areaServed:['Sweden','Europe','United Arab Emirates']},
+ const ld=[{'@context':'https://schema.org','@type':'Organization',name:BRAND.name,url:`${DOMAIN}/${lang}`,description:m.sub,email:MAIL,areaServed:['Worldwide','United Arab Emirates']},
  {'@context':'https://schema.org','@type':'ItemList',name:m.sh,itemListElement:services.map((s,i)=>({'@type':'ListItem',position:i+1,name:s.title,url:`${DOMAIN}/${lang}/services/${s.slug}`}))}];
  return <main id="main-content">
   <section className="hero-shell"><div className="w hero"><div className="hero-layout"><div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div><div className="hero-copy"><div className="eyebrow">{u.euUae}</div><h1>{m.h1}</h1><p>{m.sub}</p><AuthorityMarquee authorities={about.authorities} label={about.authoritiesTitle}/><p className="hero-authority-message">{about.authoritiesCta}</p></div>
