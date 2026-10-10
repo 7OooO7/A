@@ -12,8 +12,7 @@
     "certified-translation"
   ],
   "poa-online-notarisation": [
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "poa-revocation-cancellation": [
     "poa-online-notarisation",
@@ -52,57 +51,46 @@
   ],
   "corporate-power-of-attorney": [
     "certified-translation",
-    "uae-document-attestation",
     "contract-notarisation"
   ],
   "company-incorporation-poa": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "company-management-poa": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "company-shares-poa": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "vat-tax-poa": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "moa-drafting-notarisation": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "moa-amendment": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "board-resolution-notarisation": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "share-sale-assignment": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "company-liquidation-documents": [
     "corporate-power-of-attorney",
-    "certified-translation",
-    "uae-document-attestation"
+    "certified-translation"
   ],
   "vehicle-power-of-attorney": [
-    "poa-online-notarisation",
-    "uae-document-attestation"
+    "poa-online-notarisation"
   ],
   "vehicle-sale-poa": [
     "vehicle-power-of-attorney",
@@ -138,12 +126,6 @@
     "certified-translation"
   ],
   "apostille": [
-    "certified-translation"
-  ],
-  "document-legalisation": [
-    "certified-translation"
-  ],
-  "uae-document-attestation": [
     "certified-translation"
   ],
   "certified-true-copy": [
