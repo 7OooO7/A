@@ -28,17 +28,17 @@
       ]
     },
     "en": {
-      "shortDescription": "A broad POA is not a blank cheque: specify categories of authority, excluded acts and the representative’s identity before signing.",
-      "intro": "A broad POA is not a blank cheque: specify categories of authority, excluded acts and the representative’s identity before signing.",
-      "what": "A broad POA is not a blank cheque: specify categories of authority, excluded acts and the representative’s identity before signing.",
-      "howHelp": "For this request, we start by reviewing list of intended powers and entities where the agent will act. We then check the intended recipient and separate the drafting or administrative coordination from any act that must be performed by an authorised UAE professional or authority. You receive a clear scope before any paid work.",
-      "beforeYouStart": "Have ready: list of intended powers and entities where the agent will act. Include the relevant identity records and any prior official correspondence. We will identify missing evidence before a document is signed, served or filed; a document prepared for the wrong authority may need to be redone.",
-      "remote": "Remote handling may be possible for several connected personal, administrative or business matters, but it depends on the identity route, document type, competent authority and where the principal or document holder is located. We confirm the likely route before asking you to proceed, and we flag cases where physical originals, in-person verification or an additional embassy/authority step may be required.",
+      "shortDescription": "Need someone you trust to manage several UAE matters? A General POA can cover defined administrative, financial and business powers without granting unrestricted control.",
+      "intro": "Living in Europe while your affairs remain in Dubai can mean repeated requests for signatures and appointments. A General Power of Attorney (General POA) may let a trusted representative handle several clearly listed matters. The important decision is not how broad the document sounds, but exactly which powers you are comfortable granting.",
+      "what": "A General POA identifies the principal, the appointed agent and the categories of authority. Banking transactions, property transfers and court proceedings may still need special wording or a separate instrument. The receiving bank, DLD office or other authority decides which powers and format it accepts.",
+      "howHelp": "Tell us what your representative needs to do, which UAE organisations will receive the document and where you are currently located. We help organise the proposed powers, flag unusually broad permissions and coordinate the appropriate drafting and notarisation route with licensed UAE partners.",
+      "beforeYouStart": "Prepare the principal’s passport or accepted identity document, the agent’s identity details, a list of intended actions and the names of the banks or authorities involved. If real estate or a company is involved, have the relevant title deed or corporate records available. Do not sign an open-ended draft before reviewing its powers.",
+      "remote": "An initial review can begin from Sweden or elsewhere in Europe. A remote UAE notarisation route may be available for an eligible applicant; the authority determines identity verification, signing and whether an additional legalisation route is required.",
       "questions": [
-        "Can a general POA be used to sell any property?",
-        "Can general power of attorney be arranged while I am outside the UAE?",
-        "What information matters most for General Power of Attorney?",
-        "What should I check before authorising or submitting this POA?"
+        "Is a General POA enough to sell my Dubai property?",
+        "Can I exclude access to my bank accounts?",
+        "Can I arrange a General POA while living in Europe?",
+        "When does a General POA stop applying?"
       ],
       "keywords": [
         "POA",
@@ -58,20 +58,20 @@
       ],
       "faq": [
         {
-          "q": "Can a general POA be used to sell any property?",
-          "a": "Do not assume so. A receiving property authority may require explicit property and sale powers."
+          "q": "Is a General POA enough to sell my Dubai property?",
+          "a": "Not necessarily. A property sale may require specific powers, property identification and wording accepted by the Dubai Land Department or the relevant registration trustee. We check that separately."
         },
         {
-          "q": "Can general power of attorney be arranged while I am outside the UAE?",
-          "a": "Remote handling may be possible for several connected personal, administrative or business matters, but it depends on the identity route, document type, competent authority and where the principal or document holder is located. We confirm the likely route before asking you to proceed, and we flag cases where physical originals, in-person verification or an additional embassy/authority step may be required."
+          "q": "Can I exclude access to my bank accounts?",
+          "a": "Yes, the intended powers should be expressly defined and exclusions considered. Whether a bank accepts the final document is subject to its own requirements."
         },
         {
-          "q": "What information matters most for General Power of Attorney?",
-          "a": "The starting point is list of intended powers and entities where the agent will act. We use that information to identify the correct procedure and the recipient’s document requirements, rather than offering a one-size-fits-all form."
+          "q": "Can I arrange a General POA while living in Europe?",
+          "a": "Often the assessment and coordination can start remotely. The available signing and notarisation procedure depends on the applicant and competent authority."
         },
         {
-          "q": "What should I check before authorising or submitting this POA?",
-          "a": "Have ready: list of intended powers and entities where the agent will act. Include the relevant identity records and any prior official correspondence. We will identify missing evidence before a document is signed, served or filed; a document prepared for the wrong authority may need to be redone."
+          "q": "When does a General POA stop applying?",
+          "a": "Validity depends on its wording and applicable law. Revocation, a specified expiry and other legal events may affect the authority; do not assume it remains usable indefinitely."
         }
       ],
       "keywordVariants": [
@@ -85,17 +85,17 @@
       ]
     },
     "ar": {
-      "shortDescription": "الوكالة العامة ليست تفويضًا بلا حدود: يجب تحديد مجالات التصرف والاستثناءات وهوية الوكيل قبل التوقيع.",
-      "intro": "الوكالة العامة ليست تفويضًا بلا حدود: يجب تحديد مجالات التصرف والاستثناءات وهوية الوكيل قبل التوقيع.",
-      "what": "الوكالة العامة ليست تفويضًا بلا حدود: يجب تحديد مجالات التصرف والاستثناءات وهوية الوكيل قبل التوقيع.",
-      "howHelp": "في طلب وكالة عامة نبدأ بمراجعة قائمة الصلاحيات والجهات التي سيتعامل معها الوكيل. بعد ذلك نحدد الجهة المستقبلة ونفصل بين أعمال تجهيز المستندات والتنسيق الإداري وبين أي إجراء يجب أن تنفذه جهة رسمية أو مهني مرخص. نوضح نطاق الخدمة قبل بدء العمل المدفوع.",
-      "beforeYouStart": "جهّز قائمة الصلاحيات والجهات التي سيتعامل معها الوكيل، إلى جانب هويات الأطراف وأي مراسلات رسمية سابقة مرتبطة بالمعاملة. نحدد المستندات الناقصة قبل التوقيع أو التبليغ أو تقديم الطلب حتى لا يتم إعداد مستند غير مناسب للجهة المستقبلة.",
-      "remote": "قد يكون من الممكن تنسيق عدة معاملات شخصية أو إدارية أو تجارية مترابطة عن بُعد، لكن ذلك يعتمد على طريقة التحقق من الهوية، ونوع المستند، والجهة المختصة، ومكان وجود صاحب المستند أو الموكل. نتحقق من المسار المتوقع أولًا، ونوضح منذ البداية إذا كانت الحالة تحتاج إلى أصول ورقية أو حضور شخصي أو خطوة إضافية لدى سفارة أو جهة رسمية.",
+      "shortDescription": "هل تحتاج إلى شخص موثوق يتابع عدة معاملات في الإمارات؟ تتيح الوكالة العامة تحديد صلاحيات متعددة بوضوح، دون منح تفويض مفتوح لا تحتاج إليه.",
+      "intro": "إذا كنت تعيش في أوروبا وما زالت لديك معاملات في دبي، فقد يصعب حضور كل توقيع أو مراجعة بنفسك. تساعد الوكالة العامة على تفويض شخص تختاره للقيام بمجموعة من الأعمال المحددة. الأهم ليس أن تكون الوكالة واسعة، بل أن تكون صلاحياتها واضحة ومتوافقة مع ما تريد السماح به فعلًا.",
+      "what": "تحدد الوكالة العامة بيانات الموكل والوكيل ومجالات التصرف المسموح بها. وقد تتطلب معاملات البنوك أو نقل ملكية العقار أو التقاضي صلاحيات صريحة أو وكالة مخصصة. قبول الصياغة النهائية يخضع لمتطلبات الجهة التي ستُستخدم أمامها.",
+      "howHelp": "أخبرنا بما سيقوم به الوكيل والجهات التي سيتعامل معها ومكان إقامتك الحالي. نساعد في تنظيم نطاق الصلاحيات، والتنبيه إلى البنود الواسعة غير الضرورية، وتنسيق إعداد المستند والتوثيق عبر الشركاء المرخصين والجهة المختصة.",
+      "beforeYouStart": "جهّز إثبات هوية الموكل وبيانات هوية الوكيل وقائمة واضحة بالأعمال المطلوبة وأسماء الجهات المعنية. إذا شملت المعاملة عقارًا أو شركة، فقد نحتاج سند الملكية أو مستندات الشركة. راجع كل صلاحية قبل الموافقة على النص.",
+      "remote": "يمكن بدء مراجعة الطلب من السويد أو أي دولة أوروبية. وقد يتاح التوثيق الإماراتي عن بُعد لبعض الحالات، وفق شروط التحقق من الهوية والتوقيع التي تحددها الجهة المختصة.",
       "questions": [
-        "هل تسمح الوكالة العامة ببيع أي عقار؟",
-        "هل يمكن إنجاز توكيل عام وأنا خارج الإمارات؟",
-        "ما المعلومات المهمة قبل بدء خدمة وكالة عامة؟",
-        "ما الذي يجب التحقق منه قبل تقديم طلب وكالة عامة؟"
+        "هل تكفي الوكالة العامة لبيع عقار في دبي؟",
+        "هل أستطيع استثناء الحسابات البنكية من الوكالة؟",
+        "هل يمكن إعداد وكالة عامة وأنا مقيم في أوروبا؟",
+        "متى تنتهي صلاحية الوكالة العامة؟"
       ],
       "keywords": [
         "general power of attorney Dubai",
@@ -113,20 +113,20 @@
       ],
       "faq": [
         {
-          "q": "هل تسمح الوكالة العامة ببيع أي عقار؟",
-          "a": "ليس بالضرورة؛ قد تشترط الجهة العقارية صلاحيات بيع صريحة وبيانات العقار."
+          "q": "هل تكفي الوكالة العامة لبيع عقار في دبي؟",
+          "a": "ليس بالضرورة. قد تتطلب معاملة البيع صلاحيات محددة وبيانات العقار وصياغة تقبلها دائرة الأراضي والأملاك أو مكتب أمين التسجيل."
         },
         {
-          "q": "هل يمكن إنجاز توكيل عام وأنا خارج الإمارات؟",
-          "a": "قد يكون من الممكن تنسيق عدة معاملات شخصية أو إدارية أو تجارية مترابطة عن بُعد، لكن ذلك يعتمد على طريقة التحقق من الهوية، ونوع المستند، والجهة المختصة، ومكان وجود صاحب المستند أو الموكل. نتحقق من المسار المتوقع أولًا، ونوضح منذ البداية إذا كانت الحالة تحتاج إلى أصول ورقية أو حضور شخصي أو خطوة إضافية لدى سفارة أو جهة رسمية."
+          "q": "هل أستطيع استثناء الحسابات البنكية من الوكالة؟",
+          "a": "يمكن تحديد الصلاحيات والاستثناءات صراحةً، مع مراعاة متطلبات الجهة التي ستستقبل الوكالة."
         },
         {
-          "q": "ما المعلومات المهمة قبل بدء خدمة وكالة عامة؟",
-          "a": "نبدأ بـ قائمة الصلاحيات والجهات التي سيتعامل معها الوكيل، لأن هذه المعلومات تحدد الإجراء والجهة المستقبلة والمتطلبات الفعلية بدل استخدام نموذج عام لا يناسب الحالة."
+          "q": "هل يمكن إعداد وكالة عامة وأنا مقيم في أوروبا؟",
+          "a": "يمكن غالبًا بدء المراجعة والتنسيق عن بُعد، أما طريقة التوقيع والتوثيق فتتوقف على الحالة والجهة المختصة."
         },
         {
-          "q": "ما الذي يجب التحقق منه قبل تقديم طلب وكالة عامة؟",
-          "a": "جهّز قائمة الصلاحيات والجهات التي سيتعامل معها الوكيل، إلى جانب هويات الأطراف وأي مراسلات رسمية سابقة مرتبطة بالمعاملة. نحدد المستندات الناقصة قبل التوقيع أو التبليغ أو تقديم الطلب حتى لا يتم إعداد مستند غير مناسب للجهة المستقبلة."
+          "q": "متى تنتهي صلاحية الوكالة العامة؟",
+          "a": "يعتمد ذلك على صياغتها والقانون الواجب التطبيق. وقد يؤثر الإلغاء أو تاريخ الانتهاء المحدد أو أحداث قانونية أخرى في استمرارها."
         }
       ],
       "keywordVariants": [
@@ -22115,17 +22115,16 @@
       ]
     },
     "en": {
-      "shortDescription": "Property management POA is for leasing, rent collection, maintenance and tenant dealings; it should not silently include sale, mortgage or gift authority.",
-      "intro": "Property management POA is for leasing, rent collection, maintenance and tenant dealings; it should not silently include sale, mortgage or gift authority.",
-      "what": "Property management POA is for leasing, rent collection, maintenance and tenant dealings; it should not silently include sale, mortgage or gift authority.",
-      "howHelp": "For this request, we start by reviewing property title and precise leasing, rent collection and maintenance powers. We then check the intended recipient and separate the drafting or administrative coordination from any act that must be performed by an authorised UAE professional or authority. You receive a clear scope before any paid work.",
-      "beforeYouStart": "Have ready: property title and precise leasing, rent collection and maintenance powers. Include the relevant identity records and any prior official correspondence. We will identify missing evidence before a document is signed, served or filed; a document prepared for the wrong authority may need to be redone.",
-      "remote": "Remote handling may be possible for leasing, managing and administering defined property matters, but it depends on the identity route, document type, competent authority and where the principal or document holder is located. We confirm the likely route before asking you to proceed, and we flag cases where physical originals, in-person verification or an additional embassy/authority step may be required.",
+      "shortDescription": "Own a Dubai apartment but live abroad? A Property Management POA can help a representative handle leasing, Ejari, rent collection and maintenance without automatically authorising a sale.",
+      "intro": "Your property still needs attention when you are thousands of kilometres away. A Property Management Power of Attorney (Property Management POA) can allow someone to deal with tenants, renew leases and coordinate essential maintenance. The powers should reflect how you want the property managed, not transfer control of the asset itself.",
+      "what": "Management authority may cover tenancy agreements, Ejari, receipts, utility arrangements, contractors and relevant RERA or RDC matters. Selling, gifting or mortgaging the property is a different category of power and should not be assumed to be included.",
+      "howHelp": "We review the title deed, who will act as manager, which leasing or maintenance tasks need authorisation and whether any rent-handling limits should be included. We then coordinate a suitable POA draft and the competent notarisation route.",
+      "beforeYouStart": "Have the title deed or ownership details, owner and agent IDs, property address and unit number, current lease or Ejari record and a list of permitted tasks. Decide who may receive rent and how payments should be recorded.",
+      "remote": "Owners abroad can send the ownership and identity records for review. Remote notarisation may be possible, subject to eligibility and the requirements of the UAE authority handling the POA.",
       "questions": [
-        "Does management authority automatically include a sale?",
-        "Can property management power of attorney be arranged while I am outside the UAE?",
-        "What information matters most for Property Management Power of Attorney?",
-        "What should I check before authorising or submitting this POA?"
+        "Does a Property Management POA allow my agent to sell the apartment?",
+        "Can the agent renew Ejari and collect rent?",
+        "What if a tenant stops paying?"
       ],
       "keywords": [
         "POA",
@@ -22146,20 +22145,16 @@
       ],
       "faq": [
         {
-          "q": "Does management authority automatically include a sale?",
-          "a": "No. Sale and other disposal powers should be considered separately."
+          "q": "Does a Property Management POA allow my agent to sell the apartment?",
+          "a": "Not automatically. Selling or mortgaging requires separate, explicit authority and acceptance by the relevant property authority."
         },
         {
-          "q": "Can property management power of attorney be arranged while I am outside the UAE?",
-          "a": "Remote handling may be possible for leasing, managing and administering defined property matters, but it depends on the identity route, document type, competent authority and where the principal or document holder is located. We confirm the likely route before asking you to proceed, and we flag cases where physical originals, in-person verification or an additional embassy/authority step may be required."
+          "q": "Can the agent renew Ejari and collect rent?",
+          "a": "These powers can be included if appropriate, with clear limits and payment instructions. The receiving system or authority determines acceptance."
         },
         {
-          "q": "What information matters most for Property Management Power of Attorney?",
-          "a": "The starting point is property title and precise leasing, rent collection and maintenance powers. We use that information to identify the correct procedure and the recipient’s document requirements, rather than offering a one-size-fits-all form."
-        },
-        {
-          "q": "What should I check before authorising or submitting this POA?",
-          "a": "Have ready: property title and precise leasing, rent collection and maintenance powers. Include the relevant identity records and any prior official correspondence. We will identify missing evidence before a document is signed, served or filed; a document prepared for the wrong authority may need to be redone."
+          "q": "What if a tenant stops paying?",
+          "a": "Management powers and powers to issue notices or pursue an RDC case are not identical. The scope should be checked before taking action."
         }
       ],
       "keywordVariants": [
@@ -22173,17 +22168,16 @@
       ]
     },
     "ar": {
-      "shortDescription": "وكالة إدارة العقار تركز على الإيجار وتحصيل الأجرة والصيانة والتعامل مع المستأجرين؛ ولا ينبغي خلطها بصلاحيات البيع أو الرهن أو الهبة.",
-      "intro": "وكالة إدارة العقار تركز على الإيجار وتحصيل الأجرة والصيانة والتعامل مع المستأجرين؛ ولا ينبغي خلطها بصلاحيات البيع أو الرهن أو الهبة.",
-      "what": "وكالة إدارة العقار تركز على الإيجار وتحصيل الأجرة والصيانة والتعامل مع المستأجرين؛ ولا ينبغي خلطها بصلاحيات البيع أو الرهن أو الهبة.",
-      "howHelp": "في طلب وكالة إدارة عقار نبدأ بمراجعة سند العقار وصلاحيات التأجير وتحصيل الإيجار والصيانة بالتحديد. بعد ذلك نحدد الجهة المستقبلة ونفصل بين أعمال تجهيز المستندات والتنسيق الإداري وبين أي إجراء يجب أن تنفذه جهة رسمية أو مهني مرخص. نوضح نطاق الخدمة قبل بدء العمل المدفوع.",
-      "beforeYouStart": "جهّز سند العقار وصلاحيات التأجير وتحصيل الإيجار والصيانة بالتحديد، إلى جانب هويات الأطراف وأي مراسلات رسمية سابقة مرتبطة بالمعاملة. نحدد المستندات الناقصة قبل التوقيع أو التبليغ أو تقديم الطلب حتى لا يتم إعداد مستند غير مناسب للجهة المستقبلة.",
-      "remote": "قد يكون من الممكن تنسيق تأجير وإدارة ومتابعة شؤون عقارية محددة عن بُعد، لكن ذلك يعتمد على طريقة التحقق من الهوية، ونوع المستند، والجهة المختصة، ومكان وجود صاحب المستند أو الموكل. نتحقق من المسار المتوقع أولًا، ونوضح منذ البداية إذا كانت الحالة تحتاج إلى أصول ورقية أو حضور شخصي أو خطوة إضافية لدى سفارة أو جهة رسمية.",
+      "shortDescription": "تمتلك شقة في دبي وتعيش بالخارج؟ تتيح وكالة إدارة العقار تفويض متابعة الإيجار وإيجاري والتحصيل والصيانة دون منح حق البيع تلقائيًا.",
+      "intro": "العقار يحتاج إلى متابعة حتى عندما تكون بعيدًا عنه. تساعد وكالة إدارة العقار على تعيين شخص يتعامل مع المستأجرين وتجديد العقود ومتابعة الصيانة. ينبغي أن تعكس الصلاحيات ما تحتاج إليه لإدارة الوحدة، لا أن تمنح الوكيل حق التصرف في ملكيتها دون قصد.",
+      "what": "قد تشمل الصلاحيات توقيع عقود الإيجار وتجديد إيجاري وإصدار الإيصالات ومتابعة الخدمات والمقاولين وبعض الإجراءات لدى الجهات المختصة. أما بيع العقار أو هبته أو رهنه فهي صلاحيات مختلفة ولا تُفترض ضمن الإدارة.",
+      "howHelp": "نراجع سند الملكية وهوية الشخص المفوض والمهام الإيجارية والصيانة المطلوبة وحدود تحصيل الأجرة. ثم ننسق إعداد وكالة ملائمة ومسار توثيقها لدى الجهة المختصة.",
+      "beforeYouStart": "جهّز سند الملكية أو بيانات الوحدة وهويات المالك والوكيل والعقد الإيجاري الحالي أو بيانات إيجاري، وحدد الأعمال المسموح بها وطريقة تحصيل الإيجار.",
+      "remote": "يمكن للمالك المقيم خارج الإمارات إرسال المستندات للمراجعة الأولية. ويتوقف إتمام التوثيق عن بُعد على أهلية مقدم الطلب ومتطلبات الجهة الإماراتية المختصة.",
       "questions": [
-        "هل تشمل وكالة الإدارة البيع تلقائيًا؟",
-        "هل يمكن إنجاز توكيل لإدارة عقار وأنا خارج الإمارات؟",
-        "ما المعلومات المهمة قبل بدء خدمة وكالة إدارة عقار؟",
-        "ما الذي يجب التحقق منه قبل تقديم طلب وكالة إدارة عقار؟"
+        "هل تتيح وكالة إدارة العقار للوكيل بيع الشقة؟",
+        "هل يمكن للوكيل تجديد إيجاري وتحصيل الإيجار؟",
+        "ماذا لو امتنع المستأجر عن دفع الأجرة؟"
       ],
       "keywords": [
         "property management power of attorney Dubai",
@@ -22201,20 +22195,16 @@
       ],
       "faq": [
         {
-          "q": "هل تشمل وكالة الإدارة البيع تلقائيًا؟",
-          "a": "لا؛ صلاحيات التصرف في الملكية يجب بحثها بصورة مستقلة."
+          "q": "هل تتيح وكالة إدارة العقار للوكيل بيع الشقة؟",
+          "a": "لا، ليس تلقائيًا. يحتاج البيع أو الرهن إلى صلاحيات صريحة مستقلة ومتطلبات قبول الجهة العقارية."
         },
         {
-          "q": "هل يمكن إنجاز توكيل لإدارة عقار وأنا خارج الإمارات؟",
-          "a": "قد يكون من الممكن تنسيق تأجير وإدارة ومتابعة شؤون عقارية محددة عن بُعد، لكن ذلك يعتمد على طريقة التحقق من الهوية، ونوع المستند، والجهة المختصة، ومكان وجود صاحب المستند أو الموكل. نتحقق من المسار المتوقع أولًا، ونوضح منذ البداية إذا كانت الحالة تحتاج إلى أصول ورقية أو حضور شخصي أو خطوة إضافية لدى سفارة أو جهة رسمية."
+          "q": "هل يمكن للوكيل تجديد إيجاري وتحصيل الإيجار؟",
+          "a": "يمكن إدراج هذه الأعمال عند الحاجة مع تحديد حدود الصلاحيات وتعليمات السداد، مع مراعاة متطلبات الجهات المختصة."
         },
         {
-          "q": "ما المعلومات المهمة قبل بدء خدمة وكالة إدارة عقار؟",
-          "a": "نبدأ بـ سند العقار وصلاحيات التأجير وتحصيل الإيجار والصيانة بالتحديد، لأن هذه المعلومات تحدد الإجراء والجهة المستقبلة والمتطلبات الفعلية بدل استخدام نموذج عام لا يناسب الحالة."
-        },
-        {
-          "q": "ما الذي يجب التحقق منه قبل تقديم طلب وكالة إدارة عقار؟",
-          "a": "جهّز سند العقار وصلاحيات التأجير وتحصيل الإيجار والصيانة بالتحديد، إلى جانب هويات الأطراف وأي مراسلات رسمية سابقة مرتبطة بالمعاملة. نحدد المستندات الناقصة قبل التوقيع أو التبليغ أو تقديم الطلب حتى لا يتم إعداد مستند غير مناسب للجهة المستقبلة."
+          "q": "ماذا لو امتنع المستأجر عن دفع الأجرة؟",
+          "a": "إدارة العقار وتوجيه الإنذارات ورفع دعوى لدى مركز فض المنازعات الإيجارية إجراءات مختلفة؛ يجب التأكد من شمول الوكالة للصلاحيات المطلوبة."
         }
       ],
       "keywordVariants": [
@@ -79412,16 +79402,16 @@
       ]
     },
     "en": {
-      "shortDescription": "A rent claim should reconcile the lease, payment schedule, receipts, bounced payments and amount sought.",
-      "intro": "A rent claim should reconcile the lease, payment schedule, receipts, bounced payments and amount sought. Filing the wrong amount or combining unrelated requests can complicate a Dubai RDC case.",
-      "what": "A rent claim should reconcile the lease, payment schedule, receipts, bounced payments and amount sought. Filing the wrong amount or combining unrelated requests can complicate a Dubai RDC case.",
-      "howHelp": "For this request, we start by reviewing lease, rent ledger and receipts showing the amount actually outstanding. We then check the intended recipient and separate the drafting or administrative coordination from any act that must be performed by an authorised UAE professional or authority. You receive a clear scope before any paid work.",
-      "beforeYouStart": "Have ready: lease, rent ledger and receipts showing the amount actually outstanding. Include the relevant identity records and any prior official correspondence. We will identify missing evidence before a document is signed, served or filed; a document prepared for the wrong authority may need to be redone.",
-      "remote": "You can send documents for an initial review remotely. Formal notices, filings and authorized acts follow the competent authority’s procedure.",
+      "shortDescription": "Unpaid rent in Dubai? An RDC rent claim starts with a reliable payment record, not a guessed total. Organise the lease, instalments and proof before filing.",
+      "intro": "When rent stops arriving, the priority is to establish what is actually owed and what you can prove. An unpaid-rent claim at Dubai’s Rental Disputes Centre (RDC) should match the tenancy agreement, payment dates, cheques and any partial settlements. A well-organised file helps distinguish unpaid rent from other disputed charges.",
+      "what": "A financial rent claim is not the same as an eviction case or a cheque execution request. The appropriate filing depends on the facts, the relief sought and RDC rules. Each requested amount should be linked to documentary evidence.",
+      "howHelp": "We help assemble the rent schedule, check the lease and Ejari details, organise payment records and identify which documents need translation or formal filing. A licensed professional handles reserved legal representation or advice where required.",
+      "beforeYouStart": "Prepare the tenancy contract and Ejari, landlord and tenant identification, rent schedule, bank transfers, receipts, cheque copies and any relevant correspondence. Keep records of payments already received so the claim is not overstated.",
+      "remote": "Documents can be collected and reviewed remotely. RDC filing and representation follow the centre’s procedures, language requirements and authorisation rules.",
       "questions": [
-        "What if part of the rent was already paid?",
-        "What information matters most for Rental Payment Claim Dubai?",
-        "What should I check before authorising or submitting this request?"
+        "Can I include rent that the tenant has already paid?",
+        "Is an unpaid-rent claim the same as a bounced-cheque execution?",
+        "Do my English-language documents need Arabic translation?"
       ],
       "keywords": [
         "Rental Payment Claim Dubai",
@@ -79429,16 +79419,16 @@
       ],
       "faq": [
         {
-          "q": "What if part of the rent was already paid?",
-          "a": "Show the payment evidence and claim only the amount supported by the records. The competent center determines the disputed liability."
+          "q": "Can I include rent that the tenant has already paid?",
+          "a": "No. Reconcile receipts and transfers first and support the outstanding amount with evidence."
         },
         {
-          "q": "What information matters most for Rental Payment Claim Dubai?",
-          "a": "The starting point is lease, rent ledger and receipts showing the amount actually outstanding. We use that information to identify the correct procedure and the recipient’s document requirements, rather than offering a one-size-fits-all form."
+          "q": "Is an unpaid-rent claim the same as a bounced-cheque execution?",
+          "a": "No. They are distinct procedural routes; the bank return record and the nature of the claim affect which route is appropriate."
         },
         {
-          "q": "What should I check before authorising or submitting this request?",
-          "a": "Have ready: lease, rent ledger and receipts showing the amount actually outstanding. Include the relevant identity records and any prior official correspondence. We will identify missing evidence before a document is signed, served or filed; a document prepared for the wrong authority may need to be redone."
+          "q": "Do my English-language documents need Arabic translation?",
+          "a": "RDC submission requirements may require Arabic documents or legal translations. Confirm the current requirements for your filing."
         }
       ],
       "keywordVariants": [
@@ -79446,16 +79436,16 @@
       ]
     },
     "ar": {
-      "shortDescription": "تحتاج مطالبة الأجرة إلى مطابقة عقد الإيجار وجدول الاستحقاق والإيصالات والمدفوعات غير المنفذة مع المبلغ المطلوب.",
-      "intro": "تحتاج مطالبة الأجرة إلى مطابقة عقد الإيجار وجدول الاستحقاق والإيصالات والمدفوعات غير المنفذة مع المبلغ المطلوب. تحديد المبلغ والطلبات بدقة يساعد على إعداد ملف واضح لدى مركز فض المنازعات الإيجارية.",
-      "what": "تحتاج مطالبة الأجرة إلى مطابقة عقد الإيجار وجدول الاستحقاق والإيصالات والمدفوعات غير المنفذة مع المبلغ المطلوب. تحديد المبلغ والطلبات بدقة يساعد على إعداد ملف واضح لدى مركز فض المنازعات الإيجارية.",
-      "howHelp": "في طلب مطالبة إيجار نبدأ بمراجعة عقد الإيجار وكشف المستحقات والإيصالات المثبتة للمبلغ المتبقي. بعد ذلك نحدد الجهة المستقبلة ونفصل بين أعمال تجهيز المستندات والتنسيق الإداري وبين أي إجراء يجب أن تنفذه جهة رسمية أو مهني مرخص. نوضح نطاق الخدمة قبل بدء العمل المدفوع.",
-      "beforeYouStart": "جهّز عقد الإيجار وكشف المستحقات والإيصالات المثبتة للمبلغ المتبقي، إلى جانب هويات الأطراف وأي مراسلات رسمية سابقة مرتبطة بالمعاملة. نحدد المستندات الناقصة قبل التوقيع أو التبليغ أو تقديم الطلب حتى لا يتم إعداد مستند غير مناسب للجهة المستقبلة.",
-      "remote": "يمكن إرسال المستندات للمراجعة الأولية عن بُعد، أما الإنذارات والتقديم الرسمي والأعمال المحجوزة فتتبع إجراءات الجهة المختصة.",
+      "shortDescription": "لديك إيجار متأخر في دبي؟ تبدأ مطالبة الأجرة بحساب دقيق ومستندات تثبت الاستحقاق، لا بمجرد ذكر مبلغ تقريبي.",
+      "intro": "عندما تتوقف دفعات الإيجار، الأهم أن تعرف المبلغ المستحق فعلًا وما يمكنك إثباته. تحتاج مطالبة الأجرة أمام مركز فض المنازعات الإيجارية إلى مطابقة العقد ومواعيد الاستحقاق والشيكات والتحويلات وأي تسويات جزئية. يساعد الملف المنظم على الفصل بين الأجرة غير المدفوعة والرسوم الأخرى المتنازع عليها.",
+      "what": "مطالبة الأجرة دعوى مالية تختلف عن دعوى الإخلاء أو طلب تنفيذ شيك مرتجع. يتحدد المسار وفق الوقائع والطلبات وقواعد المركز، ويجب ربط كل مبلغ مطلوب بمستند يدعمه.",
+      "howHelp": "نساعد في ترتيب جدول الأجرة ومراجعة العقد وإيجاري وتنظيم أدلة السداد وتحديد المستندات التي تحتاج إلى ترجمة أو تقديم رسمي. وتتولى الأعمال القانونية المحجوزة الجهات المختصة أو المهنيون المرخصون عند اللزوم.",
+      "beforeYouStart": "جهّز عقد الإيجار وإيجاري وبيانات الأطراف وجدول الأقساط والتحويلات والإيصالات وصور الشيكات والمراسلات. سجّل المدفوعات المستلمة بالفعل حتى لا تتضمن المطالبة مبالغ غير مستحقة.",
+      "remote": "يمكن جمع المستندات ومراجعتها عن بُعد. أما تقديم الدعوى والتمثيل فيتبعان إجراءات مركز فض المنازعات الإيجارية ومتطلبات اللغة والتفويض.",
       "questions": [
-        "ماذا لو سدد المستأجر جزءًا من الأجرة؟",
-        "ما المعلومات المهمة قبل بدء خدمة مطالبة إيجار؟",
-        "ما الذي يجب التحقق منه قبل تقديم طلب مطالبة إيجار؟"
+        "هل أطالب بإيجار سبق أن سدده المستأجر؟",
+        "هل مطالبة الأجرة هي نفسها تنفيذ شيك مرتجع؟",
+        "هل تحتاج المستندات الإنجليزية إلى ترجمة عربية؟"
       ],
       "keywords": [
         "مطالبة إيجار",
@@ -79463,16 +79453,16 @@
       ],
       "faq": [
         {
-          "q": "ماذا لو سدد المستأجر جزءًا من الأجرة؟",
-          "a": "يجب إرفاق ما يثبت المدفوعات وحساب المبلغ المتبقي وفق المستندات، والجهة المختصة هي التي تفصل في المبلغ المتنازع عليه."
+          "q": "هل أطالب بإيجار سبق أن سدده المستأجر؟",
+          "a": "لا. يجب مطابقة الإيصالات والتحويلات أولًا وتحديد المبلغ المتبقي المدعوم بالمستندات."
         },
         {
-          "q": "ما المعلومات المهمة قبل بدء خدمة مطالبة إيجار؟",
-          "a": "نبدأ بـ عقد الإيجار وكشف المستحقات والإيصالات المثبتة للمبلغ المتبقي، لأن هذه المعلومات تحدد الإجراء والجهة المستقبلة والمتطلبات الفعلية بدل استخدام نموذج عام لا يناسب الحالة."
+          "q": "هل مطالبة الأجرة هي نفسها تنفيذ شيك مرتجع؟",
+          "a": "لا. لكل منهما مسار إجرائي مختلف، ويتوقف الاختيار على المستندات والوقائع."
         },
         {
-          "q": "ما الذي يجب التحقق منه قبل تقديم طلب مطالبة إيجار؟",
-          "a": "جهّز عقد الإيجار وكشف المستحقات والإيصالات المثبتة للمبلغ المتبقي، إلى جانب هويات الأطراف وأي مراسلات رسمية سابقة مرتبطة بالمعاملة. نحدد المستندات الناقصة قبل التوقيع أو التبليغ أو تقديم الطلب حتى لا يتم إعداد مستند غير مناسب للجهة المستقبلة."
+          "q": "هل تحتاج المستندات الإنجليزية إلى ترجمة عربية؟",
+          "a": "قد تشترط إجراءات المركز مستندات باللغة العربية أو ترجمة قانونية، ويجب التحقق من المتطلبات السارية عند التقديم."
         }
       ],
       "keywordVariants": [
