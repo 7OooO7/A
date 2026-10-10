@@ -2098,11 +2098,11 @@
         },
         {
           "q": "Does a special POA automatically expire after the task is completed?",
-          "a": "This answer remains pending verification against the Civil Transactions Law effective from 1 June 2026. Ask the competent professional to confirm when the mandate ends and what cancellation or notification steps apply to this instrument."
+          "a": "Do not assume that every special POA ends automatically upon completion. Its wording, applicable law and the receiving authority’s requirements matter; confirm duration, revocation and notification before relying on it."
         },
         {
           "q": "Is a special POA guaranteed to expire once the transaction ends?",
-          "a": "This answer remains pending verification against the Civil Transactions Law effective from 1 June 2026. Ask the competent professional to confirm when the mandate ends and what cancellation or notification steps apply to this instrument."
+          "a": "Do not assume automatic expiry solely because the stated task was completed. Review the instrument’s terms and applicable law and confirm whether a formal revocation or notice is required."
         }
       ],
       "keywordVariants": [
@@ -2168,7 +2168,7 @@
         },
         {
           "q": "هل تنتهي الوكالة الخاصة تلقائيًا بمجرد إنجاز المهمة؟",
-          "a": "هذه الإجابة معلّقة لحين التحقق من أحكام قانون المعاملات المدنية النافذ منذ 1 يونيو 2026. اطلب من المختص تحديد وقت انقضاء التفويض وما يلزم لهذه الوثيقة من إجراءات إلغاء أو إخطار."
+          "a": "لا ينبغي افتراض انتهاء الوكالة تلقائيًا لمجرد إنجاز المهمة؛ تُراجع شروط الوثيقة والقانون المنطبق، وما إذا كان يلزم إلغاء رسمي أو إخطار."
         }
       ],
       "keywordVariants": [
@@ -6254,7 +6254,7 @@
         },
         {
           "q": "Can a passport-only applicant always use Dubai Courts online POA notarisation?",
-          "a": "The Smart Electronic Notary page lists Emirates ID or passport and describes virtual or personal attendance. A passport alone does not establish eligibility for a particular remote route; confirm the selected service with Dubai Courts."
+          "a": "No. Dubai Courts’ published online POA conditions require a valid Emirates ID; a passport-only party may need personal attendance. Check the exact current service."
         },
         {
           "q": "How much does the service cost?",
@@ -6333,7 +6333,7 @@
         },
         {
           "q": "هل يستطيع حامل جواز السفر دون هوية إماراتية توثيق وكالة عبر الإنترنت دائمًا؟",
-          "a": "تذكر صفحة الكاتب العدل الإلكتروني الذكي الهوية الإماراتية أو جواز السفر، وتعرض الحضور الافتراضي أو الشخصي. ولا يثبت الجواز وحده أهلية مسار محدد عن بُعد؛ يجب تأكيد شروط الخدمة المختارة مع محاكم دبي."
+          "a": "لا. تشترط خدمة تصديق الوكالات الإلكترونية المنشورة لدى محاكم دبي هوية إماراتية سارية، وقد يلزم الحضور الشخصي لمن لديه جواز فقط."
         },
         {
           "q": "كم تبلغ تكلفة هذه الخدمة؟",
@@ -37549,12 +37549,12 @@
       ]
     },
     "en": {
-      "shortDescription": "Coordinate an MOA suited to the company’s legal form and licensing jurisdiction, with the competent authority’s attestation route confirmed before signing.",
-      "intro": "An MOA must reflect ownership, capital, management and the selected licensing jurisdiction; signatory eligibility and competent authority’s attestation route require confirmation.",
+      "shortDescription": "An MOA must reflect ownership, capital, management and the selected licensing jurisdiction; signatory eligibility and Dubai Courts notarisation route require confirmation.",
+      "intro": "An MOA must reflect ownership, capital, management and the selected licensing jurisdiction; signatory eligibility and Dubai Courts notarisation route require confirmation.",
       "what": "The practical objective is preparing a memorandum of association reflecting ownership and management.",
-      "howHelp": "We start by reviewing shareholder IDs; capital and ownership split; business activity; licence details. We then map the requested action to the requirements of the competent licensing or company-formation authority and, where required, the notarial authority, flag any missing authority or supporting record, and coordinate the appropriate administrative route. Official decisions and reserved legal or notarial work remain with the competent authority or licensed professional.",
+      "howHelp": "We start by reviewing shareholder IDs; capital and ownership split; business activity; licence details. We then map the requested action to the requirements of Dubai Courts or relevant company-formation authority as applicable, flag any missing authority or supporting record, and coordinate the appropriate administrative route. Official decisions and reserved legal or notarial work remain with the competent authority or licensed professional.",
       "beforeYouStart": "Have ready: shareholder IDs; capital and ownership split; business activity; licence details. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing.",
-      "remote": "You can send the initial information from outside the UAE. Whether the final step for preparing a memorandum of association reflecting ownership and management can be completed without attending depends on the identity checks, originals and acceptance rules of the competent licensing or company-formation authority and, where required, the notarial authority; we confirm the route rather than promise remote completion.",
+      "remote": "You can send the initial information from outside the UAE. Whether the final step for preparing a memorandum of association reflecting ownership and management can be completed without attending depends on the identity checks, originals and acceptance rules of Dubai Courts or relevant company-formation authority as applicable; we confirm the route rather than promise remote completion.",
       "questions": [
         "Can shareholders use a generic MOA for any company type?",
         "Which records matter most for preparing a memorandum of association reflecting ownership and management?",
@@ -37583,11 +37583,11 @@
         },
         {
           "q": "Who makes the final decision on this preparing a memorandum of association reflecting ownership and management request?",
-          "a": "The competent licensing or company-formation authority and, where required, the notarial authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
+          "a": "Dubai courts or relevant company-formation authority as applicable or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a moa drafting notarisation document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is preparing a memorandum of association reflecting ownership and management. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the competent licensing or company-formation authority and, where required, the notarial authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholder IDs; capital and ownership split; business activity; licence details. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is preparing a memorandum of association reflecting ownership and management. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Courts or relevant company-formation authority as applicable. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholder IDs; capital and ownership split; business activity; licence details. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -37622,12 +37622,12 @@
       ]
     },
     "ar": {
-      "shortDescription": "ننسّق عقد تأسيس يناسب الشكل القانوني للشركة وجهة ترخيصها، مع تأكيد مسار اعتماده لدى الجهة المختصة قبل التوقيع.",
-      "intro": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار الاعتماد لدى الجهة المختصة، والكاتب العدل عند اشتراطه.",
-      "what": "نطاق الخدمة: صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار الاعتماد لدى الجهة المختصة، والكاتب العدل عند اشتراطه؛ لا؛ تختلف البنود الإلزامية ونوع المستند بحسب الشكل القانوني للشركة والإمارة أو المنطقة الحرة والجهة المرخصة.",
-      "howHelp": "نراجع أولًا الغرض المحدد من الخدمة: صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار الاعتماد لدى الجهة المختصة، والكاتب العدل عند اشتراطه. نحدد معك الجهة المستقبلة والمستندات التي تدعم الطلب، ثم ننسّق إعداد الملف مع المختص المرخّص أو الجهة الرسمية عند الحاجة. لا نمثل أنفسنا ككاتب عدل أو محامٍ، ولا نضمن قبول أي مستند قبل مراجعة متطلبات الجهة.",
+      "shortDescription": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي.",
+      "intro": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي.",
+      "what": "نطاق الخدمة: صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي؛ لا؛ تختلف البنود الإلزامية ونوع المستند بحسب الشكل القانوني للشركة والإمارة أو المنطقة الحرة والجهة المرخصة.",
+      "howHelp": "نراجع أولًا الغرض المحدد من الخدمة: صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي. نحدد معك الجهة المستقبلة والمستندات التي تدعم الطلب، ثم ننسّق إعداد الملف مع المختص المرخّص أو الجهة الرسمية عند الحاجة. لا نمثل أنفسنا ككاتب عدل أو محامٍ، ولا نضمن قبول أي مستند قبل مراجعة متطلبات الجهة.",
       "beforeYouStart": "للبدء في هذه المعاملة، أرسل الرخصة التجارية ووثائق الشركة وصفة الموقّعين والقرار أو التفويض المطلوب. نتحقق من متطلبات الجهة التي ستستقبل المستند قبل ترتيب الإجراء. وقد نطلب مستندات إضافية بحسب الوقائع ومتطلبات الجهة المختصة؛ لا ترسل أصولًا أو بيانات حساسة قبل تحديد وسيلة آمنة.",
-      "remote": "يمكنك بدء طلب هذه الخدمة ومراجعة مستنداتها من خارج الإمارات. لكن صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار الاعتماد لدى الجهة المختصة، والكاتب العدل عند اشتراطه؛ ولذلك قد يلزم حضور صاحب العلاقة أو إجراء تحقق رسمي أو مستند أصلي أو توقيع لدى جهة مختصة. نؤكد مسار التنفيذ المتاح قبل حجز أي إجراء.",
+      "remote": "يمكنك بدء طلب هذه الخدمة ومراجعة مستنداتها من خارج الإمارات. لكن صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي؛ ولذلك قد يلزم حضور صاحب العلاقة أو إجراء تحقق رسمي أو مستند أصلي أو توقيع لدى جهة مختصة. نؤكد مسار التنفيذ المتاح قبل حجز أي إجراء.",
       "questions": [
         "هل يصلح عقد تأسيس موحد لكل أنواع الشركات؟",
         "ما المعلومات التي يجب أن أرسلها لتقييم هذه المعاملة؟",
@@ -37651,11 +37651,11 @@
         },
         {
           "q": "ما المستندات التي يجب مراجعتها قبل البدء في صياغة وتوثيق عقد التأسيس؟",
-          "a": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار الاعتماد لدى الجهة المختصة، والكاتب العدل عند اشتراطه. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
+          "a": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
           "q": "هل يمكن استخدام مستند moa drafting notarisation دون مراجعة صلاحية الموقّع؟",
-          "a": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار الاعتماد لدى الجهة المختصة، والكاتب العدل عند اشتراطه.\n\nالخطوة الأساسية هنا هي تحديد حدود المعاملة وما الذي سيُسمح للممثل أو الجهة المنفذة بفعله. لا نضيف صلاحيات أو طلبات لا تخدم الغرض المحدد، ونراجع شروط الجهة المستلمة قبل إعداد الصيغة النهائية. للبدء في هذه المعاملة، أرسل الرخصة التجارية ووثائق الشركة وصفة الموقّعين والقرار أو التفويض المطلوب. نراجع أيضًا السؤال العملي الأهم في ملفك: هل يصلح عقد تأسيس موحد لكل أنواع الشركات؟ وقد نطلب مستندات إضافية بحسب الوقائع ومتطلبات الجهة المختصة؛ لا ترسل أصولًا أو بيانات حساسة قبل تحديد وسيلة آمنة."
+          "a": "صياغة وتوثيق عقد التأسيس تتطلب ضبط الحصص ورأس المال والإدارة وجهة الترخيص؛ ويجب التحقق من أهلية الموقّعين ومسار التوثيق في محاكم دبي.\n\nالخطوة الأساسية هنا هي تحديد حدود المعاملة وما الذي سيُسمح للممثل أو الجهة المنفذة بفعله. لا نضيف صلاحيات أو طلبات لا تخدم الغرض المحدد، ونراجع شروط الجهة المستلمة قبل إعداد الصيغة النهائية. للبدء في هذه المعاملة، أرسل الرخصة التجارية ووثائق الشركة وصفة الموقّعين والقرار أو التفويض المطلوب. نراجع أيضًا السؤال العملي الأهم في ملفك: هل يصلح عقد تأسيس موحد لكل أنواع الشركات؟ وقد نطلب مستندات إضافية بحسب الوقائع ومتطلبات الجهة المختصة؛ لا ترسل أصولًا أو بيانات حساسة قبل تحديد وسيلة آمنة."
         },
         {
           "q": "كم تبلغ تكلفة هذه الخدمة؟",
