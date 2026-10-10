@@ -12,6 +12,7 @@ import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLi
 import semanticLinkMap from '../../../../lib/semanticLinkMap.json';
 import {semanticLinkLead} from '../../../../lib/semanticLinkCopy';
 import StickyProcessGuard from '../../../../components/StickyProcessGuard';
+const NEW_SERVICES_PENDING_LOCALIZATION = new Set(['eviction-notice-property-sale','eviction-notice-personal-use','eviction-notice-demolition','rent-nonpayment-notice','poa-cancellation-notice','rental-dispute-resolution','rental-eviction-case','rental-claim','bounced-rent-cheque','rental-judgment-enforcement','mohre-power-of-attorney','company-bank-account-poa']);
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>getEnabledServiceSlugs().map(slug=>({lang,slug})))}
 
@@ -26,7 +27,7 @@ const labels=(lang,u,m)=>({
 export async function generateMetadata({params}){
  const {lang,slug}=await params,m=await getM(lang),s=getService(m,slug,lang),r=getResearch(slug);if(!s)return{};
  const title=`${s.title} | ${BRAND.name}`,url=absolute(lang,`/services/${slug}`);
- return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:languageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
+ return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:languageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang) && (!NEW_SERVICES_PENDING_LOCALIZATION.has(slug) || ['en','ar'].includes(lang)),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
 }
 
 export default async function ServicePage({params}){
@@ -68,6 +69,8 @@ export default async function ServicePage({params}){
    if(!missing.length)return null;
    return <span className="semantic-link-bridge"> {' '}{semanticLinkLead(lang)} {missing.map((r,i)=><span key={r.slug}>{i>0?(i===missing.length-1?' · ':' · '):''}<Link className="internal-link" href={`/${lang}/services/${r.slug}`}>{r.title}</Link></span>)}.</span>;
  };
+ const agencyVideoNote = ['general-power-of-attorney','special-power-of-attorney','poa-online-notarisation'].includes(slug);
+ const scopeNote = agencyVideoNote ? m.note : (lang==='ar' ? 'خدمة تنسيق مستقلة. تُنفذ إجراءات التوثيق والأعمال المحجوزة من خلال الجهة المختصة أو المهني المرخص بحسب المعاملة. نقدم عرض سعر مكتوبًا قبل بدء العمل.' : 'Independent coordination service. Notarial and other reserved procedures are carried out by the competent authority or an appropriately licensed professional as applicable. Every request is quoted in writing before work starts.');
  const faq=(content?.faq||[]).slice(0,5).map(x=>({q:x.q,a:x.a}));
  const schemas=[{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:service.title,description:service.summary,serviceType:service.title,provider:{'@type':'Organization','@id':`${DOMAIN}/#organization`,name:BRAND.name,url:DOMAIN},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:category?.title||m.sh,path:`#${service.category}`},{name:service.title,path:`/services/${slug}`}]),{'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}))}];
  return <main id="main-content" className="w service-page">
@@ -79,10 +82,10 @@ export default async function ServicePage({params}){
    <h2>{u.howHelp}</h2><p>{renderText(content?.howHelp)}{semanticFallback()}</p>
    <h2>{L.before}</h2><p>{renderText(content?.beforeYouStart)}</p>
    <h2>{L.remote}</h2><p>{renderText(content?.remote)}</p>
-   <div className="service-mobile-process" aria-label={u.process}><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div></div>
+   <div className="service-mobile-process" aria-label={u.process}><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{scopeNote}</p></div></div>
    <div className="pre-faq-cta"><div className="pre-faq-copy"><h2>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2><p>{u.preFaqWhatsapp?.text || u.faqPrompt}</p></div>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div>
    <h2>{L.questions}</h2><div className="faq-list">{faq.map((x,i)=><details key={i}><summary>{x.q}</summary><p>{renderText(x.a)}</p></details>)}</div>
-  </article><StickyProcessGuard><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{m.note}</p></div><div className="desktop-sticky-whatsapp"><h2>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div></StickyProcessGuard></section>
+  </article><StickyProcessGuard><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{scopeNote}</p></div><div className="desktop-sticky-whatsapp"><h2>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2>{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}</div></StickyProcessGuard></section>
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeJsonLd(schemas)}}/>
  </main>;
 }
