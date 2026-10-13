@@ -1,0 +1,607 @@
+{
+  "privacy": {
+    "en": [
+      "Privacy & Document Care",
+      "Your information, handled with care",
+      "We use the information you share to understand your request, communicate with you and coordinate the document service you choose.",
+      [
+        [
+          "What we receive",
+          "When you contact us, we may receive your name, contact details, service requirements and documents you choose to provide."
+        ],
+        [
+          "How we use it",
+          "We use these details to respond to enquiries, prepare quotes, coordinate agreed services and maintain necessary service records."
+        ],
+        [
+          "Who may receive it",
+          "Where your request requires a specialist or authority, relevant information may be shared with the professional or service partner handling that step. We only share information needed for the requested service."
+        ],
+        [
+          "Storage and security",
+          "We use appropriate access controls and limit access to people working on your request. Retention depends on the service, operational requirements and applicable obligations."
+        ],
+        [
+          "Your choices",
+          "You can ask about the information we hold, request corrections or raise a privacy question by emailing info@poadubai.eu."
+        ],
+        [
+          "Website and third-party services",
+          "The site may use essential technical services. If you contact us through WhatsApp, that platform processes the conversation under its own terms. Any optional analytics or cookies should be described here when enabled."
+        ]
+      ]
+    ],
+    "ar": [
+      "الخصوصية والعناية بمستنداتك",
+      "معلوماتك تُعامل بعناية",
+      "نستخدم المعلومات التي تشاركها لفهم طلبك والتواصل معك وتنسيق خدمة المستندات التي تختارها.",
+      [
+        [
+          "المعلومات التي نستقبلها",
+          "عند التواصل معنا قد نستقبل اسمك وبيانات الاتصال وتفاصيل الخدمة والمستندات التي تختار مشاركتها."
+        ],
+        [
+          "كيف نستخدم المعلومات",
+          "نستخدم هذه البيانات للرد على الاستفسارات وإعداد عروض الأسعار وتنسيق الخدمات المتفق عليها والاحتفاظ بالسجلات اللازمة للخدمة."
+        ],
+        [
+          "مشاركة المعلومات",
+          "عندما تتطلب معاملتك مختصًا أو جهة مختصة، قد نشارك المعلومات اللازمة فقط مع الشريك أو المختص الذي يتولى تلك الخطوة."
+        ],
+        [
+          "الحفظ والحماية",
+          "نستخدم وسائل مناسبة لتقييد الوصول إلى البيانات على الأشخاص المعنيين بطلبك. تختلف مدة الاحتفاظ بحسب طبيعة الخدمة والمتطلبات التشغيلية والالتزامات المطبقة."
+        ],
+        [
+          "خياراتك",
+          "يمكنك الاستفسار عن بياناتك أو طلب تصحيحها أو إرسال أي سؤال عن الخصوصية إلى info@poadubai.eu."
+        ],
+        [
+          "الموقع والخدمات الخارجية",
+          "قد يستخدم الموقع خدمات تقنية أساسية. وإذا تواصلت معنا عبر واتساب، تخضع المحادثة لسياسات تلك المنصة. تُوضح هنا أي أدوات تحليل أو ملفات تعريف ارتباط اختيارية عند تفعيلها."
+        ]
+      ]
+    ],
+    "sv": [
+      "Integritet och dokumenthantering",
+      "Vi hanterar dina uppgifter med omsorg",
+      "Vi använder informationen du lämnar för att förstå ditt ärende, kontakta dig och samordna den dokumenttjänst du beställer",
+      [
+        [
+          "Vilka uppgifter vi tar emot",
+          "När du kontaktar oss kan vi få ditt namn, dina kontaktuppgifter, information om ärendet och dokument som du själv väljer att skicka."
+        ],
+        [
+          "Så använder vi uppgifterna",
+          "Vi använder uppgifterna för att besvara frågor, lämna prisförslag, samordna överenskomna tjänster och föra nödvändiga ärendeanteckningar."
+        ],
+        [
+          "När uppgifter delas",
+          "Om ditt ärende kräver en specialist eller behörig myndighet kan relevanta uppgifter delas med den samarbetspartner som utför det aktuella steget. Vi delar bara det som behövs för tjänsten."
+        ],
+        [
+          "Lagring och säkerhet",
+          "Vi begränsar åtkomsten till personer som arbetar med ditt ärende. Hur länge uppgifter sparas beror på tjänsten, verksamhetens behov och tillämpliga skyldigheter."
+        ],
+        [
+          "Dina val",
+          "Du kan fråga vilka uppgifter vi har, begära rättelse eller ställa frågor om integritet via info@poadubai.eu."
+        ],
+        [
+          "Webbplats och externa tjänster",
+          "Webbplatsen kan använda nödvändiga tekniska tjänster. Om du kontaktar oss via WhatsApp hanteras konversationen också enligt den plattformens villkor. Eventuella frivilliga analysverktyg och cookies ska beskrivas när de aktiveras."
+        ]
+      ]
+    ]
+  },
+  "terms": {
+    "en": [
+      "Service Terms",
+      "Clear steps from enquiry to completion",
+      "These terms explain how POA Dubai handles enquiries, quotes and document-service coordination.",
+      [
+        [
+          "Starting your request",
+          "Tell us what you need and where the document will be used. We review the request and explain the proposed next steps."
+        ],
+        [
+          "Quotes and confirmation",
+          "We confirm the agreed service scope, price and payment arrangements before paid work begins. Third-party charges are identified where applicable."
+        ],
+        [
+          "Documents and instructions",
+          "Please provide accurate details and the documents required for the agreed service. We will explain any additional information needed during processing."
+        ],
+        [
+          "Working with specialists",
+          "Where a service requires a notary, translator, embassy or competent authority, we coordinate the relevant steps with the appropriate provider."
+        ],
+        [
+          "Timelines and updates",
+          "We share expected timeframes when available and keep you informed of material changes to the agreed process."
+        ],
+        [
+          "Changes, cancellation and refunds",
+          "If your requirements change, contact us promptly. Cancellation and refund arrangements are explained in the quote and our dedicated policy before payment."
+        ],
+        [
+          "Questions",
+          "For service questions, email info@poadubai.eu."
+        ]
+      ]
+    ],
+    "ar": [
+      "شروط تقديم الخدمات",
+      "خطوات واضحة من الاستفسار حتى الإنجاز",
+      "توضح هذه الشروط طريقة التعامل مع الاستفسارات وعروض الأسعار وتنسيق خدمات المستندات لدى POA Dubai.",
+      [
+        [
+          "بدء الطلب",
+          "أخبرنا بالخدمة المطلوبة والدولة التي سيُستخدم فيها المستند. نراجع التفاصيل ونوضح الخطوات المقترحة."
+        ],
+        [
+          "عرض السعر والتأكيد",
+          "نحدد نطاق الخدمة والسعر وطريقة الدفع قبل بدء أي عمل مدفوع، مع توضيح رسوم الأطراف الأخرى عند انطباقها."
+        ],
+        [
+          "المستندات والتعليمات",
+          "يرجى تقديم بيانات دقيقة والمستندات المطلوبة للخدمة المتفق عليها. نوضح لك أي معلومات إضافية أثناء التنفيذ."
+        ],
+        [
+          "التنسيق مع المختصين",
+          "عندما تتطلب الخدمة كاتب عدل أو مترجمًا أو سفارة أو جهة مختصة، ننسق الخطوات اللازمة مع مقدم الخدمة المناسب."
+        ],
+        [
+          "المواعيد والمتابعة",
+          "نوضح المدة المتوقعة عند توفرها ونطلعك على أي تغيير مهم في مسار المعاملة."
+        ],
+        [
+          "التعديل والإلغاء والاسترداد",
+          "إذا تغيرت متطلباتك، تواصل معنا مبكرًا. تُوضح ترتيبات الإلغاء والاسترداد في عرض السعر وفي سياسة الإلغاء قبل الدفع."
+        ],
+        [
+          "الاستفسارات",
+          "للاستفسار عن الخدمات، راسل info@poadubai.eu."
+        ]
+      ]
+    ],
+    "sv": [
+      "Villkor för våra tjänster",
+      "Tydliga steg från förfrågan till färdigt ärende",
+      "Här beskriver vi hur POA Dubai hanterar förfrågningar, offerter och samordning av dokumenttjänster.",
+      [
+        [
+          "Så startar du ett ärende",
+          "Berätta vad du behöver hjälp med och var dokumentet ska användas. Vi går igenom din förfrågan och förklarar nästa steg."
+        ],
+        [
+          "Offert och bekräftelse",
+          "Vi bekräftar tjänstens omfattning, pris och betalningsvillkor innan ett betalt uppdrag påbörjas. Eventuella externa avgifter anges när det är relevant."
+        ],
+        [
+          "Dokument och instruktioner",
+          "Lämna korrekta uppgifter och de dokument som behövs för den överenskomna tjänsten. Vi förklarar om ytterligare information behövs under handläggningen."
+        ],
+        [
+          "Samarbete med specialister",
+          "Om tjänsten kräver notarius publicus, översättare, ambassad eller behörig myndighet samordnar vi de relevanta stegen med rätt aktör."
+        ],
+        [
+          "Tider och uppdateringar",
+          "Vi anger förväntad handläggningstid när den är känd och informerar om viktiga förändringar under processen."
+        ],
+        [
+          "Ändringar, avbokning och återbetalning",
+          "Kontakta oss så snart som möjligt om dina behov ändras. Villkor för avbokning och återbetalning framgår av offerten och vår särskilda policy före betalning."
+        ],
+        [
+          "Kontakt",
+          "Frågor om ditt ärende eller våra villkor? Skriv till info@poadubai.eu."
+        ]
+      ]
+    ]
+  },
+  "refunds": {
+    "en": [
+      "Cancellation & Refunds",
+      "Flexible planning, clear expectations",
+      "We explain the stages of your document request and the charges associated with each stage before you confirm.",
+      [
+        [
+          "Before work starts",
+          "Contact us if you need to change or cancel a request. We will confirm what has been started and what charges, if any, have already been incurred."
+        ],
+        [
+          "After work starts",
+          "Refund eligibility depends on the agreed service, work already completed and any third-party costs committed to your request."
+        ],
+        [
+          "Third-party payments",
+          "Official fees, translation charges, courier fees and other external costs may have their own refund conditions. We identify these where relevant."
+        ],
+        [
+          "How to request a cancellation",
+          "Email info@poadubai.eu with your reference and the change you would like to make. We will review the status and respond with the available options."
+        ],
+        [
+          "Your applicable rights",
+          "Any mandatory consumer rights applicable to your order continue to apply."
+        ]
+      ]
+    ],
+    "ar": [
+      "الإلغاء واسترداد المدفوعات",
+      "ترتيبات مرنة وتفاصيل واضحة",
+      "نوضح مراحل طلب المستندات والتكاليف المرتبطة بكل مرحلة قبل تأكيد الخدمة.",
+      [
+        [
+          "قبل بدء العمل",
+          "تواصل معنا إذا رغبت في تعديل الطلب أو إلغائه. نوضح لك ما بدأ تنفيذه وأي تكاليف ترتبت بالفعل."
+        ],
+        [
+          "بعد بدء العمل",
+          "تعتمد إمكانية الاسترداد على الخدمة المتفق عليها والعمل المنجز والتكاليف التي تم الالتزام بها لدى أطراف أخرى."
+        ],
+        [
+          "رسوم الجهات الخارجية",
+          "قد تخضع الرسوم الرسمية والترجمة والشحن وغيرها لشروط استرداد خاصة بمقدميها. نوضح ذلك عند الحاجة."
+        ],
+        [
+          "طلب الإلغاء",
+          "أرسل رسالة إلى info@poadubai.eu تتضمن مرجع طلبك والتعديل المطلوب، وسنراجع حالة الطلب والخيارات المتاحة."
+        ],
+        [
+          "حقوق العميل",
+          "تظل حقوق المستهلك الإلزامية المطبقة على طلبك سارية."
+        ]
+      ]
+    ],
+    "sv": [
+      "Avbokning och återbetalning",
+      "Tydlig information om ändrade planer",
+      "Vi förklarar vilka möjligheter som finns om du behöver ändra eller avbryta en beställd dokumenttjänst.",
+      [
+        [
+          "Innan arbetet påbörjas",
+          "Kontakta oss så snart som möjligt om du vill avboka innan vi har påbörjat det överenskomna arbetet. Vi går igenom vad som redan har beställts eller betalats."
+        ],
+        [
+          "När arbetet har påbörjats",
+          "Om samordning, granskning eller arbete hos en extern part har startat bedöms eventuell återbetalning utifrån det utförda arbetet och redan uppkomna kostnader."
+        ],
+        [
+          "Avgifter till externa parter",
+          "Avgifter som redan betalats till myndigheter, specialister, bud eller andra leverantörer kan omfattas av deras egna återbetalningsvillkor."
+        ],
+        [
+          "Om uppdraget ändras",
+          "Om du behöver en annan tjänst eller vill ändra instruktionerna hjälper vi dig att förstå hur det påverkar omfattning, pris och tidsplan."
+        ],
+        [
+          "Så kontaktar du oss",
+          "Skicka ditt ärendenummer eller en beskrivning av beställningen till info@poadubai.eu så går vi igenom din förfrågan."
+        ]
+      ]
+    ]
+  },
+  "how-it-works": {
+    "en": [
+      "How It Works",
+      "From your first message to the next document step",
+      "A straightforward way to coordinate documents for Dubai and the UAE while you are in Europe or elsewhere.",
+      [
+        [
+          "1. Tell us your goal",
+          "Describe the document, where you are and what you need it for. You can start with a short message."
+        ],
+        [
+          "2. Receive a tailored plan",
+          "We identify the likely steps, document requirements, estimated timeline and available service options."
+        ],
+        [
+          "3. Confirm your quote",
+          "Review the proposed scope and price. We proceed with paid services once you confirm."
+        ],
+        [
+          "4. We coordinate the process",
+          "We work with the relevant service partners and keep you updated on progress and requests for information."
+        ],
+        [
+          "5. Receive your outcome",
+          "We arrange the agreed delivery method for completed documents or explain the next step needed for your case."
+        ]
+      ]
+    ],
+    "ar": [
+      "كيف ننجز طلبك",
+      "من أول رسالة إلى الخطوة التالية لمستندك",
+      "طريقة واضحة لتنسيق معاملات المستندات المتعلقة بدبي والإمارات وأنت في أوروبا أو أي مكان آخر.",
+      [
+        [
+          "1. أخبرنا بما تحتاجه",
+          "صف المستند والدولة التي تقيم فيها والغرض من استخدامه. يمكنك البدء برسالة قصيرة."
+        ],
+        [
+          "2. احصل على خطة مناسبة",
+          "نحدد الخطوات المتوقعة والمستندات المطلوبة والمدة التقديرية والخيارات المتاحة."
+        ],
+        [
+          "3. أكد عرض السعر",
+          "راجع نطاق العمل والسعر المقترح. نبدأ الخدمة المدفوعة بعد موافقتك."
+        ],
+        [
+          "4. ننسق الإجراءات",
+          "نتواصل مع شركاء الخدمة المعنيين ونطلعك على تقدم الطلب وأي معلومات إضافية مطلوبة."
+        ],
+        [
+          "5. استلم النتيجة",
+          "نرتب تسليم المستندات بالطريقة المتفق عليها أو نوضح الخطوة التالية المناسبة لمعاملتك."
+        ]
+      ]
+    ],
+    "sv": [
+      "Så fungerar det",
+      "Från din förfrågan till nästa steg",
+      "Berätta vilket dokument du behöver och var det ska användas. Vi hjälper dig att hitta rätt väg framåt.",
+      [
+        [
+          "1. Beskriv ditt behov",
+          "Berätta vilken tjänst du söker, vilket land du befinner dig i och var dokumentet ska användas."
+        ],
+        [
+          "2. Vi går igenom ärendet",
+          "Vi ser över informationen och förklarar vilka dokument, uppgifter och eventuella externa aktörer som behövs."
+        ],
+        [
+          "3. Du får ett prisförslag",
+          "Du får information om tjänstens omfattning, uppskattad tidsplan och pris innan du bestämmer dig."
+        ],
+        [
+          "4. Vi samordnar stegen",
+          "När du har bekräftat uppdraget samordnar vi de överenskomna momenten och håller dig uppdaterad."
+        ],
+        [
+          "5. Ditt ärende slutförs",
+          "Vi förklarar hur färdiga dokument lämnas över och om något ytterligare steg återstår."
+        ]
+      ]
+    ]
+  },
+  "pricing": {
+    "en": [
+      "Pricing & Quotes",
+      "Know the scope before you decide",
+      "Document requirements vary, so we prepare a quote based on the steps your request actually needs.",
+      [
+        [
+          "What affects the price",
+          "Document type, country of issue and destination, translation needs, authority fees, delivery method and requested timing can affect the total."
+        ],
+        [
+          "What your quote includes",
+          "We set out the service being coordinated and distinguish our service fee from identifiable external charges."
+        ],
+        [
+          "How to get a quote",
+          "Tell us which document you have, where it was issued, where it will be used and your preferred timeframe."
+        ],
+        [
+          "Before payment",
+          "You can review the scope, price and any relevant cancellation terms before confirming a paid request."
+        ]
+      ]
+    ],
+    "ar": [
+      "الأسعار وعروض التكلفة",
+      "اعرف تفاصيل الخدمة قبل اتخاذ قرارك",
+      "تختلف متطلبات المستندات، لذلك نعد عرض سعر بناءً على الخطوات التي تحتاجها معاملتك بالفعل.",
+      [
+        [
+          "ما الذي يؤثر في السعر؟",
+          "نوع المستند ودولة إصداره والجهة التي سيُستخدم لديها ومتطلبات الترجمة والرسوم الرسمية وطريقة التسليم والمدة المطلوبة."
+        ],
+        [
+          "ماذا يتضمن عرض السعر؟",
+          "نوضح الخدمة التي سننسقها ونميز بين أتعاب الخدمة والرسوم الخارجية المحددة عند توفرها."
+        ],
+        [
+          "كيف تحصل على عرض؟",
+          "أخبرنا بنوع المستند ودولة إصداره ومكان استخدامه والوقت الذي تفضله."
+        ],
+        [
+          "قبل الدفع",
+          "يمكنك مراجعة نطاق العمل والتكلفة وشروط الإلغاء ذات الصلة قبل تأكيد الطلب المدفوع."
+        ]
+      ]
+    ],
+    "sv": [
+      "Priser och offerter",
+      "Ett tydligt prisförslag för ditt ärende",
+      "Priset beror på dokumenttyp, land, vilka moment som krävs och eventuella externa avgifter.",
+      [
+        [
+          "Vad påverkar priset?",
+          "Dokumentets typ, antal handlingar, översättningar, intyganden och leveranssätt kan påverka den totala kostnaden."
+        ],
+        [
+          "Vad ingår i offerten?",
+          "Vi beskriver vilka samordningsmoment som ingår och vilka avgifter som tillkommer från myndigheter eller externa tjänsteleverantörer."
+        ],
+        [
+          "Så får du en offert",
+          "Berätta vilken handling du behöver, var den utfärdats och var den ska användas. Bifoga gärna relevanta detaljer så att vi kan bedöma omfattningen."
+        ],
+        [
+          "Innan du bekräftar",
+          "Vi går igenom priset och nästa steg med dig innan ett betalt uppdrag påbörjas."
+        ]
+      ]
+    ]
+  },
+  "document-requirements": {
+    "en": [
+      "Document Checklist",
+      "Start with the right details",
+      "A few details at the beginning help us identify the correct route for your document.",
+      [
+        [
+          "Document type",
+          "Tell us whether it is a power of attorney, certificate, corporate record, translation or another document."
+        ],
+        [
+          "Origin and destination",
+          "Share where the document was issued and where it will be presented or used."
+        ],
+        [
+          "Purpose and recipient",
+          "Tell us what the document is intended to achieve and, if known, which organisation will receive it."
+        ],
+        [
+          "Available format",
+          "Let us know whether you have an original, a scan, a certified copy or a digital file."
+        ],
+        [
+          "Language and translation",
+          "Identify the document language and any language requested by the receiving organisation."
+        ],
+        [
+          "What happens next",
+          "We provide a request-specific checklist once we understand the document and intended use."
+        ]
+      ]
+    ],
+    "ar": [
+      "دليل المستندات المطلوبة",
+      "ابدأ بالمعلومات الصحيحة",
+      "بعض التفاصيل من البداية تساعدنا على تحديد المسار المناسب لمستندك.",
+      [
+        [
+          "نوع المستند",
+          "أخبرنا هل هو وكالة أو شهادة أو مستند شركة أو ترجمة أو مستند آخر."
+        ],
+        [
+          "بلد الإصدار والاستخدام",
+          "حدد الدولة التي صدر فيها المستند والدولة أو الجهة التي سيُقدم إليها."
+        ],
+        [
+          "الغرض والجهة المستلمة",
+          "اشرح الهدف من المستند والجهة التي ستستلمه إذا كنت تعرفها."
+        ],
+        [
+          "النسخة المتاحة",
+          "وضح هل لديك أصل المستند أم نسخة ممسوحة أم صورة مصدقة أم ملف إلكتروني."
+        ],
+        [
+          "اللغة والترجمة",
+          "حدد لغة المستند واللغة المطلوبة لدى الجهة المستلمة إن كانت معروفة."
+        ],
+        [
+          "الخطوة التالية",
+          "نرسل لك قائمة مخصصة بالمتطلبات بعد معرفة نوع المستند والغرض منه."
+        ]
+      ]
+    ],
+    "sv": [
+      "Dokument och förberedelser",
+      "Förbered rätt handlingar från början",
+      "Vilka dokument som behövs beror på tjänsten och på var handlingen ska användas. Vi hjälper dig att ta reda på vad som är relevant.",
+      [
+        [
+          "Börja med syftet",
+          "Beskriv vad du ska använda dokumentet till, i vilket land och hos vilken mottagare."
+        ],
+        [
+          "Identitet och kontaktuppgifter",
+          "Vissa tjänster kräver identitetsuppgifter eller kopior av identitetshandlingar. Vi meddelar vad som behövs i ditt ärende."
+        ],
+        [
+          "Original eller kopia",
+          "Beroende på ärendet kan originalhandling, bestyrkt kopia eller digital fil behövas. Kontrollera kraven innan du skickar något."
+        ],
+        [
+          "Språk och översättning",
+          "Berätta vilket språk dokumentet är skrivet på och vilket språk mottagaren behöver. Vi hjälper till att klarlägga eventuella översättningssteg."
+        ],
+        [
+          "Tidigare stämplar och intyg",
+          "Om handlingen redan har stämplar, intyg eller legaliseringar är det bra att informera oss om det."
+        ],
+        [
+          "Skicka din förfrågan",
+          "Beskriv dokumentet och målet med ärendet. Vi återkommer med en anpassad lista över nästa steg."
+        ]
+      ]
+    ]
+  },
+  "document-rejection": {
+    "en": [
+      "Document Issues & Solutions",
+      "When a document needs another step",
+      "If a document has been returned or a requirement is unclear, we help you identify what needs attention.",
+      [
+        [
+          "Start with the feedback",
+          "Share the message or reason provided by the receiving organisation, if available."
+        ],
+        [
+          "Common points to review",
+          "Names and dates, signatures, document validity, required translations, certification format and the intended destination."
+        ],
+        [
+          "Find the next step",
+          "We review the available information and help coordinate the appropriate correction, translation or document-processing step."
+        ],
+        [
+          "Avoid repeating the same issue",
+          "Before resubmitting, confirm the receiving organisation’s current document requirements and any reference details."
+        ]
+      ]
+    ],
+    "ar": [
+      "حل مشكلات المستندات",
+      "عندما يحتاج المستند إلى خطوة إضافية",
+      "إذا أعادت جهة ما مستندك أو كانت المتطلبات غير واضحة، نساعدك على تحديد النقطة التي تحتاج إلى معالجة.",
+      [
+        [
+          "ابدأ بسبب الإرجاع",
+          "شارك معنا الرسالة أو السبب الذي أوضحته الجهة المستلمة إن كان متاحًا."
+        ],
+        [
+          "نقاط شائعة للمراجعة",
+          "الأسماء والتواريخ والتوقيعات وصلاحية المستند ومتطلبات الترجمة وشكل التصديق والجهة المقصودة."
+        ],
+        [
+          "تحديد الخطوة التالية",
+          "نراجع المعلومات المتاحة ونساعد في تنسيق التصحيح أو الترجمة أو معالجة المستند المناسبة."
+        ],
+        [
+          "تجنب تكرار المشكلة",
+          "قبل إعادة التقديم، تحقق من المتطلبات الحالية للجهة المستلمة وأي أرقام أو بيانات مرجعية."
+        ]
+      ]
+    ],
+    "sv": [
+      "Problem med dokument?",
+      "Hitta nästa steg när något behöver rättas",
+      "Om en handling inte godtas hjälper vi dig att reda ut vad som behöver kompletteras eller ändras.",
+      [
+        [
+          "Ta reda på orsaken",
+          "Om du har fått ett besked från mottagaren kan du dela formuleringen med oss, så att vi kan förstå vad som efterfrågas."
+        ],
+        [
+          "Kontrollera dokumentuppgifterna",
+          "Namn, datum, underskrifter, språk och dokumentversioner är exempel på uppgifter som kan behöva kontrolleras."
+        ],
+        [
+          "Kompletteringar och nya steg",
+          "I vissa fall behövs en ny kopia, översättning, stämpel eller annan handläggning. Vi hjälper dig att kartlägga alternativen."
+        ],
+        [
+          "Få hjälp med ditt ärende",
+          "Berätta vilken handling det gäller, var den ska användas och vilket besked du har fått. Vi föreslår ett lämpligt nästa steg."
+        ]
+      ]
+    ]
+  }
+}

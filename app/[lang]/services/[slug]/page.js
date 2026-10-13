@@ -27,7 +27,7 @@ const labels=(lang,u,m)=>({
 export async function generateMetadata({params}){
  const {lang,slug}=await params,m=await getM(lang),s=getService(m,slug,lang),r=getResearch(slug);if(!s)return{};
  const title=`${s.title} | ${BRAND.name}`,url=absolute(lang,`/services/${slug}`);
- return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:languageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang) && (!NEW_SERVICES_PENDING_LOCALIZATION.has(slug) || ['en','ar'].includes(lang)),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
+ return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:reviewedLanguageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang) && (!NEW_SERVICES_PENDING_LOCALIZATION.has(slug) || ['en','ar'].includes(lang)),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
 }
 
 export default async function ServicePage({params}){
@@ -79,7 +79,7 @@ export default async function ServicePage({params}){
   <section className="service-content"><article>
    <span className="kicker">{u.overview}</span><h2>{service.title}</h2><p>{renderText(content?.intro)}</p>
    <h2>{L.what}</h2><p>{renderText(content?.what)}</p>
-   <h2>{u.howHelp}</h2><p>{renderText(content?.howHelp)}{semanticFallback()}</p>
+   <h2>{u.howHelp}</h2><p>{renderText(content?.howHelp)}</p>
    <h2>{L.before}</h2><p>{renderText(content?.beforeYouStart)}</p>
    <h2>{L.remote}</h2><p>{renderText(content?.remote)}</p>
    <div className="service-mobile-process" aria-label={u.process}><span className="kicker">{u.process}</span>{m.st.map((step,i)=><div className={`mini-step${i===3?' process-complete':''}`} key={i}><b>{i+1}</b><span>{step[0]}</span></div>)}<div className="scope-box"><b>{u.independent}</b><p>{scopeNote}</p></div></div>

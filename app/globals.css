@@ -536,3 +536,9 @@ button,input,select,textarea{font:inherit}
 .service-page .service-content>aside>.desktop-sticky-whatsapp h2{font-size:16px!important;line-height:1.08!important;margin-bottom:6px!important}
 .service-page .service-content>aside>.desktop-sticky-whatsapp .whatsapp-site-cta{min-height:42px!important;padding:8px 12px!important;font-size:14px!important}
 }
+
+/* Informational service guides */
+.guide-sections{display:grid;gap:20px;margin:28px 0 44px}.guide-section{padding:22px 25px;border:1px solid var(--border,#e4e8ef);border-radius:16px;background:var(--card,#fff)}.guide-section h2{margin:0 0 10px;font-size:clamp(1.08rem,2vw,1.35rem)}.guide-section p{margin:0;line-height:1.85}.legal-links{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:center;padding:18px 16px}.legal-links a{text-decoration:none}.legal-links a:hover{text-decoration:underline}
+
+/* Clear multi-column footer navigation */
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}.footer-section{min-width:0}.footer-links{display:flex;flex-direction:column;gap:10px}.footer-links a{overflow-wrap:anywhere}@media(max-width:640px){.footer-grid{grid-template-columns:1fr;gap:8px}}
