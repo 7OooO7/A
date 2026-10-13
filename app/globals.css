@@ -612,3 +612,17 @@ button,input,select,textarea{font:inherit}
 .lux-header #nav .lux-wa-unavailable{opacity:.55;cursor:not-allowed}
 @media(max-width:980px){.lux-header #nav .lux-nav-whatsapp{min-height:45px;width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.lux-nav-chevron{transition:none}}
+
+/* Shared guide/policy CTA: two equal, prominent actions; logical layout for RTL/LTR. */
+.guide-page .about-cta{gap:clamp(18px,3vw,38px)}
+.guide-contact-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;flex:0 0 auto}
+.guide-contact-actions .btn{display:inline-flex!important;align-items:center;justify-content:center;gap:11px;min-width:205px!important;min-height:54px!important;padding:13px 23px!important;border-radius:7px!important;font-size:15px!important;font-weight:750!important;line-height:1.25;text-decoration:none!important;white-space:normal}
+.guide-contact-actions svg{width:23px;height:23px;flex:0 0 23px}
+.guide-contact-actions .guide-whatsapp{background:#159455!important;border:2px solid #159455!important;color:#fff!important}
+.guide-contact-actions .guide-email{background:#dcc18c!important;border:2px solid #dcc18c!important;color:#102338!important}
+.guide-contact-actions .guide-email:hover{background:#e8ce9c!important;border-color:#e8ce9c!important}
+.guide-contact-actions .guide-whatsapp:hover{filter:brightness(.94)}
+.floating-actions .whatsapp-action svg{width:25px!important;height:25px!important;fill:currentColor!important}
+@media(max-width:900px){.guide-page .about-cta{flex-wrap:wrap}.guide-contact-actions{width:100%}}
+@media(max-width:600px){.guide-contact-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.guide-contact-actions .btn{width:100%!important;min-width:0!important;padding:12px 10px!important}.guide-contact-actions svg{width:21px;height:21px;flex-basis:21px}}
+@media(max-width:360px){.guide-contact-actions{grid-template-columns:1fr}}

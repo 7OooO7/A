@@ -1,3 +1,4 @@
+import WhatsAppIcon from './WhatsAppIcon';
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
@@ -16,7 +17,7 @@ export default function Header({lang,m}){
  const waNumber=(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER||'').replace(/\D/g,'');
  const waHref=waNumber?`https://wa.me/${waNumber}`:null;
  const waLabel=m.wa||'WhatsApp';
- const whatsappIcon=<svg className="lux-whatsapp-icon" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M27.3 4.7A15.8 15.8 0 0 0 2.5 23.8L.3 31.7l8.1-2.1A15.8 15.8 0 0 0 27.3 4.7ZM16 29a13 13 0 0 1-6.6-1.8l-.5-.3-4.8 1.3 1.3-4.7-.3-.5A13 13 0 1 1 16 29Zm7.1-9.7c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-2.3-1.1-3.8-2-5.3-4.6-.4-.7.4-.7 1.1-2.2.1-.3.1-.6 0-.8l-1.2-3c-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.8.1-1.1.5-.4.4-1.5 1.5-1.5 3.6s1.5 4.1 1.7 4.4c.2.3 3 4.6 7.3 6.4 2.7 1.2 3.7 1.3 5 1.1 1.5-.2 2.3-1.5 2.6-2.1.3-.6.3-1.2.2-1.3-.1-.2-.4-.3-.8-.5Z"/></svg>;
+ const whatsappIcon=<WhatsAppIcon className="lux-whatsapp-icon"/>;
  const whatsappButton=(className)=>waHref?<a className={className} href={waHref} target="_blank" rel="noopener noreferrer" onClick={close}>{whatsappIcon}<span>{waLabel}</span></a>:<span className={className+' lux-wa-unavailable'} aria-disabled="true">{whatsappIcon}<span>{waLabel}</span></span>;
  const guides=[['how-it-works',t.how],['pricing',t.pricing],['document-requirements',t.documents],['document-rejection',t.issues],['faq',m.faqLabel]];
  const change=e=>{const next=e.target.value;setOpen(null);setMobile(false);if(/^\/en\/apostille\//.test(path)&&next!=='en')return router.push(`/${next}/services/apostille`);router.push(path.replace(/^\/[^/]+/,'/'+next));};
