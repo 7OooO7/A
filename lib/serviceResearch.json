@@ -2791,12 +2791,12 @@
           "a": "Start with passport details for principal and agent; transaction reference; exact power to sign or collect. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this one clearly identified transaction request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "The authority receiving the document or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
-          "q": "Does a special power of attorney remove the need to verify the agent’s authority?",
-          "a": "The practical objective is one clearly identified transaction. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the authority receiving the document. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: passport details for principal and agent; transaction reference; exact power to sign or collect. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "q": "How can I confirm that the representative has the authority needed for this request?",
+          "a": "The practical objective is one clearly identified transaction. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the authority receiving the document. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: passport details for principal and agent; transaction reference; exact power to sign or collect. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -2869,7 +2869,7 @@
           "a": "الوكالة الخاصة ترتبط بمعاملة محددة؛ ذكر الجهة المستلمة وحدود التفويض يقلل احتمال رفض الصياغة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما حدود التفويض المطلوبة لهذه الوكالة تحديدًا — الوكالة الخاصة ترتبط بمعاملة محددة؟",
+          "q": "كيف نحدد الصلاحيات اللازمة للمعاملة في الوكالة الخاصة؟",
           "a": "نحدد التصرف الذي سيتولاه الوكيل والجهة التي سيقدم إليها المستند، ثم نراجع حدود التفويض وبيانات الأطراف. الوكالة الخاصة ترتبط بمعاملة محددة؛ ذكر الجهة المستلمة وحدود التفويض يقلل احتمال رفض الصياغة؛ ولا يُفترض أن اسم الوكالة يمنح صلاحيات غير مكتوبة."
         },
         {
@@ -5442,7 +5442,7 @@
           "a": "Start with country of residence; passport; intended UAE authority; draft powers. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this choosing between UAE remote notarisation and a locally executed, legalised overseas POA request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Uae notarial channel or the overseas authentication chain or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -8287,7 +8287,7 @@
           "a": "Start with principal and agent identity details; draft POA; contact information for verification. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this identity verification and remote signing before an authorised UAE notary request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Eligible dubai courts or uae ministry of justice notarial route or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -11103,12 +11103,12 @@
           "a": "Start with original POA reference; principal identity; agent details; entities previously given the POA. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this ending an agent’s existing authority and preventing further reliance on the instrument request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "The competent notary and any bank, registry or other recipient or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
-          "q": "Does a poa revocation cancellation remove the need to verify the agent’s authority?",
-          "a": "The practical objective is ending an agent’s existing authority and preventing further reliance on the instrument. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the competent notary and any bank, registry or other recipient. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: original POA reference; principal identity; agent details; entities previously given the POA. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "q": "How can I confirm that the representative has the authority needed for this request?",
+          "a": "The practical objective is ending an agent’s existing authority and preventing further reliance on the instrument. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the competent notary and any bank, registry or other recipient. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: original POA reference; principal identity; agent details; entities previously given the POA. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -11187,7 +11187,7 @@
           "a": "إلغاء وكالة قائمة يبدأ بتحديد بيانات الوكالة الأصلية والتحقق ممن يجب إخطارهم مثل الوكيل أو البنك أو السجل المعني. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما حدود التفويض المطلوبة لهذه الوكالة تحديدًا — إلغاء وكالة قائمة يبدأ بتحديد بيانات الوكالة الأصلية وا؟",
+          "q": "ما البيانات اللازمة لتحديد الوكالة المطلوب إلغاؤها؟",
           "a": "نحدد التصرف الذي سيتولاه الوكيل والجهة التي سيقدم إليها المستند، ثم نراجع حدود التفويض وبيانات الأطراف. إلغاء وكالة قائمة يبدأ بتحديد بيانات الوكالة الأصلية والتحقق ممن يجب إخطارهم مثل الوكيل أو البنك أو السجل المعني؛ ولا يُفترض أن اسم الوكالة يمنح صلاحيات غير مكتوبة."
         },
         {
@@ -13949,7 +13949,7 @@
           "a": "Start with case number if available; court; lawyer or representative details; scope of settlement powers. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this authorising representation in a specified court or dispute request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "The relevant court and applicable rules on legal representation or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -16607,12 +16607,12 @@
           "a": "Start with deceased person details; heirs’ identities; death certificate; succession documents. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this handling estate papers, inheritance certificates and asset follow-up request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Court or succession authority and asset-holding institutions or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
-          "q": "Does a inheritance power of attorney remove the need to verify the agent’s authority?",
-          "a": "The practical objective is handling estate papers, inheritance certificates and asset follow-up. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of court or succession authority and asset-holding institutions. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: deceased person details; heirs’ identities; death certificate; succession documents. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "q": "How can I confirm that the representative has the authority needed for this request?",
+          "a": "The practical objective is handling estate papers, inheritance certificates and asset follow-up. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of court or succession authority and asset-holding institutions. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: deceased person details; heirs’ identities; death certificate; succession documents. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -16684,7 +16684,7 @@
           "a": "وكالة التركات يجب أن تفرق بين استخراج المستندات ومتابعة ملف التركة والتصرف في أصول محددة؛ تحديد الورثة والأنصبة مسار مستقل. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما حدود التفويض المطلوبة لهذه الوكالة تحديدًا — وكالة التركات يجب أن تفرق بين استخراج المستندات ومتابعة؟",
+          "q": "كيف نحدد صلاحيات الوكيل في متابعة شؤون التركة؟",
           "a": "نحدد التصرف الذي سيتولاه الوكيل والجهة التي سيقدم إليها المستند، ثم نراجع حدود التفويض وبيانات الأطراف. وكالة التركات يجب أن تفرق بين استخراج المستندات ومتابعة ملف التركة والتصرف في أصول محددة؛ تحديد الورثة والأنصبة مسار مستقل؛ ولا يُفترض أن اسم الوكالة يمنح صلاحيات غير مكتوبة."
         },
         {
@@ -19231,12 +19231,12 @@
           "a": "Start with child passport; parents’ details; accompanying adult; destinations and travel dates. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this permission for a child to travel with a named adult request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Airline, border authority and destination country or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
-          "q": "Does a child travel consent poa remove the need to verify the agent’s authority?",
-          "a": "The practical objective is permission for a child to travel with a named adult. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of airline, border authority and destination country. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: child passport; parents’ details; accompanying adult; destinations and travel dates. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "q": "How can I confirm that the representative has the authority needed for this request?",
+          "a": "The practical objective is permission for a child to travel with a named adult. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of airline, border authority and destination country. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: child passport; parents’ details; accompanying adult; destinations and travel dates. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -19309,7 +19309,7 @@
           "a": "موافقة سفر الطفل تتطلب بيانات الطفل والمرافق والوجهة والفترة؛ وقد تختلف شروط شركة الطيران ودولة المقصد. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما حدود التفويض المطلوبة لهذه الوكالة تحديدًا — موافقة سفر الطفل تتطلب بيانات الطفل والمرافق والوجهة وا؟",
+          "q": "ما البيانات التي يجب تحديدها في موافقة سفر الطفل؟",
           "a": "نحدد التصرف الذي سيتولاه الوكيل والجهة التي سيقدم إليها المستند، ثم نراجع حدود التفويض وبيانات الأطراف. موافقة سفر الطفل تتطلب بيانات الطفل والمرافق والوجهة والفترة؛ وقد تختلف شروط شركة الطيران ودولة المقصد؛ ولا يُفترض أن اسم الوكالة يمنح صلاحيات غير مكتوبة."
         },
         {
@@ -21884,12 +21884,12 @@
           "a": "Start with account details; bank name; principal and agent IDs; authorised transaction list. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this giving a representative carefully defined personal banking powers request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "The bank’s compliance and onboarding team or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
-          "q": "Does a bank account power of attorney remove the need to verify the agent’s authority?",
-          "a": "The practical objective is giving a representative carefully defined personal banking powers. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the bank’s compliance and onboarding team. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: account details; bank name; principal and agent IDs; authorised transaction list. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "q": "How can I confirm that the representative has the authority needed for this request?",
+          "a": "The practical objective is giving a representative carefully defined personal banking powers. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the bank’s compliance and onboarding team. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: account details; bank name; principal and agent IDs; authorised transaction list. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -21962,7 +21962,7 @@
           "a": "الوكالة البنكية الشخصية يجب أن توضح هل الصلاحية للاستعلام أو تقديم الطلبات أو إجراء معاملات؛ والبنك يراجع النموذج والهوية بصورة مستقلة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما حدود التفويض المطلوبة لهذه الوكالة تحديدًا — الوكالة البنكية الشخصية يجب أن توضح هل الصلاحية للاستعل؟",
+          "q": "كيف نحدد العمليات البنكية المسموح للوكيل بتنفيذها؟",
           "a": "نحدد التصرف الذي سيتولاه الوكيل والجهة التي سيقدم إليها المستند، ثم نراجع حدود التفويض وبيانات الأطراف. الوكالة البنكية الشخصية يجب أن توضح هل الصلاحية للاستعلام أو تقديم الطلبات أو إجراء معاملات؛ والبنك يراجع النموذج والهوية بصورة مستقلة؛ ولا يُفترض أن اسم الوكالة يمنح صلاحيات غير مكتوبة."
         },
         {
@@ -24540,7 +24540,7 @@
           "a": "Start with title deed; property number; owner and buyer information; payment instructions. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this selling a named Dubai property without granting unrelated disposal powers request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai land department and authorised trustee centre or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -27102,12 +27102,12 @@
           "a": "Start with SPA or booking details; buyer passport; developer or seller details; funds arrangements. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this signing a property purchase and completing registration for an absent buyer request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai land department, developer and trustee centre or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can this property purchase poa be used for a different property transaction?",
-          "a": "The practical objective is signing a property purchase and completing registration for an absent buyer. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Land Department, developer and trustee centre. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: SPA or booking details; buyer passport; developer or seller details; funds arrangements. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is signing a property purchase and completing registration for an absent buyer. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Land Department, developer and trustee centre. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: SPA or booking details; buyer passport; developer or seller details; funds arrangements. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -27179,7 +27179,7 @@
           "a": "وكالة شراء العقار تفصل بين التوقيع على عقد الشراء ومتابعة السداد والتسجيل والاستلام؛ وهي صلاحيات مختلفة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — وكالة شراء العقار تفصل بين التوقيع على عقد الشراء ومتاب؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. وكالة شراء العقار تفصل بين التوقيع على عقد الشراء ومتابعة السداد والتسجيل والاستلام؛ وهي صلاحيات مختلفة؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -32454,12 +32454,12 @@
           "a": "Start with unit and project details; developer notice; inspection checklist; owner identity. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this accepting keys and documenting a developer handover request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Developer handover office and relevant property registry or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can this property handover poa be used for a different property transaction?",
-          "a": "The practical objective is accepting keys and documenting a developer handover. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of developer handover office and relevant property registry. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: unit and project details; developer notice; inspection checklist; owner identity. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is accepting keys and documenting a developer handover. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of developer handover office and relevant property registry. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: unit and project details; developer notice; inspection checklist; owner identity. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -32532,7 +32532,7 @@
           "a": "وكالة استلام العقار قد تشمل موعد المطور ومعاينة العيوب واستلام المفاتيح وتوقيع محاضر التسليم؛ يجب توضيح التعامل مع الملاحظات قبل الاستلام. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — وكالة استلام العقار قد تشمل موعد المطور ومعاينة العيوب؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. وكالة استلام العقار قد تشمل موعد المطور ومعاينة العيوب واستلام المفاتيح وتوقيع محاضر التسليم؛ يجب توضيح التعامل مع الملاحظات قبل الاستلام؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -35140,12 +35140,12 @@
           "a": "Start with title deed; donor and recipient identities; relationship evidence; mortgage status. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this transferring Dubai real estate as a gift rather than a sale request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai land department and any lender or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can this property gift transfer be used for a different property transaction?",
-          "a": "The practical objective is transferring Dubai real estate as a gift rather than a sale. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Land Department and any lender. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: title deed; donor and recipient identities; relationship evidence; mortgage status. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is transferring Dubai real estate as a gift rather than a sale. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Land Department and any lender. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: title deed; donor and recipient identities; relationship evidence; mortgage status. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -35222,7 +35222,7 @@
           "a": "هبة العقار ليست بيعًا عاديًا؛ يلزم مراجعة صلة الواهب بالموهوب له وسند الملكية وحالة الرهن ومتطلبات نقل الملكية. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — هبة العقار ليست بيعًا عاديًا؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. هبة العقار ليست بيعًا عاديًا؛ يلزم مراجعة صلة الواهب بالموهوب له وسند الملكية وحالة الرهن ومتطلبات نقل الملكية؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -37861,12 +37861,12 @@
           "a": "Start with trade licence; constitutional documents; authorised signatory ID; board authority. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this delegating company matters under the company’s own signing rules request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Licensing authority and receiving counterparty or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a corporate power of attorney document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is delegating company matters under the company’s own signing rules. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of licensing authority and receiving counterparty. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: trade licence; constitutional documents; authorised signatory ID; board authority. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is delegating company matters under the company’s own signing rules. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of licensing authority and receiving counterparty. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: trade licence; constitutional documents; authorised signatory ID; board authority. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -40319,12 +40319,12 @@
           "a": "Start with shareholder IDs; business activity; jurisdiction; proposed name; shareholder approvals. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this appointing someone to complete defined company-formation tasks request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Mainland licensing authority or relevant free-zone registrar or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a company incorporation poa document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is appointing someone to complete defined company-formation tasks. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of mainland licensing authority or relevant free-zone registrar. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholder IDs; business activity; jurisdiction; proposed name; shareholder approvals. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is appointing someone to complete defined company-formation tasks. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of mainland licensing authority or relevant free-zone registrar. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholder IDs; business activity; jurisdiction; proposed name; shareholder approvals. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -42747,12 +42747,12 @@
           "a": "Start with trade licence; manager identity; contract limits; banking and staffing exclusions. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this delegating operational decisions while retaining ownership control request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Company registrar and transaction-specific authorities or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a company management poa document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is delegating operational decisions while retaining ownership control. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and transaction-specific authorities. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: trade licence; manager identity; contract limits; banking and staffing exclusions. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is delegating operational decisions while retaining ownership control. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and transaction-specific authorities. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: trade licence; manager identity; contract limits; banking and staffing exclusions. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -45176,12 +45176,12 @@
           "a": "Start with share register; seller and buyer IDs; percentage; approvals and agreed consideration. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this authorising a specific transfer of company ownership interests request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Company registrar and relevant licensing authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a company shares poa document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is authorising a specific transfer of company ownership interests. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and relevant licensing authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: share register; seller and buyer IDs; percentage; approvals and agreed consideration. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is authorising a specific transfer of company ownership interests. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and relevant licensing authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: share register; seller and buyer IDs; percentage; approvals and agreed consideration. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -47636,12 +47636,12 @@
           "a": "Start with tax registration number; company licence; authorised signatory; intended filing powers. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this appointing a representative for defined VAT or corporate-tax interactions request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Uae federal tax authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a vat tax poa document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is appointing a representative for defined VAT or corporate-tax interactions. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of UAE Federal Tax Authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: tax registration number; company licence; authorised signatory; intended filing powers. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is appointing a representative for defined VAT or corporate-tax interactions. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of UAE Federal Tax Authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: tax registration number; company licence; authorised signatory; intended filing powers. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -49998,12 +49998,12 @@
           "a": "Start with shareholder IDs; capital and ownership split; business activity; licence details. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this preparing a memorandum of association reflecting ownership and management request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai courts or relevant company-formation authority as applicable or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a moa drafting notarisation document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is preparing a memorandum of association reflecting ownership and management. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Courts or relevant company-formation authority as applicable. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholder IDs; capital and ownership split; business activity; licence details. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is preparing a memorandum of association reflecting ownership and management. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Dubai Courts or relevant company-formation authority as applicable. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholder IDs; capital and ownership split; business activity; licence details. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -52397,12 +52397,12 @@
           "a": "Start with current MOA; proposed clause; shareholder approval; updated licence information. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this changing specified clauses of an existing company MOA request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Relevant licensing registrar and notarial authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a moa amendment document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is changing specified clauses of an existing company MOA. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of relevant licensing registrar and notarial authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: current MOA; proposed clause; shareholder approval; updated licence information. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is changing specified clauses of an existing company MOA. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of relevant licensing registrar and notarial authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: current MOA; proposed clause; shareholder approval; updated licence information. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -54793,12 +54793,12 @@
           "a": "Start with board or shareholder list; meeting or written-consent rules; proposed decision. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this documenting a company decision with the correct approving body request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Company registrar and applicable notarial route or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a board resolution notarisation document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is documenting a company decision with the correct approving body. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and applicable notarial route. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: board or shareholder list; meeting or written-consent rules; proposed decision. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is documenting a company decision with the correct approving body. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and applicable notarial route. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: board or shareholder list; meeting or written-consent rules; proposed decision. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -56903,12 +56903,12 @@
           "a": "Start with shareholding records; transaction terms; consents; IDs; company documents. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this recording the seller, buyer, consideration and conditions of a share assignment request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Company registrar and applicable corporate approvals or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a share sale assignment document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is recording the seller, buyer, consideration and conditions of a share assignment. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and applicable corporate approvals. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholding records; transaction terms; consents; IDs; company documents. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is recording the seller, buyer, consideration and conditions of a share assignment. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar and applicable corporate approvals. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: shareholding records; transaction terms; consents; IDs; company documents. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -59016,12 +59016,12 @@
           "a": "Start with licence; shareholder resolution; creditor and liability information; liquidator details. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this organising resolutions and filings for a company wind-up request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Company registrar, liquidator and relevant clearance authorities or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a company liquidation documents document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is organising resolutions and filings for a company wind-up. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar, liquidator and relevant clearance authorities. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: licence; shareholder resolution; creditor and liability information; liquidator details. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is organising resolutions and filings for a company wind-up. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of company registrar, liquidator and relevant clearance authorities. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: licence; shareholder resolution; creditor and liability information; liquidator details. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -61290,12 +61290,12 @@
           "a": "Start with Mulkiya; chassis and plate numbers; owner and agent IDs. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this selecting the exact vehicle powers needed for RTA transactions request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Roads and transport authority and other relevant vehicle authorities or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Does a vehicle power of attorney authorise every RTA vehicle transaction?",
-          "a": "The practical objective is selecting the exact vehicle powers needed for RTA transactions. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Roads and Transport Authority and other relevant vehicle authorities. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; chassis and plate numbers; owner and agent IDs. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is selecting the exact vehicle powers needed for RTA transactions. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Roads and Transport Authority and other relevant vehicle authorities. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; chassis and plate numbers; owner and agent IDs. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -61360,7 +61360,7 @@
           "a": "وكالات المركبات صفحة جامعة للبيع والشراء والتصدير؛ يجب تحديد المركبة والمعاملة والجهة المرورية المختصة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى — وكالات المركبات صفحة جامعة للبيع والشراء والتصدير؟",
+          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى؟",
           "a": "نحدد هل المطلوب بيع المركبة أم شراؤها أم تصديرها أم إدارتها، ونتحقق من بياناتها ومن الجهة المختصة بالتسجيل. وكالات المركبات صفحة جامعة للبيع والشراء والتصدير؛ يجب تحديد المركبة والمعاملة والجهة المرورية المختصة؛ ولا نعتمد على وكالة عامة الصياغة لكل هذه التصرفات."
         },
         {
@@ -63717,12 +63717,12 @@
           "a": "Start with Mulkiya; chassis number; plate number; seller and agent IDs. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this selling and transferring ownership of a named vehicle request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rta vehicle-transfer process or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Does a vehicle sale poa authorise every RTA vehicle transaction?",
-          "a": "The practical objective is selling and transferring ownership of a named vehicle. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA vehicle-transfer process. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; chassis number; plate number; seller and agent IDs. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is selling and transferring ownership of a named vehicle. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA vehicle-transfer process. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; chassis number; plate number; seller and agent IDs. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "Can I start this service while living outside the UAE?",
@@ -63782,7 +63782,7 @@
           "a": "وكالة بيع المركبة تتطلب بيانات الملكية والمركبة وصلاحية نقل التسجيل وفحص أي رهن أو مخالفات أو قيود. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى — وكالة بيع المركبة تتطلب بيانات الملكية والمركبة وصلاحية؟",
+          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى؟",
           "a": "نحدد هل المطلوب بيع المركبة أم شراؤها أم تصديرها أم إدارتها، ونتحقق من بياناتها ومن الجهة المختصة بالتسجيل. وكالة بيع المركبة تتطلب بيانات الملكية والمركبة وصلاحية نقل التسجيل وفحص أي رهن أو مخالفات أو قيود؛ ولا نعتمد على وكالة عامة الصياغة لكل هذه التصرفات."
         },
         {
@@ -65987,12 +65987,12 @@
           "a": "Start with buyer ID; vehicle details; purchase terms; payment limits. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this buying and registering a vehicle through a representative request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rta registration and seller-side transfer process or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Does a vehicle purchase poa authorise every RTA vehicle transaction?",
-          "a": "The practical objective is buying and registering a vehicle through a representative. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA registration and seller-side transfer process. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: buyer ID; vehicle details; purchase terms; payment limits. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is buying and registering a vehicle through a representative. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA registration and seller-side transfer process. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: buyer ID; vehicle details; purchase terms; payment limits. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -66055,7 +66055,7 @@
           "a": "وكالة شراء المركبة تميز بين المعاينة والدفع والتوقيع والتسجيل؛ ويجب ضبط صلاحيات الممثل المالية. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى — وكالة شراء المركبة تميز بين المعاينة والدفع والتوقيع وا؟",
+          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى؟",
           "a": "نحدد هل المطلوب بيع المركبة أم شراؤها أم تصديرها أم إدارتها، ونتحقق من بياناتها ومن الجهة المختصة بالتسجيل. وكالة شراء المركبة تميز بين المعاينة والدفع والتوقيع والتسجيل؛ ويجب ضبط صلاحيات الممثل المالية؛ ولا نعتمد على وكالة عامة الصياغة لكل هذه التصرفات."
         },
         {
@@ -68352,12 +68352,12 @@
           "a": "Start with Mulkiya; vehicle identification; destination; shipping details; clearance documents. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this deregistering and exporting a vehicle from the UAE request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rta and uae customs/export channels or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Does a vehicle export poa authorise every RTA vehicle transaction?",
-          "a": "The practical objective is deregistering and exporting a vehicle from the UAE. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA and UAE customs/export channels. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; vehicle identification; destination; shipping details; clearance documents. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is deregistering and exporting a vehicle from the UAE. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA and UAE customs/export channels. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; vehicle identification; destination; shipping details; clearance documents. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -68421,7 +68421,7 @@
           "a": "وكالة تصدير المركبة ترتبط بإلغاء التسجيل وشهادة التصدير واللوحات والجمارك ومتطلبات بلد الوصول، وليس نص الوكالة فقط. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى — وكالة تصدير المركبة ترتبط بإلغاء التسجيل وشهادة التصدير؟",
+          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى؟",
           "a": "نحدد هل المطلوب بيع المركبة أم شراؤها أم تصديرها أم إدارتها، ونتحقق من بياناتها ومن الجهة المختصة بالتسجيل. وكالة تصدير المركبة ترتبط بإلغاء التسجيل وشهادة التصدير واللوحات والجمارك ومتطلبات بلد الوصول، وليس نص الوكالة فقط؛ ولا نعتمد على وكالة عامة الصياغة لكل هذه التصرفات."
         },
         {
@@ -68437,7 +68437,7 @@
           "a": "لا. الوكالة تثبت حدود التفويض فقط، أما شطب التسجيل ووثائق التصدير ومتطلبات الجمارك فهي إجراءات مستقلة لدى الجهات المختصة."
         },
         {
-          "q": "هل تعتبر وكالة تصدير المركبة تصريح تصدير بحد ذاتها؟",
+          "q": "ما الفرق بين الوكالة وإجراءات إصدار مستندات تصدير المركبة؟",
           "a": "لا. تفوض الوكالة الممثل في الأعمال المذكورة فيها فقط. وتظل إجراءات شطب التسجيل والجمارك وفك التمويل والشحن مستقلة، وتختلف بحسب الجهات المعنية والوجهة."
         }
       ],
@@ -70744,12 +70744,12 @@
           "a": "Start with complete draft contract; signatory IDs; capacity and supporting authority. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this checking whether the particular agreement is eligible for notarisation request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "The notary competent for the document type or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a contract notarisation accepted automatically by every UAE authority?",
-          "a": "The practical objective is checking whether the particular agreement is eligible for notarisation. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the notary competent for the document type. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: complete draft contract; signatory IDs; capacity and supporting authority. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is checking whether the particular agreement is eligible for notarisation. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of the notary competent for the document type. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: complete draft contract; signatory IDs; capacity and supporting authority. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -70812,7 +70812,7 @@
           "a": "ليست كل العقود قابلة للتوثيق بالطريقة نفسها؛ نحدد نوع العقد وصفات الموقّعين والتفويض المؤسسي ومتطلبات اللغة العربية. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — ليست كل العقود قابلة للتوثيق بالطريقة نفسها؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. ليست كل العقود قابلة للتوثيق بالطريقة نفسها؛ نحدد نوع العقد وصفات الموقّعين والتفويض المؤسسي ومتطلبات اللغة العربية؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -73012,12 +73012,12 @@
           "a": "Start with declarant ID; exact facts; supporting evidence; intended recipient. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this making a formal statement about specific facts or circumstances request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Notary or receiving authority according to statement type or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a affidavits declarations accepted automatically by every UAE authority?",
-          "a": "The practical objective is making a formal statement about specific facts or circumstances. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of notary or receiving authority according to statement type. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: declarant ID; exact facts; supporting evidence; intended recipient. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is making a formal statement about specific facts or circumstances. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of notary or receiving authority according to statement type. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: declarant ID; exact facts; supporting evidence; intended recipient. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -73076,7 +73076,7 @@
           "a": "الإقرارات قد تتعلق بالحالة الاجتماعية أو الدخل أو التعهد أو وقائع محددة؛ الجهة المستلمة تحدد الصياغة والحاجة إلى اليمين أو التوثيق. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — الإقرارات قد تتعلق بالحالة الاجتماعية أو الدخل أو التعه؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. الإقرارات قد تتعلق بالحالة الاجتماعية أو الدخل أو التعهد أو وقائع محددة؛ الجهة المستلمة تحدد الصياغة والحاجة إلى اليمين أو التوثيق؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -75152,12 +75152,12 @@
           "a": "Start with debtor and creditor IDs; amount; currency; reason; repayment dates. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this recording a debt obligation with clear repayment terms request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Appropriate notarial or dispute-resolution route or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a debt acknowledgement accepted automatically by every UAE authority?",
-          "a": "The practical objective is recording a debt obligation with clear repayment terms. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of appropriate notarial or dispute-resolution route. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: debtor and creditor IDs; amount; currency; reason; repayment dates. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is recording a debt obligation with clear repayment terms. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of appropriate notarial or dispute-resolution route. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: debtor and creditor IDs; amount; currency; reason; repayment dates. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -75216,7 +75216,7 @@
           "a": "إقرار الدين يجب أن يوضح الدائن والمدين والمبلغ والعملة وسبب الالتزام وشروط السداد المتفق عليها دون غموض. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — إقرار الدين يجب أن يوضح الدائن والمدين والمبلغ والعملة؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. إقرار الدين يجب أن يوضح الدائن والمدين والمبلغ والعملة وسبب الالتزام وشروط السداد المتفق عليها دون غموض؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -77292,12 +77292,12 @@
           "a": "Start with contract; breach details; recipient address; proof and deadline. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this choosing the correct formal notice for the legal ground request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Notarial or other legally prescribed service channel or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a legal notices accepted automatically by every UAE authority?",
-          "a": "The practical objective is choosing the correct formal notice for the legal ground. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of notarial or other legally prescribed service channel. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: contract; breach details; recipient address; proof and deadline. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is choosing the correct formal notice for the legal ground. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of notarial or other legally prescribed service channel. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: contract; breach details; recipient address; proof and deadline. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -77356,7 +77356,7 @@
           "a": "الإنذارات العدلية صفحة جامعة؛ إنذار الأجرة والإخلاء وإلغاء الوكالة تختلف في السبب والمستندات وطريقة التبليغ. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — الإنذارات العدلية صفحة جامعة؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. الإنذارات العدلية صفحة جامعة؛ إنذار الأجرة والإخلاء وإلغاء الوكالة تختلف في السبب والمستندات وطريقة التبليغ؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -79432,12 +79432,12 @@
           "a": "Start with testator ID; beneficiaries; asset list; executors and guardianship wishes. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this choosing a will registration framework for eligible non-Muslim testators request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Relevant uae or difc will-registration authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a non muslim wills accepted automatically by every UAE authority?",
-          "a": "The practical objective is choosing a will registration framework for eligible non-Muslim testators. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of relevant UAE or DIFC will-registration authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: testator ID; beneficiaries; asset list; executors and guardianship wishes. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is choosing a will registration framework for eligible non-Muslim testators. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of relevant UAE or DIFC will-registration authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: testator ID; beneficiaries; asset list; executors and guardianship wishes. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -79496,7 +79496,7 @@
           "a": "وصايا غير المسلمين تستلزم تحديد مسار التسجيل المناسب في الإمارات أو DIFC وبيانات الأصول والمستفيدين والمنفذ وأثر الوصايا السابقة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — وصايا غير المسلمين تستلزم تحديد مسار التسجيل المناسب في؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. وصايا غير المسلمين تستلزم تحديد مسار التسجيل المناسب في الإمارات أو DIFC وبيانات الأصول والمستفيدين والمنفذ وأثر الوصايا السابقة؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -81574,12 +81574,12 @@
           "a": "Start with final draft; IDs; signing capacity; preferred route; any deadline. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this checking whether an urgent notarial request is complete and eligible request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Available authorised notarial channel or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a fast track notary accepted automatically by every UAE authority?",
-          "a": "The practical objective is checking whether an urgent notarial request is complete and eligible. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of available authorised notarial channel. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: final draft; IDs; signing capacity; preferred route; any deadline. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is checking whether an urgent notarial request is complete and eligible. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of available authorised notarial channel. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: final draft; IDs; signing capacity; preferred route; any deadline. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -81642,7 +81642,7 @@
           "a": "خدمة الكاتب العدل العاجلة تبدأ بفحص جاهزية المستند وهوية الموقّع والأصول المطلوبة وتوفر المواعيد لدى الجهة المختصة؛ لا نقدم وعدًا بوقت إنجاز. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — خدمة الكاتب العدل العاجلة تبدأ بفحص جاهزية المستند وهوي؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. خدمة الكاتب العدل العاجلة تبدأ بفحص جاهزية المستند وهوية الموقّع والأصول المطلوبة وتوفر المواعيد لدى الجهة المختصة؛ لا نقدم وعدًا بوقت إنجاز؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -83843,7 +83843,7 @@
           "a": "Start with original Swedish document; issuing body; destination country; intended use. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this obtaining an apostille for a document issued in Sweden request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Swedish notarius publicus under the hague apostille framework or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -86047,12 +86047,12 @@
           "a": "Start with original paper document; copy; intended receiving institution. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this having an eligible copy compared with its original document request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Qualified certifying professional and receiving institution or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a certified true copy accepted automatically by every UAE authority?",
-          "a": "The practical objective is having an eligible copy compared with its original document. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of qualified certifying professional and receiving institution. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: original paper document; copy; intended receiving institution. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is having an eligible copy compared with its original document. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of qualified certifying professional and receiving institution. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: original paper document; copy; intended receiving institution. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -86111,7 +86111,7 @@
           "a": "خدمة نسخة طبق الأصل تعتمد على مطابقة النسخة بالأصل الورقي لدى المهني المرخص المناسب، ولا تثبت صحة الوقائع المكتوبة في الأصل. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — خدمة نسخة طبق الأصل تعتمد على مطابقة النسخة بالأصل الور؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. خدمة نسخة طبق الأصل تعتمد على مطابقة النسخة بالأصل الورقي لدى المهني المرخص المناسب، ولا تثبت صحة الوقائع المكتوبة في الأصل؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -88188,7 +88188,7 @@
           "a": "Start with legible complete source document; language pair; recipient requirements. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this preparing a legally usable translation for the intended authority request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Appropriately authorised translator or receiving authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -90487,12 +90487,12 @@
           "a": "Start with signer identity; document; signature specimen; recipient instructions. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this authenticating a signature or specimen for a specified purpose request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Competent notarial or judicial authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a signature approval accepted automatically by every UAE authority?",
-          "a": "The practical objective is authenticating a signature or specimen for a specified purpose. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of competent notarial or judicial authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: signer identity; document; signature specimen; recipient instructions. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is authenticating a signature or specimen for a specified purpose. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of competent notarial or judicial authority. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: signer identity; document; signature specimen; recipient instructions. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -90551,7 +90551,7 @@
           "a": "اعتماد التوقيع يتعلق بإثبات التوقيع أو نموذج التوقيع، ولا يعني التصديق على صحة كل مضمون المستند. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — اعتماد التوقيع يتعلق بإثبات التوقيع أو نموذج التوقيع، و؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. اعتماد التوقيع يتعلق بإثبات التوقيع أو نموذج التوقيع، ولا يعني التصديق على صحة كل مضمون المستند؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -92613,7 +92613,7 @@
           "a": "Start with tenancy contract; title deed; landlord and tenant details; service address. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this giving a sale-ground tenancy notice request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai tenancy law and required formal notice channel or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -94511,7 +94511,7 @@
           "a": "Start with title deed; lease; intended occupier; supporting property information. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this notifying a tenant of qualifying owner or family occupancy request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai tenancy law and formal notice process or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -95352,7 +95352,7 @@
           "a": "Ei. Dubain lain nro 33 vuodelta 2008 mukaan omistajan, joka hakee hallintaa omaan käyttöönsä tai ensimmäisen asteen sukulaisen käyttöön, on osoitettava, ettei hän omista muuta soveltuvaa kiinteistöä, ja annettava vähintään 12 kuukauden ilmoitus julkisen notaarin tai kirjatun kirjeen välityksellä. Uudelleenvuokraukseen takaisinoton jälkeen sovelletaan lisärajoituksia."
         },
         {
-          "q": "Voiko kiinteistön vuokrata uudelleen heti oman käytön perusteella tapahtuneen häädön jälkeen?",
+          "q": "Mitä rajoituksia kiinteistön uudelleenvuokraukseen liittyy omakäyttöön perustuvan häädön jälkeen?",
           "a": "26 artikla rajoittaa uudelleenvuokrausta oman käytön perusteella tapahtuneen häädön jälkeen, ja asuin- ja muille kiinteistöille on eri ajanjaksot; korvaus voi tulla kyseeseen."
         }
       ],
@@ -95470,7 +95470,7 @@
           "a": "Не. Закон № 33 от 2008 г. на Дубай изисква собственикът, който иска владението за лично ползване или за ползване от роднина от първа степен, да докаже, че не притежава друг подходящ имот, и да отправи предизвестие най-малко 12 месеца предварително чрез нотариус или с препоръчана поща. За повторното отдаване под наем след връщането на владението се прилагат допълнителни ограничения."
         },
         {
-          "q": "Може ли имотът да бъде отдаден отново под наем веднага след опразване за лично ползване?",
+          "q": "Какви ограничения важат за повторното отдаване под наем след освобождаване за лично ползване?",
           "a": "Член 26 ограничава повторното отдаване под наем след опразване за лично ползване, като сроковете за жилищни и нежилищни имоти са различни; може да възникне въпрос за обезщетение."
         }
       ],
@@ -95706,7 +95706,7 @@
           "a": "Ei. Dubai seadus nr 33 aastast 2008 nõuab, et omakasutuseks või esimese astme sugulase kasutuseks valdust taotlev omanik tõendaks, et tal ei ole muud sobivat kinnisvara, ning teataks sellest vähemalt 12 kuud ette notari või tähitud kirja kaudu. Pärast tagasisaamist kehtivad uuesti väljaüürimisele täiendavad piirangud."
         },
         {
-          "q": "Kas kinnisvara võib pärast omakasutuse tõttu väljatõstmist kohe uuesti välja üürida?",
+          "q": "Millised piirangud kehtivad kinnisvara uuesti väljaüürimisele pärast omakasutuse tõttu väljatõstmist?",
           "a": "Artikkel 26 piirab pärast omakasutuse tõttu väljatõstmist uuesti väljaüürimist, kusjuures eluruumide ja mitte-eluruumide puhul on tähtajad erinevad; tõusetuda võib hüvitise küsimus."
         }
       ],
@@ -96409,7 +96409,7 @@
           "a": "Start with lease; title; permits or technical evidence; service address. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this documenting a demolition or reconstruction eviction ground request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai tenancy law and relevant municipal permissions or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -98308,7 +98308,7 @@
           "a": "Start with Ejari lease; rent schedule; missed payments; bank return records. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this demanding overdue rent before pursuing the appropriate remedy request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai tenancy notice requirements or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -100240,7 +100240,7 @@
           "a": "Start with revocation document; agent contact details; original POA reference. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this formally informing an agent that a POA has been revoked request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Prescribed legal-notification route or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -102232,7 +102232,7 @@
           "a": "Start with Ejari; correspondence; party IDs; requested remedy. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this identifying the correct route for a Dubai tenancy dispute request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rental disputes center (rdc) or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -104230,7 +104230,7 @@
           "a": "Start with lease; notices; delivery proof; grounds; landlord documents. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this filing an eviction case supported by the proper ground and service proof request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai rental disputes center or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -108327,7 +108327,7 @@
           "a": "Start with cheque copy; bank return memo; lease; payment history. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this selecting the correct remedy for a returned rent cheque request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rdc or other competent recovery route or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -110325,7 +110325,7 @@
           "a": "Start with judgment; execution status; amounts; respondent details. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this moving from a rental judgment to an enforceable execution request request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rdc execution department or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -112324,12 +112324,12 @@
           "a": "Start with trade licence; establishment details; signatory ID; requested MOHRE acts. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this delegating specified labour and establishment transactions request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Ministry of human resources and emiratisation or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
-          "q": "Does a mohre power of attorney remove the need to verify the agent’s authority?",
-          "a": "The practical objective is delegating specified labour and establishment transactions. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Ministry of Human Resources and Emiratisation. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: trade licence; establishment details; signatory ID; requested MOHRE acts. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "q": "How can I confirm that the representative has the authority needed for this request?",
+          "a": "The practical objective is delegating specified labour and establishment transactions. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of Ministry of Human Resources and Emiratisation. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: trade licence; establishment details; signatory ID; requested MOHRE acts. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -112381,7 +112381,7 @@
           "a": "يجب أن تحدد وكالة وزارة الموارد البشرية والتوطين معاملات العمل أو المنشأة التي يفوض بها الممثل بدقة، مع التمييز بين المتابعة الإدارية والإجراءات التي تتطلب حساب منشأة مخولًا أو موافقة رسمية. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما حدود التفويض المطلوبة لهذه الوكالة تحديدًا — يجب أن تحدد وكالة وزارة الموارد البشرية والتوطين معاملا؟",
+          "q": "ما معاملات العمل التي ينبغي تحديدها في الوكالة؟",
           "a": "نحدد التصرف الذي سيتولاه الوكيل والجهة التي سيقدم إليها المستند، ثم نراجع حدود التفويض وبيانات الأطراف. يجب أن تحدد وكالة وزارة الموارد البشرية والتوطين معاملات العمل أو المنشأة التي يفوض بها الممثل بدقة، مع التمييز بين المتابعة الإدارية والإجراءات ؛ ولا يُفترض أن اسم الوكالة يمنح صلاحيات غير مكتوبة."
         },
         {
@@ -114344,12 +114344,12 @@
           "a": "Start with licence; corporate documents; UBO details; authorised signatories. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this appointing an authorised person for company bank onboarding request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Chosen uae bank or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a company bank account poa document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is appointing an authorised person for company bank onboarding. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of chosen UAE bank. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: licence; corporate documents; UBO details; authorised signatories. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is appointing an authorised person for company bank onboarding. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of chosen UAE bank. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: licence; corporate documents; UBO details; authorised signatories. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -116389,12 +116389,12 @@
           "a": "Start with Mulkiya; owner and agent IDs; list of RTA tasks. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this handling registration, insurance and upkeep without transferring ownership request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rta, insurer and service providers or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Does a vehicle management poa authorise every RTA vehicle transaction?",
-          "a": "The practical objective is handling registration, insurance and upkeep without transferring ownership. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA, insurer and service providers. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; owner and agent IDs; list of RTA tasks. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is handling registration, insurance and upkeep without transferring ownership. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of RTA, insurer and service providers. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: Mulkiya; owner and agent IDs; list of RTA tasks. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -116447,7 +116447,7 @@
           "a": "وكالة إدارة المركبة تخوّل شخصًا بمتابعة تجديد التسجيل والفحص والتأمين والمخالفات دون منحه صلاحية البيع أو التصدير. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى — وكالة إدارة المركبة تخوّل شخصًا بمتابعة تجديد التسجيل و؟",
+          "q": "ما الفرق بين صلاحيات هذه الخدمة وصلاحيات المركبة الأخرى؟",
           "a": "نحدد هل المطلوب بيع المركبة أم شراؤها أم تصديرها أم إدارتها، ونتحقق من بياناتها ومن الجهة المختصة بالتسجيل. وكالة إدارة المركبة تخوّل شخصًا بمتابعة تجديد التسجيل والفحص والتأمين والمخالفات دون منحه صلاحية البيع أو التصدير؛ ولا نعتمد على وكالة عامة الصياغة لكل هذه التصرفات."
         },
         {
@@ -118365,12 +118365,12 @@
           "a": "Start with ownership split; voting thresholds; exits; funding commitments. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this setting practical rules between business owners before disputes arise request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Corporate-law adviser and relevant company jurisdiction or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Can a shareholder agreement document be used without checking the company licence and signatory authority?",
-          "a": "The practical objective is setting practical rules between business owners before disputes arise. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of corporate-law adviser and relevant company jurisdiction. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: ownership split; voting thresholds; exits; funding commitments. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is setting practical rules between business owners before disputes arise. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of corporate-law adviser and relevant company jurisdiction. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: ownership split; voting thresholds; exits; funding commitments. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -120312,7 +120312,7 @@
           "a": "Start with document origin; prior stamps; issuing authority; destination. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this checking the official attestation chain for a document request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Uae ministry of foreign affairs or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -122328,12 +122328,12 @@
           "a": "Start with original document; prior certifications; destination embassy requirements. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this arranging consular legalisation where required request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Relevant embassy or consulate or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a embassy attestation accepted automatically by every UAE authority?",
-          "a": "Embassy or consular attestation depends on the issuing country, destination and the specific mission. For UAE use, documents issued abroad may require authentication by the issuing country’s authorities before the UAE mission step. Confirm the mission’s current route and document requirements before arranging collection or courier. Have ready: original document; prior certifications; destination embassy requirements. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "Embassy or consular attestation depends on the issuing country, destination and the specific mission. For UAE use, documents issued abroad may require authentication by the issuing country’s authorities before the UAE mission step. Confirm the mission’s current route and document requirements before arranging collection or courier. Have ready: original document; prior certifications; destination embassy requirements. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "Do all UAE missions abroad offer the same online attestation route?",
@@ -122387,7 +122387,7 @@
           "a": "نراجع السفارة المعنية ونوع المستند وما إذا كانت تشترط تصديقًا سابقًا من الخارجية أو ترجمة قبل تقديم الطلب. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — يعتمد التصديق القنصلي على بلد إصدار المستند والبلد المق؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. نراجع السفارة المعنية ونوع المستند وما إذا كانت تشترط تصديقًا سابقًا من الخارجية أو ترجمة قبل تقديم الطلب؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -124340,12 +124340,12 @@
           "a": "Start with degree; transcript if requested; issuing institution; country of award. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this preparing academic credentials for employment or licensing request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Education authority, mofa and consulate as applicable or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a education certificate attestation accepted automatically by every UAE authority?",
-          "a": "Educational certificates can require a chain of prior attestations depending on where they were issued and used. MOFA lists educational documents among attestation categories, but a certificate and transcript may be treated as separate documents. Eligibility for digital attestation depends on the original issuing authority and supported document type. Have ready: degree; transcript if requested; issuing institution; country of award. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "Educational certificates can require a chain of prior attestations depending on where they were issued and used. MOFA lists educational documents among attestation categories, but a certificate and transcript may be treated as separate documents. Eligibility for digital attestation depends on the original issuing authority and supported document type. Have ready: degree; transcript if requested; issuing institution; country of award. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "Does the country issuing my degree affect the attestation route?",
@@ -124399,7 +124399,7 @@
           "a": "تصديق الشهادات الدراسية يبدأ بتحديد الجامعة وبلد الإصدار والجهة التي ستستلم الشهادة، ثم تحديد التحقق والتصديقات المطلوبة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — قد تحتاج الشهادات التعليمية إلى سلسلة تصديقات سابقة تخت؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. تصديق الشهادات الدراسية يبدأ بتحديد الجامعة وبلد الإصدار والجهة التي ستستلم الشهادة، ثم تحديد التحقق والتصديقات المطلوبة؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -126352,12 +126352,12 @@
           "a": "Start with marriage certificate; issuing-country authentication; names and translations. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this preparing a marriage record for a family or immigration application request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Consular and uae receiving authority or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a marriage certificate attestation accepted automatically by every UAE authority?",
-          "a": "Marriage certificates are among the personal documents that may be attested by UAE MOFA. The correct chain of authentication depends on where the certificate was issued and where it will be used; originals, prior attestations and certified translations may be needed. Digital eligibility is not automatic. Have ready: marriage certificate; issuing-country authentication; names and translations. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "Marriage certificates are among the personal documents that may be attested by UAE MOFA. The correct chain of authentication depends on where the certificate was issued and where it will be used; originals, prior attestations and certified translations may be needed. Digital eligibility is not automatic. Have ready: marriage certificate; issuing-country authentication; names and translations. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "Do foreign marriage certificates always follow the same attestation chain?",
@@ -126411,7 +126411,7 @@
           "a": "نراجع بلد إصدار شهادة الزواج والغرض من استخدامها والاسماء المسجلة فيها لتحديد متطلبات الترجمة والتصديق. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — عقود الزواج من الوثائق الشخصية التي قد تُصدقها وزارة ال؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. نراجع بلد إصدار شهادة الزواج والغرض من استخدامها والاسماء المسجلة فيها لتحديد متطلبات الترجمة والتصديق؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -128333,12 +128333,12 @@
           "a": "Start with document; signatories; Dubai location; identity and capacity details. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this checking whether a qualified notary can attend at a suitable location request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Authorised mobile notary provider or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a mobile notary dubai accepted automatically by every UAE authority?",
-          "a": "The practical objective is checking whether a qualified notary can attend at a suitable location. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of authorised mobile notary provider. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: document; signatories; Dubai location; identity and capacity details. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is checking whether a qualified notary can attend at a suitable location. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of authorised mobile notary provider. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: document; signatories; Dubai location; identity and capacity details. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -128391,7 +128391,7 @@
           "a": "إذا تعذر الحضور، نتحقق من إمكانية إجراء التوثيق في موقع العميل بواسطة جهة مخولة، وفق نوع المستند وموقع العميل وتوافر الخدمة. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — إذا تعذر الحضور، نتحقق من إمكانية إجراء التوثيق في موقع؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. إذا تعذر الحضور، نتحقق من إمكانية إجراء التوثيق في موقع العميل بواسطة جهة مخولة، وفق نوع المستند وموقع العميل وتوافر الخدمة؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -130306,12 +130306,12 @@
           "a": "Start with complete pleadings or evidence; case reference; required language. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this translating evidence for a specific court filing request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Authorised legal translator and receiving court or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
           "q": "Is a court document translation accepted automatically by every UAE authority?",
-          "a": "The practical objective is translating evidence for a specific court filing. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of authorised legal translator and receiving court. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: complete pleadings or evidence; case reference; required language. Tell us where the final document will be used and whether a bank, registrar, court or counterparty has already specified a format. That determines which details must be confirmed before signing."
+          "a": "The practical objective is translating evidence for a specific court filing. The document must be limited to the transaction you actually intend, with any signature, payment or representation powers checked against the requirements of authorised legal translator and receiving court. A document that is broadly worded but misses the operative step can create avoidable delays. Have ready: complete pleadings or evidence; case reference; required language. Tell us which organisation will receive the document and whether it has supplied specific instructions, so we can identify the details to confirm before signing."
         },
         {
           "q": "How much does the service cost?",
@@ -130364,7 +130364,7 @@
           "a": "مستندات المحاكم تحتاج إلى ترجمة دقيقة للمصطلحات والأسماء والأرقام والمرفقات مع مراعاة شروط المحكمة أو الجهة التي ستستقبلها. أرسل المستندات المرتبطة بالطلب وأي تعليمات صادرة عن الجهة التي ستستخدم المستند."
         },
         {
-          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة — مستندات المحاكم تحتاج إلى ترجمة دقيقة للمصطلحات والأسما؟",
+          "q": "ما الذي ينبغي التحقق منه قبل تقديم مستند هذه الخدمة للجهة المختصة؟",
           "a": "نراجع الغرض من المستند والجهة التي ستستلمه، وما إذا كانت تطلب توقيعًا موثقًا أو ترجمة أو تصديقًا إضافيًا. مستندات المحاكم تحتاج إلى ترجمة دقيقة للمصطلحات والأسماء والأرقام والمرفقات مع مراعاة شروط المحكمة أو الجهة التي ستستقبلها؛ ولا يمكن ضمان القبول دون مراجعة الحالة."
         },
         {
@@ -132284,7 +132284,7 @@
           "a": "Start with lease; attempted payment evidence; proposed amount; landlord correspondence. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this formally recording an offer or deposit in a tenancy disagreement request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rdc offer-and-deposit procedure or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -134326,7 +134326,7 @@
           "a": "Start with Ejari; proposed renewal; rent notices; correspondence. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this asking for a tenancy renewal decision when terms are disputed request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Dubai rdc and applicable rental rules or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -136303,7 +136303,7 @@
           "a": "Start with case papers; service date; lease; receipts; correspondence. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this organising a response to an existing rental claim request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rdc proceedings and any licensed legal representative or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -138310,7 +138310,7 @@
           "a": "Start with evidence of urgency; lease; parties; requested temporary measure. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this seeking an interim RDC order where delay creates a concrete risk request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rdc urgent-matters procedure or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
@@ -140288,7 +140288,7 @@
           "a": "Start with execution file number; judgment; payment or enforcement records. The final list depends on the receiving authority and the facts of your transaction."
         },
         {
-          "q": "Who makes the final decision on this submitting the correct follow-up request within an existing execution file request?",
+          "q": "Who confirms whether this document will be accepted for its intended use?",
           "a": "Rdc execution e-request portal or the legally competent professional controls the relevant official step. Our role is to organise the supporting information and agreed coordination."
         },
         {
