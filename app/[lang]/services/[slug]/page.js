@@ -7,7 +7,7 @@ import {getService,getServices,getCategories,getUi} from '../../../../lib/servic
 import {getServiceContent,getResearch} from '../../../../lib/serviceContent';
 import marketProfiles from '../../../../lib/marketProfiles.json';
 import {isSearchReady} from '../../../../lib/editorial';
-import {languageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
+import {reviewedLanguageAlternates,absolute,breadcrumbSchema,safeJsonLd,OG_LOCALE} from '../../../../lib/seo';
 import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLinks';
 import semanticLinkMap from '../../../../lib/semanticLinkMap.json';
 import {semanticLinkLead} from '../../../../lib/semanticLinkCopy';

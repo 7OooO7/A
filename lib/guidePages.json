@@ -402,6 +402,161 @@
           "Strona może korzystać z niezbędnych usług technicznych. Rozmowy przez WhatsApp podlegają także zasadom tej platformy. Opcjonalne narzędzia analityczne i pliki cookie zostaną opisane, jeśli zostaną uruchomione."
         ]
       ]
+    ],
+    "cs": [
+      "Soukromí a péče o dokumenty",
+      "S vašimi údaji zacházíme pečlivě",
+      "Údaje využíváme k vyřízení dotazu, komunikaci a koordinaci požadované dokumentové služby.",
+      [
+        [
+          "Jaké údaje přijímáme",
+          "Při kontaktu nám můžete sdělit jméno, kontaktní údaje, podrobnosti případu a potřebné dokumenty."
+        ],
+        [
+          "Jak údaje využíváme",
+          "Odpovídáme na dotazy, připravujeme nabídky a koordinujeme dohodnuté služby."
+        ],
+        [
+          "S kým údaje sdílíme",
+          "Pokud je nutný odborník nebo úřad, sdílíme pouze údaje potřebné pro daný krok."
+        ],
+        [
+          "Uchovávání a zabezpečení",
+          "Přístup mají jen osoby vyřizující případ; doba uchování závisí na službě a platných požadavcích."
+        ],
+        [
+          "Vaše možnosti",
+          "Na info@poadubai.eu můžete požádat o informace, opravu údajů nebo vysvětlení ochrany soukromí."
+        ],
+        [
+          "Web a externí služby",
+          "Web může používat nezbytné technické služby. WhatsApp se řídí vlastními podmínkami; volitelné analytické soubory cookie popíšeme při jejich zavedení."
+        ]
+      ]
+    ],
+    "sk": [
+      "Súkromie a starostlivosť o dokumenty",
+      "S vašimi údajmi zaobchádzame starostlivo",
+      "Údaje používame na vybavenie otázky, komunikáciu a koordináciu požadovanej dokumentovej služby.",
+      [
+        [
+          "Aké údaje prijímame",
+          "Pri kontakte nám môžete poskytnúť meno, kontaktné údaje, informácie o prípade a dokumenty."
+        ],
+        [
+          "Ako údaje používame",
+          "Odpovedáme na otázky, pripravujeme ponuky a koordinujeme dohodnuté služby."
+        ],
+        [
+          "S kým údaje zdieľame",
+          "Ak je potrebný odborník alebo úrad, zdieľame len údaje potrebné na daný krok."
+        ],
+        [
+          "Uchovávanie a bezpečnosť",
+          "Prístup majú len osoby pracujúce na prípade; doba uchovávania závisí od služby a požiadaviek."
+        ],
+        [
+          "Vaše možnosti",
+          "Na info@poadubai.eu môžete požiadať o informácie, opravu údajov alebo vysvetlenie ochrany súkromia."
+        ],
+        [
+          "Web a externé služby",
+          "Web môže používať nevyhnutné technické služby. WhatsApp má vlastné podmienky; voliteľné analytické cookies opíšeme po ich zapnutí."
+        ]
+      ]
+    ],
+    "ro": [
+      "Confidențialitate și grijă pentru documente",
+      "Informațiile tale sunt tratate cu atenție",
+      "Folosim datele transmise pentru a înțelege solicitarea, a comunica și a coordona serviciul de documente ales.",
+      [
+        [
+          "Ce informații primim",
+          "Ne poți trimite numele, datele de contact, detaliile solicitării și documentele necesare."
+        ],
+        [
+          "Cum folosim informațiile",
+          "Răspundem întrebărilor, pregătim oferte și coordonăm serviciile convenite."
+        ],
+        [
+          "Cu cine le partajăm",
+          "Dacă este necesar un specialist sau o autoritate, transmitem doar datele relevante acelei etape."
+        ],
+        [
+          "Păstrare și securitate",
+          "Accesul este limitat la persoanele care lucrează la solicitare; perioada de păstrare depinde de serviciu și cerințe."
+        ],
+        [
+          "Opțiunile tale",
+          "Scrie la info@poadubai.eu pentru întrebări, corecturi sau informații privind confidențialitatea."
+        ],
+        [
+          "Site-ul și serviciile externe",
+          "Site-ul poate folosi servicii tehnice esențiale. WhatsApp are propriile condiții; eventualele cookie-uri analitice vor fi explicate dacă sunt activate."
+        ]
+      ]
+    ],
+    "hu": [
+      "Adatvédelem és dokumentumkezelés",
+      "Adatait körültekintően kezeljük",
+      "Az adatokat megkeresése megértéséhez, kapcsolattartáshoz és a választott dokumentumszolgáltatás koordinálásához használjuk.",
+      [
+        [
+          "Milyen adatokat kapunk",
+          "Kapcsolatfelvételkor megadhatja nevét, elérhetőségét, az ügy részleteit és dokumentumait."
+        ],
+        [
+          "Mire használjuk az adatokat",
+          "Megválaszoljuk a kérdéseket, ajánlatot készítünk és koordináljuk az egyeztetett szolgáltatásokat."
+        ],
+        [
+          "Kikkel osztjuk meg",
+          "Szakember vagy hatóság bevonásakor csak a szükséges adatokat adjuk át."
+        ],
+        [
+          "Tárolás és biztonság",
+          "A hozzáférést az ügyben dolgozókra korlátozzuk; a megőrzési idő a szolgáltatástól és az előírásoktól függ."
+        ],
+        [
+          "Az Ön lehetőségei",
+          "Kérdésekkel vagy helyesbítési kéréssel írjon az info@poadubai.eu címre."
+        ],
+        [
+          "Weboldal és külső szolgáltatások",
+          "A weboldal alapvető technikai szolgáltatásokat használhat. A WhatsApp saját feltételei érvényesek; az opcionális elemző sütiket bevezetéskor ismertetjük."
+        ]
+      ]
+    ],
+    "bg": [
+      "Поверителност и грижа за документите",
+      "Отнасяме се внимателно към вашите данни",
+      "Използваме предоставената информация, за да разберем запитването, да общуваме с вас и да координираме избраната услуга.",
+      [
+        [
+          "Какви данни получаваме",
+          "При контакт може да получим име, данни за връзка, подробности за случая и документи."
+        ],
+        [
+          "Как използваме данните",
+          "Отговаряме на запитвания, изготвяме оферти и координираме договорените услуги."
+        ],
+        [
+          "С кого ги споделяме",
+          "При участие на специалист или институция споделяме само необходимата информация."
+        ],
+        [
+          "Съхранение и сигурност",
+          "Достъп имат само работещите по случая; срокът за съхранение зависи от услугата и изискванията."
+        ],
+        [
+          "Вашите възможности",
+          "Пишете на info@poadubai.eu за въпроси, корекции или информация за поверителността."
+        ],
+        [
+          "Сайт и външни услуги",
+          "Сайтът може да използва необходими технически услуги. WhatsApp има собствени условия; незадължителните аналитични бисквитки ще бъдат описани при активиране."
+        ]
+      ]
     ]
   },
   "terms": {
@@ -859,6 +1014,181 @@
           "Napisz do nas: info@poadubai.eu."
         ]
       ]
+    ],
+    "cs": [
+      "Podmínky poskytování služeb",
+      "Jasný postup od poptávky po vyřízení",
+      "Vysvětlujeme, jak POA Dubai vyřizuje dotazy, cenové nabídky a koordinaci dokumentových služeb.",
+      [
+        [
+          "Vaše poptávka",
+          "Popište dokument a místo jeho použití; navrhneme další postup."
+        ],
+        [
+          "Nabídka a potvrzení",
+          "Před placenou prací odsouhlasíme rozsah, cenu a platbu. Externí poplatky uvedeme zvlášť."
+        ],
+        [
+          "Dokumenty a informace",
+          "Poskytněte správné údaje a potřebné dokumenty; na chybějící podklady upozorníme."
+        ],
+        [
+          "Spolupráce s odborníky",
+          "Podle potřeby koordinujeme notáře, překladatele, ambasády a úřady."
+        ],
+        [
+          "Termíny a aktualizace",
+          "Sdělíme dostupné odhady termínů a důležité změny."
+        ],
+        [
+          "Změny a zrušení",
+          "Změnu nám oznamte co nejdříve; pravidla zrušení a vrácení plateb vysvětlíme před platbou."
+        ],
+        [
+          "Dotazy",
+          "Napište na info@poadubai.eu."
+        ]
+      ]
+    ],
+    "sk": [
+      "Podmienky poskytovania služieb",
+      "Jasný postup od dopytu po výsledok",
+      "Vysvetľujeme, ako POA Dubai vybavuje dopyty, ponuky a koordináciu dokumentových služieb.",
+      [
+        [
+          "Váš dopyt",
+          "Opíšte dokument a miesto použitia; vysvetlíme ďalší postup."
+        ],
+        [
+          "Ponuka a potvrdenie",
+          "Pred platenou prácou odsúhlasíme rozsah, cenu a platbu; externé poplatky uvedieme osobitne."
+        ],
+        [
+          "Dokumenty a informácie",
+          "Poskytnite správne údaje a potrebné dokumenty; na chýbajúce podklady upozorníme."
+        ],
+        [
+          "Spolupráca s odborníkmi",
+          "Podľa potreby koordinujeme notárov, prekladateľov, ambasády a úrady."
+        ],
+        [
+          "Termíny a aktualizácie",
+          "Poskytneme dostupné odhady termínov a informácie o dôležitých zmenách."
+        ],
+        [
+          "Zmeny a zrušenie",
+          "Zmenu oznámte čo najskôr; pravidlá zrušenia a vrátenia platieb vysvetlíme pred platbou."
+        ],
+        [
+          "Otázky",
+          "Napíšte na info@poadubai.eu."
+        ]
+      ]
+    ],
+    "ro": [
+      "Condiții de prestare a serviciilor",
+      "Un proces clar, de la cerere la rezultat",
+      "Explicăm modul în care POA Dubai gestionează solicitările, ofertele și coordonarea documentelor.",
+      [
+        [
+          "Solicitarea ta",
+          "Descrie documentul și locul utilizării; îți explicăm pașii următori."
+        ],
+        [
+          "Oferta și confirmarea",
+          "Înainte de începerea serviciilor plătite convenim domeniul, prețul și plata; taxele externe sunt prezentate separat."
+        ],
+        [
+          "Documente și informații",
+          "Furnizează date corecte și documentele necesare; te anunțăm dacă lipsește ceva."
+        ],
+        [
+          "Colaborarea cu specialiști",
+          "Coordonăm, după caz, notari, traducători, ambasade și autorități."
+        ],
+        [
+          "Termene și actualizări",
+          "Comunicăm termenele estimate disponibile și modificările importante."
+        ],
+        [
+          "Modificări și anulări",
+          "Anunță schimbările cât mai repede; explicăm condițiile de anulare și rambursare înainte de plată."
+        ],
+        [
+          "Întrebări",
+          "Scrie la info@poadubai.eu."
+        ]
+      ]
+    ],
+    "hu": [
+      "Szolgáltatási feltételek",
+      "Átlátható folyamat az érdeklődéstől a teljesítésig",
+      "Bemutatjuk, hogyan kezeli a POA Dubai a megkereséseket, ajánlatokat és a dokumentumügyek koordinálását.",
+      [
+        [
+          "Az Ön megkeresése",
+          "Írja meg, milyen dokumentumra van szüksége és hol használják fel; ismertetjük a lépéseket."
+        ],
+        [
+          "Ajánlat és jóváhagyás",
+          "A fizetős munka előtt egyeztetjük a feladatot, az árat és a fizetést; a külső díjakat külön jelezzük."
+        ],
+        [
+          "Dokumentumok és adatok",
+          "Pontos adatokat és szükséges iratokat kérünk; jelezzük, ha valami hiányzik."
+        ],
+        [
+          "Szakemberek bevonása",
+          "Szükség esetén közjegyzőkkel, fordítókkal, nagykövetségekkel és hatóságokkal egyeztetünk."
+        ],
+        [
+          "Határidők és tájékoztatás",
+          "A rendelkezésre álló várható határidőket és lényeges változásokat közöljük."
+        ],
+        [
+          "Módosítás és lemondás",
+          "Változás esetén mielőbb keressen minket; a lemondási feltételeket fizetés előtt ismertetjük."
+        ],
+        [
+          "Kérdések",
+          "Írjon az info@poadubai.eu címre."
+        ]
+      ]
+    ],
+    "bg": [
+      "Условия за предоставяне на услуги",
+      "Ясен процес от запитването до резултата",
+      "Обясняваме как POA Dubai обработва запитвания, оферти и координация на документи.",
+      [
+        [
+          "Вашето запитване",
+          "Опишете документа и къде ще се използва; ще обясним следващите стъпки."
+        ],
+        [
+          "Оферта и потвърждение",
+          "Преди платена работа уточняваме обхват, цена и плащане; външните такси се посочват отделно."
+        ],
+        [
+          "Документи и информация",
+          "Предоставете точни данни и нужните документи; ще ви уведомим при липси."
+        ],
+        [
+          "Работа със специалисти",
+          "При необходимост координираме нотариуси, преводачи, посолства и институции."
+        ],
+        [
+          "Срокове и актуализации",
+          "Съобщаваме наличните прогнозни срокове и важните промени."
+        ],
+        [
+          "Промени и отказ",
+          "Свържете се рано при промяна; условията за отказ и възстановяване се обясняват преди плащане."
+        ],
+        [
+          "Въпроси",
+          "Пишете на info@poadubai.eu."
+        ]
+      ]
     ]
   },
   "refunds": {
@@ -1210,6 +1540,141 @@
         [
           "Twoje prawa",
           "Bezwzględnie obowiązujące prawa konsumenta mające zastosowanie do zamówienia pozostają zachowane."
+        ]
+      ]
+    ],
+    "cs": [
+      "Zrušení a vrácení plateb",
+      "Přehledné podmínky v každé fázi",
+      "Před potvrzením objednávky vysvětlíme postup a související náklady.",
+      [
+        [
+          "Před zahájením",
+          "Při změně nebo zrušení nás kontaktujte; prověříme dosavadní práci a náklady."
+        ],
+        [
+          "Po zahájení",
+          "Případné vrácení závisí na dohodě, provedené práci a vzniklých externích nákladech."
+        ],
+        [
+          "Platby třetím stranám",
+          "Úřední poplatky, překlady a doručení mohou mít vlastní pravidla vracení."
+        ],
+        [
+          "Jak požádat o zrušení",
+          "Pošlete referenci případu a žádost na info@poadubai.eu; sdělíme stav a možnosti."
+        ],
+        [
+          "Vaše práva",
+          "Vaše závazná spotřebitelská práva zůstávají zachována."
+        ]
+      ]
+    ],
+    "sk": [
+      "Zrušenie a vrátenie platieb",
+      "Prehľadné dohody počas celého procesu",
+      "Pred potvrdením objednávky vysvetlíme jednotlivé kroky a súvisiace náklady.",
+      [
+        [
+          "Pred začiatkom",
+          "Pri zmene alebo zrušení nás kontaktujte; preveríme vykonanú prácu a náklady."
+        ],
+        [
+          "Po začiatku",
+          "Prípadné vrátenie závisí od dohody, vykonanej práce a vzniknutých externých nákladov."
+        ],
+        [
+          "Platby tretím stranám",
+          "Úradné poplatky, preklady a doručenie môžu mať vlastné pravidlá vrátenia."
+        ],
+        [
+          "Ako požiadať o zrušenie",
+          "Pošlite číslo prípadu a žiadosť na info@poadubai.eu; oznámime stav a možnosti."
+        ],
+        [
+          "Vaše práva",
+          "Vaše záväzné spotrebiteľské práva zostávajú zachované."
+        ]
+      ]
+    ],
+    "ro": [
+      "Anulări și rambursări",
+      "Condiții clare la fiecare etapă",
+      "Explicăm etapele și costurile înainte să confirmi comanda.",
+      [
+        [
+          "Înainte de începere",
+          "Contactează-ne pentru modificare sau anulare; verificăm lucrările și costurile deja efectuate."
+        ],
+        [
+          "După începere",
+          "Eventuala rambursare depinde de acord, serviciile prestate și costurile externe suportate."
+        ],
+        [
+          "Plăți către terți",
+          "Taxele autorităților, traducerile și livrarea pot avea reguli proprii de rambursare."
+        ],
+        [
+          "Cum soliciți anularea",
+          "Trimite referința solicitării la info@poadubai.eu; îți explicăm situația și opțiunile."
+        ],
+        [
+          "Drepturile tale",
+          "Drepturile obligatorii ale consumatorului rămân aplicabile."
+        ]
+      ]
+    ],
+    "hu": [
+      "Lemondás és visszatérítés",
+      "Világos feltételek minden szakaszban",
+      "A megrendelés jóváhagyása előtt ismertetjük a lépéseket és a költségeket.",
+      [
+        [
+          "A munka megkezdése előtt",
+          "Módosítás vagy lemondás esetén keressen minket; ellenőrizzük az elvégzett munkát és a költségeket."
+        ],
+        [
+          "A munka megkezdése után",
+          "A visszatérítés az egyezségtől, az elvégzett munkától és a felmerült külső költségektől függ."
+        ],
+        [
+          "Külső szolgáltatók díjai",
+          "A hatósági díjakra, fordításokra és kézbesítésre külön visszatérítési szabályok vonatkozhatnak."
+        ],
+        [
+          "Lemondás kérése",
+          "Küldje el az ügy azonosítóját és kérését az info@poadubai.eu címre; tájékoztatjuk a lehetőségekről."
+        ],
+        [
+          "Az Ön jogai",
+          "A kötelező fogyasztói jogok továbbra is érvényesek."
+        ]
+      ]
+    ],
+    "bg": [
+      "Отказ и възстановяване на суми",
+      "Ясни условия на всеки етап",
+      "Обясняваме стъпките и разходите, преди да потвърдите поръчката.",
+      [
+        [
+          "Преди започване",
+          "При промяна или отказ се свържете с нас; проверяваме извършената работа и разходите."
+        ],
+        [
+          "След започване",
+          "Евентуалното възстановяване зависи от договорката, извършеното и външните разходи."
+        ],
+        [
+          "Плащания към трети страни",
+          "Държавните такси, преводите и доставките може да имат отделни правила."
+        ],
+        [
+          "Как да поискате отказ",
+          "Изпратете номера на случая и искането на info@poadubai.eu; ще обясним състоянието и възможностите."
+        ],
+        [
+          "Вашите права",
+          "Задължителните потребителски права остават в сила."
         ]
       ]
     ]
@@ -1565,6 +2030,141 @@
           "Organizujemy uzgodnioną dostawę lub wyjaśniamy, jaki krok pozostał do wykonania."
         ]
       ]
+    ],
+    "cs": [
+      "Jak to funguje",
+      "Od první zprávy k dalšímu kroku",
+      "Koordinujeme dokumentové záležitosti související s Dubají a SAE pro klienty v Evropě i jinde.",
+      [
+        [
+          "1. Popište svůj požadavek",
+          "Napište, jaký dokument potřebujete, kde jste a k čemu bude sloužit."
+        ],
+        [
+          "2. Získejte plán",
+          "Vysvětlíme kroky, podklady, orientační termíny a možnosti."
+        ],
+        [
+          "3. Potvrďte nabídku",
+          "Zkontrolujte rozsah a cenu; placená práce začne po potvrzení."
+        ],
+        [
+          "4. Koordinujeme postup",
+          "Spolupracujeme s příslušnými partnery a informujeme vás o průběhu."
+        ],
+        [
+          "5. Převezměte výsledek",
+          "Zajistíme dohodnuté doručení nebo vysvětlíme zbývající krok."
+        ]
+      ]
+    ],
+    "sk": [
+      "Ako to funguje",
+      "Od prvej správy k ďalšiemu kroku",
+      "Koordinujeme dokumentové záležitosti týkajúce sa Dubaja a SAE pre klientov v Európe aj inde.",
+      [
+        [
+          "1. Opíšte potrebu",
+          "Napíšte, aký dokument potrebujete, kde ste a na čo bude slúžiť."
+        ],
+        [
+          "2. Získajte plán",
+          "Vysvetlíme kroky, podklady, odhadované termíny a možnosti."
+        ],
+        [
+          "3. Potvrďte ponuku",
+          "Skontrolujte rozsah a cenu; platená práca začne po potvrdení."
+        ],
+        [
+          "4. Koordinujeme kroky",
+          "Spolupracujeme s príslušnými partnermi a informujeme vás o priebehu."
+        ],
+        [
+          "5. Prevezmite výsledok",
+          "Zabezpečíme dohodnuté doručenie alebo vysvetlíme zostávajúci krok."
+        ]
+      ]
+    ],
+    "ro": [
+      "Cum funcționează",
+      "De la primul mesaj la pasul următor",
+      "Coordonăm documente legate de Dubai și Emiratele Arabe Unite pentru clienți din Europa și din alte regiuni.",
+      [
+        [
+          "1. Spune-ne ce îți trebuie",
+          "Descrie documentul, locul în care te afli și scopul utilizării."
+        ],
+        [
+          "2. Primește planul",
+          "Îți explicăm pașii, documentele necesare, termenele estimate și opțiunile."
+        ],
+        [
+          "3. Confirmă oferta",
+          "Verifică serviciul și prețul; lucrările plătite încep după confirmare."
+        ],
+        [
+          "4. Coordonăm pașii",
+          "Colaborăm cu partenerii relevanți și te ținem la curent."
+        ],
+        [
+          "5. Primește rezultatul",
+          "Organizăm livrarea convenită sau explicăm ce pas mai este necesar."
+        ]
+      ]
+    ],
+    "hu": [
+      "Hogyan működik",
+      "Az első üzenettől a következő lépésig",
+      "Dubajhoz és az Egyesült Arab Emírségekhez kapcsolódó dokumentumügyeket koordinálunk európai és más ügyfeleknek.",
+      [
+        [
+          "1. Mondja el, mire van szüksége",
+          "Írja meg a dokumentum típusát, tartózkodási helyét és a felhasználás célját."
+        ],
+        [
+          "2. Ismerje meg a folyamatot",
+          "Ismertetjük a lépéseket, iratokat, becsült időket és lehetőségeket."
+        ],
+        [
+          "3. Fogadja el az ajánlatot",
+          "Ellenőrizze a feladatot és az árat; a fizetős munka jóváhagyás után indul."
+        ],
+        [
+          "4. Koordináljuk a lépéseket",
+          "Az illetékes partnerekkel egyeztetünk és tájékoztatjuk a folyamatról."
+        ],
+        [
+          "5. Vegye át az eredményt",
+          "Megszervezzük a vállalt kézbesítést vagy ismertetjük a fennmaradó lépést."
+        ]
+      ]
+    ],
+    "bg": [
+      "Как работи услугата",
+      "От първото съобщение до следващата стъпка",
+      "Координираме документи, свързани с Дубай и ОАЕ, за клиенти в Европа и другаде.",
+      [
+        [
+          "1. Опишете нуждата",
+          "Кажете какъв документ ви трябва, къде сте и за какво ще се използва."
+        ],
+        [
+          "2. Получете план",
+          "Обясняваме стъпките, документите, ориентировъчните срокове и възможностите."
+        ],
+        [
+          "3. Потвърдете офертата",
+          "Прегледайте обхвата и цената; платената работа започва след потвърждение."
+        ],
+        [
+          "4. Координираме стъпките",
+          "Работим със съответните партньори и ви информираме за напредъка."
+        ],
+        [
+          "5. Получете резултата",
+          "Организираме договорената доставка или обясняваме оставащата стъпка."
+        ]
+      ]
     ]
   },
   "pricing": {
@@ -1864,6 +2464,121 @@
         [
           "Przed płatnością",
           "Możesz sprawdzić zakres, cenę i odpowiednie zasady anulowania przed zatwierdzeniem zlecenia."
+        ]
+      ]
+    ],
+    "cs": [
+      "Ceny a nabídky",
+      "Zjistěte cenu před rozhodnutím",
+      "Každý dokument má jiné požadavky, proto připravíme nabídku podle potřebných úkonů.",
+      [
+        [
+          "Co ovlivňuje cenu",
+          "Typ dokumentu, země vydání a použití, překlad, úřední poplatky, doručení a termín."
+        ],
+        [
+          "Co obsahuje nabídka",
+          "Popíšeme koordinaci a zvlášť uvedeme známé externí náklady."
+        ],
+        [
+          "Jak získat nabídku",
+          "Sdělte typ dokumentu, zemi vydání, místo použití a požadovaný termín."
+        ],
+        [
+          "Před zaplacením",
+          "Před potvrzením si můžete ověřit rozsah, cenu a pravidla zrušení."
+        ]
+      ]
+    ],
+    "sk": [
+      "Ceny a ponuky",
+      "Poznajte cenu pred rozhodnutím",
+      "Dokumenty majú odlišné požiadavky, preto ponuku pripravíme podľa potrebných úkonov.",
+      [
+        [
+          "Čo ovplyvňuje cenu",
+          "Typ dokumentu, krajina vydania a použitia, preklad, úradné poplatky, doručenie a termín."
+        ],
+        [
+          "Čo obsahuje ponuka",
+          "Opíšeme koordináciu a samostatne uvedieme známe externé náklady."
+        ],
+        [
+          "Ako získať ponuku",
+          "Uveďte typ dokumentu, krajinu vydania, miesto použitia a požadovaný termín."
+        ],
+        [
+          "Pred platbou",
+          "Pred potvrdením si môžete overiť rozsah, cenu a pravidlá zrušenia."
+        ]
+      ]
+    ],
+    "ro": [
+      "Prețuri și oferte",
+      "Cunoaște costurile înainte de a decide",
+      "Cerințele diferă între documente; pregătim oferta pentru etapele necesare solicitării tale.",
+      [
+        [
+          "Ce influențează prețul",
+          "Tipul documentului, țările implicate, traducerea, taxele oficiale, livrarea și termenul."
+        ],
+        [
+          "Ce include oferta",
+          "Descriem coordonarea și prezentăm separat costurile externe cunoscute."
+        ],
+        [
+          "Cum obții o ofertă",
+          "Spune-ne tipul documentului, țara emiterii, locul utilizării și termenul dorit."
+        ],
+        [
+          "Înainte de plată",
+          "Poți verifica domeniul, prețul și condițiile de anulare înainte de confirmare."
+        ]
+      ]
+    ],
+    "hu": [
+      "Árak és ajánlatok",
+      "Döntés előtt ismerje meg a költségeket",
+      "Az iratok követelményei eltérnek, ezért az ajánlatot a szükséges lépések alapján készítjük.",
+      [
+        [
+          "Mi befolyásolja az árat",
+          "A dokumentum típusa, kiállítási és felhasználási ország, fordítás, hatósági díjak, kézbesítés és határidő."
+        ],
+        [
+          "Mit tartalmaz az ajánlat",
+          "Ismertetjük a koordinációt és külön feltüntetjük az ismert külső költségeket."
+        ],
+        [
+          "Hogyan kérhet ajánlatot",
+          "Adja meg az irat típusát, kiállítási országát, felhasználási helyét és határidejét."
+        ],
+        [
+          "Fizetés előtt",
+          "Jóváhagyás előtt ellenőrizheti a feladatot, az árat és a lemondási feltételeket."
+        ]
+      ]
+    ],
+    "bg": [
+      "Цени и оферти",
+      "Разберете разходите преди решение",
+      "Изискванията се различават според документа, затова офертата отразява нужните действия.",
+      [
+        [
+          "Какво определя цената",
+          "Вид документ, държава на издаване и използване, превод, такси, доставка и срок."
+        ],
+        [
+          "Какво включва офертата",
+          "Описваме координацията и отделно посочваме известните външни разходи."
+        ],
+        [
+          "Как да получите оферта",
+          "Посочете вида документ, държавата на издаване, мястото на използване и срока."
+        ],
+        [
+          "Преди плащане",
+          "Можете да прегледате обхвата, цената и условията за отказ преди потвърждение."
         ]
       ]
     ]
@@ -2271,6 +2986,161 @@
           "Po zapoznaniu się z informacjami przygotujemy listę dostosowaną do Twojej sprawy."
         ]
       ]
+    ],
+    "cs": [
+      "Kontrolní seznam dokumentů",
+      "Začněte se správnými informacemi",
+      "Několik údajů nám pomůže zvolit vhodný postup pro váš dokument.",
+      [
+        [
+          "Typ dokumentu",
+          "Jde o plnou moc, potvrzení, firemní dokument, překlad nebo jiný dokument?"
+        ],
+        [
+          "Původ a cíl",
+          "Kde byl vydán a kde bude použit?"
+        ],
+        [
+          "Účel a příjemce",
+          "K čemu slouží a kdo jej převezme?"
+        ],
+        [
+          "Dostupná verze",
+          "Máte originál, sken, ověřenou kopii nebo digitální soubor?"
+        ],
+        [
+          "Jazyk a překlad",
+          "V jakém jazyce je a jaký jazyk požaduje příjemce?"
+        ],
+        [
+          "Další krok",
+          "Po posouzení vám připravíme seznam podkladů pro váš případ."
+        ]
+      ]
+    ],
+    "sk": [
+      "Kontrolný zoznam dokumentov",
+      "Začnite správnymi informáciami",
+      "Niekoľko údajov nám pomôže zvoliť vhodný postup pre váš dokument.",
+      [
+        [
+          "Typ dokumentu",
+          "Ide o plnú moc, potvrdenie, firemný dokument, preklad alebo niečo iné?"
+        ],
+        [
+          "Pôvod a cieľ",
+          "Kde bol vydaný a kde sa bude používať?"
+        ],
+        [
+          "Účel a príjemca",
+          "Na čo slúži a kto ho prevezme?"
+        ],
+        [
+          "Dostupná verzia",
+          "Máte originál, sken, overenú kópiu alebo digitálny súbor?"
+        ],
+        [
+          "Jazyk a preklad",
+          "V akom jazyku je a aký jazyk požaduje príjemca?"
+        ],
+        [
+          "Ďalší krok",
+          "Po posúdení pripravíme zoznam podkladov pre váš prípad."
+        ]
+      ]
+    ],
+    "ro": [
+      "Lista documentelor necesare",
+      "Începe cu informațiile potrivite",
+      "Câteva detalii ne ajută să alegem procesul potrivit pentru documentul tău.",
+      [
+        [
+          "Tipul documentului",
+          "Este o procură, un certificat, un document de firmă, o traducere sau altceva?"
+        ],
+        [
+          "Origine și destinație",
+          "Unde a fost emis și unde va fi folosit?"
+        ],
+        [
+          "Scop și destinatar",
+          "La ce servește și cine îl primește?"
+        ],
+        [
+          "Versiunea disponibilă",
+          "Ai originalul, un scan, o copie certificată sau un fișier digital?"
+        ],
+        [
+          "Limbă și traducere",
+          "În ce limbă este și ce limbă solicită destinatarul?"
+        ],
+        [
+          "Pasul următor",
+          "După verificare îți trimitem o listă adaptată situației."
+        ]
+      ]
+    ],
+    "hu": [
+      "Dokumentumellenőrző lista",
+      "Kezdje a megfelelő adatokkal",
+      "Néhány alapadat segít kiválasztani a dokumentumához illő eljárást.",
+      [
+        [
+          "Dokumentumtípus",
+          "Meghatalmazásról, igazolásról, cégiratról, fordításról vagy másról van szó?"
+        ],
+        [
+          "Eredet és célország",
+          "Hol állították ki és hol használják fel?"
+        ],
+        [
+          "Cél és címzett",
+          "Mire szolgál és ki fogadja be?"
+        ],
+        [
+          "Rendelkezésre álló változat",
+          "Eredeti, szkennelt, hitelesített másolat vagy digitális fájl áll rendelkezésre?"
+        ],
+        [
+          "Nyelv és fordítás",
+          "Milyen nyelvű, és milyen nyelvet kér a címzett?"
+        ],
+        [
+          "Következő lépés",
+          "Az adatok áttekintése után személyre szabott listát adunk."
+        ]
+      ]
+    ],
+    "bg": [
+      "Списък с необходими документи",
+      "Започнете с правилната информация",
+      "Няколко подробности ни помагат да изберем подходящия процес за вашия документ.",
+      [
+        [
+          "Вид документ",
+          "Пълномощно, удостоверение, фирмен документ, превод или друго?"
+        ],
+        [
+          "Произход и дестинация",
+          "Къде е издаден и къде ще се използва?"
+        ],
+        [
+          "Цел и получател",
+          "За какво служи и кой ще го получи?"
+        ],
+        [
+          "Налична версия",
+          "Имате оригинал, сканирано копие, заверено копие или цифров файл?"
+        ],
+        [
+          "Език и превод",
+          "На какъв език е и какъв език изисква получателят?"
+        ],
+        [
+          "Следваща стъпка",
+          "След преглед ще подготвим списък за конкретния случай."
+        ]
+      ]
     ]
   },
   "document-rejection": {
@@ -2570,6 +3440,121 @@
         [
           "Uniknij ponownego problemu",
           "Przed ponownym złożeniem dokumentu potwierdź aktualne wymagania i dane referencyjne odbiorcy."
+        ]
+      ]
+    ],
+    "cs": [
+      "Řešení problémů s dokumenty",
+      "Když dokument vyžaduje další krok",
+      "Byl dokument vrácen nebo jsou požadavky nejasné? Pomůžeme určit další postup.",
+      [
+        [
+          "Projděte odpověď",
+          "Pošlete nám důvod odmítnutí nebo zprávu přijímající instituce."
+        ],
+        [
+          "Časté kontrolní body",
+          "Zkontrolujte jména, data, podpisy, platnost, překlad, ověření a místo použití."
+        ],
+        [
+          "Najděte řešení",
+          "Podle potřeby koordinujeme opravy, překlady či další kroky."
+        ],
+        [
+          "Předejděte opakování",
+          "Před opětovným podáním ověřte aktuální požadavky u příjemce."
+        ]
+      ]
+    ],
+    "sk": [
+      "Riešenie problémov s dokumentmi",
+      "Keď dokument vyžaduje ďalší krok",
+      "Vrátili vám dokument alebo sú požiadavky nejasné? Pomôžeme určiť ďalší postup.",
+      [
+        [
+          "Prečítajte si odpoveď",
+          "Pošlite nám dôvod odmietnutia alebo správu prijímajúcej inštitúcie."
+        ],
+        [
+          "Časté kontrolné body",
+          "Skontrolujte mená, dátumy, podpisy, platnosť, preklad, overenie a miesto použitia."
+        ],
+        [
+          "Nájdite riešenie",
+          "Podľa potreby koordinujeme opravy, preklady alebo ďalšie kroky."
+        ],
+        [
+          "Predíďte opakovaniu",
+          "Pred opätovným podaním overte aktuálne požiadavky u príjemcu."
+        ]
+      ]
+    ],
+    "ro": [
+      "Soluții pentru problemele documentelor",
+      "Când un document mai necesită un pas",
+      "Documentul a fost returnat sau cerințele nu sunt clare? Te ajutăm să identifici soluția.",
+      [
+        [
+          "Verifică răspunsul",
+          "Trimite motivul respingerii sau mesajul instituției destinatare."
+        ],
+        [
+          "Puncte de control frecvente",
+          "Verifică numele, datele, semnăturile, valabilitatea, traducerea, certificarea și destinația."
+        ],
+        [
+          "Găsește soluția",
+          "Coordonăm, când este necesar, corecturi, traduceri sau alte etape."
+        ],
+        [
+          "Evită repetarea problemei",
+          "Confirmă cerințele actuale ale destinatarului înainte de redepunere."
+        ]
+      ]
+    ],
+    "hu": [
+      "Dokumentumproblémák megoldása",
+      "Ha még egy lépésre van szükség",
+      "Visszaküldték a dokumentumot vagy nem világosak a követelmények? Segítünk a következő lépésben.",
+      [
+        [
+          "Nézze meg a visszajelzést",
+          "Küldje el az elutasítás okát vagy a fogadó intézmény üzenetét."
+        ],
+        [
+          "Gyakori ellenőrzési pontok",
+          "Ellenőrizze a neveket, dátumokat, aláírásokat, érvényességet, fordítást, hitelesítést és a felhasználási helyet."
+        ],
+        [
+          "Találja meg a megoldást",
+          "Szükség esetén javítást, fordítást vagy további lépéseket koordinálunk."
+        ],
+        [
+          "Előzze meg az ismétlődést",
+          "Új benyújtás előtt egyeztesse az aktuális követelményeket a címzettel."
+        ]
+      ]
+    ],
+    "bg": [
+      "Решения при проблеми с документи",
+      "Когато е нужна още една стъпка",
+      "Документът е върнат или изискванията са неясни? Помагаме да намерите следващото действие.",
+      [
+        [
+          "Прегледайте отговора",
+          "Изпратете причината за отказа или съобщението от приемащата институция."
+        ],
+        [
+          "Чести проверки",
+          "Проверете имена, дати, подписи, валидност, превод, заверка и място на използване."
+        ],
+        [
+          "Намерете решение",
+          "При необходимост координираме корекции, преводи или допълнителни действия."
+        ],
+        [
+          "Избегнете повторение",
+          "Потвърдете актуалните изисквания на получателя преди повторно подаване."
         ]
       ]
     ]
