@@ -1,5 +1,6 @@
-import WhatsAppIcon from './WhatsAppIcon';
 'use client';
+
+import WhatsAppIcon from './WhatsAppIcon';
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {usePathname,useRouter} from 'next/navigation';

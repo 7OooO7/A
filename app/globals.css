@@ -626,3 +626,19 @@ button,input,select,textarea{font:inherit}
 @media(max-width:900px){.guide-page .about-cta{flex-wrap:wrap}.guide-contact-actions{width:100%}}
 @media(max-width:600px){.guide-contact-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.guide-contact-actions .btn{width:100%!important;min-width:0!important;padding:12px 10px!important}.guide-contact-actions svg{width:21px;height:21px;flex-basis:21px}}
 @media(max-width:360px){.guide-contact-actions{grid-template-columns:1fr}}
+
+/* Home hero: preserve one-line localized WhatsApp label and a compact button. */
+.hero-actions .btn.whatsapp-primary.whatsapp-site-cta {
+  width:max-content!important; min-width:0!important; max-width:100%!important;
+  min-height:52px!important; height:auto; padding:12px 18px!important;
+  white-space:nowrap!important; flex:0 0 auto; line-height:1.15!important;
+  font-size:clamp(12px,1.05vw,15px)!important; gap:9px;
+}
+.hero-actions .btn.whatsapp-primary.whatsapp-site-cta::before {flex:0 0 20px;width:20px;height:20px;}
+@media(max-width:600px){
+ .hero-actions .btn.whatsapp-primary.whatsapp-site-cta{
+   width:100%!important;max-width:100%!important;
+   padding-inline:clamp(7px,3vw,18px)!important;
+   font-size:clamp(10px,3.2vw,15px)!important;
+ }
+}

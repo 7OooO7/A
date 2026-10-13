@@ -1,5 +1,6 @@
-import WhatsAppIcon from './WhatsAppIcon';
 'use client';
+
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function FloatingActions({ whatsappLabel = 'WhatsApp' }) {
   const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '';
