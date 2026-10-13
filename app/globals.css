@@ -542,3 +542,14 @@ button,input,select,textarea{font:inherit}
 
 /* Clear multi-column footer navigation */
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}.footer-section{min-width:0}.footer-links{display:flex;flex-direction:column;gap:10px}.footer-links a{overflow-wrap:anywhere}@media(max-width:640px){.footer-grid{grid-template-columns:1fr;gap:8px}}
+
+/* Footer accordion: override older footer display declarations. */
+@media(max-width:640px){
+  .site-footer .footer-grid{display:block;gap:0}
+  .site-footer .footer-section{border-bottom:1px solid #20344a}
+  .site-footer .footer-heading{display:flex;cursor:pointer}
+  .site-footer .footer-links{display:none}
+  .site-footer .footer-section.is-open .footer-links{display:flex;flex-direction:column}
+  .site-footer .footer-section:not(.is-open) .footer-whatsapp-wrap{display:none}
+  .site-footer .footer-section.is-open .footer-whatsapp-wrap{display:block}
+}
