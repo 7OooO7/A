@@ -642,3 +642,20 @@ button,input,select,textarea{font:inherit}
    font-size:clamp(10px,3.2vw,15px)!important;
  }
 }
+
+/* 2026-10: precise CTA and footer refinements; retain existing theme. */
+/* Guide buttons: the WhatsApp SVG is rendered in JSX, so disable the legacy pseudo-icon. */
+.guide-contact-actions .guide-whatsapp::before{content:none!important;display:none!important}
+.guide-page .guide-contact-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:12px;min-width:0;max-width:100%;flex:1 1 440px}
+.guide-page .guide-contact-actions .btn{box-sizing:border-box;display:inline-flex!important;align-items:center;justify-content:center;flex-wrap:nowrap!important;white-space:nowrap!important;min-width:0!important;min-height:54px!important;height:54px!important;line-height:1!important;padding:10px clamp(12px,1.6vw,24px)!important;gap:10px;max-width:100%}
+.guide-page .guide-contact-actions .guide-whatsapp{flex:1.55 1 230px;font-size:15px!important}
+.guide-page .guide-contact-actions .guide-email{flex:1 1 170px;font-size:clamp(12px,1vw,15px)!important}
+.guide-page .guide-contact-actions .btn span{white-space:nowrap!important;overflow:visible}
+.guide-page .guide-contact-actions .btn svg{width:21px;height:21px;flex:0 0 21px}
+@media(max-width:700px){.guide-page .guide-contact-actions{width:100%;justify-content:stretch;flex:1 1 100%}.guide-page .guide-contact-actions .guide-whatsapp{flex:1.55 1 190px}.guide-page .guide-contact-actions .guide-email{flex:1 1 145px}}
+@media(max-width:460px){.guide-page .guide-contact-actions{display:grid;grid-template-columns:1fr;gap:10px}.guide-page .guide-contact-actions .btn{width:100%!important;font-size:14px!important}.guide-page .guide-contact-actions .guide-whatsapp{min-height:54px!important}}
+/* Footer WhatsApp grows with the translated label, never breaks into two lines. */
+.site-footer .footer-whatsapp-wrap{max-width:100%;min-width:0}
+.site-footer .footer-whatsapp-btn{box-sizing:border-box;display:inline-flex!important;align-items:center;justify-content:center;gap:10px;white-space:nowrap!important;width:max-content!important;max-width:100%!important;min-width:0!important;min-height:48px!important;padding:11px 16px!important;font-size:clamp(11px,1vw,14px)!important;line-height:1.2!important;overflow-wrap:normal!important}
+.site-footer .footer-whatsapp-btn::before{width:19px;height:19px;flex:0 0 19px}
+@media(max-width:600px){.site-footer .footer-whatsapp-btn{width:max-content!important;max-width:100%!important;min-height:48px!important;padding:10px 12px!important;font-size:clamp(10px,3.2vw,14px)!important}.site-footer .footer-section:last-child{border-bottom:0!important}.site-footer .footer-bottom{border-top:1px solid #20344a!important;margin-top:0!important;padding-top:22px!important}}
