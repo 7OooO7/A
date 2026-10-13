@@ -573,3 +573,42 @@ button,input,select,textarea{font:inherit}
 @media(max-width:980px){.site-header.lux-header{display:grid;grid-template-columns:minmax(0,1fr) auto;min-height:70px;gap:12px}.lux-header .lux-mobile-toggle{display:inline-flex;align-items:center;justify-content:center}.lux-header #nav.lux-navigation{display:none;grid-column:1/-1;grid-row:2;position:relative;flex-direction:column;align-items:stretch;justify-content:start;gap:3px;width:100%;max-height:min(78dvh,700px);overflow-y:auto;overflow-x:hidden;padding:12px 4px 20px;border-top:1px solid #e7e5df}.lux-header #nav.lux-navigation.mobile-visible{display:flex}.lux-header #nav .lux-nav-home,.lux-nav-trigger{width:100%;justify-content:space-between;text-align:start;padding:13px 14px;font-size:14px}.lux-nav-group{width:100%}.lux-nav-panel,.lux-nav-panel.lux-nav-mega{position:static;top:auto;left:auto;right:auto;transform:none;width:100%;max-height:none;overflow:visible;min-width:0;box-shadow:none;border:1px solid #ece8df;background:#fdfcf9;margin:0 0 8px;padding:8px;border-radius:12px}.lux-mega-layout{grid-template-columns:1fr}.lux-mega-main{padding:14px}.lux-service-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.lux-mega-aside{padding:18px;border-radius:9px}.lux-header #nav .lux-nav-cta{justify-content:space-between;padding:14px}.lux-header #lang{max-width:130px}.lux-header .brand-copy small{max-width:none}}
 @media(max-width:560px){.lux-header .brand-copy b{font-size:14px}.lux-header .brand-copy small{font-size:7px}.lux-header #lang{min-width:78px;max-width:105px;font-size:11px}.lux-header .lux-header-tools{gap:6px}.lux-service-groups{grid-template-columns:1fr}.lux-panel-intro p{margin-bottom:12px}.lux-mega-main{padding:12px}.lux-service-category{padding:4px 2px}.lux-header .brand-mark{width:35px;height:35px}}
 @media(prefers-reduced-motion:reduce){.lux-nav-chevron{transition:none}}
+
+/* Responsive navigation: logical RTL/LTR positioning and mobile containment.
+   Specificity intentionally exceeds desktop mega-menu positioning. */
+@media (max-width:980px) {
+  .site-header.lux-header { min-width:0; }
+  .lux-header #nav.lux-navigation.mobile-visible { min-width:0; box-sizing:border-box; direction:inherit; }
+  .lux-header #nav.lux-navigation .lux-nav-group { min-width:0; max-width:100%; }
+  .lux-header #nav.lux-navigation .lux-nav-panel,
+  .lux-header #nav.lux-navigation .lux-nav-panel.lux-nav-mega,
+  [dir=rtl] .lux-header #nav.lux-navigation .lux-nav-panel.lux-nav-mega {
+    position:static; inset:auto; left:auto; right:auto; top:auto;
+    transform:none; margin-inline:0; width:100%; max-width:100%; min-width:0;
+    box-sizing:border-box; max-height:none; overflow:visible;
+    direction:inherit; text-align:start;
+  }
+  .lux-header .lux-mega-layout,
+  .lux-header .lux-mega-main,
+  .lux-header .lux-service-groups,
+  .lux-header .lux-service-category { min-width:0; max-width:100%; box-sizing:border-box; }
+  .lux-header .lux-mega-layout { grid-template-columns:minmax(0,1fr); }
+  .lux-header .lux-service-groups { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .lux-header #nav .lux-service-category a { overflow-wrap:anywhere; text-align:start; }
+  .lux-header #nav .lux-nav-trigger { direction:inherit; text-align:start; }
+  .lux-header .lux-panel-intro p { overflow-wrap:anywhere; }
+}
+@media (max-width:560px) {
+  .lux-header .lux-service-groups { grid-template-columns:minmax(0,1fr); }
+}
+
+/* Refined navigation icons and WhatsApp actions */
+.lux-nav-chevron{display:block;flex:none;width:16px;height:16px;transition:transform .22s ease;opacity:.82}
+.lux-nav-group.active>.lux-nav-trigger .lux-nav-chevron{transform:rotate(180deg)}
+.lux-header #nav .lux-nav-whatsapp,.lux-header #nav .lux-aside-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;background:#21644f;color:#fff;border-radius:9px;font-weight:700}
+.lux-header #nav .lux-nav-whatsapp:hover,.lux-header #nav .lux-aside-whatsapp:hover{background:#194e3e;color:#fff}
+.lux-whatsapp-icon{width:19px;height:19px;flex:none;display:block}
+.lux-header #nav .lux-aside-whatsapp{padding:11px 16px;margin-top:8px;font-size:12px}
+.lux-header #nav .lux-wa-unavailable{opacity:.55;cursor:not-allowed}
+@media(max-width:980px){.lux-header #nav .lux-nav-whatsapp{min-height:45px;width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.lux-nav-chevron{transition:none}}
