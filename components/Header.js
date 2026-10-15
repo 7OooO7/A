@@ -11,7 +11,7 @@ import aboutCopy from '../lib/aboutCopy.json';
 import navCopy from '../lib/navigationCopy.json';
 
 export default function Header({lang,m}){
- const text=value=>typeof value==='string'?value.replace(/\s*\u2014\s*/g,lang==='ar'?'، ':', '):value;
+ const text=value=>typeof value==='string'?value.replace(/(?:\s*\u2014\s*|\s+\u2013\s+)/g,lang==='ar'?'، ':', '):value;
  const [open,setOpen]=useState(null),[mobile,setMobile]=useState(false),[menuTop,setMenuTop]=useState(76);
  const shell=useRef(null),router=useRouter(),path=usePathname(),u=getUi(lang);
  const t=navCopy[lang]||navCopy.en;
