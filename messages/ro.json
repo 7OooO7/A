@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Procura din afara EAU: ce verifici mai întâi",
-        "Dacă poţi semna la distanţă depinde de ruta acceptată de autoritatea din EAU.",
-        "Dacă te afli în străinătate, nu există o singură rută valabilă pentru toţi. Un serviciu notarial digital sau la distanţă din EAU te poate accepta dacă recunoaște părţile și documentele de identitate. Dacă nu, procura poate trebui autentificată acolo unde te afli și trecută prin lanţul de legalizare pentru EAU înainte de utilizare. Înainte de redactare, confirmă cu autoritatea primitoare ce rută acceptă și spune-ne scopul ca redactarea să corespundă."
-      ],
-      [
-        "Notificările de evacuare în Dubai: de ce un mesaj pe WhatsApp nu este suficient",
-        "Legea poate cere o notificare formală, mesajele informale nu o înlocuiesc.",
-        "Acolo unde legea chiriei cere o notificare formală conform articolului 25, Dubai Land Department descrie, pentru mai multe motive de evacuare, comunicarea prin Notary Public sau prin scrisoare recomandată. Mesajele de chat și emailurile pot servi ca probe într-un litigiu, dar nu înlocuiesc forma de notificare cerută de autoritate. Pregătește notificarea în forma solicitată și păstrează dovada comunicării."
-      ],
-      [
-        "Au documentele EAU întotdeauna nevoie de legalizare MOFA în străinătate?",
-        "Nu există o regulă generală, decide ţara primitoare.",
-        "Ţara sau instituţia care primește documentul stabilește ce supralegalizare sau legalizare cere. Unde este necesară legalizarea la Ministerul Afacerilor Externe al EAU, ruta depinde de document și de autoritatea emitentă. Verifică întâi cerinţele părţii primitoare, apoi planifică lanţul de legalizare pentru a evita pași redundanţi sau costuri inutile."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Acasă",

@@ -1,35 +1,40 @@
 import Link from 'next/link';
-import { getM, fmt, SLUGS, CODES, DOMAIN } from '../../../lib/i18n';
-import { IMG, BD } from '../../../lib/art';
+import { notFound } from 'next/navigation';
+import { getM, CODES, DOMAIN } from '../../../lib/i18n';
+import { BRAND } from '../../../lib/brand';
+import { getArticles, getBlogAlternates, formatBlogDate, safeBlogJsonLd } from '../../../lib/blog';
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
+  if (!CODES.includes(lang)) return {};
   const m = await getM(lang);
+  const posts = getArticles(lang);
+  const title = `${m.blogLabel} | ${BRAND.name}`;
+  const description = posts[0]?.description || m.sub;
   return {
-    title: `${m.blog[0]} | Poa Dubai`,
-    description: m.blog[1][0][1],
-    alternates: { canonical: `/${lang}/blog`, languages: Object.fromEntries(CODES.map((c) => [c, `${DOMAIN}/${c}/blog`])) },
+    title, description,
+    alternates: {canonical:`/${lang}/blog`, languages:getBlogAlternates(DOMAIN)},
+    openGraph:{title,description,url:`${DOMAIN}/${lang}/blog`,type:'website',siteName:BRAND.name},
+    robots:{index:posts.length > 0,follow:true},
   };
 }
 
 export default async function Blog({ params }) {
   const { lang } = await params;
+  if (!CODES.includes(lang)) notFound();
   const m = await getM(lang);
-  return (
-    <main id="main-content" className="w">
-      <section id="blog">
-        <h2>{m.blog[0]}</h2>
-        <div id="bll">
-          {m.blog[1].map((z, i) => (
-            <article className="bc" key={SLUGS[i]}>
-              <div className="bi" dangerouslySetInnerHTML={{ __html: IMG[i] }} />
-              <div className="bm">POA DUBAI &nbsp;·&nbsp; {fmt(BD[i], lang)}</div>
-              <h3><Link className="blog-title-link" href={`/${lang}/blog/${SLUGS[i]}`}>{z[0]}</Link></h3>
-              <p>{z[1]}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
+  const posts = getArticles(lang);
+  const ld = {'@context':'https://schema.org','@type':'ItemList',name:m.blogLabel,itemListElement:posts.map((post, index) => ({'@type':'ListItem',position:index+1,name:post.title,url:`${DOMAIN}/${lang}/blog/${post.slug}`}))};
+  return <main id="main-content" className="w">
+    <section id="blog">
+      <h2>{m.blogLabel}</h2>
+      <div id="bll">{posts.map(post => <article className="bc" key={post.slug}>
+        <div className="bi"><img src={post.image} alt={post.imageAlt || post.title} width="400" height="225" loading="lazy" style={{display:'block',width:'100%',height:'auto',aspectRatio:'400 / 225',objectFit:'cover'}} /></div>
+        <div className="bm">{post.author || 'POA DUBAI'} &nbsp;·&nbsp; <time dateTime={post.publishedAt}>{formatBlogDate(post.publishedAt,lang)}</time></div>
+        <h3><Link className="blog-title-link" href={`/${lang}/blog/${post.slug}`}>{post.title}</Link></h3>
+        <p>{post.description}</p>
+      </article>)}</div>
+    </section>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeBlogJsonLd(ld)}} />
+  </main>;
 }

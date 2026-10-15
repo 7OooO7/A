@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Poder notarial desde fuera de los EAU: qué comprobar primero",
-        "Que pueda firmar a distancia depende de la vía que acepte la autoridad de los EAU.",
-        "Si está en el extranjero, no hay una única vía que funcione para todos. Un servicio notarial digital o remoto de los EAU puede aceptarle si reconoce a las partes y los documentos de identidad. Si no, el poder puede necesitar notarización donde se encuentre y la cadena de autenticación de los EAU antes de su uso. Antes de redactar, confirme con la autoridad receptora qué vía acepta y comuníquenos la finalidad para que la redacción se ajuste."
-      ],
-      [
-        "Avisos de desalojo en Dubái: por qué un mensaje de WhatsApp no basta",
-        "La ley puede exigir una notificación formal, los mensajes informales no la sustituyen.",
-        "Cuando la ley de arrendamientos exige un aviso formal conforme al artículo 25, el Departamento de Tierras de Dubái describe la notificación por Notary Public o por correo certificado para varios motivos de desalojo. Los mensajes de chat y los correos pueden servir como prueba en un litigio, pero no sustituyen la vía de notificación que prescribe la ley. Prepare el aviso en la forma que exige la autoridad y conserve la prueba de la notificación."
-      ],
-      [
-        "¿Los documentos de los EAU siempre necesitan la certificación del MOFA para uso en el extranjero?",
-        "No existe una regla general, lo decide el país receptor.",
-        "El país o la institución que recibirá su documento fija la legalización o certificación que exige. Cuando se requiere la certificación del Ministerio de Asuntos Exteriores de los EAU, la vía depende del documento y de la autoridad emisora. Compruebe primero los requisitos del destinatario y luego planifique la cadena de certificación, para no repetir pasos ni pagar por los que no necesita."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Inicio",

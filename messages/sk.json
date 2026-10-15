@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Plná moc z mimo SAE: čo najprv skontrolovať",
-        "Či sa môžete podpísať na diaľku závisí od postupu, ktorý akceptuje príslušný orgán SAE.",
-        "Ak ste v zahraničí, neexistuje jediný postup, ktorý by vyhovoval všetkým. Digitálna alebo vzdialená notárska služba SAE vás môže akceptovať, ak rozpozná strany a doklady totožnosti. Ak nie, plná moc môže potrebovať osvedčenie tam, kde sa nachádzate, a prejsť autentifikačným reťazcom SAE pred použitím. Pred vypracovaním potvrďte u prijímajúceho orgánu, ktorý postup akceptuje, a oznámte nám účel, aby znenie zodpovedalo tomu účelu."
-      ],
-      [
-        "Výpovede v Dubaji: prečo WhatsApp správa nestačí",
-        "Zákon môže vyžadovať formálne oznámenie. Neformálne správy ho nenahrádzajú.",
-        "Keď nájomné právo vyžaduje formálne oznámenie podľa článku 25, Katastrálny úrad Dubaja popisuje doručenie cez verejného notára alebo doporučenú poštu pre niekoľko dôvodov vysťahovania. Chatové správy a e‑maily môžu stále slúžiť ako dôkaz v spore, ale nenahrádzajú formu oznámenia požadovanú zákonom. Pripravte oznámenie v tvare, ktorý orgán požaduje, a uchovajte dôkaz o doručení."
-      ],
-      [
-        "Potrebujú dokumenty SAE vždy osvedčenie MOFA v zahraničí?",
-        "Neexistuje všeobecné pravidlo. Prijímajúca krajina rozhoduje.",
-        "Krajina alebo inštitúcia, ktorá váš dokument príjme, určuje legalizáciu alebo osvedčenie, ktoré požaduje. Ak je vyžadované osvedčenie Ministerstvom zahraničných vecí SAE, súčasný postup závisí od dokumentu a vydávajúceho orgánu. Najprv skontrolujte požiadavky prijímajúcej strany a potom naplánujte reťazec osvedčovania, aby ste kroky neopakovali alebo neplatili za tie, ktoré nepotrebujete."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Domov",

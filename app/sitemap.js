@@ -1,8 +1,9 @@
-import { CODES, SLUGS, DOMAIN } from '../lib/i18n';
+import { CODES, DOMAIN } from '../lib/i18n';
 import { getEnabledServiceSlugs } from '../lib/serviceAvailability';
 import { languageAlternates, reviewedLanguageAlternates } from '../lib/seo';
 import { APOSTILLE_DESTINATIONS } from '../lib/apostille';
 import { isSearchReady } from '../lib/editorial';
+import { getArticles, getBlogAlternates, getArticleAlternates } from '../lib/blog';
 
 export default function sitemap() {
   const out = [];
@@ -15,8 +16,9 @@ export default function sitemap() {
     out.push({ url:`${DOMAIN}/${lang}/faq`, changeFrequency:'monthly', priority:.7, alternates:{languages:languageAlternates('/faq')} });
     if (isSearchReady(lang)) for (const slug of getEnabledServiceSlugs()) out.push({ url:`${DOMAIN}/${lang}/services/${slug}`, changeFrequency:'monthly', priority:.8, alternates:{languages:reviewedLanguageAlternates(`/services/${slug}`)} });
     if (lang === 'en') for (const d of APOSTILLE_DESTINATIONS) out.push({ url:`${DOMAIN}/${lang}/apostille/${d.slug}`, changeFrequency:'monthly', priority:.75 });
-    out.push({ url:`${DOMAIN}/${lang}/blog`, changeFrequency:'weekly', priority:.7, alternates:{languages:languageAlternates('/blog')} });
-    for (const slug of SLUGS) out.push({ url:`${DOMAIN}/${lang}/blog/${slug}`, changeFrequency:'monthly', priority:.6, alternates:{languages:languageAlternates(`/blog/${slug}`)} });
+    const posts = getArticles(lang);
+    if (posts.length) out.push({ url:`${DOMAIN}/${lang}/blog`, lastModified:posts.reduce((latest,post)=>post.updatedAt > latest ? post.updatedAt : latest,posts[0].updatedAt), changeFrequency:'weekly', priority:.7, alternates:{languages:getBlogAlternates(DOMAIN)} });
+    for (const post of posts) out.push({ url:`${DOMAIN}/${lang}/blog/${post.slug}`, lastModified:post.updatedAt, changeFrequency:'monthly', priority:.6, alternates:{languages:getArticleAlternates(post.slug,DOMAIN)} });
   }
   return out;
 }

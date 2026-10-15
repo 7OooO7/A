@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Plná moc zvenčí SAE: co zkontrolovat nejdříve",
-        "Zda můžete podepsat na dálku závisí na postupu, který přijímá příslušný orgán v SAE.",
-        "Pokud jste v zahraničí, neexistuje jeden postup vhodný pro všechny. Digitální nebo vzdálená notářská služba SAE vás může přijmout, pokud rozpozná strany a doklady totožnosti. Pokud ne, bude možná nutné notářské ověření tam, kde se nacházíte, a poté projít řetězcem autentizace pro SAE před použitím dokumentu. Před vyhotovením návrhu si u přijímajícího orgánu ověřte, jakou cestu akceptuje, a sdělte nám účel, aby znění odpovídalo."
-      ],
-      [
-        "Výzvy k vyklizení v Dubaji: proč WhatsApp nestačí",
-        "Zákon může vyžadovat formální oznámení, neformální zprávy ho nenahrazují.",
-        "Když nájemní právo vyžaduje formální oznámení podle článku 25, Dubajský pozemkový úřad uvádí doručení přes notáře nebo doporučený dopis u několika důvodů vyklizení. Chaty a e-maily mohou být jako důkaz užitečné, ale nenahrazují formu oznámení, kterou zákon předepsal. Připravte oznámení ve formě, kterou úřad požaduje, a uchovejte doklad o doručení."
-      ],
-      [
-        "Potřebují dokumenty ze SAE v zahraničí vždy ověření na MOFA?",
-        "Neexistuje plošné pravidlo, rozhoduje přijímající země.",
-        "Země nebo instituce, která váš dokument přijme, určí jakou legalizaci nebo ověření požaduje. Pokud je zapotřebí ověření Ministerstvem zahraničních věcí SAE, postup závisí na dokumentu a orgánu, který jej vydal. Nejdříve zjistěte požadavky přijímající strany a teprve potom plánujte řetězec ověření, abyste neopakovali kroky nebo neplatili za zbytečné."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Domů",

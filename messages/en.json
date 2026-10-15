@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Power of attorney from outside the UAE: what to check first",
-        "Whether you can sign remotely depends on the route the UAE authority accepts.",
-        "If you are abroad, there is no single route that works for everyone. A UAE digital or remote notary service may accept you if it recognises the parties and identity documents. If not, the power of attorney may need to be notarized where you are and pass the UAE authentication chain before use. Before drafting, confirm with the receiving authority which route it accepts, and tell us the purpose so the wording matches it."
-      ],
-      [
-        "Eviction notices in Dubai: why a WhatsApp message is not enough",
-        "A formal notice may be required by law. Informal messages do not replace it.",
-        "Where the tenancy law calls for a formal Article 25 notice, the Dubai Land Department describes service through a Notary Public or registered mail for several eviction grounds. Chat messages and emails can still help as evidence in a dispute, but they do not replace the notice route the law prescribes. Prepare the notice in the form the authority requires and keep proof of service."
-      ],
-      [
-        "Do UAE documents always need MOFA attestation abroad?",
-        "No blanket rule exists. The receiving country decides.",
-        "The country or institution that will receive your document sets the legalization or attestation it requires. Where UAE Ministry of Foreign Affairs attestation is required, the current route depends on the document and its issuing authority. Check the receiving side's requirements first, then plan the attestation chain, so you do not repeat steps or pay for ones you do not need."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Home",

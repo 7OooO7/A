@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Umboð frá utan UAE: hvað á að athuga fyrst",
-        "Hvort þú getir undirritað fjarstætt fer eftir þeirri leið sem UAE yfirvaldið samþykkir.",
-        "Ef þú ert erlendis er engin ein leið sem hentar öllum. Rafræn eða fjar-nótaraþjónusta í UAE kann að samþykkja þig ef hún viðurkennir aðila og auðkenningarskjal. Ef ekki þarf umboðið að vera vottað þar sem þú ert og fara gegnum viðeigandi UAE vottunarkeðju áður en það er notað. Staðfestu við móttökuyfirvaldið hverja leið það samþykkir áður en drögum er lokið, og segðu okkur tilganginn svo orðalag passi honum."
-      ],
-      [
-        "Brottvísunartilkynningar í Dubai: hvers vegna WhatsApp dugir ekki",
-        "Formleg tilkynning getur verið krafist samkvæmt lögum. Óformleg skilaboð koma ekki í staðinn.",
-        "Þegar leigulögin krefjast formlegrar 25. grein tilkynningar lýsir Dubai Land Department þjónustu með Notary Public eða skráðum pósti fyrir ýmsa rýmingarástæður. Spjallskilaboð og tölvupóstar geta samt verið sönnunargögn í deilu, en koma ekki í stað formlegrar tilkynningar lögin kveða á um. Undirbúðu tilkynningu í þeirri mynd sem yfirvöld krefjast og haltu sönnunar um afhendingu."
-      ],
-      [
-        "Þurfa UAE skjöl alltaf MOFA vottun erlendis?",
-        "Engin almenn regla gildir. Móttakandi land ákveður.",
-        "Landið eða stofnunin sem mun taka við skjölunum ákvarðar hvaða lögvísun eða vottun er nauðsynleg. Þegar MOFA vottun UAE er krafist fer leiðin eftir skjali og útgefanda þess. Athugaðu kröfur móttakandans fyrst, skipuleggðu svo vottunarkeðjuna til að forðast endurtekningu eða óþarfa kostnað."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Heim",

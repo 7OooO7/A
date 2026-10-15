@@ -10,7 +10,8 @@
     "audit:all": "node scripts/audit-locales.cjs && node scripts/audit-final-1620.cjs && node scripts/audit-semantic-link-consistency.cjs && node scripts/audit-central-ui.cjs && node scripts/audit-prelaunch.cjs && node scripts/audit-service-availability.cjs",
     "audit:availability": "node scripts/audit-service-availability.cjs",
     "audit:about": "node scripts/audit-about-footer.cjs",
-    "audit:faq-content": "node scripts/audit-faq-content.cjs"
+    "audit:faq-content": "node scripts/audit-faq-content.cjs",
+    "blog:check": "node scripts/check-blog.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",

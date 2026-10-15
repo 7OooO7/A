@@ -119,26 +119,6 @@
     "UKK"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blogi",
-    [
-      [
-        "Valtakirja Arabiemiirikuntien ulkopuolelta: mitä tarkistaa ensin",
-        "Se, voitko allekirjoittaa etänä, riippuu siitä mikä reitti vastaanottava UAE-viranomainen hyväksyy.",
-        "Ulkomailla ollessasi ei ole yhtä kaikille sopivaa reittiä. UAE:n digitaalinen tai etänotaari voi hyväksyä sinut jos se tunnistaa osapuolet ja henkilöllisyysasiakirjat. Muussa tapauksessa valtakirja pitää ehkä vahvistaa notaarilla siellä missä olet ja suorittaa UAE:n vaatimien vahvistusvaiheiden läpi ennen käyttöä. Varmista vastaanottavalta viranomaiselta hyväksyttävä reitti ennen tekstin laatimista ja kerro meille käyttötarkoitus jotta sanamuoto vastaa sitä."
-      ],
-      [
-        "Häätöilmoitukset Dubaissa: miksi WhatsApp-viesti ei riitä",
-        "Laki voi edellyttää virallista ilmoitusta, epäviralliset viestit eivät korvaa sitä.",
-        "Kun vuokralaki edellyttää 25 artiklan mukaista virallista ilmoitusta, Dubai Land Department kuvaa useiden häätöperusteiden osalta tiedoksiannon tapahtuvan julkisen notaarin tai kirjallisen rekisteröidyn kirjeen kautta. Chat-viestit ja sähköpostit voivat toimia näyttönä riidassa, mutta ne eivät korvaa lain edellyttämää tiedoksiantotapaa. Laadi ilmoitus viranomaisen vaatimalle muodolle ja säilytä todistus tiedoksiannosta."
-      ],
-      [
-        "Tarvitsevatko UAE-asiakirjat aina MOFA-vahvistuksen ulkomailla?",
-        "Yleistä sääntöä ei ole, vastaanottava maa päättää.",
-        "Asiakirjan vastaanottava maa tai laitos määrittää vaadittavan legalisoinnin tai vahvistuksen. Kun UAE:n ulkoministeriön MOFA-vahvistus vaaditaan, reitti riippuu asiakirjasta ja sen myöntäneestä viranomaisesta. Tarkista vastaanottajan vaatimukset ensin ja suunnittele vahvistusketju, jotta et tee tarpeettomia vaiheita tai maksa niistä."
-      ]
-    ]
-  ],
   "blogLabel": "Blogi",
   "nav": [
     "Etusivu",

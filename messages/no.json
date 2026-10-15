@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blogg",
-    [
-      [
-        "Fullmakt fra utenfor UAE: dette bør du sjekke først",
-        "Om du kan signere på avstand avhenger av hvilken rute myndigheten i UAE aksepterer.",
-        "Hvis du er i utlandet finnes det ingen enkelt løsning som passer for alle. En digital eller fjernnotartjeneste i UAE kan akseptere deg hvis den kjenner igjen partene og identitetsdokumentene. Hvis ikke, må fullmakten kanskje notarialbekreftes der du er og gjennomgå UAE-autentiseringskjeden før bruk. Avklar med mottakende myndighet hvilken rute som aksepteres før teksten utformes, og fortell oss formålet så formuleringen samsvarer med det."
-      ],
-      [
-        "Oppsigelse med krav om fraflytting i Dubai: hvorfor en WhatsApp-melding ikke er nok",
-        "Loven kan kreve et formelt varsel, uformelle meldinger erstatter det ikke.",
-        "Når husleieloven krever et formelt varsel etter artikkel 25 beskriver Dubai Land Department forkyndelse via Notary Public eller rekommandert brev for flere fraflyttingsgrunner. Chatmeldinger og e-post kan fortsatt være bevis i en tvist, men de erstatter ikke den lovbestemte forkyndelsesveien. Utarbeid varselet i formen myndigheten krever og behold bevis for forkyndelsen."
-      ],
-      [
-        "Må dokumenter fra UAE alltid attestere hos MOFA for bruk i utlandet?",
-        "Det finnes ingen generell regel, mottakerlandet avgjør.",
-        "Landet eller institusjonen som mottar dokumentet bestemmer hvilken legalisering eller attestasjon som kreves. Når MOFA-attestasjon kreves, avhenger prosessen av dokumentet og utstedende myndighet. Sjekk mottakerens krav først, og planlegg attestasjonskjeden for å unngå unødvendige trinn eller kostnader."
-      ]
-    ]
-  ],
   "blogLabel": "Blogg",
   "nav": [
     "Hjem",

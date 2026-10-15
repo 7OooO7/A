@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Pooblastilo izven ZAE: kaj najprej preveriti",
-        "Ali se lahko podpišete na daljavo, je odvisno od poti, ki jo sprejme pristojni organ ZAE.",
-        "Če ste v tujini, ni enotne poti, ki bi delovala za vse. Digitalna ali oddaljena notarska storitev ZAE vas lahko sprejme, če prepozna stranke in identifikacijske dokumente. Če ne, bo morda treba pooblastilo overiti tam, kjer ste, in opraviti verigo overitev za ZAE pred uporabo. Pred pripravo osnutka potrdite pri prejemnem organu, katero pot sprejema, in nam povejte namen, da besedilo ustreza temu namenu."
-      ],
-      [
-        "Izpraznitvena obvestila v Dubaju: zakaj WhatsApp ni dovolj",
-        "Zakon lahko zahteva formalno obvestilo. Neformalna sporočila ga ne nadomestijo.",
-        "Kadar najemno pravo zahteva formalno obvestilo po 25. členu, Dubajska zemljiška uprava opisuje vročanje preko notarskega javnega organa ali priporočene pošte za več razlogov izpraznitve. Klepetalna sporočila in e‑pošta lahko še vedno služijo kot dokaz v sporu, vendar ne nadomestijo oblike obvestila, ki jo določa zakon. Pripravite obvestilo v obliki, ki jo zahteva organ, in hranite dokaz o vročitvi."
-      ],
-      [
-        "Ali dokumenti ZAE vedno potrebujejo MOFA overitev za uporabo v tujini?",
-        "Ne obstaja splošno pravilo. Prejemna država odloči.",
-        "Država ali institucija, ki bo prejela vaš dokument, določi, katero legalizacijo ali overitev zahteva. Kjer je potrebna overitev pri Ministrstvu za zunanje zadeve ZAE, je trenutna pot odvisna od dokumenta in organa, ki ga je izdal. Najprej preverite zahteve prejemnika in nato načrtujte verigo overitev, da ne boste ponavljali korakov ali plačevali za tiste, ki jih ne potrebujete."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Domov",

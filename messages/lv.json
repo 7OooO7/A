@@ -119,26 +119,6 @@
     "BUJ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blogs",
-    [
-      [
-        "Pilnvara no ārpuses AAE: ko vispirms pārbaudīt",
-        "Tas, vai varat parakstīt attālināti, ir atkarīgs no ceļa, ko pieņem saņēmējas AAE iestāde.",
-        "Ja atrodaties ārvalstīs, nav vienota ceļa, kas der visiem. AAE digitālais vai attālinātais notariālais pakalpojums var pieņemt puses, ja tas atzīst iesniegtos identitātes dokumentus. Ja tas nav pieejams, pilnvarai var būt jāveic notariāla apliecināšana tur, kur atrodaties, un jāiziet AAE autentifikācijas ķēde pirms izmantošanas. Pirms teksta sagatavošanas saskaņojiet ar saņēmējas iestādes pieņemto ceļu un pastāstiet mums paredzēto mērķi, lai formulējums tam atbilstu."
-      ],
-      [
-        "Izlikšanas paziņojumi Dubaijā: kāpēc WhatsApp ziņa nepietiek",
-        "Likums var pieprasīt formālu paziņojumu, neoficiālas ziņas to neaizstāj.",
-        "Ja īres likums paredz formālu paziņojumu saskaņā ar 25. pantu, Dubaijas Zemes departaments apraksta paziņošanas ceļus ar Notary Public vai reģistrētu pastu konkrētiem izlikšanas pamatiem. Tērzēšanas ziņas un e-pasti var būt pierādījums strīdā, bet tie neaizstāj iestādes prasīto paziņošanas formu. Sagatavojiet paziņojumu iestādes prasītajā formā un saglabājiet piegādes pierādījumu."
-      ],
-      [
-        "Vai AAE dokumentiem ārvalstīs vienmēr vajadzīgs MOFA apliecinājums?",
-        "Nav vispārēja noteikuma, saņemšanas puse nosaka prasības.",
-        "Galamērķa valsts vai iestāde nosaka nepieciešamo legalizāciju vai apliecināšanu. Ja nepieciešams AAE Ārlietu ministrijas MOFA apliecinājums, konkrētais ceļš atkarīgs no dokumenta un izdevēju iestādes. Pārbaudiet saņēmējas prasības vispirms, pēc tam plānojiet apliecināšanas ķēdi, lai nerēķinātos ar papildsoļiem vai nevajadzīgām izmaksām."
-      ]
-    ]
-  ],
   "blogLabel": "Blogs",
   "nav": [
     "Sākums",

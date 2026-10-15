@@ -119,26 +119,6 @@
     "GYIK"
   ],
   "faqLabel": "GYIK",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Meghatalmazás az EAE-n kívülről: mit ellenőrizzen először",
-        "Az, hogy távolról aláírhat-e, attól függ, melyik eljárást fogadja el a EAE fogadó hatósága.",
-        "Ha külföldön tartózkodik, nincs mindenki számára megfelelő egyetlen út. Egy EAE digitális vagy távoli közjegyzői szolgáltatás akkor fogadhat el, ha elismeri a feleket és a személyazonosító okmányokat. Ha nem, a meghatalmazást ott kell közjegyzővel hitelesíttetni, ahol Ön tartózkodik, és az EAE hitelesítési láncon kell végigmennie a felhasználás előtt. A tervezet elkészítése előtt egyeztessen a fogadó hatósággal az elfogadható útról, és tájékoztasson minket a célt illetően, hogy a szöveg megfeleljen neki."
-      ],
-      [
-        "Kiürítési felszólítás Dubajban: miért nem elég egy WhatsApp üzenet",
-        "A törvény formális értesítést írhat elő, az informális üzenetek nem helyettesítik azt.",
-        "Ahol a bérleti jog a 25. cikk szerinti formális értesítést kéri, a Dubaji Földhivatal több kiürítési oknál közjegyzőn vagy ajánlott levélben történő kézbesítést ír le. A csevegőüzenetek és e-mailek egy jogvitában bizonyítékként szolgálhatnak, de nem helyettesítik a jog által előírt kézbesítési utat. Készítse el az értesítést a hatóság által megkövetelt formában és őrizze meg a kézbesítés igazolását."
-      ],
-      [
-        "Kell-e mindig MOFA hitelesítés az EAE iratokhoz külföldön?",
-        "Nincs általános szabály, a fogadó ország dönt.",
-        "A fogadó ország vagy intézmény határozza meg, milyen legalizációt vagy hitelesítést igényel. Ha az EAE Külügyminisztériumának hitelesítése szükséges, az útvonal az irattól és annak kiállító hatóságától függ. Először ellenőrizze a fogadó fél követelményeit, majd tervezze meg a hitelesítési láncot, hogy elkerülje a felesleges lépéseket és költségeket."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Kezdőlap",

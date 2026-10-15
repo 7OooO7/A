@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Vollmacht von außerhalb der VAE: Was Sie zuerst prüfen sollten",
-        "Ob Sie aus der Ferne unterschreiben können, hängt vom Weg ab, den die VAE-Behörde akzeptiert.",
-        "Wenn Sie sich im Ausland aufhalten, gibt es keinen universellen Weg. Ein digitaler oder Remote-Notariatsdienst der VAE kann Sie akzeptieren, wenn er die Parteien und Identitätsdokumente anerkennt. Andernfalls muss die Vollmacht möglicherweise dort notariell beglaubigt werden, wo Sie sich befinden, und die Authentifizierungskette der VAE durchlaufen, bevor sie verwendet werden kann. Klären Sie vor der Erstellung mit der empfangenden Behörde, welchen Weg sie akzeptiert, und teilen Sie uns den Zweck mit, damit die Formulierung übereinstimmt."
-      ],
-      [
-        "Räumungsaufforderungen in Dubai: Warum eine WhatsApp-Nachricht nicht ausreicht",
-        "Gesetzlich kann eine formelle Zustellung erforderlich sein. Informelle Nachrichten ersetzen diese nicht.",
-        "Wenn das Mietrecht eine formelle Artikel-25-Zustellung vorsieht, beschreibt die Dubai Land Department die Zustellung über Notary Public oder eingeschriebene Post für mehrere Räumungsgründe. Chatnachrichten und E-Mails können weiterhin als Beweismittel in einem Streit dienen, ersetzen jedoch nicht den vom Gesetz vorgeschriebenen Zustellungsweg. Bereiten Sie die Aufforderung in der von der Behörde geforderten Form vor und bewahren Sie den Zustellungsnachweis auf."
-      ],
-      [
-        "Brauchen VAE-Dokumente im Ausland immer eine MOFA-Beglaubigung?",
-        "Es gibt keine pauschale Regel. Das empfangende Land entscheidet.",
-        "Das Land oder die Institution, die Ihr Dokument erhält, legt die erforderliche Legalisierung oder Beglaubigung fest. Wenn eine Beglaubigung durch das Ministerium für Auswärtige Angelegenheiten der VAE erforderlich ist, hängt der aktuelle Ablauf vom Dokument und der ausstellenden Behörde ab. Prüfen Sie zuerst die Anforderungen der empfangenden Seite, dann planen Sie die Beglaubigungskette, damit Sie Schritte nicht wiederholen oder für unnötige Schritte zahlen."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Startseite",

@@ -119,26 +119,6 @@
     "FAQ"
   ],
   "faqLabel": "FAQ",
-  "blog": [
-    "Blog",
-    [
-      [
-        "Punomoć izvan UAE, šta prvo proveriti",
-        "Da li možete potpisati na daljinu zavisi od puta koji nadležni organ UAE prihvata.",
-        "Ako ste u inostranstvu, ne postoji jedinstven put koji radi za sve. Digitalna ili daljinska notarska usluga UAE može vas prihvatiti ako prepozna strane i dokumenta o identitetu. Ako ne, punomoć možda mora biti overena tamo gde se nalazite i proći lanac autentikacije UAE pre upotrebe. Pre izrade nacrta, potvrdite sa organom koji će primiti dokument koji put prihvata i obavestite nas o svrsi kako bi formulacija odgovarala toj nameni."
-      ],
-      [
-        "Obaveštenja o iseljenju u Dubaiju, zašto WhatsApp poruka nije dovoljna",
-        "Zakon može zahtevati formalno obaveštenje. Neformalnim porukama se ono ne zamenjuje.",
-        "Gde zakon o zakupu zahteva formalno obaveštenje po članu 25, Dubai Land Department opisuje uručenje preko javnog notara ili registrovane pošte za nekoliko osnova iseljenja. Poruke iz četa i e‑mejlovi i dalje mogu pomoći kao dokaz u sporu, ali ne zamenjuju put uručenja koji zakon propisuje. Pripremite obaveštenje u obliku koji organ zahteva i sačuvajte dokaz o uručenju."
-      ],
-      [
-        "Da li dokumenti za UAE uvek trebaju MOFA overu za upotrebu u inostranstvu?",
-        "Ne postoji univerzalno pravilo. Zemlja koja prima odlučuje.",
-        "Zemlja ili institucija koja će primiti vaš dokument određuje koju legalizaciju ili overu zahteva. Gde se zahteva overa Ministarstva spoljnih poslova UAE, trenutni postupak zavisi od dokumenta i organa koji ga je izdao. Proverite zahteve primaoca prvo, pa planirajte lanac overe, kako ne biste ponavljali korake ili plaćali nepotrebno."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Početna",

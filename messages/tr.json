@@ -119,26 +119,6 @@
     "SSS"
   ],
   "faqLabel": "SSS",
-  "blog": [
-    "Blog",
-    [
-      [
-        "BAE dışından vekâletname: önce neleri kontrol etmelisiniz",
-        "Uzaktan imzalama yapıp yapamayacağınız, belgeyi kabul edecek BAE makamının kabul ettiği yola bağlıdır.",
-        "Yurt dışındaysanız herkes için tek bir geçerli yol yoktur. Bir BAE dijital veya uzaktan noter hizmeti tarafları ve kimlik belgelerini tanırsa sizi kabul edebilir. Tanımazsa vekâletnamenin bulunduğunuz yerde noter onayından geçmesi ve BAE tasdik zincirini tamamlaması gerekebilir. Taslağı hazırlamadan önce belgeyi kabul edecek makamın hangi yolu kabul ettiğini teyit edin ve ifadenin amacına uygun olması için amacı bize bildirin."
-      ],
-      [
-        "Dubai’de tahliye ihtarnameleri: neden bir WhatsApp mesajı yeterli değildir",
-        "Kanun resmî bir ihtar gerektirebilir, gayriresmî mesajlar onun yerini tutmaz.",
-        "Kira kanunu 25. madde kapsamında resmi bir ihtar gerektiğinde Dubai Land Department çeşitli tahliye sebepleri için noter aracılığıyla veya taahhütlü postayla tebliği öngörür. Sohbet mesajları ve e-postalar delil olabilir ancak kanunun öngördüğü ihtar yolunun yerine geçmez. İhtarnameyi makamın istediği biçimde hazırlayın ve tebliğ kanıtını saklayın."
-      ],
-      [
-        "BAE belgeleri yurt dışında her zaman MOFA tasdiki gerektirir mi?",
-        "Genel bir kural yoktur, kararı belgeyi kabul edecek ülke verir.",
-        "Belgeyi kabul edecek ülke veya kurum, hangi legalizasyon veya tasdiki istediğini belirler. BAE Dışişleri Bakanlığı tasdiki gerektiğinde uygulanacak yol belgenin türüne ve düzenleyen makama bağlıdır. Önce kabul eden tarafın şartlarını kontrol edin, sonra tasdik zincirini planlayın, böylece gereksiz adımları tekrarlamaz veya gereksiz ödemeler yapmazsınız."
-      ]
-    ]
-  ],
   "blogLabel": "Blog",
   "nav": [
     "Ana sayfa",
