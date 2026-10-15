@@ -1,708 +1,9 @@
 {
   "articles": [
     {
-      "slug": "power-of-attorney-from-abroad",
-      "published": true,
-      "publishedAt": "2026-09-24",
-      "updatedAt": "2026-09-24",
-      "image": "/images/blog/power-of-attorney-from-abroad.svg",
-      "translations": {
-        "en": {
-          "title": "Power of attorney from outside the UAE: what to check first",
-          "description": "Whether you can sign remotely depends on the route the UAE authority accepts.",
-          "content": [
-            "If you are abroad, there is no single route that works for everyone. A UAE digital or remote notary service may accept you if it recognises the parties and identity documents. If not, the power of attorney may need to be notarized where you are and pass the UAE authentication chain before use. Before drafting, confirm with the receiving authority which route it accepts, and tell us the purpose so the wording matches it."
-          ]
-        },
-        "de": {
-          "title": "Vollmacht von außerhalb der VAE: Was Sie zuerst prüfen sollten",
-          "description": "Ob Sie aus der Ferne unterschreiben können, hängt vom Weg ab, den die VAE-Behörde akzeptiert.",
-          "content": [
-            "Wenn Sie sich im Ausland aufhalten, gibt es keinen universellen Weg. Ein digitaler oder Remote-Notariatsdienst der VAE kann Sie akzeptieren, wenn er die Parteien und Identitätsdokumente anerkennt. Andernfalls muss die Vollmacht möglicherweise dort notariell beglaubigt werden, wo Sie sich befinden, und die Authentifizierungskette der VAE durchlaufen, bevor sie verwendet werden kann. Klären Sie vor der Erstellung mit der empfangenden Behörde, welchen Weg sie akzeptiert, und teilen Sie uns den Zweck mit, damit die Formulierung übereinstimmt."
-          ]
-        },
-        "fr": {
-          "title": "Procuration depuis l’étranger : que vérifier en premier",
-          "description": "La possibilité de signer à distance dépend de la voie que l’autorité émirienne accepte.",
-          "content": [
-            "Si vous êtes à l’étranger, il n’existe pas de voie unique applicable à tous. Un service notarial numérique ou à distance des EAU peut vous accepter s’il reconnaît les parties et les pièces d’identité. Sinon, la procuration peut devoir être notariée là où vous êtes puis passer par la chaîne de légalisation des EAU avant utilisation. Avant la rédaction, confirmez auprès de l’autorité destinataire la voie qu’elle accepte et indiquez‑nous l’objet, afin d’adapter la rédaction."
-          ]
-        },
-        "es": {
-          "title": "Poder notarial desde fuera de los EAU: qué comprobar primero",
-          "description": "Que pueda firmar a distancia depende de la vía que acepte la autoridad de los EAU.",
-          "content": [
-            "Si está en el extranjero, no hay una única vía que funcione para todos. Un servicio notarial digital o remoto de los EAU puede aceptarle si reconoce a las partes y los documentos de identidad. Si no, el poder puede necesitar notarización donde se encuentre y la cadena de autenticación de los EAU antes de su uso. Antes de redactar, confirme con la autoridad receptora qué vía acepta y comuníquenos la finalidad para que la redacción se ajuste."
-          ]
-        },
-        "it": {
-          "title": "Procura da fuori gli UAE: cosa verificare prima",
-          "description": "La possibilità di firmare a distanza dipende dal percorso accettato dall'autorità UAE.",
-          "content": [
-            "Se ti trovi all'estero non esiste un percorso unico valido per tutti. Un servizio notarile digitale o a distanza degli UAE può accettarti se riconosce le parti e i documenti d'identità. In caso contrario la procura potrebbe dover essere autenticata nel luogo in cui ti trovi e passare per la catena di attestazione UAE prima dell'uso. Prima di redigere, conferma con l'autorità ricevente quale percorso accetta e indicaci lo scopo affinché la formulazione sia coerente."
-          ]
-        },
-        "pt": {
-          "title": "Procuração fora dos EAU: o que verificar primeiro",
-          "description": "A possibilidade de assinar remotamente depende do percurso que a autoridade dos EAU aceita.",
-          "content": [
-            "Se estiver no estrangeiro não existe um percurso único para todos. Um notário digital ou remoto dos EAU pode aceitá‑lo se reconhecer as partes e os documentos de identidade. Caso contrário, a procuração pode ter de ser autenticada no local e passar pela cadeia de autenticação dos EAU antes de ser usada. Confirme com a autoridade receptora que percurso aceita e diga‑nos a finalidade para que a redação corresponda."
-          ]
-        },
-        "nl": {
-          "title": "Volmacht vanuit het buitenland: wat eerst te controleren",
-          "description": "Of u op afstand kunt ondertekenen hangt af van de route die de VAE-instantie accepteert.",
-          "content": [
-            "Als u in het buitenland bent bestaat er geen universele route die voor iedereen werkt. Een digitale of op afstand aangeboden VAE-notariële dienst kan u accepteren als zij de partijen en identiteitsdocumenten herkent. Zo niet, dan moet de volmacht mogelijk worden gelegaliseerd waar u bent en de VAE-authenticatieketen doorlopen voordat deze gebruikt kan worden. Bevestig vooraf bij de ontvangende instantie welke route zij accepteren en geef ons het doel zodat de bewoording daarop aansluit."
-          ]
-        },
-        "pl": {
-          "title": "Pełnomocnictwo spoza ZEA: co sprawdzić najpierw",
-          "description": "Możliwość podpisu zdalnego zależy od ścieżki akceptowanej przez organ ZEA.",
-          "content": [
-            "Jeśli przebywasz za granicą, nie ma jednej ścieżki dla wszystkich. Cyfrowa lub zdalna usługa notarialna w ZEA może Cię przyjąć, jeśli rozpoznaje strony i dokumenty tożsamości. Jeśli nie, pełnomocnictwo może wymagać poświadczenia notarialnego tam, gdzie jesteś, i przejścia łańcucha uwierzytelniania dla ZEA przed użyciem. Przed przygotowaniem projektu potwierdź z organem przyjmującym akceptowaną ścieżkę i przekaż nam cel, aby treść była zgodna z przeznaczeniem."
-          ]
-        },
-        "sv": {
-          "title": "Fullmakt från utlandet: vad du bör kontrollera först",
-          "description": "Om du kan skriva under på distans beror på vilken väg den UAE-myndighet som tar emot dokumentet accepterar.",
-          "content": [
-            "Om du är utomlands finns ingen enda väg som passar alla. En UAE digital eller distansnotariatstjänst kan acceptera dig om den känner igen parterna och identitetshandlingarna. Om inte kan fullmakten behöva notarisering där du befinner dig och genomgå UAE-autentiseringskedjan innan användning. Bekräfta med mottagande myndighet vilken väg som accepteras innan du upprättar dokumentet, och berätta för oss syftet så ordalydelsen stämmer."
-          ]
-        },
-        "ro": {
-          "title": "Procura din afara EAU: ce verifici mai întâi",
-          "description": "Dacă poţi semna la distanţă depinde de ruta acceptată de autoritatea din EAU.",
-          "content": [
-            "Dacă te afli în străinătate, nu există o singură rută valabilă pentru toţi. Un serviciu notarial digital sau la distanţă din EAU te poate accepta dacă recunoaște părţile și documentele de identitate. Dacă nu, procura poate trebui autentificată acolo unde te afli și trecută prin lanţul de legalizare pentru EAU înainte de utilizare. Înainte de redactare, confirmă cu autoritatea primitoare ce rută acceptă și spune-ne scopul ca redactarea să corespundă."
-          ]
-        },
-        "el": {
-          "title": "Πληρεξούσιο από το εξωτερικό για τα ΗΑΕ: τι να ελέγξετε πρώτα",
-          "description": "Το αν μπορείτε να υπογράψετε εξ αποστάσεως εξαρτάται από τη διαδρομή που αποδέχεται η αρμόδια αρχή των ΗΑΕ.",
-          "content": [
-            "Αν βρίσκεστε στο εξωτερικό, δεν υπάρχει μία διαδρομή που να λειτουργεί για όλους. Μια ψηφιακή ή εξ αποστάσεως συμβολαιογραφική υπηρεσία των ΗΑΕ μπορεί να σας αποδεχτεί εάν αναγνωρίζει τα μέρη και τα έγγραφα ταυτοποίησης. Εάν όχι, το πληρεξούσιο μπορεί να χρειαστεί τοπική συμβολαιογραφική επικύρωση και να περάσει την αλυσίδα νομιμοποίησης των ΗΑΕ πριν χρησιμοποιηθεί. Πριν από τη σύνταξη, επιβεβαιώστε με την αρχή παραλαβής ποια διαδρομή δέχεται και πείτε μας τον σκοπό, ώστε η διατύπωση να ταιριάζει."
-          ]
-        },
-        "cs": {
-          "title": "Plná moc zvenčí SAE: co zkontrolovat nejdříve",
-          "description": "Zda můžete podepsat na dálku závisí na postupu, který přijímá příslušný orgán v SAE.",
-          "content": [
-            "Pokud jste v zahraničí, neexistuje jeden postup vhodný pro všechny. Digitální nebo vzdálená notářská služba SAE vás může přijmout, pokud rozpozná strany a doklady totožnosti. Pokud ne, bude možná nutné notářské ověření tam, kde se nacházíte, a poté projít řetězcem autentizace pro SAE před použitím dokumentu. Před vyhotovením návrhu si u přijímajícího orgánu ověřte, jakou cestu akceptuje, a sdělte nám účel, aby znění odpovídalo."
-          ]
-        },
-        "da": {
-          "title": "Fuldmagt fra udlandet til UAE: hvad du skal tjekke først",
-          "description": "Om du kan underskrive på afstand afhænger af den vej den modtagende UAE-myndighed accepterer.",
-          "content": [
-            "Hvis du er i udlandet findes der ikke én fremgangsmåde der passer til alle. En UAE digital eller fjernnotartjeneste kan acceptere dig hvis den genkender parterne og identitetsdokumenterne. Hvis ikke kan fuldmagten skulle notarialbekræftes der hvor du er og gennemgå UAE-autentificeringskæden før brug. Bekræft med den modtagende myndighed hvilken vej den accepterer før teksten udformes, og fortæl os formålet så formuleringen matcher det."
-          ]
-        },
-        "fi": {
-          "title": "Valtakirja Arabiemiirikuntien ulkopuolelta: mitä tarkistaa ensin",
-          "description": "Se, voitko allekirjoittaa etänä, riippuu siitä mikä reitti vastaanottava UAE-viranomainen hyväksyy.",
-          "content": [
-            "Ulkomailla ollessasi ei ole yhtä kaikille sopivaa reittiä. UAE:n digitaalinen tai etänotaari voi hyväksyä sinut jos se tunnistaa osapuolet ja henkilöllisyysasiakirjat. Muussa tapauksessa valtakirja pitää ehkä vahvistaa notaarilla siellä missä olet ja suorittaa UAE:n vaatimien vahvistusvaiheiden läpi ennen käyttöä. Varmista vastaanottavalta viranomaiselta hyväksyttävä reitti ennen tekstin laatimista ja kerro meille käyttötarkoitus jotta sanamuoto vastaa sitä."
-          ]
-        },
-        "hu": {
-          "title": "Meghatalmazás az EAE-n kívülről: mit ellenőrizzen először",
-          "description": "Az, hogy távolról aláírhat-e, attól függ, melyik eljárást fogadja el a EAE fogadó hatósága.",
-          "content": [
-            "Ha külföldön tartózkodik, nincs mindenki számára megfelelő egyetlen út. Egy EAE digitális vagy távoli közjegyzői szolgáltatás akkor fogadhat el, ha elismeri a feleket és a személyazonosító okmányokat. Ha nem, a meghatalmazást ott kell közjegyzővel hitelesíttetni, ahol Ön tartózkodik, és az EAE hitelesítési láncon kell végigmennie a felhasználás előtt. A tervezet elkészítése előtt egyeztessen a fogadó hatósággal az elfogadható útról, és tájékoztasson minket a célt illetően, hogy a szöveg megfeleljen neki."
-          ]
-        },
-        "bg": {
-          "title": "Пълномощно извън ОАЕ: какво да проверите първо",
-          "description": "Дали можете да подпишете дистанционно зависи от маршрута, който приема органът в ОАЕ.",
-          "content": [
-            "Ако сте в чужбина няма един универсален маршрут. Дигитална или дистанционна нотариална услуга в ОАЕ може да приеме вашия случай ако разпознава страните и документите за идентичност. Ако не, пълномощното може да трябва да бъде заверено нотариално там където сте и да премине през веригата за удостоверяване за ОАЕ преди използване. Преди изготвянето потвърдете с приемащия орган кой маршрут приема и ни кажете целта, за да съответства формулировката на нея."
-          ]
-        },
-        "hr": {
-          "title": "Punomoć izvan UAE: što prvo provjeriti",
-          "description": "Možete li potpisati na daljinu ovisi o putu koji prihvaća tijelo u UAE.",
-          "content": [
-            "Ako ste u inozemstvu, ne postoji jedan put koji vrijedi svugdje. UAE digitalna ili udaljena notarska usluga može vas prihvatiti ako prepoznaje stranke i identifikacijske dokumente. Ako ne, punomoć može trebati lokalnu notarsku ovjeru i zatim proći lanac autentikacije za UAE prije uporabe. Prije sastavljanja teksta potvrdite s tijelom koje prima dokument koji put prihvaća i recite nam svrhu da bi tekst odgovarao namjeni."
-          ]
-        },
-        "sk": {
-          "title": "Plná moc z mimo SAE: čo najprv skontrolovať",
-          "description": "Či sa môžete podpísať na diaľku závisí od postupu, ktorý akceptuje príslušný orgán SAE.",
-          "content": [
-            "Ak ste v zahraničí, neexistuje jediný postup, ktorý by vyhovoval všetkým. Digitálna alebo vzdialená notárska služba SAE vás môže akceptovať, ak rozpozná strany a doklady totožnosti. Ak nie, plná moc môže potrebovať osvedčenie tam, kde sa nachádzate, a prejsť autentifikačným reťazcom SAE pred použitím. Pred vypracovaním potvrďte u prijímajúceho orgánu, ktorý postup akceptuje, a oznámte nám účel, aby znenie zodpovedalo tomu účelu."
-          ]
-        },
-        "sl": {
-          "title": "Pooblastilo izven ZAE: kaj najprej preveriti",
-          "description": "Ali se lahko podpišete na daljavo, je odvisno od poti, ki jo sprejme pristojni organ ZAE.",
-          "content": [
-            "Če ste v tujini, ni enotne poti, ki bi delovala za vse. Digitalna ali oddaljena notarska storitev ZAE vas lahko sprejme, če prepozna stranke in identifikacijske dokumente. Če ne, bo morda treba pooblastilo overiti tam, kjer ste, in opraviti verigo overitev za ZAE pred uporabo. Pred pripravo osnutka potrdite pri prejemnem organu, katero pot sprejema, in nam povejte namen, da besedilo ustreza temu namenu."
-          ]
-        },
-        "et": {
-          "title": "Volikiri väljaspool AÜE-d: mida esmalt kontrollida",
-          "description": "See, kas saate kaugelt allkirjastada, sõltub sellest, millist marsruuti AÜE vastuvõttev asutus aktsepteerib.",
-          "content": [
-            "Välismaal olles ei ole üks lahendus, mis sobiks kõigile. AÜE digitaalne või kaugnotariteenus võib teid aktsepteerida, kui see tunnustab osapooli ja isikut tõendavaid dokumente. Kui mitte, võib volikiri vajada notariaalset kinnitamist teie asukohariigis ja AÜE autentimisahela läbimist enne kasutamist. Enne sõnastuse koostamist kinnitage vastuvõtva asutuse aktsepteeritav marsruut ja öelge meile volikirja eesmärk, et sõnastus vastaks sellele."
-          ]
-        },
-        "lv": {
-          "title": "Pilnvara no ārpuses AAE: ko vispirms pārbaudīt",
-          "description": "Tas, vai varat parakstīt attālināti, ir atkarīgs no ceļa, ko pieņem saņēmējas AAE iestāde.",
-          "content": [
-            "Ja atrodaties ārvalstīs, nav vienota ceļa, kas der visiem. AAE digitālais vai attālinātais notariālais pakalpojums var pieņemt puses, ja tas atzīst iesniegtos identitātes dokumentus. Ja tas nav pieejams, pilnvarai var būt jāveic notariāla apliecināšana tur, kur atrodaties, un jāiziet AAE autentifikācijas ķēde pirms izmantošanas. Pirms teksta sagatavošanas saskaņojiet ar saņēmējas iestādes pieņemto ceļu un pastāstiet mums paredzēto mērķi, lai formulējums tam atbilstu."
-          ]
-        },
-        "lt": {
-          "title": "Įgaliojimas būnant už JAE ribų: ką patikrinti pirmiausia",
-          "description": "Ar galite pasirašyti nuotoliniu būdu priklauso nuo kelio, kurį priima priimanti JAE institucija.",
-          "content": [
-            "Jei esate užsienyje, nėra vieno visiems tinkamo kelio. JAE skaitmeninė arba nuotolinė notaro paslauga gali priimti jus, jei ji pripažįsta šalis ir tapatybės dokumentus. Jei ne, įgaliojimą gali reikėti notariškai patvirtinti vietoje ir atlikti JAE autentifikavimo grandinę prieš naudojimą. Prieš rengdami tekstą patikrinkite priimančios institucijos reikalavimus ir nurodykite tikslą, kad formuluotė jam atitiktų."
-          ]
-        },
-        "mt": {
-          "title": "Power of attorney minn barra l-UAE: x’għandek tiċċekkja l-ewwel",
-          "description": "Jekk tista’ tiffirma remotament jiddependi mir-rotta li l-awtorità tal-UAE taċċetta.",
-          "content": [
-            "Jekk inti barra, m’hemmx rotta waħda li taħdem għal kulħadd. Servizz notariali diġitali jew remot tal-UAE jista’ jaċċettak jekk jirrikonosci l-partijiet u d-dokumenti tal-identità. Jekk le, il-prokura jista’ jeħtieġ notarizzazzjoni fejn tinsab u tgħaddi mill-katina ta’ awtentikazzjoni tal-UAE qabel l-użu. Qabel nidrafaw, ikkonferma mar-reċipjent liema rotta jaċċetta u għidilna l-iskop sabiex il-kliem jaqbel miegħu."
-          ]
-        },
-        "ga": {
-          "title": "Cumhacht aturnae ó lasmuigh de na UAE: cad ba chóir a sheiceáil ar dtús",
-          "description": "An féidir leat sínithe a dhéanamh go cianda ag brath ar an mbealach a nglacann an t-údarás UAE leis an doiciméad agus na doiciméid aitheantais.",
-          "content": [
-            "Má tá tú thar lear, níl aon bhealach amháin atá ceart do chách. D’fhéadfadh seirbhís nótaireachta dhigiteach nó chianda de chuid na UAE glacadh leat má aithníonn sí na páirtithe agus na doiciméid aitheantais. Mura n-aithníonn sí, d’fhéadfadh go mbeadh ar an Cumhacht Aturnae deimhniú nótaireachta a fháil in áit ina bhfuil tú agus dul trí shlabhra fíordheimhnithe na UAE sula n-úsáidfear í sna UAE. Deimhnigh leis an údarás faighte cén bealach a nglacann sé leis sula ndéanaimid dréachtú agus inis dúinn an cuspóir ionas go mbeidh an fhoclaíocht oiriúnach."
-          ]
-        },
-        "no": {
-          "title": "Fullmakt fra utenfor UAE: dette bør du sjekke først",
-          "description": "Om du kan signere på avstand avhenger av hvilken rute myndigheten i UAE aksepterer.",
-          "content": [
-            "Hvis du er i utlandet finnes det ingen enkelt løsning som passer for alle. En digital eller fjernnotartjeneste i UAE kan akseptere deg hvis den kjenner igjen partene og identitetsdokumentene. Hvis ikke, må fullmakten kanskje notarialbekreftes der du er og gjennomgå UAE-autentiseringskjeden før bruk. Avklar med mottakende myndighet hvilken rute som aksepteres før teksten utformes, og fortell oss formålet så formuleringen samsvarer med det."
-          ]
-        },
-        "tr": {
-          "title": "BAE dışından vekâletname: önce neleri kontrol etmelisiniz",
-          "description": "Uzaktan imzalama yapıp yapamayacağınız, belgeyi kabul edecek BAE makamının kabul ettiği yola bağlıdır.",
-          "content": [
-            "Yurt dışındaysanız herkes için tek bir geçerli yol yoktur. Bir BAE dijital veya uzaktan noter hizmeti tarafları ve kimlik belgelerini tanırsa sizi kabul edebilir. Tanımazsa vekâletnamenin bulunduğunuz yerde noter onayından geçmesi ve BAE tasdik zincirini tamamlaması gerekebilir. Taslağı hazırlamadan önce belgeyi kabul edecek makamın hangi yolu kabul ettiğini teyit edin ve ifadenin amacına uygun olması için amacı bize bildirin."
-          ]
-        },
-        "sr": {
-          "title": "Punomoć izvan UAE, šta prvo proveriti",
-          "description": "Da li možete potpisati na daljinu zavisi od puta koji nadležni organ UAE prihvata.",
-          "content": [
-            "Ako ste u inostranstvu, ne postoji jedinstven put koji radi za sve. Digitalna ili daljinska notarska usluga UAE može vas prihvatiti ako prepozna strane i dokumenta o identitetu. Ako ne, punomoć možda mora biti overena tamo gde se nalazite i proći lanac autentikacije UAE pre upotrebe. Pre izrade nacrta, potvrdite sa organom koji će primiti dokument koji put prihvata i obavestite nas o svrsi kako bi formulacija odgovarala toj nameni."
-          ]
-        },
-        "uk": {
-          "title": "Довіреність з-за меж ОАЕ: що перевірити передусім",
-          "description": "Чи можете ви підписати дистанційно, залежить від шляху, який прийме орган ОАЕ.",
-          "content": [
-            "Якщо ви перебуваєте за кордоном, універсального шляху для всіх не існує. Цифрова або віддалена нотаріальна послуга ОАЕ може прийняти вас, якщо вона визнає сторони та документи ідентифікації. Якщо ні, довіреність може потребувати нотаріалізації там, де ви знаходитесь, та проходження ланцюжка автентифікації ОАЕ перед використанням. Перед підготовкою підтвердіть у приймаючого органу, який маршрут він приймає, і повідомте нам мету, щоб формулювання відповідало їй."
-          ]
-        },
-        "sq": {
-          "title": "Fuqia e avokatit nga jashtë UAE: çfarë duhet të kontrolloni së pari",
-          "description": "Nëse mund të nënshkruani në distancë varet nga rruga që pranon autoriteti i UAE.",
-          "content": [
-            "Nëse jeni jashtë, nuk ka një rrugë të vetme që funksionon për të gjithë. Një shërbim noterial digjital ose në distancë i UAE mund t'ju pranojë nëse njeh palët dhe dokumentet e identitetit. Nëse jo, fuqia e avokatit mund të duhet të noterizohet aty ku ndodheni dhe të kalojë zinxhirin e autentikimit për UAE para përdorimit. Para hartimit, konfirmoni me autoritetin pranues se cilën rrugë pranon, dhe na tregoni qëllimin që fjalimi të përshtatet me të."
-          ]
-        },
-        "is": {
-          "title": "Umboð frá utan UAE: hvað á að athuga fyrst",
-          "description": "Hvort þú getir undirritað fjarstætt fer eftir þeirri leið sem UAE yfirvaldið samþykkir.",
-          "content": [
-            "Ef þú ert erlendis er engin ein leið sem hentar öllum. Rafræn eða fjar-nótaraþjónusta í UAE kann að samþykkja þig ef hún viðurkennir aðila og auðkenningarskjal. Ef ekki þarf umboðið að vera vottað þar sem þú ert og fara gegnum viðeigandi UAE vottunarkeðju áður en það er notað. Staðfestu við móttökuyfirvaldið hverja leið það samþykkir áður en drögum er lokið, og segðu okkur tilganginn svo orðalag passi honum."
-          ]
-        },
-        "ru": {
-          "title": "Доверенность из-за пределов ОАЭ: что проверить в первую очередь",
-          "description": "Можно ли подписать дистанционно зависит от порядка, который принимает принимающий орган ОАЭ.",
-          "content": [
-            "Если вы за рубежом, единого подхода, подходящего всем, нет. Цифровая или удалённая нотариальная услуга ОАЭ может принять вас, если признаёт стороны и удостоверяющие личность документы. Если нет, доверенность придётся нотариально заверить там, где вы находитесь, и пройти цепочку удостоверения подлинности для ОАЭ перед использованием. Прежде чем составлять проект, уточните у принимающего органа, какой порядок он принимает, и сообщите нам цель, чтобы формулировки соответствовали ей."
-          ]
-        },
-        "ar": {
-          "title": "توكيل من خارج الإمارات، ما الذي تتحقق منه أولًا",
-          "description": "إمكانية التوقيع عن بُعد تعتمد على المسار الذي تقبله الجهة الإماراتية.",
-          "content": [
-            "إذا كنت خارج الإمارات لا يوجد مسار واحد يناسب الجميع. قد تقبلك خدمة توثيق رقمية أو عن بُعد في الإمارات إذا اعتمدت الأطراف ومستندات الهوية. وإلا فقد يلزم توثيق التوكيل في بلدك ثم استكمال سلسلة التصديق الإماراتية قبل الاستخدام. قبل الصياغة، تأكد من الجهة المستلمة عن المسار المقبول، وأخبرنا بالغرض لتطابق الصياغة معه."
-          ]
-        }
-      }
-    },
-    {
-      "slug": "eviction-notice-dubai",
-      "published": true,
-      "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10",
-      "image": "/images/blog/eviction-notice-dubai.svg",
-      "translations": {
-        "en": {
-          "title": "Eviction notices in Dubai: why a WhatsApp message is not enough",
-          "description": "A formal notice may be required by law. Informal messages do not replace it.",
-          "content": [
-            "Where the tenancy law calls for a formal Article 25 notice, the Dubai Land Department describes service through a Notary Public or registered mail for several eviction grounds. Chat messages and emails can still help as evidence in a dispute, but they do not replace the notice route the law prescribes. Prepare the notice in the form the authority requires and keep proof of service."
-          ]
-        },
-        "de": {
-          "title": "Räumungsaufforderungen in Dubai: Warum eine WhatsApp-Nachricht nicht ausreicht",
-          "description": "Gesetzlich kann eine formelle Zustellung erforderlich sein. Informelle Nachrichten ersetzen diese nicht.",
-          "content": [
-            "Wenn das Mietrecht eine formelle Artikel-25-Zustellung vorsieht, beschreibt die Dubai Land Department die Zustellung über Notary Public oder eingeschriebene Post für mehrere Räumungsgründe. Chatnachrichten und E-Mails können weiterhin als Beweismittel in einem Streit dienen, ersetzen jedoch nicht den vom Gesetz vorgeschriebenen Zustellungsweg. Bereiten Sie die Aufforderung in der von der Behörde geforderten Form vor und bewahren Sie den Zustellungsnachweis auf."
-          ]
-        },
-        "fr": {
-          "title": "Avis d’expulsion à Dubaï : pourquoi un message WhatsApp ne suffit pas",
-          "description": "La loi peut exiger une notification formelle, les messages informels ne la remplacent pas.",
-          "content": [
-            "Lorsque la loi sur les baux exige une notification formelle au titre de l’article 25, le Dubai Land Department prévoit la signification par notaire public ou par lettre recommandée pour plusieurs motifs d’expulsion. Les messages et e‑mails peuvent servir de preuve dans un litige, mais ils ne remplacent pas la voie de notification prescrite. Préparez l’avis selon la forme exigée par l’autorité et conservez la preuve de signification."
-          ]
-        },
-        "es": {
-          "title": "Avisos de desalojo en Dubái: por qué un mensaje de WhatsApp no basta",
-          "description": "La ley puede exigir una notificación formal, los mensajes informales no la sustituyen.",
-          "content": [
-            "Cuando la ley de arrendamientos exige un aviso formal conforme al artículo 25, el Departamento de Tierras de Dubái describe la notificación por Notary Public o por correo certificado para varios motivos de desalojo. Los mensajes de chat y los correos pueden servir como prueba en un litigio, pero no sustituyen la vía de notificación que prescribe la ley. Prepare el aviso en la forma que exige la autoridad y conserve la prueba de la notificación."
-          ]
-        },
-        "it": {
-          "title": "Avvisi di sfratto a Dubai: perché un messaggio WhatsApp non basta",
-          "description": "La legge può richiedere una notifica formale, i messaggi informali non la sostituiscono.",
-          "content": [
-            "Quando la legge sulle locazioni richiede una notifica formale ai sensi dell'articolo 25, il Dubai Land Department descrive la notifica tramite Notaio Pubblico o posta raccomandata per diversi motivi di sfratto. Chat ed email possono comunque essere utili come prova in una controversia ma non sostituiscono il canale di notifica previsto dalla legge. Prepara l'avviso nella forma richiesta dall'autorità e conserva prova della notifica."
-          ]
-        },
-        "pt": {
-          "title": "Avisos de despejo no Dubai: porque uma mensagem de WhatsApp não basta",
-          "description": "A lei pode exigir uma notificação formal, as mensagens informais não a substituem.",
-          "content": [
-            "Quando a lei do arrendamento exige notificação formal ao abrigo do artigo 25, o Dubai Land Department descreve notificação por notário público ou carta registada para vários fundamentos de despejo. Mensagens de chat e emails podem servir como prova num litígio, mas não substituem a via de notificação que a lei prescreve. Prepare a notificação na forma exigida pela autoridade e guarde prova da entrega."
-          ]
-        },
-        "nl": {
-          "title": "Ontruimingsberichten in Dubai: waarom een WhatsApp-bericht niet genoeg is",
-          "description": "De wet kan een formele kennisgeving vereisen, informele berichten vervangen die niet.",
-          "content": [
-            "Wanneer de huurwet een formele Artikel 25 kennisgeving vereist, beschrijft de Dubai Land Department betekening via een Notary Public of aangetekende post voor verschillende ontruimingsgronden. Chatberichten en e-mails kunnen nog steeds dienstdoen als bewijs in een geschil, maar vervangen de door de wet voorgeschreven kennisgevingsroute niet. Stel de kennisgeving op in de vorm die de instantie vereist en bewaar bewijs van betekening."
-          ]
-        },
-        "pl": {
-          "title": "Wezwania do opuszczenia lokalu w Dubaju: dlaczego wiadomość na WhatsApp nie wystarczy",
-          "description": "Prawo może wymagać formalnego zawiadomienia, którego nie zastąpią nieformalne wiadomości.",
-          "content": [
-            "Gdy prawo najmu wymaga formalnego zawiadomienia na podstawie art. 25, Departament Gruntów Dubaju wskazuje doręczenie przez Notariusza Publicznego lub list polecony dla kilku podstaw eksmisji. Wiadomości i e-maile mogą posłużyć jako dowód, ale nie zastępują wymaganego sposobu doręczenia. Przygotuj zawiadomienie w formie wymaganej przez organ i zachowaj dowód doręczenia."
-          ]
-        },
-        "sv": {
-          "title": "Vräkningsmeddelanden i Dubai: därför räcker inte ett WhatsApp-meddelande",
-          "description": "Lagen kan kräva ett formellt meddelande. Informella meddelanden ersätter det inte.",
-          "content": [
-            "När hyreslagen kräver ett formellt artikel 25-meddelande beskriver Dubai Land Department delgivning via Notary Public eller rekommenderat brev för flera vräkningsgrunder. Chattmeddelanden och e-post kan fortfarande fungera som bevis i en tvist, men de ersätter inte den form av meddelande som lagen föreskriver. Förbered meddelandet i den form myndigheten kräver och spara bevis på delgivning."
-          ]
-        },
-        "ro": {
-          "title": "Notificările de evacuare în Dubai: de ce un mesaj pe WhatsApp nu este suficient",
-          "description": "Legea poate cere o notificare formală, mesajele informale nu o înlocuiesc.",
-          "content": [
-            "Acolo unde legea chiriei cere o notificare formală conform articolului 25, Dubai Land Department descrie, pentru mai multe motive de evacuare, comunicarea prin Notary Public sau prin scrisoare recomandată. Mesajele de chat și emailurile pot servi ca probe într-un litigiu, dar nu înlocuiesc forma de notificare cerută de autoritate. Pregătește notificarea în forma solicitată și păstrează dovada comunicării."
-          ]
-        },
-        "el": {
-          "title": "Ειδοποιήσεις απόδοσης μισθίου στο Ντουμπάι: γιατί ένα μήνυμα WhatsApp δεν αρκεί",
-          "description": "Ο νόμος μπορεί να απαιτεί επίσημη ειδοποίηση, επομένως τα ανεπίσημα μηνύματα δεν την αντικαθιστούν.",
-          "content": [
-            "Όταν ο νόμος περί μισθώσεων απαιτεί επίσημη ειδοποίηση βάσει Άρθρου 25, η Dubai Land Department περιγράφει επίδοση μέσω Notary Public ή συστημένης επιστολής για ορισμένους λόγους απόδοσης μισθίου. Μηνύματα συνομιλίας και email μπορούν να βοηθήσουν ως αποδεικτικά σε διαφορά, αλλά δεν αντικαθιστούν την οδό ειδοποίησης που προβλέπει ο νόμος. Ετοιμάστε την ειδοποίηση στη μορφή που απαιτεί η αρχή και φυλάξτε αποδεικτικό επίδοσης."
-          ]
-        },
-        "cs": {
-          "title": "Výzvy k vyklizení v Dubaji: proč WhatsApp nestačí",
-          "description": "Zákon může vyžadovat formální oznámení, neformální zprávy ho nenahrazují.",
-          "content": [
-            "Když nájemní právo vyžaduje formální oznámení podle článku 25, Dubajský pozemkový úřad uvádí doručení přes notáře nebo doporučený dopis u několika důvodů vyklizení. Chaty a e-maily mohou být jako důkaz užitečné, ale nenahrazují formu oznámení, kterou zákon předepsal. Připravte oznámení ve formě, kterou úřad požaduje, a uchovejte doklad o doručení."
-          ]
-        },
-        "da": {
-          "title": "Opsigelse med krav om fraflytning i Dubai: hvorfor en WhatsApp-besked ikke er nok",
-          "description": "Loven kan kræve en formel meddelelse, uformelle beskeder erstatter den ikke.",
-          "content": [
-            "Når lejeloven kræver en formel artikel 25-meddelelse, beskriver Dubai Land Department forkyndelse via Notary Public eller anbefalet post for flere fraflytningsgrunde. Chatbeskeder og e-mails kan stadig være bevis i en tvist, men de erstatter ikke den lovbestemte forkyndelsesvej. Udarbejd meddelelsen i den form myndigheden kræver og gem bevis for forkyndelsen."
-          ]
-        },
-        "fi": {
-          "title": "Häätöilmoitukset Dubaissa: miksi WhatsApp-viesti ei riitä",
-          "description": "Laki voi edellyttää virallista ilmoitusta, epäviralliset viestit eivät korvaa sitä.",
-          "content": [
-            "Kun vuokralaki edellyttää 25 artiklan mukaista virallista ilmoitusta, Dubai Land Department kuvaa useiden häätöperusteiden osalta tiedoksiannon tapahtuvan julkisen notaarin tai kirjallisen rekisteröidyn kirjeen kautta. Chat-viestit ja sähköpostit voivat toimia näyttönä riidassa, mutta ne eivät korvaa lain edellyttämää tiedoksiantotapaa. Laadi ilmoitus viranomaisen vaatimalle muodolle ja säilytä todistus tiedoksiannosta."
-          ]
-        },
-        "hu": {
-          "title": "Kiürítési felszólítás Dubajban: miért nem elég egy WhatsApp üzenet",
-          "description": "A törvény formális értesítést írhat elő, az informális üzenetek nem helyettesítik azt.",
-          "content": [
-            "Ahol a bérleti jog a 25. cikk szerinti formális értesítést kéri, a Dubaji Földhivatal több kiürítési oknál közjegyzőn vagy ajánlott levélben történő kézbesítést ír le. A csevegőüzenetek és e-mailek egy jogvitában bizonyítékként szolgálhatnak, de nem helyettesítik a jog által előírt kézbesítési utat. Készítse el az értesítést a hatóság által megkövetelt formában és őrizze meg a kézbesítés igazolását."
-          ]
-        },
-        "bg": {
-          "title": "Предизвестия за освобождаване в Дубай: защо съобщение в WhatsApp не стига",
-          "description": "Законът може да изисква формално предизвестие, неформалните съобщения не го заместват.",
-          "content": [
-            "Когато законът за наемите изисква формално предизвестие по член 25, Dubai Land Department описва връчване чрез Notary Public или препоръчана поща за някои основания за опразване. Чат съобщенията и имейлите могат да служат като доказателство в спор, но не заменят предписания от закона ред за уведомяване. Подгответе предизвестието във формата, която органът изисква, и запазете доказателство за връчването."
-          ]
-        },
-        "hr": {
-          "title": "Obavijesti o iseljenju u Dubaiju: zašto WhatsApp nije dovoljan",
-          "description": "Zakon može zahtijevati formalnu obavijest, neformalne poruke je ne zamjenjuju.",
-          "content": [
-            "Kad zakon o najmu zahtijeva formalnu obavijest po članku 25., Dubai Land Department navodi dostavu putem javnog bilježnika ili preporučene pošte za nekoliko razloga iseljenja. Poruke u chatu i e‑pošta mogu pomoći kao dokaz, ali ne zamjenjuju zakonom propisani put obavijesti. Pripremite obavijest u obliku koji tijelo zahtijeva i zadržite dokaz o dostavi."
-          ]
-        },
-        "sk": {
-          "title": "Výpovede v Dubaji: prečo WhatsApp správa nestačí",
-          "description": "Zákon môže vyžadovať formálne oznámenie. Neformálne správy ho nenahrádzajú.",
-          "content": [
-            "Keď nájomné právo vyžaduje formálne oznámenie podľa článku 25, Katastrálny úrad Dubaja popisuje doručenie cez verejného notára alebo doporučenú poštu pre niekoľko dôvodov vysťahovania. Chatové správy a e‑maily môžu stále slúžiť ako dôkaz v spore, ale nenahrádzajú formu oznámenia požadovanú zákonom. Pripravte oznámenie v tvare, ktorý orgán požaduje, a uchovajte dôkaz o doručení."
-          ]
-        },
-        "sl": {
-          "title": "Izpraznitvena obvestila v Dubaju: zakaj WhatsApp ni dovolj",
-          "description": "Zakon lahko zahteva formalno obvestilo. Neformalna sporočila ga ne nadomestijo.",
-          "content": [
-            "Kadar najemno pravo zahteva formalno obvestilo po 25. členu, Dubajska zemljiška uprava opisuje vročanje preko notarskega javnega organa ali priporočene pošte za več razlogov izpraznitve. Klepetalna sporočila in e‑pošta lahko še vedno služijo kot dokaz v sporu, vendar ne nadomestijo oblike obvestila, ki jo določa zakon. Pripravite obvestilo v obliki, ki jo zahteva organ, in hranite dokaz o vročitvi."
-          ]
-        },
-        "et": {
-          "title": "Väljatõstmisteated Dubais: miks WhatsApp ei pruugi piisa",
-          "description": "Seadus võib nõuda ametlikku teadet, mitteametlikud sõnumid seda ei asenda.",
-          "content": [
-            "Kui üüriseadus nõuab artikli 25 alusel ametlikku teadet, kirjeldab Dubai maa-amet mitmete väljatõstmiste aluste puhul kättetoimetamist notari või registreeritud kirja kaudu. Vestlus- ja e-kirjad võivad vaidluses olla tõendina, kuid ei asenda seaduses nõutud teavitamisviisi. Koostage teade asutuse soovitud vormis ja säilitage kättetoimetamise tõend."
-          ]
-        },
-        "lv": {
-          "title": "Izlikšanas paziņojumi Dubaijā: kāpēc WhatsApp ziņa nepietiek",
-          "description": "Likums var pieprasīt formālu paziņojumu, neoficiālas ziņas to neaizstāj.",
-          "content": [
-            "Ja īres likums paredz formālu paziņojumu saskaņā ar 25. pantu, Dubaijas Zemes departaments apraksta paziņošanas ceļus ar Notary Public vai reģistrētu pastu konkrētiem izlikšanas pamatiem. Tērzēšanas ziņas un e-pasti var būt pierādījums strīdā, bet tie neaizstāj iestādes prasīto paziņošanas formu. Sagatavojiet paziņojumu iestādes prasītajā formā un saglabājiet piegādes pierādījumu."
-          ]
-        },
-        "lt": {
-          "title": "Iškeldinimo pranešimai Dubajuje: kodėl WhatsApp žinutės nepakanka",
-          "description": "Įstatymas gali reikalauti oficialaus pranešimo, neformalūs pranešimai to nepakeičia.",
-          "content": [
-            "Kai nuomos įstatymas reikalauja formaliojo 25 straipsnio pranešimo, Dubajaus žemės departamentas nurodo pranešimo įteikimą per Notary Public arba registruotu laišku keliems iškeldinimo pagrindams. Pokalbių žinutės ir el. laiškai ginče gali būti naudingi kaip įrodymai, bet jie nepakeičia įstatyme numatyto pranešimo kelio. Parenkite pranešimą institucijos reikalaujama forma ir išsaugokite įteikimo įrodymą."
-          ]
-        },
-        "mt": {
-          "title": "Avviżi ta’ żgumbrament f’Dubai: għaliex messaġġ ta’ WhatsApp mhux biżżejjed",
-          "description": "Xi drabi l-liġi titlob avviż formali. Messaġġi informali ma jissostitwux dan.",
-          "content": [
-            "Ladarba l-liġi tal-kera titlob avviż formali taħt Artikolu 25, id-Dubai Land Department jiddeskrivi servizz permezz ta’ Notary Public jew posta rreġistrata għal diversi kawżi ta’ żgumbrament. Messaġġi chat u emails għadhom jistgħu jservu bħala evidenza f’tilwima, iżda ma jbiddlux ir-rotta tal-avviż li tordna l-liġi. Ipprepara l-avviż fil-forma li titlob l-awtorità u żomm prova tan-notifika."
-          ]
-        },
-        "ga": {
-          "title": "Fógraí díshealbhaithe i Dubai: cén fáth nach leor teachtaireacht WhatsApp",
-          "description": "D’fhéadfadh an dlí a éileamh go ndéantar fógra foirmiúil, ní dhéanann teachtaireachtaí neamhfhoirmiúla ionad air.",
-          "content": [
-            "Nuair a éilíonn an dlí tionóntaí fógra foirmiúil faoi Airteagal 25, déanann an Dubai Land Department cur síos ar sheachadadh trí Notary Public nó trí phost cláraithe do roinnt cúiseanna díshealbhaithe. Is féidir le teachtaireachtaí comhrá agus ríomhphoist a bheith úsáideach mar fhianaise i ndíospóid, ach ní dhéanann siad ionad an fhógra foirmiúil a éilítear. Ullmhaigh an fógra sa fhoirm a éilíonn an t-údarás agus coinnigh cruthúnas seirbheála."
-          ]
-        },
-        "no": {
-          "title": "Oppsigelse med krav om fraflytting i Dubai: hvorfor en WhatsApp-melding ikke er nok",
-          "description": "Loven kan kreve et formelt varsel, uformelle meldinger erstatter det ikke.",
-          "content": [
-            "Når husleieloven krever et formelt varsel etter artikkel 25 beskriver Dubai Land Department forkyndelse via Notary Public eller rekommandert brev for flere fraflyttingsgrunner. Chatmeldinger og e-post kan fortsatt være bevis i en tvist, men de erstatter ikke den lovbestemte forkyndelsesveien. Utarbeid varselet i formen myndigheten krever og behold bevis for forkyndelsen."
-          ]
-        },
-        "tr": {
-          "title": "Dubai’de tahliye ihtarnameleri: neden bir WhatsApp mesajı yeterli değildir",
-          "description": "Kanun resmî bir ihtar gerektirebilir, gayriresmî mesajlar onun yerini tutmaz.",
-          "content": [
-            "Kira kanunu 25. madde kapsamında resmi bir ihtar gerektiğinde Dubai Land Department çeşitli tahliye sebepleri için noter aracılığıyla veya taahhütlü postayla tebliği öngörür. Sohbet mesajları ve e-postalar delil olabilir ancak kanunun öngördüğü ihtar yolunun yerine geçmez. İhtarnameyi makamın istediği biçimde hazırlayın ve tebliğ kanıtını saklayın."
-          ]
-        },
-        "sr": {
-          "title": "Obaveštenja o iseljenju u Dubaiju, zašto WhatsApp poruka nije dovoljna",
-          "description": "Zakon može zahtevati formalno obaveštenje. Neformalnim porukama se ono ne zamenjuje.",
-          "content": [
-            "Gde zakon o zakupu zahteva formalno obaveštenje po članu 25, Dubai Land Department opisuje uručenje preko javnog notara ili registrovane pošte za nekoliko osnova iseljenja. Poruke iz četa i e‑mejlovi i dalje mogu pomoći kao dokaz u sporu, ali ne zamenjuju put uručenja koji zakon propisuje. Pripremite obaveštenje u obliku koji organ zahteva i sačuvajte dokaz o uručenju."
-          ]
-        },
-        "uk": {
-          "title": "Повідомлення про виселення в Дубаї: чому повідомлення в WhatsApp недостатньо",
-          "description": "Закон може вимагати формального повідомлення. Неофіційні повідомлення його не замінюють.",
-          "content": [
-            "Коли закон про оренду вимагає формального повідомлення за статтею 25, Департамент земель Дубая описує вручення через нотаріуса або зареєстровану пошту для кількох підстав виселення. Чат-повідомлення та електронні листи все ще можуть допомогти як докази у спорі, але вони не замінюють порядок вручення, передбачений законом. Підготуйте повідомлення у формі, яку вимагає орган, і зберігайте підтвердження вручення."
-          ]
-        },
-        "sq": {
-          "title": "Njoftimet për dëbim në Dubai: pse një mesazh WhatsApp nuk mjafton",
-          "description": "Ligji mund të kërkojë një njoftim formal. Mesazhet joformale nuk e zëvendësojnë atë.",
-          "content": [
-            "Kur ligji i qirasë kërkon një njoftim formal sipas Nenit 25, Departamenti i Tokave i Dubai-t përshkruan shërbimin përmes Noterit Publik ose postës së regjistruar për disa baza dëbimi. Mesazhet e bisedave dhe email-et mund të jenë ende provë në një mosmarrëveshje, por nuk zëvendësojnë rrugën e njoftimit që ligji përcakton. Përgatitni njoftimin në formën që kërkon autoriteti dhe mbani provën e dorëzimit."
-          ]
-        },
-        "is": {
-          "title": "Brottvísunartilkynningar í Dubai: hvers vegna WhatsApp dugir ekki",
-          "description": "Formleg tilkynning getur verið krafist samkvæmt lögum. Óformleg skilaboð koma ekki í staðinn.",
-          "content": [
-            "Þegar leigulögin krefjast formlegrar 25. grein tilkynningar lýsir Dubai Land Department þjónustu með Notary Public eða skráðum pósti fyrir ýmsa rýmingarástæður. Spjallskilaboð og tölvupóstar geta samt verið sönnunargögn í deilu, en koma ekki í stað formlegrar tilkynningar lögin kveða á um. Undirbúðu tilkynningu í þeirri mynd sem yfirvöld krefjast og haltu sönnunar um afhendingu."
-          ]
-        },
-        "ru": {
-          "title": "Уведомления о выселении в Дубае: почему сообщения в WhatsApp недостаточны",
-          "description": "Закон может требовать формального уведомления, неформальные сообщения его не заменяют.",
-          "content": [
-            "Когда закон об аренде требует официального уведомления по статье 25, Земельный департамент Дубая описывает вручение через нотариуса или заказное письмо для ряда оснований выселения. Чаты и электронная почта могут помочь как доказательства в споре, но не заменяют предусмотренную законом форму уведомления. Подготовьте уведомление в той форме, которую требует орган, и сохраните подтверждение вручения."
-          ]
-        },
-        "ar": {
-          "title": "إخطارات الإخلاء في دبي، لماذا لا تكفي رسالة واتساب",
-          "description": "قد يشترط القانون إخطارًا رسميًا، ولا تغني الرسائل غير الرسمية عنه.",
-          "content": [
-            "عندما يوجب قانون الإيجار إخطارًا رسميًا بموجب المادة 25، تشير دائرة الأراضي والأملاك إلى التبليغ عبر كاتب عدل أو البريد المسجّل لعدة أسباب إخلاء. قد تساعد رسائل الدردشة والبريد الإلكتروني كدليل، لكنها لا تغني عن شكل الإخطار الذي تطلبه الجهة. أعد الإخطار بالشكل المطلوب واحتفظ بدليل التبليغ."
-          ]
-        }
-      }
-    },
-    {
-      "slug": "mofa-attestation-abroad",
-      "published": true,
-      "publishedAt": "2026-08-27",
-      "updatedAt": "2026-08-27",
-      "image": "/images/blog/mofa-attestation-abroad.svg",
-      "translations": {
-        "en": {
-          "title": "Do UAE documents always need MOFA attestation abroad?",
-          "description": "No blanket rule exists. The receiving country decides.",
-          "content": [
-            "The country or institution that will receive your document sets the legalization or attestation it requires. Where UAE Ministry of Foreign Affairs attestation is required, the current route depends on the document and its issuing authority. Check the receiving side's requirements first, then plan the attestation chain, so you do not repeat steps or pay for ones you do not need."
-          ]
-        },
-        "de": {
-          "title": "Brauchen VAE-Dokumente im Ausland immer eine MOFA-Beglaubigung?",
-          "description": "Es gibt keine pauschale Regel. Das empfangende Land entscheidet.",
-          "content": [
-            "Das Land oder die Institution, die Ihr Dokument erhält, legt die erforderliche Legalisierung oder Beglaubigung fest. Wenn eine Beglaubigung durch das Ministerium für Auswärtige Angelegenheiten der VAE erforderlich ist, hängt der aktuelle Ablauf vom Dokument und der ausstellenden Behörde ab. Prüfen Sie zuerst die Anforderungen der empfangenden Seite, dann planen Sie die Beglaubigungskette, damit Sie Schritte nicht wiederholen oder für unnötige Schritte zahlen."
-          ]
-        },
-        "fr": {
-          "title": "Les documents émiriens nécessitent‑ils toujours la légalisation MOFA pour l’étranger ?",
-          "description": "Il n’existe pas de règle générale, c’est le pays destinataire qui décide.",
-          "content": [
-            "Le pays ou l’institution qui recevra votre document fixe la légalisation ou la certification requise. Lorsque la légalisation par le Ministry of Foreign Affairs des EAU est exigée, la procédure dépend du document et de l’autorité émettrice. Vérifiez d’abord les exigences du destinataire, puis planifiez la chaîne de légalisation pour éviter des étapes répétées ou des frais inutiles."
-          ]
-        },
-        "es": {
-          "title": "¿Los documentos de los EAU siempre necesitan la certificación del MOFA para uso en el extranjero?",
-          "description": "No existe una regla general, lo decide el país receptor.",
-          "content": [
-            "El país o la institución que recibirá su documento fija la legalización o certificación que exige. Cuando se requiere la certificación del Ministerio de Asuntos Exteriores de los EAU, la vía depende del documento y de la autoridad emisora. Compruebe primero los requisitos del destinatario y luego planifique la cadena de certificación, para no repetir pasos ni pagar por los que no necesita."
-          ]
-        },
-        "it": {
-          "title": "I documenti UAE richiedono sempre l'attestazione MOFA per l'estero?",
-          "description": "Non esiste una regola generale, lo decide il paese ricevente.",
-          "content": [
-            "Il paese o l'istituzione che riceverà il documento stabilisce la legalizzazione o l'attestazione richiesta. Quando è richiesta l'attestazione del Ministero degli Affari Esteri degli UAE, il percorso dipende dal documento e dall'autorità che lo ha emesso. Controlla prima i requisiti del destinatario e poi pianifica la catena di attestazione, così non ripeterai passaggi né pagherai procedure non necessarie."
-          ]
-        },
-        "pt": {
-          "title": "Os documentos dos EAU precisam sempre de autenticação MOFA no estrangeiro?",
-          "description": "Não existe uma regra geral, o país recetor decide.",
-          "content": [
-            "O país ou instituição que vai receber o seu documento define a legalização ou autenticação que exige. Quando a autenticação do Ministry of Foreign Affairs dos EAU é necessária, o percurso depende do documento e da autoridade emissora. Verifique primeiro os requisitos do lado recetor e depois planeie a cadeia de autenticação para não repetir passos nem pagar por etapas desnecessárias."
-          ]
-        },
-        "nl": {
-          "title": "Hebben VAE-documenten altijd MOFA-legalisatie nodig in het buitenland?",
-          "description": "Er bestaat geen algemene regel. Het ontvangende land bepaalt dat.",
-          "content": [
-            "Het land of de instelling die uw document ontvangt bepaalt welke legalisatie of attestatie vereist is. Waar legalisatie door het Ministerie van Buitenlandse Zaken van de VAE vereist is, hangt de huidige route af van het document en de uitgevende autoriteit. Controleer eerst de eisen van de ontvangende zijde en plan dan de attestatieketen, zodat u geen stappen herhaalt of betaalt voor onnodige handelingen."
-          ]
-        },
-        "pl": {
-          "title": "Czy dokumenty z ZEA zawsze wymagają legalizacji MOFA za granicą?",
-          "description": "Nie ma ogólnej reguły, decyduje kraj przyjmujący.",
-          "content": [
-            "Kraj lub instytucja przyjmująca ustala wymaganą legalizację lub uwierzytelnienie. Gdy potrzebna jest legalizacja w Ministerstwie Spraw Zagranicznych ZEA, ścieżka zależy od dokumentu i organu, który go wydał. Najpierw sprawdź wymagania strony przyjmującej, a potem zaplanuj łańcuch uwierzytelniania, aby uniknąć powtarzania kroków lub niepotrzebnych opłat."
-          ]
-        },
-        "sv": {
-          "title": "Behöver UAE-dokument alltid MOFA-attestering för användning utomlands?",
-          "description": "Ingen generell regel finns. Den mottagande staten avgör.",
-          "content": [
-            "Det land eller den institution som tar emot ditt dokument bestämmer vilken legalisering eller attestering som krävs. När UAE Ministry of Foreign Affairs-attestering krävs, beror den aktuella rutten på dokumentet och dess utfärdande myndighet. Kontrollera mottagarens krav först, planera sedan attestkedjan så att du inte upprepar steg eller betalar för onödiga åtgärder."
-          ]
-        },
-        "ro": {
-          "title": "Au documentele EAU întotdeauna nevoie de legalizare MOFA în străinătate?",
-          "description": "Nu există o regulă generală, decide ţara primitoare.",
-          "content": [
-            "Ţara sau instituţia care primește documentul stabilește ce supralegalizare sau legalizare cere. Unde este necesară legalizarea la Ministerul Afacerilor Externe al EAU, ruta depinde de document și de autoritatea emitentă. Verifică întâi cerinţele părţii primitoare, apoi planifică lanţul de legalizare pentru a evita pași redundanţi sau costuri inutile."
-          ]
-        },
-        "el": {
-          "title": "Χρειάζονται πάντα τα έγγραφα των ΗΑΕ επικύρωση από το MOFA για χρήση στο εξωτερικό,",
-          "description": "Δεν υπάρχει γενικός κανόνας· το αποφασίζει ο αποδέκτης.",
-          "content": [
-            "Η χώρα ή ο φορέας που θα παραλάβει το έγγραφό σας ορίζει τη νομιμοποίηση ή την επικύρωση που απαιτεί. Όπου ζητείται επικύρωση από το UAE Ministry of Foreign Affairs, η διαδικασία εξαρτάται από το είδος του εγγράφου και την εκδούσα αρχή. Ελέγξτε πρώτα τις απαιτήσεις του αποδέκτη και μετά σχεδιάστε την αλυσίδα επικυρώσεων, ώστε να αποφύγετε επαναλήψεις ή περιττά έξοδα."
-          ]
-        },
-        "cs": {
-          "title": "Potřebují dokumenty ze SAE v zahraničí vždy ověření na MOFA?",
-          "description": "Neexistuje plošné pravidlo, rozhoduje přijímající země.",
-          "content": [
-            "Země nebo instituce, která váš dokument přijme, určí jakou legalizaci nebo ověření požaduje. Pokud je zapotřebí ověření Ministerstvem zahraničních věcí SAE, postup závisí na dokumentu a orgánu, který jej vydal. Nejdříve zjistěte požadavky přijímající strany a teprve potom plánujte řetězec ověření, abyste neopakovali kroky nebo neplatili za zbytečné."
-          ]
-        },
-        "da": {
-          "title": "Skal UAE-dokumenter altid attesteres hos MOFA for brug i udlandet?",
-          "description": "Der findes ingen generel regel. Det modtagende land bestemmer.",
-          "content": [
-            "Det land eller den institution der modtager dit dokument bestemmer hvilken legalisering eller attestering der kræves. Hvor UAE Ministry of Foreign Affairs attestering er nødvendig afhænger processen af dokumentet og udstedende myndighed. Tjek modtagerens krav først og planlæg attestationskæden, så du undgår gentagne trin eller unødvendige udgifter."
-          ]
-        },
-        "fi": {
-          "title": "Tarvitsevatko UAE-asiakirjat aina MOFA-vahvistuksen ulkomailla?",
-          "description": "Yleistä sääntöä ei ole, vastaanottava maa päättää.",
-          "content": [
-            "Asiakirjan vastaanottava maa tai laitos määrittää vaadittavan legalisoinnin tai vahvistuksen. Kun UAE:n ulkoministeriön MOFA-vahvistus vaaditaan, reitti riippuu asiakirjasta ja sen myöntäneestä viranomaisesta. Tarkista vastaanottajan vaatimukset ensin ja suunnittele vahvistusketju, jotta et tee tarpeettomia vaiheita tai maksa niistä."
-          ]
-        },
-        "hu": {
-          "title": "Kell-e mindig MOFA hitelesítés az EAE iratokhoz külföldön?",
-          "description": "Nincs általános szabály, a fogadó ország dönt.",
-          "content": [
-            "A fogadó ország vagy intézmény határozza meg, milyen legalizációt vagy hitelesítést igényel. Ha az EAE Külügyminisztériumának hitelesítése szükséges, az útvonal az irattól és annak kiállító hatóságától függ. Először ellenőrizze a fogadó fél követelményeit, majd tervezze meg a hitelesítési láncot, hogy elkerülje a felesleges lépéseket és költségeket."
-          ]
-        },
-        "bg": {
-          "title": "Винаги ли документите от ОАЕ се нуждаят от MOFA заверка за използване в чужбина?",
-          "description": "Няма универсално правило. Приемащата държава решава.",
-          "content": [
-            "Държавата или институцията, която ще получи документа ви, определя каква легализация или заверка е необходима. Когато е нужна заверка от Министерството на външните работи на ОАЕ, актуалният процес зависи от документа и от органа, който го е издал. Проверете изискванията на приемащата страна първо, после планирайте веригата от заверки, за да не извършвате повторни стъпки или да плащате за ненужни."
-          ]
-        },
-        "hr": {
-          "title": "Treba li dokumentima iz UAE uvijek MOFA ovjera za inozemnu uporabu?",
-          "description": "Ne postoji opće pravilo, odlučuje zemlja ili institucija primatelj.",
-          "content": [
-            "Zemlja ili institucija koja će primiti vaš dokument određuje koju legalizaciju ili ovjeru zahtijeva. Kad je potrebna ovjera Ministarstva vanjskih poslova UAE, trenutačni put ovisi o vrsti dokumenta i tijelu koje ga je izdalo. Prvo provjerite zahtjeve primatelja, pa planirajte lanac ovjera da ne ponavljate korake ili ne plaćate nepotrebno."
-          ]
-        },
-        "sk": {
-          "title": "Potrebujú dokumenty SAE vždy osvedčenie MOFA v zahraničí?",
-          "description": "Neexistuje všeobecné pravidlo. Prijímajúca krajina rozhoduje.",
-          "content": [
-            "Krajina alebo inštitúcia, ktorá váš dokument príjme, určuje legalizáciu alebo osvedčenie, ktoré požaduje. Ak je vyžadované osvedčenie Ministerstvom zahraničných vecí SAE, súčasný postup závisí od dokumentu a vydávajúceho orgánu. Najprv skontrolujte požiadavky prijímajúcej strany a potom naplánujte reťazec osvedčovania, aby ste kroky neopakovali alebo neplatili za tie, ktoré nepotrebujete."
-          ]
-        },
-        "sl": {
-          "title": "Ali dokumenti ZAE vedno potrebujejo MOFA overitev za uporabo v tujini?",
-          "description": "Ne obstaja splošno pravilo. Prejemna država odloči.",
-          "content": [
-            "Država ali institucija, ki bo prejela vaš dokument, določi, katero legalizacijo ali overitev zahteva. Kjer je potrebna overitev pri Ministrstvu za zunanje zadeve ZAE, je trenutna pot odvisna od dokumenta in organa, ki ga je izdal. Najprej preverite zahteve prejemnika in nato načrtujte verigo overitev, da ne boste ponavljali korakov ali plačevali za tiste, ki jih ne potrebujete."
-          ]
-        },
-        "et": {
-          "title": "Kas AÜE dokumendid vajavad välismaal alati MOFA kinnitust?",
-          "description": "Üldreeglit ei ole, otsuse teeb vastuvõttev riik või asutus.",
-          "content": [
-            "Vastuvõttev riik või institutsioon määrab, millist legaliseerimist või kinnitust ta nõuab. Kui nõutakse AÜE välisministeeriumi kinnitust, sõltub protseduur dokumendist ja selle väljaandjast. Kontrollige esmalt vastuvõtja nõudeid ja planeerige siis kinnitusahel, et vältida liigseid samme või tarbetuid kulutusi."
-          ]
-        },
-        "lv": {
-          "title": "Vai AAE dokumentiem ārvalstīs vienmēr vajadzīgs MOFA apliecinājums?",
-          "description": "Nav vispārēja noteikuma, saņemšanas puse nosaka prasības.",
-          "content": [
-            "Galamērķa valsts vai iestāde nosaka nepieciešamo legalizāciju vai apliecināšanu. Ja nepieciešams AAE Ārlietu ministrijas MOFA apliecinājums, konkrētais ceļš atkarīgs no dokumenta un izdevēju iestādes. Pārbaudiet saņēmējas prasības vispirms, pēc tam plānojiet apliecināšanas ķēdi, lai nerēķinātos ar papildsoļiem vai nevajadzīgām izmaksām."
-          ]
-        },
-        "lt": {
-          "title": "Ar JAE dokumentams užsienyje visada reikia MOFA patvirtinimo?",
-          "description": "Bendros taisyklės nėra. Priimanti šalis sprendžia reikalavimus.",
-          "content": [
-            "Šalis arba institucija, kuri gaus jūsų dokumentą, nustato, kokio legalizavimo ar patvirtinimo reikia. Jei reikalingas JAE URM MOFA patvirtinimas, dabartinė procedūra priklauso nuo dokumento ir jį išdavusios institucijos. Pirmiausia patikrinkite priimančios pusės reikalavimus, tada suplanuokite patvirtinimo grandinę, kad nekartotumėte veiksmų arba nemokėtumėte už nereikalingus žingsnius."
-          ]
-        },
-        "mt": {
-          "title": "Id-dokumenti tal-UAE dejjem jeħtieġu attestazzjoni MOFA barra?",
-          "description": "M’hemmx regola ġenerali. Il-pajjiż li jirċievi jiddeċiedi.",
-          "content": [
-            "Il-pajjiż jew l-istituzzjoni li se jirċievi d-dokument jiddeċiedu liema legalizzazzjoni jew attestazzjoni jeħtieġu. Meta l-attestazzjoni tal-Ministeru tal-Affarijiet Barranin tal-UAE tkun meħtieġa, ir-rotta tiddependi fuq id-dokument u l-awtorità li emmettilu. Iċċekkja r-rekwiżiti tar-reċipjent l-ewwel, imbagħad ipprepara l-katina ta’ attestazzjoni, sabiex ma tirrepetix passi jew tħallas għal dawk li m’għandekx bżonn."
-          ]
-        },
-        "ga": {
-          "title": "An gá i gcónaí le fianú MOFA do dhoiciméid UAE a úsáidtear thar lear?",
-          "description": "Níl riail ghinearálta, is í an tír ghlactha a chinneann.",
-          "content": [
-            "Socraíonn an tír nó an institiúid a ghlacfaidh do dhoiciméad cén dleathú nó fianú atá ag teastáil. Má éilíonn Aireacht Gnóthaí Eachtracha na UAE fianú, braitheann an slabhra ar an doiciméad agus ar an údarás eisiúna. Seiceáil riachtanais an fhaighteora ar dtús chun céimeanna neamhriachtanacha a sheachaint agus costais atá faoi chois a laghdú."
-          ]
-        },
-        "no": {
-          "title": "Må dokumenter fra UAE alltid attestere hos MOFA for bruk i utlandet?",
-          "description": "Det finnes ingen generell regel, mottakerlandet avgjør.",
-          "content": [
-            "Landet eller institusjonen som mottar dokumentet bestemmer hvilken legalisering eller attestasjon som kreves. Når MOFA-attestasjon kreves, avhenger prosessen av dokumentet og utstedende myndighet. Sjekk mottakerens krav først, og planlegg attestasjonskjeden for å unngå unødvendige trinn eller kostnader."
-          ]
-        },
-        "tr": {
-          "title": "BAE belgeleri yurt dışında her zaman MOFA tasdiki gerektirir mi?",
-          "description": "Genel bir kural yoktur, kararı belgeyi kabul edecek ülke verir.",
-          "content": [
-            "Belgeyi kabul edecek ülke veya kurum, hangi legalizasyon veya tasdiki istediğini belirler. BAE Dışişleri Bakanlığı tasdiki gerektiğinde uygulanacak yol belgenin türüne ve düzenleyen makama bağlıdır. Önce kabul eden tarafın şartlarını kontrol edin, sonra tasdik zincirini planlayın, böylece gereksiz adımları tekrarlamaz veya gereksiz ödemeler yapmazsınız."
-          ]
-        },
-        "sr": {
-          "title": "Da li dokumenti za UAE uvek trebaju MOFA overu za upotrebu u inostranstvu?",
-          "description": "Ne postoji univerzalno pravilo. Zemlja koja prima odlučuje.",
-          "content": [
-            "Zemlja ili institucija koja će primiti vaš dokument određuje koju legalizaciju ili overu zahteva. Gde se zahteva overa Ministarstva spoljnih poslova UAE, trenutni postupak zavisi od dokumenta i organa koji ga je izdao. Proverite zahteve primaoca prvo, pa planirajte lanac overe, kako ne biste ponavljali korake ili plaćali nepotrebno."
-          ]
-        },
-        "uk": {
-          "title": "Чи потребують документи ОАЕ завжди атестації MOFA для використання за кордоном?",
-          "description": "Універсального правила не існує. Приймаюча країна вирішує.",
-          "content": [
-            "Країна або установа, що прийматиме ваш документ, визначає необхідну легалізацію або атестацію. Якщо вимагається атестація Міністерства закордонних справ ОАЕ, поточний маршрут залежить від документа та органу, що його видав. Спочатку перевірте вимоги приймаючої сторони, а потім плануйте ланцюжок атестації, щоб не повторювати кроки і не платити за непотрібні послуги."
-          ]
-        },
-        "sq": {
-          "title": "A kërkojnë gjithmonë dokumentet e UAE vërtetim MOFA për përdorim jashtë?",
-          "description": "Nuk ekziston një rregull i përgjithshëm. Vendi pranues vendos.",
-          "content": [
-            "Vendi ose institucioni që do ta pranojë dokumentin tuaj përcakton legalizimin ose vërtetimin që kërkohet. Kur kërkohet vërtetimi i Ministrisë së Punëve të Jashtme të UAE, rruga aktuale varet nga dokumenti dhe autoriteti i lëshimit. Kontrolloni kërkesat e palës pranuese së pari, pastaj planifikoni zinxhirin e vërtetimit, në mënyrë që të mos përsërisni hapa ose të paguani për gjëra që nuk ju duhen."
-          ]
-        },
-        "is": {
-          "title": "Þurfa UAE skjöl alltaf MOFA vottun erlendis?",
-          "description": "Engin almenn regla gildir. Móttakandi land ákveður.",
-          "content": [
-            "Landið eða stofnunin sem mun taka við skjölunum ákvarðar hvaða lögvísun eða vottun er nauðsynleg. Þegar MOFA vottun UAE er krafist fer leiðin eftir skjali og útgefanda þess. Athugaðu kröfur móttakandans fyrst, skipuleggðu svo vottunarkeðjuna til að forðast endurtekningu eða óþarfa kostnað."
-          ]
-        },
-        "ru": {
-          "title": "Всегда ли нужен MOFA для документов ОАЭ при использовании за рубежом?",
-          "description": "Единого правила нет, решение принимает страна, которая будет принимать документ.",
-          "content": [
-            "Страна или учреждение, принимающее ваш документ, определяет нужную легализацию или заверение. Если требуется заверение Министерством иностранных дел ОАЭ MOFA, применимый порядок зависит от документа и органа, его выдавшего. Сначала проверьте требования принимающей стороны, затем планируйте цепочку легализации, чтобы не повторять шаги и не платить за лишние процедуры."
-          ]
-        },
-        "ar": {
-          "title": "هل تحتاج مستندات الإمارات دائمًا إلى تصديق وزارة الخارجية في الخارج؟",
-          "description": "لا قاعدة عامة، الجهة المستلمة هي التي تقرر.",
-          "content": [
-            "الدولة أو الجهة المستلمة هي التي تحدد نوع التوثيق أو التصديق المطلوب. حيث يلزم تصديق وزارة الخارجية، يختلف المسار حسب المستند والجهة المصدرة. تحقق من متطلبات المستلم أولًا ثم خطط لسلسلة التصديق لتفادي خطوات أو تكاليف غير ضرورية."
-          ]
-        }
-      }
-    },
-    {
       "slug": "uae-poa-abroad-signing-options",
       "published": true,
-      "publishedAt": "2026-01-15",
+      "publishedAt": "2026-01-07",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/poa-abroad.svg",
       "translations": {
@@ -5863,7 +5164,7 @@
     {
       "slug": "general-or-special-poa-uae",
       "published": true,
-      "publishedAt": "2026-02-15",
+      "publishedAt": "2026-02-22",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/choose-poa.svg",
       "translations": {
@@ -10736,7 +10037,7 @@
     {
       "slug": "sell-dubai-property-from-abroad-checklist",
       "published": true,
-      "publishedAt": "2026-03-15",
+      "publishedAt": "2026-03-04",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/property-sale.svg",
       "translations": {
@@ -15897,7 +15198,7 @@
     {
       "slug": "manage-dubai-property-without-sale-powers",
       "published": true,
-      "publishedAt": "2026-04-15",
+      "publishedAt": "2026-04-18",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/property-management.svg",
       "translations": {
@@ -21058,7 +20359,7 @@
     {
       "slug": "sell-uae-car-while-abroad",
       "published": true,
-      "publishedAt": "2026-05-15",
+      "publishedAt": "2026-05-29",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/vehicle-poa.svg",
       "translations": {
@@ -25931,7 +25232,7 @@
     {
       "slug": "foreign-document-mofa-attestation-uae-guide",
       "published": true,
-      "publishedAt": "2026-06-15",
+      "publishedAt": "2026-06-11",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/document-attestation.svg",
       "translations": {
@@ -31092,7 +30393,7 @@
     {
       "slug": "arabic-legal-translation-uae-documents",
       "published": true,
-      "publishedAt": "2026-07-15",
+      "publishedAt": "2026-07-26",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/legal-translation.svg",
       "translations": {
@@ -36253,7 +35554,7 @@
     {
       "slug": "company-poa-board-resolution-uae",
       "published": true,
-      "publishedAt": "2026-08-15",
+      "publishedAt": "2026-08-09",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/company-authority.svg",
       "translations": {
@@ -41414,7 +40715,7 @@
     {
       "slug": "cancel-uae-poa-from-abroad-notification",
       "published": true,
-      "publishedAt": "2026-09-15",
+      "publishedAt": "2026-09-23",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/poa-revocation.svg",
       "translations": {
@@ -46575,7 +45876,7 @@
     {
       "slug": "uae-bank-account-poa-from-abroad",
       "published": true,
-      "publishedAt": "2026-10-15",
+      "publishedAt": "2026-10-02",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/bank-account-poa.svg",
       "translations": {
@@ -51736,7 +51037,7 @@
     {
       "slug": "child-travel-consent-uae-one-parent-guide",
       "published": true,
-      "publishedAt": "2026-10-15",
+      "publishedAt": "2026-10-13",
       "updatedAt": "2026-10-15",
       "image": "/images/blog/child-travel-consent.svg",
       "translations": {

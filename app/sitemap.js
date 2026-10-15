@@ -3,7 +3,8 @@ import { getEnabledServiceSlugs } from '../lib/serviceAvailability';
 import { languageAlternates, reviewedLanguageAlternates } from '../lib/seo';
 import { APOSTILLE_DESTINATIONS } from '../lib/apostille';
 import { isSearchReady } from '../lib/editorial';
-import { getArticles, getBlogAlternates, getArticleAlternates } from '../lib/blog';
+import { getArticles, getArticleAlternates } from '../lib/blog';
+import { getBlogPageCount, getBlogPageInfo, blogPagePath, getBlogPageAlternates } from '../lib/blog-pagination';
 
 export default function sitemap() {
   const out = [];
@@ -17,7 +18,10 @@ export default function sitemap() {
     if (isSearchReady(lang)) for (const slug of getEnabledServiceSlugs()) out.push({ url:`${DOMAIN}/${lang}/services/${slug}`, changeFrequency:'monthly', priority:.8, alternates:{languages:reviewedLanguageAlternates(`/services/${slug}`)} });
     if (lang === 'en') for (const d of APOSTILLE_DESTINATIONS) out.push({ url:`${DOMAIN}/${lang}/apostille/${d.slug}`, changeFrequency:'monthly', priority:.75 });
     const posts = getArticles(lang);
-    if (posts.length) out.push({ url:`${DOMAIN}/${lang}/blog`, lastModified:posts.reduce((latest,post)=>post.updatedAt > latest ? post.updatedAt : latest,posts[0].updatedAt), changeFrequency:'weekly', priority:.7, alternates:{languages:getBlogAlternates(DOMAIN)} });
+    for (let page=1;page<=getBlogPageCount(lang);page++) {
+      const pagePosts=getBlogPageInfo(lang,page).posts;
+      out.push({url:`${DOMAIN}${blogPagePath(lang,page)}`,lastModified:pagePosts.reduce((latest,post)=>post.updatedAt>latest?post.updatedAt:latest,pagePosts[0].updatedAt),changeFrequency:'weekly',priority:page===1?.7:.5,alternates:{languages:getBlogPageAlternates(page)}});
+    }
     for (const post of posts) out.push({ url:`${DOMAIN}/${lang}/blog/${post.slug}`, lastModified:post.updatedAt, changeFrequency:'monthly', priority:.6, alternates:{languages:getArticleAlternates(post.slug,DOMAIN)} });
   }
   return out;
