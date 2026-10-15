@@ -1,14 +1,14 @@
 {
   "t": "Poa Dubai, UAE Valtakirjat ja asiakirjojen vahvistukset, koordinointi riippumatta sijainnistasi",
   "h1": "Arabiemiirikuntien asiakirjat, koordinoidaan etänä asuinpaikastasi riippumatta",
-  "sub": "Valtakirjat, tiedoksiannot ja virallistamiset Arabiemiirikunnissa, laadimme, jätämme ja seuraamme ne puolestasi. Jotkin viralliset vaiheet voivat edellyttää henkilöllisyyden varmistusta, läsnäoloa tai asiakirjan toimittamista viranomaisen vaatimin ehdoin.",
+  "sub": "Valtakirjat, tiedoksiannot ja laillistukset Arabiemiirikunnissa, laadimme, jätämme ja seuraamme ne puolestasi. Jotkin viralliset vaiheet voivat edellyttää henkilöllisyyden varmistusta, läsnäoloa tai asiakirjan toimittamista viranomaisen vaatimin ehdoin.",
   "wa": "Lähetä meille viestiä WhatsAppissa",
   "mail": "Lähetä sähköpostia",
   "sh": "Mitä hoidamme",
   "s": [
     [
       "Valtakirjat",
-      "Yleisvaltakirjat, erityisvaltakirjat, kiinteistö-, pankki-, ajoneuvo-, oikeus-, yhtiön perustaminen-, perintö- ja lapsen matkustamiseen liittyvät valtakirjat, muotoiltuna tarkkaan käyttötarkoitukseen."
+      "Yleisvaltakirjat, erityisvaltakirjat, kiinteistö-, pankki-, ajoneuvo-, oikeudenkäynti-, yhtiön perustamis-, perintö- ja lapsen matkustamiseen liittyvät valtakirjat, muotoiltuna tarkkaan käyttötarkoitukseen."
     ],
     [
       "Tiedoksiannot",
@@ -16,7 +16,7 @@
     ],
     [
       "Vahvistus ja seuranta",
-      "Asiakirjojen virallistaminen Arabiemiirikunnissa ja seuranta siihen asti kun ne palautetaan. Ulkomailla myönnettyjen asiakirjojen tarvittava vahvistusketju määräytyy alkuperämaan ja vastaanottavan UAE-viranomaisen mukaan. Tämä voi sisältää vahvistuksia antomassa ja Arabiemiirikuntien toimivaltaisessa edustustossa."
+      "Asiakirjojen laillistaminen Arabiemiirikunnissa ja seuranta siihen asti kun ne palautetaan. Ulkomailla myönnettyjen asiakirjojen tarvittava vahvistusketju määräytyy alkuperämaan ja vastaanottavan UAE-viranomaisen mukaan. Tämä voi sisältää vahvistuksia myöntämismaassa ja Arabiemiirikuntien toimivaltaisessa edustustossa."
     ]
   ],
   "ph": "Miten palvelu etenee",
@@ -49,7 +49,7 @@
       ],
       [
         "Onko asianajaja sama kuin julkinen notaari Arabiemiirikunnissa?",
-        "Ei. Asianajajat ja julkiset notaariot toimivat eri säädellyissä rooleissa. Asianajaja voi neuvoa tai edustaa asiakasta, jos hänellä on siihen valtuudet, kun taas virallisen notaarivahvistuksen tekee toimivaltainen notaariviranomainen tai luvan saanut notaari. Tarjoamme asiakirjojen laatimisen ja prosessikoordinoinnin tukea. Emme ole viranomainen."
+        "Ei. Asianajajat ja julkiset notaarit toimivat eri säädellyissä rooleissa. Asianajaja voi neuvoa tai edustaa asiakasta, jos hänellä on siihen valtuudet, kun taas virallisen notaarivahvistuksen tekee toimivaltainen notaariviranomainen tai luvan saanut notaari. Tarjoamme asiakirjojen laatimisen ja prosessikoordinoinnin tukea. Emme ole viranomainen."
       ],
       [
         "Voinko hoitaa valtakirjan, kun olen Arabiemiirikuntien ulkopuolella?",
@@ -69,11 +69,11 @@
       ],
       [
         "Mikä on yleisvaltakirjan ja erityisvaltakirjan ero?",
-        "Yleisvaltakirja voi luetella useita valtuuksia, kun erityisvaltakirja keskittyy tiettyihin toimiin tai kauppoihin. Kumpikaan nimike ei yksin takaa hyväksyntää. Vastaanottava pankki, maaosaston viranomainen tai muu taho voi edellyttää täsmällistä sanamuotoa tai lisänäyttöä."
+        "Yleisvaltakirja voi luetella useita valtuuksia, kun erityisvaltakirja keskittyy tiettyihin toimiin tai kauppoihin. Kumpikaan nimike ei yksin takaa hyväksyntää. Vastaanottava pankki, kiinteistörekisteriviranomainen tai muu taho voi edellyttää täsmällistä sanamuotoa tai lisänäyttöä."
       ],
       [
         "Täytyykö valtuuttamani henkilön osallistua valtakirjan notaarivahvistukseen?",
-        "Ei välttämättä. Valmistaja yleensä suorittaa vaaditut henkilöllisyyden ja suostumuksen vaiheet, mutta osallistumista ja tunnistamista koskevat vaatimukset riippuvat valitusta notaarikanavasta ja tapahtumasta. Tarkistamme reitin ennen järjestelyjen tekemistä."
+        "Ei välttämättä. Valtuuttaja yleensä suorittaa vaaditut henkilöllisyyden ja suostumuksen vaiheet, mutta osallistumista ja tunnistamista koskevat vaatimukset riippuvat valitusta notaarikanavasta ja tapahtumasta. Tarkistamme reitin ennen järjestelyjen tekemistä."
       ],
       [
         "Voiko ulkomailla allekirjoitetun valtakirjan käyttää Dubaissa?",
@@ -109,11 +109,11 @@
       ],
       [
         "Mikä ero on maksamattomia vuokria koskevalla vaatimuksella ja häätöasiassa?",
-        "Vuokravaatimus hakee erääntyneiden summien maksamista. Häätöasia pyrkii asuntohallinnan palauttamiseen laissa tunnustetun perusteella. Riippuen tilanteesta molemmat voivat olla relevantteja, mutta ne eivät korvaa toisiaan."
+        "Vuokravaatimus hakee erääntyneiden summien maksamista. Häätöasia pyrkii asunnon hallinnan palauttamiseen laissa tunnustetun perusteella. Riippuen tilanteesta molemmat voivat olla relevantteja, mutta ne eivät korvaa toisiaan."
       ],
       [
         "Mitä tapahtuu jos asiakirja hylätään?",
-        "Ensin on määritettävä hylkäyksen tarkka syy ja vastaanottava viranomainen. Yleisiä ongelmia ovat puutteelliset valtakirjavaltuudet, epäjohdonmukaiset henkilötiedot, puuttuva tuki, käännös tai vahvistusongelmat ja väärä jättökanava. Voimme auttaa järjestämään korjatun toimituksen."
+        "Ensin on määritettävä hylkäyksen tarkka syy ja vastaanottava viranomainen. Yleisiä ongelmia ovat puutteelliset valtakirjavaltuudet, epäjohdonmukaiset henkilötiedot, puuttuvat tukiasiakirjat, käännös tai vahvistusongelmat ja väärä jättökanava. Voimme auttaa järjestämään korjatun toimituksen."
       ]
     ],
     "UKK"

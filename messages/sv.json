@@ -15,7 +15,7 @@
       "Rättsliga underrättelser, vräkningsmeddelanden och återkallelse av fullmakt, delgivna genom licensierad kanal."
     ],
     [
-      "Legaliseringshandlingar och uppföljning",
+      "Legalisering och uppföljning",
       "Dokumentattestering inom UAE, följd tills dokumentet returneras. För dokument utfärdade utomlands beror den tillämpliga autentiseringskedjan på ursprungslandet och den mottagande UAE-myndigheten. Detta kan inkludera attestering i utfärdandelandet och vid behörig UAE-mission."
     ]
   ],
@@ -31,15 +31,15 @@
     ],
     [
       "Du godkänner",
-      "Inget lämnas in eller notifieras utan ditt skriftliga godkännande."
+      "Inget lämnas in eller notariseras utan ditt skriftliga godkännande."
     ],
     [
       "Inlämning och leverans",
       "Dokumentet lämnas till myndigheten och returneras till dig. Tidsåtgång beror på myndigheten."
     ]
   ],
-  "note": "Fjärrsamordning finns för att inleda din begäran. Officiell notarisering kan vara elektronisk, via video eller personligen beroende på behörighet och ansvarig myndighet. Varje uppdrag prisges skriftligt innan arbete påbörjas.",
-  "legal": "Oberoende tjänst för dokumentupprättande och processkoordinering. Officiella handlingar fullgörs av behörig myndighet eller licensierad partner.",
+  "note": "Fjärrsamordning finns för att inleda din begäran. Officiell notarisering kan vara elektronisk, via video eller personligen beroende på behörighet och ansvarig myndighet. Varje uppdrag prissätts skriftligt innan arbete påbörjas.",
+  "legal": "Oberoende tjänst för dokumentupprättande och processkoordinering. Officiella åtgärder utförs av behörig myndighet eller licensierad partner.",
   "faq": [
     "Vanliga frågor",
     [
@@ -49,7 +49,7 @@
       ],
       [
         "Är en advokat samma sak som en Notary Public i UAE?",
-        "Nej. Advokater och Notaries Public har olika reglerade roller. En advokat kan ge råd eller företräda en klient där det är tillåtet, medan officiell notarisation utförs genom behörig notariemyndighet eller licensierad notarie. Vi tillhandahåller dokumentupprättande och processkoordinering. Vi är inte en statlig myndighet."
+        "Nej. Advokater och Notaries Public har olika reglerade roller. En advokat kan ge råd eller företräda en klient där det är tillåtet, medan officiell notarisering utförs genom behörig notariemyndighet eller licensierad notarie. Vi tillhandahåller dokumentupprättande och processkoordinering. Vi är inte en statlig myndighet."
       ],
       [
         "Kan jag upprätta en fullmakt medan jag är utanför UAE?",
@@ -57,14 +57,14 @@
       ],
       [
         "Räcker WhatsApp-meddelanden för ett vräkningsmeddelande i Dubai?",
-        "Inte när hyreslagen kräver ett formellt artikel 25-meddelande. DLD publicerar Notary Public eller registrerad posttjänst för flera artikel 25-vräkningsgrunder. WhatsApp eller e-post kan fortfarande vara relevant bevisning i en tvist, men de ersätter inte den föreskrivna formella delgivningsvägen när lagen kräver det."
+        "Inte när hyreslagen kräver ett formellt artikel 25-meddelande. DLD anger delgivning via Notary Public eller rekommenderat brev för flera artikel 25-vräkningsgrunder. WhatsApp eller e-post kan fortfarande vara relevant bevisning i en tvist, men de ersätter inte den föreskrivna formella delgivningsvägen när lagen kräver det."
       ],
       [
         "Krävs MOFA-attestering för varje UAE-dokument som används utomlands?",
         "Ingen generell regel täcker alla dokument och destinationer. Den mottagande staten eller institutionen avgör vilken legalisering eller attestering som krävs. När UAE MOFA-attestering krävs beror den aktuella rutten på dokumentet och utfärdande myndighet."
       ],
       [
-        "Hur lång tid tar notarisation i Dubai?",
+        "Hur lång tid tar notarisering i Dubai?",
         "Det finns ingen enhetlig slutförandetid för alla notariella transaktioner. Utkast kan ofta förberedas snabbt när fakta och underlag är kompletta, medan officiell granskning, identitets- och närvarokrav, betalning och utfärdande beror på ansvarig tjänst och bokningsmöjlighet. Vi bekräftar förväntad väg och tidsplan efter granskning av ditt dokument."
       ],
       [
@@ -72,12 +72,12 @@
         "En generell fullmakt kan ange flera befogenheter. En särskild fullmakt inriktar sig på särskilda åtgärder eller transaktioner. Ingen beteckning garanterar automatiskt godkännande. Den mottagande banken, lantmäteriet eller annan myndighet kan kräva exakt ordalydelse eller ytterligare bevis."
       ],
       [
-        "Behöver den person jag utser närvara vid fullmaktens notarisation?",
+        "Behöver den person jag utser närvara vid fullmaktens notarisering?",
         "Inte nödvändigtvis. Huvudmannen fullgör normalt nödvändiga identitets- och samtyckessteg, men närvaro- och identifieringsregler beror på vald notariekanal och transaktionen. Vi kontrollerar den valda rutten innan vi ordnar den."
       ],
       [
         "Kan en fullmakt undertecknad utomlands användas i Dubai?",
-        "Den kan accepteras efter tillämpliga notarisering, legalisering eller attestering och eventuell krävd arabisk översättning. Rutten beror på utfärdelselandet och den Dubai-myndighet som tar emot dokumentet. Förlita dig inte enbart på en utländsk underskrift."
+        "Den kan accepteras efter tillämpliga notarisering, legalisering eller attestering och eventuell krävd arabisk översättning. Rutten beror på utfärdandelandet och den Dubai-myndighet som tar emot dokumentet. Förlita dig inte enbart på en utländsk underskrift."
       ],
       [
         "Behöver jag en arabisk översättning av mitt dokument?",
@@ -97,7 +97,7 @@
       ],
       [
         "Kan en skannad PDF användas för UAE MOFA digital attestering?",
-        "För UAE utfärdade digitala dokument kräver MOFA ett ursprungligt elektroniskt utfärdat dokument med en godkänd verifieringsfunktion. En skanning eller fotografi är inte ett ursprungligt digitalt dokument. Andra dokument kan följa en kurirbaserad rutin med original."
+        "För UAE utfärdade digitala dokument kräver MOFA ett ursprungligt elektroniskt utfärdat dokument med en godkänd verifieringsfunktion. En skanning eller ett fotografi är inte ett ursprungligt digitalt dokument. Andra dokument kan följa en kurirbaserad rutin med original."
       ],
       [
         "Måste jag alltid skicka fysiskt original för attestering?",
@@ -108,8 +108,8 @@
         "Nej. Vräkningsgrund, tajming och lagligt föreskriven delgivningsmetod är avgörande. Om hyresgästen bestrider ärendet eller inte flyttar ut kan behörig hyrestvistsprocess behövas. Ett meddelande är inte i sig en vräkningsdom."
       ],
       [
-        "Vad är skillnaden mellan ett obetalt hyreskrav och ett vräkningsmål?",
-        "Ett hyreskrav söker betalning av påstådda skulder. Ett vräkningsmål söker återställande av besittning på en rättsligt erkänd grund. Beroende på omständigheterna kan båda formerna av lättnad vara relevanta, men de är inte utbytbara."
+        "Vad är skillnaden mellan ett krav på obetald hyra och ett vräkningsmål?",
+        "Ett hyreskrav söker betalning av påstådda skulder. Ett vräkningsmål söker återställande av besittning på en rättsligt erkänd grund. Beroende på omständigheterna kan båda formerna av rättsligt skydd vara relevanta, men de är inte utbytbara."
       ],
       [
         "Vad händer om ett dokument avvisas?",
@@ -130,7 +130,7 @@
       [
         "Vräkningsmeddelanden i Dubai: därför räcker inte ett WhatsApp-meddelande",
         "Lagen kan kräva ett formellt meddelande. Informella meddelanden ersätter det inte.",
-        "När hyreslagen kräver ett formellt artikel 25-meddelande beskriver Dubai Land Department delgivning via Notary Public eller registrerad post för flera vräkningsgrunder. Chattmeddelanden och e-post kan fortfarande fungera som bevis i en tvist, men de ersätter inte den form av meddelande som lagen föreskriver. Förbered meddelandet i den form myndigheten kräver och spara bevis på delgivning."
+        "När hyreslagen kräver ett formellt artikel 25-meddelande beskriver Dubai Land Department delgivning via Notary Public eller rekommenderat brev för flera vräkningsgrunder. Chattmeddelanden och e-post kan fortfarande fungera som bevis i en tvist, men de ersätter inte den form av meddelande som lagen föreskriver. Förbered meddelandet i den form myndigheten kräver och spara bevis på delgivning."
       ],
       [
         "Behöver UAE-dokument alltid MOFA-attestering för användning utomlands?",
