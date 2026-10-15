@@ -3,6 +3,7 @@
 import WhatsAppIcon from './WhatsAppIcon';
 import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {usePathname,useRouter} from 'next/navigation';
 import langs from '../lib/langs.json';
 import {BRAND} from '../lib/brand';
@@ -33,6 +34,10 @@ export default function Header({lang,m}){
  </div>;
  return <header className="site-header lux-header" dir={lang==='ar'?'rtl':'ltr'} ref={shell} style={{"--lux-menu-top":`${menuTop}px`}}>
   <style jsx global>{`
+ .lux-header .brand-logo-image {width:42px;height:42px;object-fit:contain;flex:0 0 auto;display:block;}
+ @media(max-width:600px){.lux-header .brand-logo-image{width:38px;height:38px;}}
+ @media(max-width:560px){.lux-header .brand-logo-image{width:35px;height:35px;}}
+
  .hero-shell .hero-actions .btn.whatsapp-primary.whatsapp-site-cta {
   display: flex !important; align-items: center; justify-content: center;
   width: 260px !important; max-width: 100% !important; min-width: 0 !important;
@@ -51,7 +56,7 @@ export default function Header({lang,m}){
   }
  }
 `}</style>
-  <Link className="logo" href={`/${lang}`} onClick={close} aria-label={BRAND.name}><span className="brand-mark" aria-hidden="true">P</span><span className="brand-copy"><b>POA DUBAI</b><small>{text(u.euUae)}</small></span></Link>
+  <Link className="logo" href={`/${lang}`} onClick={close} aria-label={BRAND.name}><Image className="brand-logo-image" src="/images/brand/logo.png" alt="" width={42} height={42} sizes="(max-width: 560px) 35px, (max-width: 600px) 38px, 42px" priority /><span className="brand-copy"><b>POA DUBAI</b><small>{text(u.euUae)}</small></span></Link>
   <nav className={'lux-navigation'+(mobile?' mobile-visible':'')} id="nav" aria-label={text(t.navigation)}>
    <Link className="lux-nav-home" href={`/${lang}`} onClick={close}>{text(m.nav[0])}</Link>
    {group('services',m.servicesLabel||t.services,<div className="lux-mega-layout"><div className="lux-mega-main"><div className="lux-panel-intro"><span>{text(t.services)}</span><p>{text(t.serviceIntro)}</p></div><div className="lux-service-groups">{categories.map(c=><div className="lux-service-category" key={c.id}><Link className="lux-category-title" href={`/${lang}#category-${c.id}`} onClick={close}>{text(c.title)}<span aria-hidden="true">↗</span></Link>{services.filter(s=>s.category===c.id).slice(0,3).map(s=><Link key={s.slug} href={`/${lang}/services/${s.slug}`} onClick={close}>{text(s.title)}</Link>)}</div>)}</div></div><aside className="lux-mega-aside"><span className="lux-aside-kicker">POA DUBAI</span><strong>{text(t.needHelp)}</strong><p>{text(t.helpDescription)}</p>{whatsappButton("lux-aside-whatsapp")}</aside></div>,true)}

@@ -6,6 +6,7 @@ const ALIAS = { nb: 'no', nn: 'no' };
 
 export function middleware(req) {
   const p = req.nextUrl.pathname;
+  if (p === '/icon' || p === '/apple-icon') return;
   if (CODES.includes(p.split('/')[1])) return;
   const wanted = (req.headers.get('accept-language') || '')
     .split(',')
