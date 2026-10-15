@@ -32,6 +32,25 @@ export default function Header({lang,m}){
   <div id={'lux-panel-'+id} className={'lux-nav-panel'+(large?' lux-nav-mega':'')} hidden={open!==id}>{content}</div>
  </div>;
  return <header className="site-header lux-header" dir={lang==='ar'?'rtl':'ltr'} ref={shell} style={{"--lux-menu-top":`${menuTop}px`}}>
+  <style jsx global>{`
+ .hero-shell .hero-actions .btn.whatsapp-primary.whatsapp-site-cta {
+  display: flex !important; align-items: center; justify-content: center;
+  width: 260px !important; max-width: 100% !important; min-width: 0 !important;
+  flex: 0 1 260px !important; min-height: 52px !important; height: auto !important;
+  padding: 12px 18px !important; font-size: 15px !important;
+  white-space: normal !important; overflow-wrap: anywhere; word-break: normal;
+  line-height: 1.4 !important; text-align: center; box-sizing: border-box; gap: 9px;
+ }
+ .hero-shell .hero-actions .btn.whatsapp-primary.whatsapp-site-cta::before {
+  position: static !important; inset: auto !important; transform: none !important;
+  flex: 0 0 20px; width: 20px; height: 20px;
+ }
+ @media (max-width: 600px) {
+  .hero-shell .hero-actions .btn.whatsapp-primary.whatsapp-site-cta {
+   width: 100% !important; flex-basis: 100% !important;
+  }
+ }
+`}</style>
   <Link className="logo" href={`/${lang}`} onClick={close} aria-label={BRAND.name}><span className="brand-mark" aria-hidden="true">P</span><span className="brand-copy"><b>POA DUBAI</b><small>{text(u.euUae)}</small></span></Link>
   <nav className={'lux-navigation'+(mobile?' mobile-visible':'')} id="nav" aria-label={text(t.navigation)}>
    <Link className="lux-nav-home" href={`/${lang}`} onClick={close}>{text(m.nav[0])}</Link>
