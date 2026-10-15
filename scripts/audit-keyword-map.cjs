@@ -1,0 +1,6 @@
+const fs=require('fs'); const d=JSON.parse(fs.readFileSync('lib/serviceResearch.json','utf8'));
+const limits={sv:54,de:54,fr:54,nl:54,da:54,no:54,fi:54,es:54,it:54,pt:54,pl:54,ro:54,el:54,cs:48};
+const slugs=Object.keys(d); let errors=[],checked=0,poaPages=0,poaCovered=0;
+function expectsPOA(item,slug){return ['poa','property','vehicle'].includes(item.category)||['corporate-power-of-attorney','company-incorporation-poa','company-management-poa','company-shares-poa','vat-tax-poa'].includes(slug)}
+for(const [lang,n] of Object.entries(limits)) for(const slug of slugs.slice(0,n)){checked++;const item=d[slug],c=item[lang]; if(!c){errors.push(`${lang}/${slug}:missing`);continue;} if(!Array.isArray(c.keywords)||c.keywords.length<4)errors.push(`${lang}/${slug}:weak keywords`); if(!item.keywordMap)errors.push(`${lang}/${slug}:no map`); if(expectsPOA(item,slug)){poaPages++;const blob=(JSON.stringify(c.keywords)+' '+c.intro).toLowerCase();if(blob.includes('poa'))poaCovered++;else errors.push(`${lang}/${slug}:POA missing`)} }
+console.log(`Pages checked: ${checked}`);console.log(`POA-relevant pages: ${poaPages}; POA covered: ${poaCovered}`);console.log(`Errors: ${errors.length}`);if(errors.length){console.log(errors.slice(0,80).join('\n'));process.exit(1)}console.log('PASS: keyword mapping applied to all 750 reviewed pages.');

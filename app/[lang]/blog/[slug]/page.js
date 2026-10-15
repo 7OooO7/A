@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getM, MAIL, RTL, DOMAIN } from '../../../../lib/i18n';
+import { getM, RTL, DOMAIN } from '../../../../lib/i18n';
 import { BRAND } from '../../../../lib/brand';
 import { getArticle, getBlogRoutes, getArticleAlternates, formatBlogDate, safeBlogJsonLd } from '../../../../lib/blog';
 import BlogContent from '../../../../components/BlogContent';
@@ -29,6 +29,8 @@ export default async function Article({ params }) {
   const post = getArticle(slug,lang);
   if (!post) notFound();
   const m = await getM(lang);
+  const waNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
+  const waHref = waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent(post.title)}` : '';
   const url = `${DOMAIN}/${lang}/blog/${slug}`;
   const ld = {
     '@context':'https://schema.org','@type':'Article',headline:post.title,description:post.description,inLanguage:lang,
@@ -44,7 +46,7 @@ export default async function Article({ params }) {
       <h1>{post.title}</h1>
       <p className="lead">{post.description}</p>
       <BlogContent content={post.content} />
-      <a className="btn p" href={`mailto:${MAIL}?subject=POA%20Dubai%20Request`}>{m.wa}</a>
+      {waHref ? <a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa}</a> : <span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa}</span>}
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeBlogJsonLd(ld)}} />
     </article>
   </main>;

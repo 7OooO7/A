@@ -11,7 +11,10 @@
     "audit:availability": "node scripts/audit-service-availability.cjs",
     "audit:about": "node scripts/audit-about-footer.cjs",
     "audit:faq-content": "node scripts/audit-faq-content.cjs",
-    "blog:check": "node scripts/check-blog.mjs"
+    "blog:check": "node scripts/check-blog.mjs",
+    "predev": "node scripts/sync-blog-images.mjs",
+    "prebuild": "node scripts/sync-blog-images.mjs",
+    "blog:images": "node scripts/sync-blog-images.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",
