@@ -10,9 +10,13 @@ export async function POST(request){
   const key=process.env.RESEND_API_KEY,from='info@poadubai.eu',to='info@poadubai.eu';
   if(!key||!from||!to)return NextResponse.json({error:'Email service not configured'},{status:503});
   const lines=[['Name',name],['Email',email],['Phone',clean(data.phone,40)],['Location',clean(data.location,120)],['Service',clean(data.service,150)],['Language',clean(data.lang,10)],['Message',message]];
-  const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({from,to:[to],subject:'POA Dubai — website enquiry',text:lines.map(([k,v])=>`${k}: ${v}`).join('\n'),reply_to:email})});
-  if(result.status >= 200 && result.status < 300)return NextResponse.json({ok:true});
-  if(!result.ok)return NextResponse.json({error:'Delivery failed'},{status:502});
+const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${key}`,'Content-Type':'application/json'},body:JSON.stringify({from,to:[to],subject:'POA Dubai — website enquiry',text:lines.map(([k,v])=>`${k}: ${v}`).join('\n'),reply_to:email})});
+const resendData = await result.json();
+if(result.ok) {
   return NextResponse.json({ok:true});
+} else {
+  console.error('Resend error:', resendData);
+  return NextResponse.json({error:'Delivery failed'},{status:502});
+}
  }catch{return NextResponse.json({error:'Invalid request'},{status:400});}
 }
