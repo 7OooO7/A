@@ -24,7 +24,7 @@ export default async function BlogListing({lang,page=1}) {
   return <main id="main-content" className="w">
     <section id="blog">
       <h2>{m.blogLabel}</h2>
-      <div id="bll">{info.posts.map(post=><article className="bc" key={post.slug}>
+      <div id="bll" style={{gridTemplateColumns:'repeat(auto-fill, minmax(min(100%, 290px), 1fr))'}}>{info.posts.map(post=><article className="bc" key={post.slug}>
         <div className="bi"><img src={post.image} alt={post.imageAlt || post.title} width="400" height="225" loading="lazy" style={{display:'block',width:'100%',height:'auto',aspectRatio:'400 / 225',objectFit:'cover'}} /></div>
         <div className="bm">{post.author || 'POA DUBAI'} &nbsp;·&nbsp; <time dateTime={post.publishedAt}>{formatBlogDate(post.publishedAt,lang)}</time></div>
         <h3><Link className="blog-title-link" href={`/${lang}/blog/${post.slug}`}>{post.title}</Link></h3>

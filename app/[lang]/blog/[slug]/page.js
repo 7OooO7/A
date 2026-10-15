@@ -4,6 +4,7 @@ import { getM, RTL, DOMAIN } from '../../../../lib/i18n';
 import { BRAND } from '../../../../lib/brand';
 import { getArticle, getBlogRoutes, getArticleAlternates, formatBlogDate, safeBlogJsonLd } from '../../../../lib/blog';
 import BlogContent from '../../../../components/BlogContent';
+import { getUi } from '../../../../lib/services';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => getBlogRoutes();
@@ -29,6 +30,7 @@ export default async function Article({ params }) {
   const post = getArticle(slug,lang);
   if (!post) notFound();
   const m = await getM(lang);
+  const u = getUi(lang);
   const waNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
   const waHref = waNumber ? `https://wa.me/${waNumber}?text=${encodeURIComponent(post.title)}` : '';
   const url = `${DOMAIN}/${lang}/blog/${slug}`;
@@ -46,7 +48,10 @@ export default async function Article({ params }) {
       <h1>{post.title}</h1>
       <p className="lead">{post.description}</p>
       <BlogContent content={post.content} />
-      {waHref ? <a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa}</a> : <span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa}</span>}
+      <div className="blog-whatsapp-box" style={{marginTop:'32px',padding:'12px',border:'1.5px solid color-mix(in srgb,var(--navy) 72%,#fff)',borderRadius:'12px',background:'#f7f4ee',boxShadow:'0 8px 24px rgba(8,31,48,.06)',minWidth:0}}>
+        <h2 style={{margin:'0 0 10px',fontSize:'17px',lineHeight:1.25,overflowWrap:'anywhere'}}>{u.preFaqWhatsapp?.title || u.faqPrompt}</h2>
+        {waHref ? <a className="btn service-whatsapp whatsapp-site-cta" style={{width:'100%',minWidth:0,justifyContent:'center'}} href={waHref} target="_blank" rel="noopener noreferrer">{m.wa}</a> : <span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" style={{width:'100%',minWidth:0,justifyContent:'center'}} aria-disabled="true">{m.wa}</span>}
+      </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html:safeBlogJsonLd(ld)}} />
     </article>
   </main>;
