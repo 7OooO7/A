@@ -2,10 +2,20 @@
 import { useState } from 'react';
 import uiData from '../lib/uiCopy.json';
 import contactCopy from '../lib/contactCopy.json';
+import { SERVICE_CATEGORIES, SERVICES } from '../lib/serviceCatalog';
+import { isGroupEnabled, isServiceEnabled } from '../lib/serviceAvailability';
+import ServiceSelect from './ServiceSelect';
+import styles from './ContactForm.module.css';
 
 export default function ContactForm({ c, lang }) {
   const u = uiData[lang] || uiData.en;
   const copy = contactCopy[lang] || contactCopy.en;
+  const serviceOptions = SERVICE_CATEGORIES.map((category, index) => ({
+    id: category.id, label: u.categories[index] || category.title,
+  })).filter(category => isGroupEnabled(category.id) && SERVICES.some(
+    ([slug, group]) => group === category.id && isServiceEnabled(slug)
+  ));
+  serviceOptions.push({ id: 'other', label: copy.other });
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
 
@@ -43,7 +53,7 @@ export default function ContactForm({ c, lang }) {
   }
 
   return (
-    <form className="contact-form" onSubmit={submit}>
+    <form className={`contact-form ${styles.form}`} onSubmit={submit}>
       <div className="field-row">
         <label>
           {c.name}
@@ -66,15 +76,9 @@ export default function ContactForm({ c, lang }) {
         </label>
       </div>
 
-      <label>
-        {c.service}
-        <select name="service" defaultValue="">
-          <option value="" disabled>{copy.chooseService}</option>
-          {u.categories.map((x) => (
-            <option key={x}>{x}</option>
-          ))}
-        </select>
-      </label>
+      <div className={styles.serviceField}>
+        <ServiceSelect name="service" label={c.service} placeholder={copy.chooseService} options={serviceOptions} lang={lang} />
+      </div>
 
       <label>
         {c.message}
