@@ -62,15 +62,18 @@ export default function Footer({m,lang}){
   width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box;
  }
  .site-footer .footer-whatsapp-wrap .footer-whatsapp-btn {
-  display: flex !important; align-items: center; justify-content: center;
-  gap: .5rem; width: 100% !important; max-width: 100% !important;
-  min-width: 0 !important; height: auto !important; min-height: 48px;
-  padding: .75rem 1rem; box-sizing: border-box;
-  white-space: normal !important; text-align: center; line-height: 1.4;
-  overflow-wrap: anywhere; word-break: normal;
+  display: inline-flex !important; align-items: center; justify-content: center;
+  gap: 9px !important; width: fit-content !important; max-width: 100% !important;
+  min-width: 0 !important; height: auto !important; min-height: 42px !important;
+  padding: 11px 15px !important; box-sizing: border-box;
+  border: 0 !important; border-radius: 9px !important;
+  background: #21644f !important; color: #fff !important;
+  font-size: 12px !important; font-weight: 700 !important;
+  white-space: normal !important; text-align: center; line-height: 20px !important;
+  box-shadow: none !important; overflow-wrap: anywhere; word-break: normal;
  }
  .site-footer .footer-whatsapp-wrap .footer-whatsapp-label {
-  display: block; flex: 1 1 auto; min-width: 0; max-width: 100%;
+  display: block; flex: 0 1 auto; min-width: 0; max-width: 100%;
   white-space: normal !important; overflow-wrap: anywhere; word-break: normal;
  }
  .site-footer .footer-whatsapp-wrap .footer-whatsapp-btn::before,
@@ -78,8 +81,15 @@ export default function Footer({m,lang}){
   position: static !important; inset: auto !important; transform: none !important;
   flex: 0 0 auto;
  }
+ .site-footer .footer-whatsapp-wrap .footer-whatsapp-btn::before {
+  width: 19px !important; height: 19px !important; flex: 0 0 19px !important;
+ }
  .site-footer .footer-whatsapp-wrap .footer-whatsapp-btn svg {
   flex: 0 0 auto;
  }
-`}</style><div className="footer-shell"><div className="footer-grid">{groups.map((g,i)=><section className={`footer-section ${open===i?'is-open':''}`} key={i}><button className="footer-heading" type="button" aria-expanded={open===i} aria-controls={`footer-panel-${i}`} onClick={()=>setOpen(open===i?null:i)}><span>{text(g.title)}</span><span className="footer-chevron" aria-hidden="true">+</span></button><div id={`footer-panel-${i}`} className="footer-links">{g.links.map((x,j)=><Link key={j} href={x.href}>{text(x.label)}</Link>)}</div>{g.whatsapp?<div className="footer-whatsapp-wrap">{waHref?<a className="footer-whatsapp-btn whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer"><span className="footer-whatsapp-label">{text(m.wa||'WhatsApp')}</span></a>:<span className="footer-whatsapp-btn whatsapp-site-cta whatsapp-disabled" aria-disabled="true"><span className="footer-whatsapp-label">{text(m.wa||'WhatsApp')}</span></span>}</div>:null}</section>)}</div><div className="footer-bottom"><div className="footer-brand"><b>POA DUBAI</b><span>{text(u.independent)}</span></div><p>{text(roleCopy[lang]||roleCopy.en)}</p><small>© {new Date().getFullYear()} POA DUBAI</small></div></div></footer>
+ .site-footer .footer-whatsapp-wrap .footer-whatsapp-btn:hover {
+  background: #194e3e !important; filter: none !important; transform: none !important;
+ }
+
+`}</style><div className="footer-shell"><div className="footer-grid">{groups.map((g,i)=><section className={`footer-section ${open===i?'is-open':''}`} key={i}><button className="footer-heading" type="button" aria-expanded={open===i} aria-controls={`footer-panel-${i}`} onClick={()=>setOpen(open===i?null:i)}><span>{text(g.title)}</span><span className="footer-chevron" aria-hidden="true">+</span></button><div id={`footer-panel-${i}`} className="footer-links">{g.links.map((x,j)=><Link key={j} href={x.href}>{text(x.label)}</Link>)}</div>{g.whatsapp?<div className="footer-whatsapp-wrap">{waHref?<a className="footer-whatsapp-btn whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer"><span className="footer-whatsapp-label">WhatsApp</span></a>:<span className="footer-whatsapp-btn whatsapp-site-cta whatsapp-disabled" aria-disabled="true"><span className="footer-whatsapp-label">WhatsApp</span></span>}</div>:null}</section>)}</div><div className="footer-bottom"><div className="footer-brand"><b>POA DUBAI</b><span>{text(u.independent)}</span></div><p>{text(roleCopy[lang]||roleCopy.en)}</p><small>© {new Date().getFullYear()} POA DUBAI</small></div></div></footer>
 }
