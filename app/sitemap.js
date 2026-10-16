@@ -1,5 +1,5 @@
 import { CODES, DOMAIN } from '../lib/i18n';
-import { getEnabledServiceSlugs } from '../lib/serviceAvailability';
+import { getEnabledServiceSlugs, isServiceEnabled } from '../lib/serviceAvailability';
 import { languageAlternates, reviewedLanguageAlternates } from '../lib/seo';
 import { APOSTILLE_DESTINATIONS } from '../lib/apostille';
 import { isSearchReady } from '../lib/editorial';
@@ -16,7 +16,7 @@ export default function sitemap() {
     if (["en", "ar", "sv", "de", "fr", "es", "it", "nl", "da", "no", "fi", "pt", "pl", "cs", "sk", "ro", "hu", "bg", "el", "et", "hr", "ru", "lt", "lv", "is", "mt", "sl", "tr", "ga", "sr", "uk", "sq"].includes(lang)) for (const slug of ['privacy','terms','refunds','how-it-works','pricing','document-requirements','document-rejection']) out.push({url:`${DOMAIN}/${lang}/${slug}`,changeFrequency:'monthly',priority:.65,alternates:{languages:Object.fromEntries(["en", "ar", "sv", "de", "fr", "es", "it", "nl", "da", "no", "fi", "pt", "pl", "cs", "sk", "ro", "hu", "bg", "el", "et", "hr", "ru", "lt", "lv", "is", "mt", "sl", "tr", "ga", "sr", "uk", "sq"].map(code=>[code,`${DOMAIN}/${code}/${slug}`]))}});
     out.push({ url:`${DOMAIN}/${lang}/faq`, changeFrequency:'monthly', priority:.7, alternates:{languages:languageAlternates('/faq')} });
     if (isSearchReady(lang)) for (const slug of getEnabledServiceSlugs()) out.push({ url:`${DOMAIN}/${lang}/services/${slug}`, changeFrequency:'monthly', priority:.8, alternates:{languages:reviewedLanguageAlternates(`/services/${slug}`)} });
-    if (lang === 'en') for (const d of APOSTILLE_DESTINATIONS) out.push({ url:`${DOMAIN}/${lang}/apostille/${d.slug}`, changeFrequency:'monthly', priority:.75 });
+    if (lang === 'en' && isServiceEnabled('apostille')) for (const d of APOSTILLE_DESTINATIONS) out.push({ url:`${DOMAIN}/${lang}/apostille/${d.slug}`, changeFrequency:'monthly', priority:.75 });
     const posts = getArticles(lang);
     for (let page=1;page<=getBlogPageCount(lang);page++) {
       const pagePosts=getBlogPageInfo(lang,page).posts;

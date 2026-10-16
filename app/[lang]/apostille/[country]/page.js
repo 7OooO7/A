@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { isServiceEnabled } from '../../../../lib/serviceAvailability';
 import { CODES, DOMAIN, MAIL } from '../../../../lib/i18n';
 import { BRAND } from '../../../../lib/brand';
 import { APOSTILLE_DESTINATIONS, apostilleDestination } from '../../../../lib/apostille';
 import { absolute, languageAlternates, breadcrumbSchema, safeJsonLd, OG_LOCALE } from '../../../../lib/seo';
 
 export const dynamicParams=false;
-export function generateStaticParams(){ return APOSTILLE_DESTINATIONS.map(d=>({lang:'en',country:d.slug})); }
+export function generateStaticParams(){ return isServiceEnabled('apostille') ? APOSTILLE_DESTINATIONS.map(d=>({lang:'en',country:d.slug})) : []; }
 export async function generateMetadata({params}){
+ if(!isServiceEnabled('apostille'))notFound();
  const {lang,country}=await params; const d=apostilleDestination(country); if(!d)return{};
  const title=`Apostille for Swedish Documents for Use in ${d.name} | ${BRAND.name}`;
  const description=`Arrange Apostille for eligible documents issued in Sweden and intended for use in ${d.name}. Sweden-origin documents only at present; destination requirements are checked before processing.`;
@@ -15,6 +17,7 @@ export async function generateMetadata({params}){
  return {title,description,alternates:{canonical:url,languages:languageAlternates(path)},robots:{index:lang==='en',follow:true},openGraph:{title,description,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description}};
 }
 export default async function Page({params}){
+ if(!isServiceEnabled('apostille'))notFound();
  const {lang,country}=await params; const d=apostilleDestination(country); if(!d)notFound(); const url=absolute(lang,`/apostille/${country}`);
  const schemas=[{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:`Apostille for Swedish Documents for Use in ${d.name}`,description:`Apostille coordination for eligible Sweden-issued documents intended for use in ${d.name}.`,provider:{'@type':'Organization','@id':`${DOMAIN}/#organization`,name:BRAND.name,url:DOMAIN},areaServed:{'@type':'Country',name:d.name},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:'Apostille Services',path:'/services/apostille'},{name:d.name,path:`/apostille/${country}`}])];
  return <main id="main-content" className="w service-page">
