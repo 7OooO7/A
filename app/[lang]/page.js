@@ -7,6 +7,7 @@ import langs from '../../lib/langs.json';
 import HeroServiceSearch from '../../components/HeroServiceSearch';
 import AuthorityMarquee from '../../components/AuthorityMarquee';
 import aboutCopy from '../../lib/aboutCopy.json';
+import ClientReviews from '../../components/ClientReviews';
 
 export default async function Home({ params }) {
  const {lang}=await params; const m=await getM(lang); const u=getUi(lang); const categories=getCategories(lang); const about=aboutCopy[lang]||aboutCopy.en;
@@ -22,6 +23,7 @@ export default async function Home({ params }) {
    <div className="hero-actions">{waHref?<a className="btn whatsapp-primary whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{u.serviceSearch.whatsapp}</a>:<span className="btn whatsapp-primary whatsapp-site-cta whatsapp-unconfigured" aria-disabled="true">{u.serviceSearch.whatsapp}</span>}<a className="btn p hero-email-secondary" href={`mailto:${MAIL}`}>{m.mail}</a><a className="btn g" href="#services">{u.explore}</a></div></div>
   </div></section>
   <div className="w">
+   <ClientReviews lang={lang}/>
    <section id="services" className="section-head"><div><span className="kicker">{u.directory}</span><h2>{m.sh}</h2></div><p className="section-intro">{u.directoryIntro}</p></section>
    <nav className="category-nav" aria-label={m.sh}>{categories.map(c=><a key={c.id} href={`#${c.id}`}>{c.title}</a>)}</nav>
    {categories.map(category=><section className="service-category" id={category.id} key={category.id}>
