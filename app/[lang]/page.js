@@ -7,6 +7,7 @@ import langs from '../../lib/langs.json';
 import HeroServiceSearch from '../../components/HeroServiceSearch';
 import AuthorityMarquee from '../../components/AuthorityMarquee';
 import aboutCopy from '../../lib/aboutCopy.json';
+import styles from './HeroFlag.module.css';
 
 export default async function Home({ params }) {
  const {lang}=await params; const m=await getM(lang); const u=getUi(lang); const categories=getCategories(lang); const about=aboutCopy[lang]||aboutCopy.en;
@@ -17,7 +18,7 @@ export default async function Home({ params }) {
  const ld=[{'@context':'https://schema.org','@type':'Organization',name:BRAND.name,url:`${DOMAIN}/${lang}`,description:m.sub,email:MAIL,areaServed:['Worldwide','United Arab Emirates']},
  {'@context':'https://schema.org','@type':'ItemList',name:m.sh,itemListElement:services.map((s,i)=>({'@type':'ListItem',position:i+1,name:s.title,url:`${DOMAIN}/${lang}/services/${s.slug}`}))}];
  return <main id="main-content">
-  <section className="hero-shell"><div className="w hero"><div className="hero-layout"><div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div><div className="hero-copy"><div className="eyebrow">{u.euUae}</div><h1>{m.h1}</h1><p>{m.sub}</p><AuthorityMarquee authorities={about.authorities} label={about.authoritiesTitle}/><p className="hero-authority-message">{about.authoritiesCta}</p></div>
+  <section className="hero-shell"><div className={styles.flagWatermark} aria-hidden="true"><svg viewBox="0 0 600 300" focusable="false" preserveAspectRatio="xMidYMid meet"><rect x="150" width="450" height="100" fill="#00732f"/><rect x="150" y="100" width="450" height="100" fill="#fff"/><rect x="150" y="200" width="450" height="100" fill="#000"/><rect width="150" height="300" fill="#f00"/></svg></div><div className="w hero"><div className="hero-layout"><div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div><div className="hero-copy"><div className="eyebrow">{u.euUae}</div><h1>{m.h1}</h1><p>{m.sub}</p><AuthorityMarquee authorities={about.authorities} label={about.authoritiesTitle}/><p className="hero-authority-message">{about.authoritiesCta}</p></div>
    <div className="hero-finder"><HeroServiceSearch lang={lang} searchIndex={searchIndex} labels={u.serviceSearch}/></div>
    <div className="hero-actions">{waHref?<a className="btn whatsapp-primary whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{u.serviceSearch.whatsapp}</a>:<span className="btn whatsapp-primary whatsapp-site-cta whatsapp-unconfigured" aria-disabled="true">{u.serviceSearch.whatsapp}</span>}<a className="btn p hero-email-secondary" href={`mailto:${MAIL}`}>{m.mail}</a><a className="btn g" href="#services">{u.explore}</a></div></div>
   </div></section>
