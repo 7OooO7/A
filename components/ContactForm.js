@@ -1,9 +1,11 @@
 'use client';
 import { useState } from 'react';
 import uiData from '../lib/uiCopy.json';
+import contactCopy from '../lib/contactCopy.json';
 
 export default function ContactForm({ c, lang }) {
   const u = uiData[lang] || uiData.en;
+  const copy = contactCopy[lang] || contactCopy.en;
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
 
@@ -13,7 +15,8 @@ export default function ContactForm({ c, lang }) {
     setBusy(true);
     setStatus('');
 
-    const f = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const f = new FormData(form);
     const payload = Object.fromEntries(f.entries());
     payload.lang = lang;
 
@@ -30,18 +33,10 @@ export default function ContactForm({ c, lang }) {
         throw Error(data.error || 'send failed');
       }
 
-      setStatus(
-        lang === 'ar'
-          ? 'تم إرسال رسالتك بنجاح.'
-          : 'Your message has been sent successfully.'
-      );
-      e.currentTarget.reset();
+      setStatus(copy.success);
+      form.reset();
     } catch {
-      setStatus(
-        lang === 'ar'
-          ? 'تعذّر إرسال الرسالة. يرجى المحاولة لاحقًا أو التواصل عبر البريد.'
-          : 'Message could not be sent. Please try again later or email us.'
-      );
+      setStatus(copy.error);
     } finally {
       setBusy(false);
     }
@@ -74,7 +69,7 @@ export default function ContactForm({ c, lang }) {
       <label>
         {c.service}
         <select name="service" defaultValue="">
-          <option value="" disabled>—</option>
+          <option value="" disabled>{copy.chooseService}</option>
           {u.categories.map((x) => (
             <option key={x}>{x}</option>
           ))}
@@ -87,13 +82,7 @@ export default function ContactForm({ c, lang }) {
       </label>
 
       <button className="btn p" type="submit" disabled={busy}>
-        {busy
-          ? lang === 'ar'
-            ? 'جارٍ الإرسال…'
-            : 'Sending…'
-          : lang === 'ar'
-          ? 'إرسال الرسالة بالبريد الإلكتروني'
-          : 'Send email enquiry'}
+        {busy ? copy.sending : copy.send}
       </button>
 
       <p className="form-note" role="status" aria-live="polite">
