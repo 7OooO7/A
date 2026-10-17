@@ -6,6 +6,7 @@ export default function robots() {
       {
         userAgent: 'Googlebot',
         allow: '/',
+        disallow: ['/api/'],
       },
       {
         userAgent: '*',
