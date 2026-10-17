@@ -1,11 +1,26 @@
 'use client';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import Link from 'next/link';
+import {norm,rankServices} from '../lib/serviceSearchCore.mjs';
 
-const norm=(v='')=>String(v).toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+let indexPromise;
+function fetchSearchIndex(){
+ if(!indexPromise) indexPromise=fetch('/api/service-search').then(r=>{if(!r.ok)throw new Error('Search unavailable');return r.json()}).then(data=>{if(!Array.isArray(data))throw new Error('Invalid search index');return data}).catch(error=>{indexPromise=undefined;throw error});
+ return indexPromise;
+}
 
-export default function HeroServiceSearch({lang,searchIndex,labels}){
+
+
+export default function HeroServiceSearch({lang,searchIndex,labels,loadingLabel}){
   const [q,setQ]=useState('');
+  const [allIndex,setAllIndex]=useState(null),[loading,setLoading]=useState(false);
+  const mounted=useRef(true),loadingRef=useRef(false),loadedRef=useRef(false);
+  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false}},[]);
+  const loadIndex=()=>{
+    if(loadingRef.current||loadedRef.current)return;
+    loadingRef.current=true;setLoading(true);
+    fetchSearchIndex().then(data=>{if(mounted.current){setAllIndex(data);loadedRef.current=true}}).catch(()=>{}).finally(()=>{loadingRef.current=false;if(mounted.current)setLoading(false)});
+  };
   const [open,setOpen]=useState(false);
   const root=useRef(null);
   const query=norm(q);
@@ -14,37 +29,16 @@ export default function HeroServiceSearch({lang,searchIndex,labels}){
     document.addEventListener('pointerdown',close);
     return()=>document.removeEventListener('pointerdown',close);
   },[]);
-  const results=useMemo(()=>{
-    if(!query) return [];
-    // Reject obvious non-search input (e.g. aaaaaaa / ///////) before scoring.
-    const compact=query.replace(/\s+/g,'');
-    if(compact.length<2 || (/^(.)\1{3,}$/u.test(compact))) return [];
-    const tokens=query.split(/\s+/).filter(t=>t.length>1);
-    if(!tokens.length) return [];
-    const scored=searchIndex.map(s=>{
-      const title=norm(s.title), keywords=norm((s.keywords||[]).join(' | ')), summary=norm(s.summary||'');
-      const primary=`${title} | ${keywords}`;
-      const allText=`${primary} | ${summary}`;
-      const allTokensMatch=tokens.length>1&&tokens.every(t=>allText.includes(t));
-      const primaryTokenMatch=tokens.some(t=>primary.includes(t));
-      // A single generic word must occur in the service title/approved keywords.
-      // Descriptions can support a multi-word query, but can never create a result alone.
-      let score=title===query?140:title.startsWith(query)?120:title.includes(query)?105:keywords.includes(query)?90:primary.includes(query)?80:(allTokensMatch&&primaryTokenMatch)?55:0;
-      if(s.lang===lang && score>0) score+=3;
-      return {...s,score};
-    }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
-    const seen=new Set();
-    return scored.filter(x=>{const k=`${x.slug}:${x.lang}`;if(seen.has(k))return false;seen.add(k);return true;}).slice(0,6);
-  },[query,searchIndex,lang]);
+  const results=useMemo(()=>rankServices(allIndex||searchIndex,query,lang),[query,searchIndex,allIndex,lang]);
   const show=open&&q.trim().length>0;
   return <div className="hero-service-search" ref={root}>
     <label htmlFor="hero-service-query">{labels.label}</label>
     <div className="hero-search-box">
       <span aria-hidden="true">⌕</span>
-      <input id="hero-service-query" value={q} onFocus={()=>setOpen(true)} onChange={e=>{setQ(e.target.value);setOpen(true)}} onKeyDown={e=>{if(e.key==='Escape')setOpen(false)}} placeholder={labels.placeholder} autoComplete="off" role="combobox" aria-autocomplete="list" aria-expanded={show} aria-controls="hero-search-results" />
+      <input id="hero-service-query" value={q} onFocus={()=>{setOpen(true);loadIndex()}} onChange={e=>{setQ(e.target.value);setOpen(true);loadIndex()}} onKeyDown={e=>{if(e.key==='Escape')setOpen(false)}} placeholder={labels.placeholder} autoComplete="off" role="combobox" aria-autocomplete="list" aria-expanded={show} aria-controls="hero-search-results" />
     </div>
     {show&&<div id="hero-search-results" className="hero-search-results" role="region" aria-live="polite" aria-label={labels.results}>
-      {results.length?results.map((s,i)=><Link key={`${s.slug}-${s.lang}-${i}`} href={`/${lang}/services/${s.slug}`} onClick={()=>setOpen(false)}>
+      {loading&&!results.length?<p role="status">{loadingLabel}</p>:results.length?results.map((s,i)=><Link key={`${s.slug}-${s.lang}-${i}`} href={`/${lang}/services/${s.slug}`} onClick={()=>setOpen(false)}>
         <span className="hero-result-head"><strong>{s.title}</strong><em>{s.languageName}</em></span>
         <small>{s.summary}</small>
       </Link>):<Link className="hero-search-contact" href={`/${lang}/contact`} onClick={()=>setOpen(false)}><strong>{labels.noResultsTitle}</strong><small>{labels.noResultsText}</small></Link>}
