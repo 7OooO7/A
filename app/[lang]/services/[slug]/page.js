@@ -12,7 +12,6 @@ import {findContextualSpan,buildAnchorVariants} from '../../../../lib/internalLi
 import semanticLinkMap from '../../../../lib/semanticLinkMap.json';
 import {semanticLinkLead} from '../../../../lib/semanticLinkCopy';
 import StickyProcessGuard from '../../../../components/StickyProcessGuard';
-const NEW_SERVICES_PENDING_LOCALIZATION = new Set(['eviction-notice-property-sale','eviction-notice-personal-use','eviction-notice-demolition','rent-nonpayment-notice','poa-cancellation-notice','rental-dispute-resolution','rental-eviction-case','rental-claim','bounced-rent-cheque','rental-judgment-enforcement','mohre-power-of-attorney','company-bank-account-poa']);
 export const dynamicParams=false;
 export function generateStaticParams(){return CODES.flatMap(lang=>getEnabledServiceSlugs().map(slug=>({lang,slug})))}
 
@@ -27,7 +26,7 @@ const labels=(lang,u,m)=>({
 export async function generateMetadata({params}){
  const {lang,slug}=await params,m=await getM(lang),s=getService(m,slug,lang),r=getResearch(slug);if(!s)return{};
  const title=`${s.title} | ${BRAND.name}`,url=absolute(lang,`/services/${slug}`);
- return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:reviewedLanguageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang) && (!NEW_SERVICES_PENDING_LOCALIZATION.has(slug) || ['en','ar'].includes(lang)),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
+ return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:reviewedLanguageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang),follow:true},openGraph:{title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{card:'summary_large_image',title,description:s.summary}};
 }
 
 export default async function ServicePage({params}){
