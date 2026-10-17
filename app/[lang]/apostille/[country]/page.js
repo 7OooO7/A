@@ -1,3 +1,4 @@
+import {identitySchema,IDENTITY_ID} from '../../../../lib/contentIdentity';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { isServiceEnabled } from '../../../../lib/serviceAvailability';
@@ -19,7 +20,7 @@ export async function generateMetadata({params}){
 export default async function Page({params}){
  if(!isServiceEnabled('apostille'))notFound();
  const {lang,country}=await params; const d=apostilleDestination(country); if(!d)notFound(); const url=absolute(lang,`/apostille/${country}`);
- const schemas=[{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:`Apostille for Swedish Documents for Use in ${d.name}`,description:`Apostille coordination for eligible Sweden-issued documents intended for use in ${d.name}.`,areaServed:{'@type':'Country',name:d.name},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:'Apostille Services',path:'/services/apostille'},{name:d.name,path:`/apostille/${country}`}])];
+ const schemas=[identitySchema(lang),{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:`Apostille for Swedish Documents for Use in ${d.name}`,description:`Apostille coordination for eligible Sweden-issued documents intended for use in ${d.name}.`,provider:{'@id':IDENTITY_ID},areaServed:{'@type':'Country',name:d.name},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:'Apostille Services',path:'/services/apostille'},{name:d.name,path:`/apostille/${country}`}])];
  return <main id="main-content" className="w service-page">
   <nav aria-label="Breadcrumb" className="breadcrumbs"><Link href={`/${lang}`}>{BRAND.name}</Link><span>›</span><Link href={`/${lang}/services/apostille`}>Apostille Services</Link><span>›</span><span>{d.name}</span></nav>
   <section className="service-hero"><span className="kicker">Swedish documents · International use</span><h1>Apostille for Swedish Documents for Use in {d.name}</h1><p>We coordinate Apostille for eligible documents <b>issued in Sweden</b> that are intended for use in {d.name}. We check the intended use and document type before processing.</p><div className="hero-actions"><a className="btn p" href={`mailto:${MAIL}?subject=${encodeURIComponent(`Apostille Sweden to ${d.name}`)}`}>Request an Apostille check</a><Link className="btn outline" href={`/${lang}/services/apostille`}>Apostille overview</Link></div></section>

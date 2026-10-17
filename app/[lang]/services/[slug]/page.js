@@ -1,3 +1,6 @@
+import scopeCopy from '../../../../lib/serviceScopeCopy.json';
+import {getServiceSeo} from '../../../../lib/serviceSeo';
+import {identitySchema,IDENTITY_ID} from '../../../../lib/contentIdentity';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {CODES,DOMAIN,MAIL,getM} from '../../../../lib/i18n';
@@ -25,8 +28,8 @@ const labels=(lang,u,m)=>({
 
 export async function generateMetadata({params}){
  const {lang,slug}=await params,m=await getM(lang),s=getService(m,slug,lang),r=getResearch(slug);if(!s)return{};
- const title=`${s.title} | ${BRAND.name}`,url=absolute(lang,`/services/${slug}`);
- return{title,description:s.summary,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:reviewedLanguageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang),follow:true},openGraph:{images:defaultSocialImages(lang),title,description:s.summary,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{images:defaultSocialImages(lang).map(i=>i.url),card:'summary_large_image',title,description:s.summary}};
+ const {seoTitle:title,seoDescription:description}=getServiceSeo(slug,lang,s),url=absolute(lang,`/services/${slug}`);
+ return{title,description,keywords:getServiceContent(slug,lang)?.keywords||r?.research?.secondaryKeywords||[],alternates:{canonical:url,languages:reviewedLanguageAlternates(`/services/${slug}`)},robots:{index:isSearchReady(lang),follow:true},openGraph:{images:defaultSocialImages(lang),title,description,url,siteName:BRAND.name,locale:OG_LOCALE(lang),type:'website'},twitter:{images:defaultSocialImages(lang).map(i=>i.url),card:'summary_large_image',title,description}};
 }
 
 export default async function ServicePage({params}){
@@ -69,9 +72,9 @@ export default async function ServicePage({params}){
    return <span className="semantic-link-bridge"> {' '}{semanticLinkLead(lang)} {missing.map((r,i)=><span key={r.slug}>{i>0?(i===missing.length-1?' · ':' · '):''}<Link className="internal-link" href={`/${lang}/services/${r.slug}`}>{r.title}</Link></span>)}.</span>;
  };
  const agencyVideoNote = ['general-power-of-attorney','special-power-of-attorney','poa-online-notarisation'].includes(slug);
- const scopeNote = agencyVideoNote ? m.note : (lang==='ar' ? 'خدمة تنسيق مستقلة. تُنفذ إجراءات التوثيق والأعمال المحجوزة من خلال الجهة المختصة أو المهني المرخص بحسب المعاملة. نقدم عرض سعر مكتوبًا قبل بدء العمل.' : 'Independent coordination service. Notarial and other reserved procedures are carried out by the competent authority or an appropriately licensed professional as applicable. Every request is quoted in writing before work starts.');
+ const scopeNote = agencyVideoNote ? m.note : scopeCopy[lang];
  const faq=(content?.faq||[]).slice(0,5).map(x=>({q:x.q,a:x.a}));
- const schemas=[{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:service.title,description:service.summary,serviceType:service.title,url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:category?.title||m.sh,path:`#${service.category}`},{name:service.title,path:`/services/${slug}`}]),{'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}))}];
+ const schemas=[identitySchema(lang),{'@context':'https://schema.org','@type':'Service','@id':`${url}#service`,name:service.title,description:service.summary,serviceType:service.title,provider:{'@id':IDENTITY_ID},url},breadcrumbSchema(lang,[{name:BRAND.name,path:''},{name:category?.title||m.sh,path:`#${service.category}`},{name:service.title,path:`/services/${slug}`}]),{'@context':'https://schema.org','@type':'FAQPage',mainEntity:faq.map(x=>({'@type':'Question',name:x.q,acceptedAnswer:{'@type':'Answer',text:x.a}}))}];
  return <main id="main-content" className="w service-page">
   <nav aria-label="Breadcrumb" className="breadcrumbs"><Link href={`/${lang}`}>{BRAND.name}</Link><span>›</span><Link href={`/${lang}#${service.category}`}>{category?.title||m.sh}</Link><span>›</span><span aria-current="page">{service.title}</span></nav>
   <section className="service-hero"><span className="kicker">{BRAND.name} · {u.euUae}</span><h1>{service.title}</h1><p>{content?.shortDescription||service.summary}</p><div className="hero-actions">{waHref?<a className="btn service-whatsapp whatsapp-site-cta" href={waHref} target="_blank" rel="noopener noreferrer">{m.wa||'WhatsApp'}</a>:<span className="btn service-whatsapp whatsapp-site-cta whatsapp-disabled" aria-disabled="true">{m.wa||'WhatsApp'}</span>}<a className="btn p" href={`mailto:${MAIL}?subject=${encodeURIComponent(service.title)}`}>{m.mail}</a><Link className="btn outline back-to-category" href={`/${lang}#${service.category}`}><span className="back-arrow" aria-hidden="true"></span><span>{category?.title}</span></Link></div></section>

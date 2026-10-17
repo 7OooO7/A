@@ -1,3 +1,4 @@
+import {identitySchema} from '../../lib/contentIdentity';
 import {websiteSchema} from '../../lib/seo';
 import Link from 'next/link';
 import { getM, MAIL, DOMAIN } from '../../lib/i18n';
@@ -15,7 +16,7 @@ export default async function Home({ params }) {
  const searchIndex=getServiceSearchIndex(lang);
  const waNumber=process.env.NEXT_PUBLIC_WHATSAPP_NUMBER||'';
  const waHref=waNumber?`https://wa.me/${waNumber.replace(/\D/g,'')}`:'';
- const ld=[websiteSchema(),
+ const ld=[identitySchema(lang),websiteSchema(),
  {'@context':'https://schema.org','@type':'ItemList',name:m.sh,itemListElement:services.map((s,i)=>({'@type':'ListItem',position:i+1,name:s.title,url:`${DOMAIN}/${lang}/services/${s.slug}`}))}];
  return <main id="main-content">
   <section className="hero-shell"><div className="w hero"><div className="hero-layout"><div className="trust-row"><span>{u.remote}</span><span>{u.euUae}</span><span>{u.inside}</span><span>{u.multilingual}</span></div><div className="hero-copy"><div className="eyebrow">{u.euUae}</div><h1>{m.h1}</h1><p>{m.sub}</p><AuthorityMarquee authorities={about.authorities} label={about.authoritiesTitle}/><p className="hero-authority-message">{about.authoritiesCta}</p></div>
