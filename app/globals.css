@@ -260,14 +260,14 @@ button,input,select,textarea{font:inherit}
 @media(max-width:600px){.about-grid{align-items:start}.about-card{height:auto}.about-cta-actions{display:grid;grid-template-columns:1fr;width:100%}}
 
 /* Conversion CTAs: shared WhatsApp placements + clear category return */
-.footer-whatsapp-wrap{margin-top:22px}.footer-whatsapp-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 18px;border-radius:8px;background:#159455;color:#fff!important;font-weight:700;text-decoration:none;border:1px solid #159455;box-shadow:0 8px 20px rgba(0,0,0,.12)}.footer-whatsapp-btn:hover{filter:brightness(.96);transform:translateY(-1px)}
-.service-hero .hero-actions{align-items:center}.service-whatsapp{background:#159455!important;border-color:#159455!important;color:#fff!important}.service-whatsapp:hover{filter:brightness(.96)}
+.footer-whatsapp-wrap{margin-top:22px}.footer-whatsapp-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 18px;border-radius:8px;background:#128047;color:#fff!important;font-weight:700;text-decoration:none;border:1px solid #128047;box-shadow:0 8px 20px rgba(0,0,0,.12)}.footer-whatsapp-btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+.service-hero .hero-actions{align-items:center}.service-whatsapp{background:#128047!important;border-color:#128047!important;color:#fff!important}.service-whatsapp:hover{filter:brightness(.96)}
 .back-to-category{display:inline-flex;align-items:center;gap:8px;white-space:normal}.back-to-category .back-arrow{font-size:1.12em;line-height:1;font-weight:800}.back-to-category .back-arrow::before{content:'←'}[dir=rtl] .back-to-category .back-arrow::before{content:'→'}
 .pre-faq-cta{margin:38px 0 28px;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--cream);display:flex;align-items:center;justify-content:space-between;gap:20px}.pre-faq-cta p{margin:0!important;font-weight:600;color:var(--navy)}.pre-faq-cta .btn{flex:0 0 auto}
 @media(max-width:650px){.pre-faq-cta{align-items:stretch;flex-direction:column;padding:18px}.pre-faq-cta .btn{width:100%;text-align:center}.footer-whatsapp-btn{width:100%;max-width:300px}.service-hero .hero-actions{grid-template-columns:1fr}.service-hero .hero-actions .btn{width:100%}}
 
 /* Global WhatsApp CTA system — prominent, rectangular, consistent everywhere */
-.whatsapp-site-cta{display:inline-flex!important;align-items:center;justify-content:center;gap:10px;min-height:52px!important;min-width:190px;padding:13px 24px!important;border-radius:7px!important;background:#159455!important;border:2px solid #159455!important;color:#fff!important;font-weight:800!important;font-size:15px!important;line-height:1.2;text-decoration:none!important;box-shadow:0 10px 24px rgba(21,148,85,.22)!important;white-space:normal;text-align:center;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease!important}
+.whatsapp-site-cta{display:inline-flex!important;align-items:center;justify-content:center;gap:10px;min-height:52px!important;min-width:190px;padding:13px 24px!important;border-radius:7px!important;background:#128047!important;border:2px solid #128047!important;color:#fff!important;font-weight:800!important;font-size:15px!important;line-height:1.2;text-decoration:none!important;box-shadow:0 10px 24px rgba(21,148,85,.22)!important;white-space:normal;text-align:center;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease!important}
 .whatsapp-site-cta:hover,.whatsapp-site-cta:focus-visible{filter:brightness(.94);transform:translateY(-1px);box-shadow:0 13px 28px rgba(21,148,85,.28)!important}
 .whatsapp-disabled{opacity:.62!important;cursor:not-allowed!important;pointer-events:none!important;filter:saturate(.65)}
 .footer-whatsapp-wrap{margin-top:20px}.footer-whatsapp-btn{width:min(100%,260px)}
@@ -279,7 +279,7 @@ button,input,select,textarea{font:inherit}
 
 
 /* Floating WhatsApp: compact circular icon-only action, matching Back to top on desktop and mobile. */
-.floating-actions .whatsapp-action{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;padding:0!important;border-radius:50%!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;background:#159455!important;border:1px solid #159455!important;color:#fff!important;box-shadow:0 8px 20px rgba(0,0,0,.12)!important}
+.floating-actions .whatsapp-action{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;padding:0!important;border-radius:50%!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;background:#128047!important;border:1px solid #128047!important;color:#fff!important;box-shadow:0 8px 20px rgba(0,0,0,.12)!important}
 .floating-actions .whatsapp-action svg{width:24px!important;height:24px!important;display:block;fill:currentColor}
 .floating-actions .whatsapp-action span{display:none!important}
 /* Homepage WhatsApp CTA keeps the same prominent rectangular sizing as the rest of the site. */
@@ -618,7 +618,7 @@ button,input,select,textarea{font:inherit}
 .guide-contact-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;flex:0 0 auto}
 .guide-contact-actions .btn{display:inline-flex!important;align-items:center;justify-content:center;gap:11px;min-width:205px!important;min-height:54px!important;padding:13px 23px!important;border-radius:7px!important;font-size:15px!important;font-weight:750!important;line-height:1.25;text-decoration:none!important;white-space:normal}
 .guide-contact-actions svg{width:23px;height:23px;flex:0 0 23px}
-.guide-contact-actions .guide-whatsapp{background:#159455!important;border:2px solid #159455!important;color:#fff!important}
+.guide-contact-actions .guide-whatsapp{background:#128047!important;border:2px solid #128047!important;color:#fff!important}
 .guide-contact-actions .guide-email{background:#dcc18c!important;border:2px solid #dcc18c!important;color:#102338!important}
 .guide-contact-actions .guide-email:hover{background:#e8ce9c!important;border-color:#e8ce9c!important}
 .guide-contact-actions .guide-whatsapp:hover{filter:brightness(.94)}
@@ -659,3 +659,23 @@ button,input,select,textarea{font:inherit}
 .site-footer .footer-whatsapp-btn{box-sizing:border-box;display:inline-flex!important;align-items:center;justify-content:center;gap:10px;white-space:nowrap!important;width:max-content!important;max-width:100%!important;min-width:0!important;min-height:48px!important;padding:11px 16px!important;font-size:clamp(11px,1vw,14px)!important;line-height:1.2!important;overflow-wrap:normal!important}
 .site-footer .footer-whatsapp-btn::before{width:19px;height:19px;flex:0 0 19px}
 @media(max-width:600px){.site-footer .footer-whatsapp-btn{width:max-content!important;max-width:100%!important;min-height:48px!important;padding:10px 12px!important;font-size:clamp(10px,3.2vw,14px)!important}.site-footer .footer-section:last-child{border-bottom:0!important}.site-footer .footer-bottom{border-top:1px solid #20344a!important;margin-top:0!important;padding-top:22px!important}}
+
+
+/* Accessible contrast and responsive footer targets; shared by all locales. */
+:root{--label-on-light:#8a6733}
+.eyebrow,.kicker{color:var(--label-on-light)}
+.hero-shell .eyebrow,.hero-shell .kicker,.about-cta .kicker{color:var(--sand)}
+.site-footer .footer-heading{
+  min-height:44px!important;height:auto;
+  padding-block:10px!important;margin-block-end:8px;
+  line-height:1.4!important;white-space:normal;overflow-wrap:anywhere;
+}
+.site-footer .footer-links a{
+  display:flex;align-items:center;min-height:28px;min-width:24px;
+  padding-block:2px;max-width:100%;white-space:normal;overflow-wrap:anywhere;
+}
+@media(max-width:600px),(pointer:coarse){
+  .site-footer .footer-links a{min-height:44px;padding-block:8px}
+}
+
+.process-card:last-child p{color:#596777}
